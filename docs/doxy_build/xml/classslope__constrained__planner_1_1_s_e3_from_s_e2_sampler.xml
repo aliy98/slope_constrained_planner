@@ -1,0 +1,421 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classslope__constrained__planner_1_1_s_e3_from_s_e2_sampler" kind="class" language="C++" prot="public">
+    <compoundname>slope_constrained_planner::SE3FromSE2Sampler</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">StateSampler</basecompoundref>
+    <includes refid="sampler_8h" local="no">sampler.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classslope__constrained__planner_1_1_s_e3_from_s_e2_sampler_1a42d07589ad8ea944c5e4377340ce12a8" prot="private" static="no" mutable="no">
+        <type>ParamsConstPtr</type>
+        <definition>ParamsConstPtr slope_constrained_planner::SE3FromSE2Sampler::params_</definition>
+        <argsstring></argsstring>
+        <name>params_</name>
+        <briefdescription>
+<para>Parameters containing the data for map layers. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/sampler.h" line="35" column="18" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/sampler.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classslope__constrained__planner_1_1_s_e3_from_s_e2_sampler_1aeacab4845409da8f500b97b9292d302d" prot="private" static="no" mutable="no">
+        <type>ob::StateSpacePtr</type>
+        <definition>ob::StateSpacePtr slope_constrained_planner::SE3FromSE2Sampler::space_real_vec_</definition>
+        <argsstring></argsstring>
+        <name>space_real_vec_</name>
+        <briefdescription>
+<para>Defines the states in R(3) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/sampler.h" line="38" column="21" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/sampler.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classslope__constrained__planner_1_1_s_e3_from_s_e2_sampler_1af6807e25f805f28c1cc8455b4d854870" prot="private" static="no" mutable="no">
+        <type>ob::StateSpacePtr</type>
+        <definition>ob::StateSpacePtr slope_constrained_planner::SE3FromSE2Sampler::space_rot_</definition>
+        <argsstring></argsstring>
+        <name>space_rot_</name>
+        <briefdescription>
+<para>Defines the states in SO3. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/sampler.h" line="41" column="21" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/sampler.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classslope__constrained__planner_1_1_s_e3_from_s_e2_sampler_1ae4154c68852d979b5eb941b1065dbecb" prot="private" static="no" mutable="no">
+        <type>std::shared_ptr&lt; ob::RealVectorBounds &gt;</type>
+        <definition>std::shared_ptr&lt;ob::RealVectorBounds&gt; slope_constrained_planner::SE3FromSE2Sampler::bounds_se3_</definition>
+        <argsstring></argsstring>
+        <name>bounds_se3_</name>
+        <briefdescription>
+<para>Sets R(3) state space bounderies. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/sampler.h" line="44" column="19" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/sampler.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classslope__constrained__planner_1_1_s_e3_from_s_e2_sampler_1a6bc5de8a0d7279d7d5c76fcace3a7bb1" prot="private" static="no" mutable="no">
+        <type>ob::ScopedState&lt; ob::RealVectorStateSpace &gt;</type>
+        <definition>ob::ScopedState&lt;ob::RealVectorStateSpace&gt; slope_constrained_planner::SE3FromSE2Sampler::state_pos_</definition>
+        <argsstring></argsstring>
+        <name>state_pos_</name>
+        <briefdescription>
+<para>An scoped state in R(3) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/sampler.h" line="47" column="19" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/sampler.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classslope__constrained__planner_1_1_s_e3_from_s_e2_sampler_1a376def08ca4667439a5e604ba355e85e" prot="private" static="no" mutable="no">
+        <type>grid_map::Position</type>
+        <definition>grid_map::Position slope_constrained_planner::SE3FromSE2Sampler::prev_pos_</definition>
+        <argsstring></argsstring>
+        <name>prev_pos_</name>
+        <briefdescription>
+<para>Represents the position of previously found valid state. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/sampler.h" line="50" column="22" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/sampler.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classslope__constrained__planner_1_1_s_e3_from_s_e2_sampler_1a35a12dde901fae316b8c89cc8b073465" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool slope_constrained_planner::SE3FromSE2Sampler::sample_is_near_robot_</definition>
+        <argsstring></argsstring>
+        <name>sample_is_near_robot_</name>
+        <briefdescription>
+<para>An attribute to specify if the found sample is near robot. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/sampler.h" line="53" column="8" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/sampler.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classslope__constrained__planner_1_1_s_e3_from_s_e2_sampler_1a284b8819e20ba722975459b5c111b424" prot="private" static="no" mutable="no">
+        <type>ob::ScopedState&lt; ob::SE3StateSpace &gt;</type>
+        <definition>ob::ScopedState&lt;ob::SE3StateSpace&gt; slope_constrained_planner::SE3FromSE2Sampler::state_rot_</definition>
+        <argsstring></argsstring>
+        <name>state_rot_</name>
+        <briefdescription>
+<para>An scopes state in SE3. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/sampler.h" line="56" column="19" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/sampler.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classslope__constrained__planner_1_1_s_e3_from_s_e2_sampler_1a62cb885b374a3c076ab060597a8395e8" prot="private" static="no" mutable="no">
+        <type>ob::RealVectorStateSampler</type>
+        <definition>ob::RealVectorStateSampler slope_constrained_planner::SE3FromSE2Sampler::base_real_vec_</definition>
+        <argsstring></argsstring>
+        <name>base_real_vec_</name>
+        <briefdescription>
+<para>State sampler in R(2) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/sampler.h" line="59" column="30" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/sampler.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classslope__constrained__planner_1_1_s_e3_from_s_e2_sampler_1ac73846ffdd140bfa54877ccdbd70b900" prot="private" static="no" mutable="no">
+        <type>std::shared_ptr&lt; <ref refid="classslope__constrained__planner_1_1_map" kindref="compound">Map</ref> &gt;</type>
+        <definition>std::shared_ptr&lt;Map&gt; slope_constrained_planner::SE3FromSE2Sampler::map_</definition>
+        <argsstring></argsstring>
+        <name>map_</name>
+        <briefdescription>
+<para>Grid map data. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/sampler.h" line="62" column="19" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/sampler.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classslope__constrained__planner_1_1_s_e3_from_s_e2_sampler_1a68cca6f3bb38e50b33537931b51404fc" prot="private" static="no" mutable="yes">
+        <type>std::mutex</type>
+        <definition>std::mutex slope_constrained_planner::SE3FromSE2Sampler::map_mutex_</definition>
+        <argsstring></argsstring>
+        <name>map_mutex_</name>
+        <briefdescription>
+<para>Grid map process mutex. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/sampler.h" line="65" column="22" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/sampler.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classslope__constrained__planner_1_1_s_e3_from_s_e2_sampler_1a37a08bc80fd780f78771862b9e73365b" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool slope_constrained_planner::SE3FromSE2Sampler::prev_state_is_valid_</definition>
+        <argsstring></argsstring>
+        <name>prev_state_is_valid_</name>
+        <briefdescription>
+<para>specifies whether the previously found state was valid </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/sampler.h" line="68" column="8" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/sampler.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classslope__constrained__planner_1_1_s_e3_from_s_e2_sampler_1a7050fd71b5b295c4bf3ddc61d5450720" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double slope_constrained_planner::SE3FromSE2Sampler::prev_yaw_</definition>
+        <argsstring></argsstring>
+        <name>prev_yaw_</name>
+        <briefdescription>
+<para>Represents the yaw angle for previous valid state. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/sampler.h" line="71" column="10" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/sampler.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classslope__constrained__planner_1_1_s_e3_from_s_e2_sampler_1ac92ab2277de1fdf8dd59b376495c82fc" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double slope_constrained_planner::SE3FromSE2Sampler::prev_phi_</definition>
+        <argsstring></argsstring>
+        <name>prev_phi_</name>
+        <briefdescription>
+<para>Represents the heading angle for previous valid state. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/sampler.h" line="74" column="10" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/sampler.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classslope__constrained__planner_1_1_s_e3_from_s_e2_sampler_1ac84ae8033330107cd45c451b05fe3d62" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>grid_map::Position</type>
+        <definition>grid_map::Position SE3FromSE2Sampler::samplePositionInMap</definition>
+        <argsstring>()</argsstring>
+        <name>samplePositionInMap</name>
+        <briefdescription>
+<para>Helper function to sample the state position within map bounderies and finit normal vector. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>pos state position info </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/sampler.h" line="81" column="22" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/src/sampler.cpp" bodystart="61" bodyend="80"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classslope__constrained__planner_1_1_s_e3_from_s_e2_sampler_1aeec4758271bf7133ba8269b131d1c763" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SE3FromSE2Sampler::SE3FromSE2Sampler</definition>
+        <argsstring>(const ob::StateSpace *si, const std::shared_ptr&lt; Map &gt; &amp;map, const ParamsConstPtr &amp;params)</argsstring>
+        <name>SE3FromSE2Sampler</name>
+        <param>
+          <type>const ob::StateSpace *</type>
+          <declname>si</declname>
+        </param>
+        <param>
+          <type>const std::shared_ptr&lt; <ref refid="classslope__constrained__planner_1_1_map" kindref="compound">Map</ref> &gt; &amp;</type>
+          <declname>map</declname>
+        </param>
+        <param>
+          <type>const ParamsConstPtr &amp;</type>
+          <declname>params</declname>
+        </param>
+        <briefdescription>
+<para>Constructor for <computeroutput><ref refid="classslope__constrained__planner_1_1_s_e3_from_s_e2_sampler" kindref="compound">SE3FromSE2Sampler</ref></computeroutput> class. Defines the space bounderies using the grid map info. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>space</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>state space in which the sampler would find the states </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>map</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>grid map of the environment </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>params</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>contains required info about the map layers </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/sampler.h" line="93" column="3" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/src/sampler.cpp" bodystart="13" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="classslope__constrained__planner_1_1_s_e3_from_s_e2_sampler_1a2ff6fc278f9a52bbcfc6f907172156b6" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void SE3FromSE2Sampler::sampleUniform</definition>
+        <argsstring>(ob::State *state) override</argsstring>
+        <name>sampleUniform</name>
+        <param>
+          <type>ob::State *</type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+<para>Overriden function from the base class <computeroutput>StateSampler</computeroutput>, uses <computeroutput>samplePositionInMap()</computeroutput> function to find state position. Uses <computeroutput>getNormal(ind)</computeroutput> function to find roll and pitch angles for the state orientation. Keeps rotating the state frame along its z-axis until the heading angle gets below threshold. If previously found state was valid, use its reverse orientation for the next state. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The sampled state data </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/sampler.h" line="106" column="16" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/src/sampler.cpp" bodystart="83" bodyend="247"/>
+      </memberdef>
+      <memberdef kind="function" id="classslope__constrained__planner_1_1_s_e3_from_s_e2_sampler_1a2f8aff9d16a7908fd6c0c23ce2ee31ae" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void SE3FromSE2Sampler::sampleUniformNear</definition>
+        <argsstring>(ob::State *, const ob::State *, double) override</argsstring>
+        <name>sampleUniformNear</name>
+        <param>
+          <type>ob::State *</type>
+        </param>
+        <param>
+          <type>const ob::State *</type>
+        </param>
+        <param>
+          <type>double</type>
+        </param>
+        <briefdescription>
+<para>Not implemented in this software architecture. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/sampler.h" line="112" column="16" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/src/sampler.cpp" bodystart="250" bodyend="254"/>
+      </memberdef>
+      <memberdef kind="function" id="classslope__constrained__planner_1_1_s_e3_from_s_e2_sampler_1a60db8bdd8149ab997032cd476cea2304" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void SE3FromSE2Sampler::sampleGaussian</definition>
+        <argsstring>(ob::State *, const ob::State *, double) override</argsstring>
+        <name>sampleGaussian</name>
+        <param>
+          <type>ob::State *</type>
+        </param>
+        <param>
+          <type>const ob::State *</type>
+        </param>
+        <param>
+          <type>double</type>
+        </param>
+        <briefdescription>
+<para>Not implemented in this software architecture. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/sampler.h" line="120" column="16" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/src/sampler.cpp" bodystart="257" bodyend="261"/>
+      </memberdef>
+      <memberdef kind="function" id="classslope__constrained__planner_1_1_s_e3_from_s_e2_sampler_1a5ebc804d223ad69cb39f097dcb832670" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool SE3FromSE2Sampler::checkSampleDistance</definition>
+        <argsstring>(const ob::ScopedState&lt;&gt; &amp;sample)</argsstring>
+        <name>checkSampleDistance</name>
+        <param>
+          <type>const ob::ScopedState&lt;&gt; &amp;</type>
+          <declname>sample</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/sampler.h" line="125" column="8" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/src/sampler.cpp" bodystart="50" bodyend="59"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Defines a custom sampler which only samples an state with the heading angle below the threshold. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Description: A custom sampler which randomly samples a state position within map bounderies. Regarding the state orientation, the yaw angle would be chosen randomly within (-pi, pi), roll and pitch angles are found by getting the normal vector of the state cell in the map. In order to get the desired orientation, state frame rotates along its z-axis until the heading angle gets below the threshold. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>ob::StateSampler</label>
+      </node>
+      <node id="1">
+        <label>slope_constrained_planner::SE3FromSE2Sampler</label>
+        <link refid="classslope__constrained__planner_1_1_s_e3_from_s_e2_sampler"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>ob::StateSampler</label>
+      </node>
+      <node id="1">
+        <label>slope_constrained_planner::SE3FromSE2Sampler</label>
+        <link refid="classslope__constrained__planner_1_1_s_e3_from_s_e2_sampler"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/sampler.h" line="32" column="48" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/sampler.h" bodystart="32" bodyend="126"/>
+    <listofallmembers>
+      <member refid="classslope__constrained__planner_1_1_s_e3_from_s_e2_sampler_1a62cb885b374a3c076ab060597a8395e8" prot="private" virt="non-virtual"><scope>slope_constrained_planner::SE3FromSE2Sampler</scope><name>base_real_vec_</name></member>
+      <member refid="classslope__constrained__planner_1_1_s_e3_from_s_e2_sampler_1ae4154c68852d979b5eb941b1065dbecb" prot="private" virt="non-virtual"><scope>slope_constrained_planner::SE3FromSE2Sampler</scope><name>bounds_se3_</name></member>
+      <member refid="classslope__constrained__planner_1_1_s_e3_from_s_e2_sampler_1a5ebc804d223ad69cb39f097dcb832670" prot="public" virt="non-virtual"><scope>slope_constrained_planner::SE3FromSE2Sampler</scope><name>checkSampleDistance</name></member>
+      <member refid="classslope__constrained__planner_1_1_s_e3_from_s_e2_sampler_1ac73846ffdd140bfa54877ccdbd70b900" prot="private" virt="non-virtual"><scope>slope_constrained_planner::SE3FromSE2Sampler</scope><name>map_</name></member>
+      <member refid="classslope__constrained__planner_1_1_s_e3_from_s_e2_sampler_1a68cca6f3bb38e50b33537931b51404fc" prot="private" virt="non-virtual"><scope>slope_constrained_planner::SE3FromSE2Sampler</scope><name>map_mutex_</name></member>
+      <member refid="classslope__constrained__planner_1_1_s_e3_from_s_e2_sampler_1a42d07589ad8ea944c5e4377340ce12a8" prot="private" virt="non-virtual"><scope>slope_constrained_planner::SE3FromSE2Sampler</scope><name>params_</name></member>
+      <member refid="classslope__constrained__planner_1_1_s_e3_from_s_e2_sampler_1ac92ab2277de1fdf8dd59b376495c82fc" prot="private" virt="non-virtual"><scope>slope_constrained_planner::SE3FromSE2Sampler</scope><name>prev_phi_</name></member>
+      <member refid="classslope__constrained__planner_1_1_s_e3_from_s_e2_sampler_1a376def08ca4667439a5e604ba355e85e" prot="private" virt="non-virtual"><scope>slope_constrained_planner::SE3FromSE2Sampler</scope><name>prev_pos_</name></member>
+      <member refid="classslope__constrained__planner_1_1_s_e3_from_s_e2_sampler_1a37a08bc80fd780f78771862b9e73365b" prot="private" virt="non-virtual"><scope>slope_constrained_planner::SE3FromSE2Sampler</scope><name>prev_state_is_valid_</name></member>
+      <member refid="classslope__constrained__planner_1_1_s_e3_from_s_e2_sampler_1a7050fd71b5b295c4bf3ddc61d5450720" prot="private" virt="non-virtual"><scope>slope_constrained_planner::SE3FromSE2Sampler</scope><name>prev_yaw_</name></member>
+      <member refid="classslope__constrained__planner_1_1_s_e3_from_s_e2_sampler_1a35a12dde901fae316b8c89cc8b073465" prot="private" virt="non-virtual"><scope>slope_constrained_planner::SE3FromSE2Sampler</scope><name>sample_is_near_robot_</name></member>
+      <member refid="classslope__constrained__planner_1_1_s_e3_from_s_e2_sampler_1a60db8bdd8149ab997032cd476cea2304" prot="public" virt="virtual"><scope>slope_constrained_planner::SE3FromSE2Sampler</scope><name>sampleGaussian</name></member>
+      <member refid="classslope__constrained__planner_1_1_s_e3_from_s_e2_sampler_1ac84ae8033330107cd45c451b05fe3d62" prot="private" virt="non-virtual"><scope>slope_constrained_planner::SE3FromSE2Sampler</scope><name>samplePositionInMap</name></member>
+      <member refid="classslope__constrained__planner_1_1_s_e3_from_s_e2_sampler_1a2ff6fc278f9a52bbcfc6f907172156b6" prot="public" virt="virtual"><scope>slope_constrained_planner::SE3FromSE2Sampler</scope><name>sampleUniform</name></member>
+      <member refid="classslope__constrained__planner_1_1_s_e3_from_s_e2_sampler_1a2f8aff9d16a7908fd6c0c23ce2ee31ae" prot="public" virt="virtual"><scope>slope_constrained_planner::SE3FromSE2Sampler</scope><name>sampleUniformNear</name></member>
+      <member refid="classslope__constrained__planner_1_1_s_e3_from_s_e2_sampler_1aeec4758271bf7133ba8269b131d1c763" prot="public" virt="non-virtual"><scope>slope_constrained_planner::SE3FromSE2Sampler</scope><name>SE3FromSE2Sampler</name></member>
+      <member refid="classslope__constrained__planner_1_1_s_e3_from_s_e2_sampler_1aeacab4845409da8f500b97b9292d302d" prot="private" virt="non-virtual"><scope>slope_constrained_planner::SE3FromSE2Sampler</scope><name>space_real_vec_</name></member>
+      <member refid="classslope__constrained__planner_1_1_s_e3_from_s_e2_sampler_1af6807e25f805f28c1cc8455b4d854870" prot="private" virt="non-virtual"><scope>slope_constrained_planner::SE3FromSE2Sampler</scope><name>space_rot_</name></member>
+      <member refid="classslope__constrained__planner_1_1_s_e3_from_s_e2_sampler_1a6bc5de8a0d7279d7d5c76fcace3a7bb1" prot="private" virt="non-virtual"><scope>slope_constrained_planner::SE3FromSE2Sampler</scope><name>state_pos_</name></member>
+      <member refid="classslope__constrained__planner_1_1_s_e3_from_s_e2_sampler_1a284b8819e20ba722975459b5c111b424" prot="private" virt="non-virtual"><scope>slope_constrained_planner::SE3FromSE2Sampler</scope><name>state_rot_</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

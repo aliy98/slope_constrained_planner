@@ -1,0 +1,306 @@
+\hypertarget{include_2slope__constrained__planner_2utils_8h}{}\doxysection{/home/ali/ros\+\_\+ws/src/slope\+\_\+constrained\+\_\+planner/slope\+\_\+constrained\+\_\+planner/include/slope\+\_\+constrained\+\_\+planner/utils.h File Reference}
+\label{include_2slope__constrained__planner_2utils_8h}\index{/home/ali/ros\_ws/src/slope\_constrained\_planner/slope\_constrained\_planner/include/slope\_constrained\_planner/utils.h@{/home/ali/ros\_ws/src/slope\_constrained\_planner/slope\_constrained\_planner/include/slope\_constrained\_planner/utils.h}}
+
+
+Some helper functions to be used in different components of the software architecture.  
+
+
+{\ttfamily \#include $<$memory$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$Eigen/\+Dense$>$}\newline
+{\ttfamily \#include $<$grid\+\_\+map\+\_\+core/\+Grid\+Map.\+hpp$>$}\newline
+{\ttfamily \#include $<$ompl/base/spaces/\+S\+E3\+State\+Space.\+h$>$}\newline
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{include_2slope__constrained__planner_2utils_8h_a03a12f308166d2d30d64f3d3fa282bda}\label{include_2slope__constrained__planner_2utils_8h_a03a12f308166d2d30d64f3d3fa282bda}} 
+using {\bfseries slope\+\_\+constrained\+\_\+planner\+::\+Scalar} = float
+\item 
+\mbox{\Hypertarget{include_2slope__constrained__planner_2utils_8h_a8d3ffc5bb1e509c663a996336d9151f5}\label{include_2slope__constrained__planner_2utils_8h_a8d3ffc5bb1e509c663a996336d9151f5}} 
+using {\bfseries slope\+\_\+constrained\+\_\+planner\+::\+Pose3} = Eigen\+::\+Transform$<$ Scalar, 3, Eigen\+::\+Affine $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+Pose3 \mbox{\hyperlink{include_2slope__constrained__planner_2utils_8h_aaa1afa706c6eea0820d109fea72fe72f}{slope\+\_\+constrained\+\_\+planner\+::\+Pose3\+From\+S\+E3}} (const ob\+::\+State $\ast$state)
+\begin{DoxyCompactList}\small\item\em Gets position of state from its S\+E3 representation. \end{DoxyCompactList}\item 
+Pose3 \mbox{\hyperlink{include_2slope__constrained__planner_2utils_8h_a803385a13df77f5c9f0524be3917c4bf}{slope\+\_\+constrained\+\_\+planner\+::\+Pose3\+From\+X\+YZ}} (Scalar x, Scalar y, Scalar z)
+\begin{DoxyCompactList}\small\item\em Gets the position of state from its x-\/y-\/z representation. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{include_2slope__constrained__planner_2utils_8h_a33fbcc7fcabcb7a710ab618bb812b7fd}{slope\+\_\+constrained\+\_\+planner\+::lateral\+Distance}} (const ob\+::\+State $\ast$from, const ob\+::\+State $\ast$to)
+\begin{DoxyCompactList}\small\item\em Gets the lateral distance between two states. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\T \mbox{\hyperlink{include_2slope__constrained__planner_2utils_8h_aa8430341802109b3203bfe726e3eea91}{slope\+\_\+constrained\+\_\+planner\+::get\+Roll\+From\+Quat}} (T w, T x, T y, T z)
+\begin{DoxyCompactList}\small\item\em Gets roll angle from quaternion represntation. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\T \mbox{\hyperlink{include_2slope__constrained__planner_2utils_8h_a51006fe8c71b68332c03b87390505ad3}{slope\+\_\+constrained\+\_\+planner\+::get\+Pitch\+From\+Quat}} (T w, T x, T y, T z)
+\begin{DoxyCompactList}\small\item\em Gets pitch angle from quaternion represntation. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\T \mbox{\hyperlink{include_2slope__constrained__planner_2utils_8h_a6852c8698b81bd3f2b692a44266d0634}{slope\+\_\+constrained\+\_\+planner\+::get\+Yaw\+From\+Quat}} (T w, T x, T y, T z)
+\begin{DoxyCompactList}\small\item\em Gets yaw angle from quaternion represntation. \end{DoxyCompactList}\item 
+Scalar \mbox{\hyperlink{include_2slope__constrained__planner_2utils_8h_a4da0e01e16937554779f163c6b8e16ae}{slope\+\_\+constrained\+\_\+planner\+::get\+Yaw\+From\+S\+O3}} (const ob\+::\+S\+O3\+State\+Space\+::\+State\+Type \&s)
+\begin{DoxyCompactList}\small\item\em Gets yaw angle from S\+O3 represntation. \end{DoxyCompactList}\item 
+Scalar \mbox{\hyperlink{include_2slope__constrained__planner_2utils_8h_a48e1f90cc8391f010fe7efa11f179bb1}{slope\+\_\+constrained\+\_\+planner\+::get\+Roll\+From\+S\+O3}} (const ob\+::\+S\+O3\+State\+Space\+::\+State\+Type \&s)
+\begin{DoxyCompactList}\small\item\em Gets roll angle from S\+O3 represntation. \end{DoxyCompactList}\item 
+Scalar \mbox{\hyperlink{include_2slope__constrained__planner_2utils_8h_a428d7014957c631f7b624a5cac7b16a3}{slope\+\_\+constrained\+\_\+planner\+::get\+Pitch\+From\+S\+O3}} (const ob\+::\+S\+O3\+State\+Space\+::\+State\+Type \&s)
+\begin{DoxyCompactList}\small\item\em Gets pitch angle from S\+O3 represntation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{include_2slope__constrained__planner_2utils_8h_a795e026e29385a30e9028219b748b09e}{slope\+\_\+constrained\+\_\+planner\+::set\+S\+O3\+From\+Yaw}} (ob\+::\+S\+O3\+State\+Space\+::\+State\+Type \&s, double yaw)
+\begin{DoxyCompactList}\small\item\em Gets S\+O3 represntation from yaw angle. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{include_2slope__constrained__planner_2utils_8h_a991f425b1a0e14d5c750fc1406972fa2}{slope\+\_\+constrained\+\_\+planner\+::set\+S\+O3\+From\+R\+PY}} (ob\+::\+S\+O3\+State\+Space\+::\+State\+Type \&s, double $\ast$rpy)
+\begin{DoxyCompactList}\small\item\em Sets S\+O3 represntation using R\+PY representation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{include_2slope__constrained__planner_2utils_8h_a3ce8763c5dba4aa0847e7c59881ebff9}{slope\+\_\+constrained\+\_\+planner\+::estimate\+Normals}} (grid\+\_\+map\+::\+Grid\+Map \&map, double estimation\+\_\+radius, const std\+::string \&input\+\_\+layer, const std\+::string \&output\+\_\+layer\+\_\+prefix=\char`\"{}normal\char`\"{})
+\begin{DoxyCompactList}\small\item\em Estimates the normal vectors in a grid map cell. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{include_2slope__constrained__planner_2utils_8h_a28d6b6d2b77f680176dd7b625fc84f85}\label{include_2slope__constrained__planner_2utils_8h_a28d6b6d2b77f680176dd7b625fc84f85}} 
+std\+::vector$<$ double $>$ {\bfseries slope\+\_\+constrained\+\_\+planner\+::global\+\_\+start\+\_\+} = \{0.\+0\}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Some helper functions to be used in different components of the software architecture. 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{include_2slope__constrained__planner_2utils_8h_a3ce8763c5dba4aa0847e7c59881ebff9}\label{include_2slope__constrained__planner_2utils_8h_a3ce8763c5dba4aa0847e7c59881ebff9}} 
+\index{utils.h@{utils.h}!estimateNormals@{estimateNormals}}
+\index{estimateNormals@{estimateNormals}!utils.h@{utils.h}}
+\doxysubsubsection{\texorpdfstring{estimateNormals()}{estimateNormals()}}
+{\footnotesize\ttfamily void slope\+\_\+constrained\+\_\+planner\+::estimate\+Normals (\begin{DoxyParamCaption}\item[{grid\+\_\+map\+::\+Grid\+Map \&}]{map,  }\item[{double}]{estimation\+\_\+radius,  }\item[{const std\+::string \&}]{input\+\_\+layer,  }\item[{const std\+::string \&}]{output\+\_\+layer\+\_\+prefix = {\ttfamily \char`\"{}normal\char`\"{}} }\end{DoxyParamCaption})}
+
+
+
+Estimates the normal vectors in a grid map cell. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em map} & Grid map data \\
+\hline
+{\em estimation\+\_\+radius} & The dimension of estimation \\
+\hline
+{\em input\+\_\+layer} & Name of the input layer \\
+\hline
+{\em output\+\_\+layer\+\_\+prefix} & Prefix of output layer \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{include_2slope__constrained__planner_2utils_8h_a51006fe8c71b68332c03b87390505ad3}\label{include_2slope__constrained__planner_2utils_8h_a51006fe8c71b68332c03b87390505ad3}} 
+\index{utils.h@{utils.h}!getPitchFromQuat@{getPitchFromQuat}}
+\index{getPitchFromQuat@{getPitchFromQuat}!utils.h@{utils.h}}
+\doxysubsubsection{\texorpdfstring{getPitchFromQuat()}{getPitchFromQuat()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T slope\+\_\+constrained\+\_\+planner\+::get\+Pitch\+From\+Quat (\begin{DoxyParamCaption}\item[{T}]{w,  }\item[{T}]{x,  }\item[{T}]{y,  }\item[{T}]{z }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets pitch angle from quaternion represntation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em w} & Quaternion w value \\
+\hline
+{\em x} & Quaternion x value \\
+\hline
+{\em y} & Quaternion y value \\
+\hline
+{\em z} & Quaternion z value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pitch angle 
+\end{DoxyReturn}
+\mbox{\Hypertarget{include_2slope__constrained__planner_2utils_8h_a428d7014957c631f7b624a5cac7b16a3}\label{include_2slope__constrained__planner_2utils_8h_a428d7014957c631f7b624a5cac7b16a3}} 
+\index{utils.h@{utils.h}!getPitchFromSO3@{getPitchFromSO3}}
+\index{getPitchFromSO3@{getPitchFromSO3}!utils.h@{utils.h}}
+\doxysubsubsection{\texorpdfstring{getPitchFromSO3()}{getPitchFromSO3()}}
+{\footnotesize\ttfamily Scalar slope\+\_\+constrained\+\_\+planner\+::get\+Pitch\+From\+S\+O3 (\begin{DoxyParamCaption}\item[{const ob\+::\+S\+O3\+State\+Space\+::\+State\+Type \&}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets pitch angle from S\+O3 represntation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & State data \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pitch angle 
+\end{DoxyReturn}
+\mbox{\Hypertarget{include_2slope__constrained__planner_2utils_8h_aa8430341802109b3203bfe726e3eea91}\label{include_2slope__constrained__planner_2utils_8h_aa8430341802109b3203bfe726e3eea91}} 
+\index{utils.h@{utils.h}!getRollFromQuat@{getRollFromQuat}}
+\index{getRollFromQuat@{getRollFromQuat}!utils.h@{utils.h}}
+\doxysubsubsection{\texorpdfstring{getRollFromQuat()}{getRollFromQuat()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T slope\+\_\+constrained\+\_\+planner\+::get\+Roll\+From\+Quat (\begin{DoxyParamCaption}\item[{T}]{w,  }\item[{T}]{x,  }\item[{T}]{y,  }\item[{T}]{z }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets roll angle from quaternion represntation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em w} & Quaternion w value \\
+\hline
+{\em x} & Quaternion x value \\
+\hline
+{\em y} & Quaternion y value \\
+\hline
+{\em z} & Quaternion z value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Roll angle 
+\end{DoxyReturn}
+\mbox{\Hypertarget{include_2slope__constrained__planner_2utils_8h_a48e1f90cc8391f010fe7efa11f179bb1}\label{include_2slope__constrained__planner_2utils_8h_a48e1f90cc8391f010fe7efa11f179bb1}} 
+\index{utils.h@{utils.h}!getRollFromSO3@{getRollFromSO3}}
+\index{getRollFromSO3@{getRollFromSO3}!utils.h@{utils.h}}
+\doxysubsubsection{\texorpdfstring{getRollFromSO3()}{getRollFromSO3()}}
+{\footnotesize\ttfamily Scalar slope\+\_\+constrained\+\_\+planner\+::get\+Roll\+From\+S\+O3 (\begin{DoxyParamCaption}\item[{const ob\+::\+S\+O3\+State\+Space\+::\+State\+Type \&}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets roll angle from S\+O3 represntation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & State data \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Roll angle 
+\end{DoxyReturn}
+\mbox{\Hypertarget{include_2slope__constrained__planner_2utils_8h_a6852c8698b81bd3f2b692a44266d0634}\label{include_2slope__constrained__planner_2utils_8h_a6852c8698b81bd3f2b692a44266d0634}} 
+\index{utils.h@{utils.h}!getYawFromQuat@{getYawFromQuat}}
+\index{getYawFromQuat@{getYawFromQuat}!utils.h@{utils.h}}
+\doxysubsubsection{\texorpdfstring{getYawFromQuat()}{getYawFromQuat()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T slope\+\_\+constrained\+\_\+planner\+::get\+Yaw\+From\+Quat (\begin{DoxyParamCaption}\item[{T}]{w,  }\item[{T}]{x,  }\item[{T}]{y,  }\item[{T}]{z }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets yaw angle from quaternion represntation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em w} & Quaternion w value \\
+\hline
+{\em x} & Quaternion x value \\
+\hline
+{\em y} & Quaternion y value \\
+\hline
+{\em z} & Quaternion z value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Yaw angle 
+\end{DoxyReturn}
+\mbox{\Hypertarget{include_2slope__constrained__planner_2utils_8h_a4da0e01e16937554779f163c6b8e16ae}\label{include_2slope__constrained__planner_2utils_8h_a4da0e01e16937554779f163c6b8e16ae}} 
+\index{utils.h@{utils.h}!getYawFromSO3@{getYawFromSO3}}
+\index{getYawFromSO3@{getYawFromSO3}!utils.h@{utils.h}}
+\doxysubsubsection{\texorpdfstring{getYawFromSO3()}{getYawFromSO3()}}
+{\footnotesize\ttfamily Scalar slope\+\_\+constrained\+\_\+planner\+::get\+Yaw\+From\+S\+O3 (\begin{DoxyParamCaption}\item[{const ob\+::\+S\+O3\+State\+Space\+::\+State\+Type \&}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets yaw angle from S\+O3 represntation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & State data \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Yaw angle 
+\end{DoxyReturn}
+\mbox{\Hypertarget{include_2slope__constrained__planner_2utils_8h_a33fbcc7fcabcb7a710ab618bb812b7fd}\label{include_2slope__constrained__planner_2utils_8h_a33fbcc7fcabcb7a710ab618bb812b7fd}} 
+\index{utils.h@{utils.h}!lateralDistance@{lateralDistance}}
+\index{lateralDistance@{lateralDistance}!utils.h@{utils.h}}
+\doxysubsubsection{\texorpdfstring{lateralDistance()}{lateralDistance()}}
+{\footnotesize\ttfamily double slope\+\_\+constrained\+\_\+planner\+::lateral\+Distance (\begin{DoxyParamCaption}\item[{const ob\+::\+State $\ast$}]{from,  }\item[{const ob\+::\+State $\ast$}]{to }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the lateral distance between two states. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em from} & Starting state \\
+\hline
+{\em to} & Ending state \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Lateral distance between from and to states 
+\end{DoxyReturn}
+\mbox{\Hypertarget{include_2slope__constrained__planner_2utils_8h_aaa1afa706c6eea0820d109fea72fe72f}\label{include_2slope__constrained__planner_2utils_8h_aaa1afa706c6eea0820d109fea72fe72f}} 
+\index{utils.h@{utils.h}!Pose3FromSE3@{Pose3FromSE3}}
+\index{Pose3FromSE3@{Pose3FromSE3}!utils.h@{utils.h}}
+\doxysubsubsection{\texorpdfstring{Pose3FromSE3()}{Pose3FromSE3()}}
+{\footnotesize\ttfamily Pose3 slope\+\_\+constrained\+\_\+planner\+::\+Pose3\+From\+S\+E3 (\begin{DoxyParamCaption}\item[{const ob\+::\+State $\ast$}]{state }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets position of state from its S\+E3 representation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & State info \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Position of state 
+\end{DoxyReturn}
+\mbox{\Hypertarget{include_2slope__constrained__planner_2utils_8h_a803385a13df77f5c9f0524be3917c4bf}\label{include_2slope__constrained__planner_2utils_8h_a803385a13df77f5c9f0524be3917c4bf}} 
+\index{utils.h@{utils.h}!Pose3FromXYZ@{Pose3FromXYZ}}
+\index{Pose3FromXYZ@{Pose3FromXYZ}!utils.h@{utils.h}}
+\doxysubsubsection{\texorpdfstring{Pose3FromXYZ()}{Pose3FromXYZ()}}
+{\footnotesize\ttfamily Pose3 slope\+\_\+constrained\+\_\+planner\+::\+Pose3\+From\+X\+YZ (\begin{DoxyParamCaption}\item[{Scalar}]{x,  }\item[{Scalar}]{y,  }\item[{Scalar}]{z }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the position of state from its x-\/y-\/z representation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & State\textquotesingle{}s x value \\
+\hline
+{\em y} & State\textquotesingle{}s y value \\
+\hline
+{\em z} & State\textquotesingle{}s z value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Position of the state 
+\end{DoxyReturn}
+\mbox{\Hypertarget{include_2slope__constrained__planner_2utils_8h_a991f425b1a0e14d5c750fc1406972fa2}\label{include_2slope__constrained__planner_2utils_8h_a991f425b1a0e14d5c750fc1406972fa2}} 
+\index{utils.h@{utils.h}!setSO3FromRPY@{setSO3FromRPY}}
+\index{setSO3FromRPY@{setSO3FromRPY}!utils.h@{utils.h}}
+\doxysubsubsection{\texorpdfstring{setSO3FromRPY()}{setSO3FromRPY()}}
+{\footnotesize\ttfamily void slope\+\_\+constrained\+\_\+planner\+::set\+S\+O3\+From\+R\+PY (\begin{DoxyParamCaption}\item[{ob\+::\+S\+O3\+State\+Space\+::\+State\+Type \&}]{s,  }\item[{double $\ast$}]{rpy }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets S\+O3 represntation using R\+PY representation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & State data \\
+\hline
+{\em rpy} & Roll, pitch and yaw angles \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{include_2slope__constrained__planner_2utils_8h_a795e026e29385a30e9028219b748b09e}\label{include_2slope__constrained__planner_2utils_8h_a795e026e29385a30e9028219b748b09e}} 
+\index{utils.h@{utils.h}!setSO3FromYaw@{setSO3FromYaw}}
+\index{setSO3FromYaw@{setSO3FromYaw}!utils.h@{utils.h}}
+\doxysubsubsection{\texorpdfstring{setSO3FromYaw()}{setSO3FromYaw()}}
+{\footnotesize\ttfamily void slope\+\_\+constrained\+\_\+planner\+::set\+S\+O3\+From\+Yaw (\begin{DoxyParamCaption}\item[{ob\+::\+S\+O3\+State\+Space\+::\+State\+Type \&}]{s,  }\item[{double}]{yaw }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets S\+O3 represntation from yaw angle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & State data \\
+\hline
+{\em yaw} & Yaw angle \\
+\hline
+\end{DoxyParams}

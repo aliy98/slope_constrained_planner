@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="source__files_8rst_8txt" kind="file" language="C++">
+    <compoundname>source_files.rst.txt</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="source__files_8rst_8txt_1a70cf3747732b45d8339c0b96037e3b62" prot="public" static="no" mutable="no">
+        <type>Source Files and</type>
+        <definition>Source Files and Scripts</definition>
+        <argsstring></argsstring>
+        <name>Scripts</name>
+        <initializer>==========================
+Here is an overview from the details of this package</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="_sources/source_files.rst.txt" line="1" column="18" bodyfile="_sources/source_files.rst.txt" bodystart="2" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="source__files_8rst_8txt_1a3ba122e2fd81fc462a5fef67359c4b74" prot="public" static="no" mutable="no">
+        <type>Source Files and including the description of the source files and</type>
+        <definition>Source Files and including the description of the source files and scripts</definition>
+        <argsstring></argsstring>
+        <name>scripts</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="_sources/source_files.rst.txt" line="3" column="52" bodyfile="_sources/source_files.rst.txt" bodystart="3" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="source__files_8rst_8txt_1af2834d7d79913cfdf61bcc5da06caefc" prot="public" static="no" mutable="no">
+        <type>Source Files and including the description of the source files and both in Doxygen&lt; doxy_build/html/index.html &gt; _</type>
+        <definition>Source Files and including the description of the source files and both in Doxygen&lt;doxy_build/html/index.html&gt; _ format</definition>
+        <argsstring></argsstring>
+        <name>format</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="_sources/source_files.rst.txt" line="3" column="78" bodyfile="_sources/source_files.rst.txt" bodystart="3" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">Source<sp/>Files<sp/>and<sp/>Scripts</highlight></codeline>
+<codeline lineno="2"><highlight class="normal">==========================</highlight></codeline>
+<codeline lineno="3"><highlight class="normal">Here<sp/>is<sp/>an<sp/>overview<sp/>from<sp/>the<sp/>details<sp/>of<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/>package,<sp/>including<sp/>the<sp/>description<sp/>of<sp/>the<sp/>source<sp/>files<sp/>and<sp/>scripts,<sp/>both<sp/>in<sp/>`Doxygen<sp/>&lt;doxy_build/html/index.html&gt;`_<sp/>format,<sp/>and<sp/>Sphinx:</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal">..<sp/>toctree::</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/>:maxdepth:<sp/>2</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/>slope_constrained_planner</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/>slope_constrained_planner_ros</highlight></codeline>
+    </programlisting>
+    <location file="_sources/source_files.rst.txt"/>
+  </compounddef>
+</doxygen>

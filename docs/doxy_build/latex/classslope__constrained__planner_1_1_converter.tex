@@ -1,0 +1,80 @@
+\hypertarget{classslope__constrained__planner_1_1_converter}{}\doxysection{slope\+\_\+constrained\+\_\+planner\+::Converter Class Reference}
+\label{classslope__constrained__planner_1_1_converter}\index{slope\_constrained\_planner::Converter@{slope\_constrained\_planner::Converter}}
+
+
+Helper class for converting data from O\+M\+PL to R\+OS and vice versa.  
+
+
+
+
+{\ttfamily \#include $<$converter.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classslope__constrained__planner_1_1_converter_a679c2be0e77cf96db1f4434cbddc8587}{Converter}} (std\+::shared\+\_\+ptr$<$ ob\+::\+S\+E3\+State\+Space $>$ space)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+ob\+::\+Scoped\+State \mbox{\hyperlink{classslope__constrained__planner_1_1_converter_a10a71f8ae0507717ec6c28c076f3f20d}{pose\+Ros\+To\+Ompl}} (const geometry\+\_\+msgs\+::\+Pose\+Stamped \&pose\+\_\+ros) const
+\begin{DoxyCompactList}\small\item\em Converts the pos data from type {\ttfamily geometry\+\_\+msgs\+::\+Pose\+Stamped} to S\+E3 state data type. \end{DoxyCompactList}\item 
+nav\+\_\+msgs\+::\+Path \mbox{\hyperlink{classslope__constrained__planner_1_1_converter_afd08819f177c65142183740fc008ce7c}{path\+Ompl\+To\+Ros}} (const og\+::\+Path\+Geometric \&path) const
+\begin{DoxyCompactList}\small\item\em Converts the found path by the planner to {\ttfamily nav\+\_\+msgs\+::\+Path} data type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Helper class for converting data from O\+M\+PL to R\+OS and vice versa. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classslope__constrained__planner_1_1_converter_a679c2be0e77cf96db1f4434cbddc8587}\label{classslope__constrained__planner_1_1_converter_a679c2be0e77cf96db1f4434cbddc8587}} 
+\index{slope\_constrained\_planner::Converter@{slope\_constrained\_planner::Converter}!Converter@{Converter}}
+\index{Converter@{Converter}!slope\_constrained\_planner::Converter@{slope\_constrained\_planner::Converter}}
+\doxysubsubsection{\texorpdfstring{Converter()}{Converter()}}
+{\footnotesize\ttfamily Converter\+::\+Converter (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ ob\+::\+S\+E3\+State\+Space $>$}]{space }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em space} & State space of the problem represented in S\+E3 \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classslope__constrained__planner_1_1_converter_afd08819f177c65142183740fc008ce7c}\label{classslope__constrained__planner_1_1_converter_afd08819f177c65142183740fc008ce7c}} 
+\index{slope\_constrained\_planner::Converter@{slope\_constrained\_planner::Converter}!pathOmplToRos@{pathOmplToRos}}
+\index{pathOmplToRos@{pathOmplToRos}!slope\_constrained\_planner::Converter@{slope\_constrained\_planner::Converter}}
+\doxysubsubsection{\texorpdfstring{pathOmplToRos()}{pathOmplToRos()}}
+{\footnotesize\ttfamily nav\+\_\+msgs\+::\+Path Converter\+::path\+Ompl\+To\+Ros (\begin{DoxyParamCaption}\item[{const og\+::\+Path\+Geometric \&}]{path }\end{DoxyParamCaption}) const}
+
+
+
+Converts the found path by the planner to {\ttfamily nav\+\_\+msgs\+::\+Path} data type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & Found solution by the planner in {\ttfamily og\+::\+Path\+Geometric} format \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classslope__constrained__planner_1_1_converter_a10a71f8ae0507717ec6c28c076f3f20d}\label{classslope__constrained__planner_1_1_converter_a10a71f8ae0507717ec6c28c076f3f20d}} 
+\index{slope\_constrained\_planner::Converter@{slope\_constrained\_planner::Converter}!poseRosToOmpl@{poseRosToOmpl}}
+\index{poseRosToOmpl@{poseRosToOmpl}!slope\_constrained\_planner::Converter@{slope\_constrained\_planner::Converter}}
+\doxysubsubsection{\texorpdfstring{poseRosToOmpl()}{poseRosToOmpl()}}
+{\footnotesize\ttfamily ob\+::\+Scoped\+State Converter\+::pose\+Ros\+To\+Ompl (\begin{DoxyParamCaption}\item[{const geometry\+\_\+msgs\+::\+Pose\+Stamped \&}]{pose\+\_\+ros }\end{DoxyParamCaption}) const}
+
+
+
+Converts the pos data from type {\ttfamily geometry\+\_\+msgs\+::\+Pose\+Stamped} to S\+E3 state data type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pose\+\_\+ros} & Position to be converted \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/ali/ros\+\_\+ws/src/slope\+\_\+constrained\+\_\+planner/slope\+\_\+constrained\+\_\+planner\+\_\+ros/include/slope\+\_\+constrained\+\_\+planner\+\_\+ros/\mbox{\hyperlink{converter_8h}{converter.\+h}}\item 
+/home/ali/ros\+\_\+ws/src/slope\+\_\+constrained\+\_\+planner/slope\+\_\+constrained\+\_\+planner\+\_\+ros/src/\mbox{\hyperlink{converter_8cpp}{converter.\+cpp}}\end{DoxyCompactItemize}

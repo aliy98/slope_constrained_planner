@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="dir_b447deccbc6d46736aaf81e451f21acd" kind="dir">
+    <compoundname>/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/include</compoundname>
+    <innerdir refid="dir_dde837544b4e37a4fd34006cde65fa6f">/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/include/slope_constrained_planner_ros</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/include/"/>
+  </compounddef>
+</doxygen>

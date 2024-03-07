@@ -1,0 +1,591 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structslope__constrained__planner_1_1_params" kind="struct" language="C++" prot="public">
+    <compoundname>slope_constrained_planner::Params</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structslope__constrained__planner_1_1_params_1a70f73c2f66e9f1e9660c229086ef898e" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string slope_constrained_planner::Params::name</definition>
+        <argsstring></argsstring>
+        <name>name</name>
+        <initializer>{&quot;prm_star&quot;}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/params.h" line="20" column="20" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/params.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structslope__constrained__planner_1_1_params_1a8e9f6ef8a8961c6f15b0eaf591486b2b" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string slope_constrained_planner::Params::elevation_layer</definition>
+        <argsstring></argsstring>
+        <name>elevation_layer</name>
+        <initializer>{&quot;elevation&quot;}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/params.h" line="21" column="20" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/params.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structslope__constrained__planner_1_1_params_1a2960bec67a6d483210f39ae40d3620be" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double slope_constrained_planner::Params::plan_time</definition>
+        <argsstring></argsstring>
+        <name>plan_time</name>
+        <initializer>{1.0}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/params.h" line="22" column="20" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/params.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structslope__constrained__planner_1_1_params_1ad85e62c1eabdea9fc377de1ef9646c73" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int slope_constrained_planner::Params::n_threads</definition>
+        <argsstring></argsstring>
+        <name>n_threads</name>
+        <initializer>{1}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/params.h" line="23" column="20" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/params.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structslope__constrained__planner_1_1_params_1acceb376ad640d94a7211a8c9bce197a7" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double slope_constrained_planner::Params::replan_freq</definition>
+        <argsstring></argsstring>
+        <name>replan_freq</name>
+        <initializer>{0.5}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/params.h" line="24" column="20" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/params.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structslope__constrained__planner_1_1_params_1a3b01fd30f86c2dee7f4e4c142f18900d" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool slope_constrained_planner::Params::simplify_solution</definition>
+        <argsstring></argsstring>
+        <name>simplify_solution</name>
+        <initializer>{false}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/params.h" line="25" column="20" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/params.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structslope__constrained__planner_1_1_params_1ab8af7bc5ecd2d932d6b0c14f602fd911" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool slope_constrained_planner::Params::snap_goal_to_map</definition>
+        <argsstring></argsstring>
+        <name>snap_goal_to_map</name>
+        <initializer>{true}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/params.h" line="26" column="20" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/params.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structslope__constrained__planner_1_1_params_1ad1b6c49bc3de33d4e46af9bf722216af" prot="public" static="no" mutable="no">
+        <type>struct slope_constrained_planner::Params::@0</type>
+        <definition>struct slope_constrained_planner::Params::@0 slope_constrained_planner::Params::planner</definition>
+        <argsstring></argsstring>
+        <name>planner</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/params.h" line="28" column="11"/>
+      </memberdef>
+      <memberdef kind="variable" id="structslope__constrained__planner_1_1_params_1af8ebff1a07d6e2de22e9105bb1965090" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double slope_constrained_planner::Params::max_pitch_pert</definition>
+        <argsstring></argsstring>
+        <name>max_pitch_pert</name>
+        <initializer>{10.0 / 180*M_PI}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/params.h" line="31" column="20" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/params.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structslope__constrained__planner_1_1_params_1ae94497953d5c346a3e7cdef37830f62b" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double slope_constrained_planner::Params::max_roll_pert</definition>
+        <argsstring></argsstring>
+        <name>max_roll_pert</name>
+        <initializer>{3.33 / 180*M_PI}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/params.h" line="32" column="20" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/params.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structslope__constrained__planner_1_1_params_1aa83aedc9ef75e4bc467a8df95e6c93c6" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool slope_constrained_planner::Params::sample_from_distribution</definition>
+        <argsstring></argsstring>
+        <name>sample_from_distribution</name>
+        <initializer>{true}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/params.h" line="33" column="20" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/params.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structslope__constrained__planner_1_1_params_1a0ea6e1d8d55c04f7f6a6ecdfc31fb40c" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool slope_constrained_planner::Params::use_inverse_vertex_density</definition>
+        <argsstring></argsstring>
+        <name>use_inverse_vertex_density</name>
+        <initializer>{false}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/params.h" line="34" column="20" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/params.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structslope__constrained__planner_1_1_params_1a7dbd53ce10d1aa88bc1026849452c1df" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool slope_constrained_planner::Params::use_max_prob_unknown_samples</definition>
+        <argsstring></argsstring>
+        <name>use_max_prob_unknown_samples</name>
+        <initializer>{false}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/params.h" line="35" column="20" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/params.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structslope__constrained__planner_1_1_params_1a8b6527669c10260b1fe7326610c7ce22" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double slope_constrained_planner::Params::max_prob_unknown_samples</definition>
+        <argsstring></argsstring>
+        <name>max_prob_unknown_samples</name>
+        <initializer>{0.1}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/params.h" line="36" column="20" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/params.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structslope__constrained__planner_1_1_params_1a526ad71a18421c6d5111210ea9bb420c" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool slope_constrained_planner::Params::reach_min_phi</definition>
+        <argsstring></argsstring>
+        <name>reach_min_phi</name>
+        <initializer>{false}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/params.h" line="37" column="20" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/params.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structslope__constrained__planner_1_1_params_1a57e7c049baf846da623d3043d0ba2efb" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool slope_constrained_planner::Params::consider_theta</definition>
+        <argsstring></argsstring>
+        <name>consider_theta</name>
+        <initializer>{false}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/params.h" line="38" column="20" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/params.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structslope__constrained__planner_1_1_params_1add9cf2ce071e218af9913f32faa10b9a" prot="public" static="no" mutable="no">
+        <type>struct slope_constrained_planner::Params::@1</type>
+        <definition>struct slope_constrained_planner::Params::@1 slope_constrained_planner::Params::sampler</definition>
+        <argsstring></argsstring>
+        <name>sampler</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/params.h" line="39" column="11"/>
+      </memberdef>
+      <memberdef kind="variable" id="structslope__constrained__planner_1_1_params_1a9efd71fb0c53bb0ba9cb9fd7cc7e91a7" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double slope_constrained_planner::Params::max_motion_slope</definition>
+        <argsstring></argsstring>
+        <name>max_motion_slope</name>
+        <initializer>{15.0}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/params.h" line="42" column="20" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/params.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structslope__constrained__planner_1_1_params_1a18a981fd03d13736e93bae4937b0d1b4" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double slope_constrained_planner::Params::max_motion_length</definition>
+        <argsstring></argsstring>
+        <name>max_motion_length</name>
+        <initializer>{2.0}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/params.h" line="43" column="20" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/params.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structslope__constrained__planner_1_1_params_1a34689238f9c5b69f66d3c716be36675a" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double slope_constrained_planner::Params::min_motion_length</definition>
+        <argsstring></argsstring>
+        <name>min_motion_length</name>
+        <initializer>{1.0}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/params.h" line="44" column="20" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/params.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structslope__constrained__planner_1_1_params_1ae1b75053d7f76c37914dbcd968fcf71c" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double slope_constrained_planner::Params::max_motion_yaw_diff</definition>
+        <argsstring></argsstring>
+        <name>max_motion_yaw_diff</name>
+        <initializer>{30.0}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/params.h" line="45" column="20" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/params.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structslope__constrained__planner_1_1_params_1a82aae156079b9f4ea700a06bd5619b91" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double slope_constrained_planner::Params::max_motion_slope_yaw_diff_free</definition>
+        <argsstring></argsstring>
+        <name>max_motion_slope_yaw_diff_free</name>
+        <initializer>{5.0}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/params.h" line="46" column="20" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/params.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structslope__constrained__planner_1_1_params_1af9f44f1a364796ee2ec225a31680511b" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double slope_constrained_planner::Params::max_state_phi</definition>
+        <argsstring></argsstring>
+        <name>max_state_phi</name>
+        <initializer>{10.0}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/params.h" line="47" column="20" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/params.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structslope__constrained__planner_1_1_params_1acb146f56395b8c5f2a4c2e7a34cf5b3a" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double slope_constrained_planner::Params::max_state_theta</definition>
+        <argsstring></argsstring>
+        <name>max_state_theta</name>
+        <initializer>{10.0}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/params.h" line="48" column="20" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/params.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structslope__constrained__planner_1_1_params_1a662fd4d32d973759cb5d121d31224de2" prot="public" static="no" mutable="no">
+        <type>struct slope_constrained_planner::Params::@2</type>
+        <definition>struct slope_constrained_planner::Params::@2 slope_constrained_planner::Params::validator</definition>
+        <argsstring></argsstring>
+        <name>validator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/params.h" line="49" column="13"/>
+      </memberdef>
+      <memberdef kind="variable" id="structslope__constrained__planner_1_1_params_1a2a58966f054396249f55ccacce28eea4" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string slope_constrained_planner::Params::base_frame</definition>
+        <argsstring></argsstring>
+        <name>base_frame</name>
+        <initializer>{&quot;base_link&quot;}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/params.h" line="52" column="20" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/params.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structslope__constrained__planner_1_1_params_1a0e5b6f05ac8e0eb21272e1f3bfd65cf4" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double slope_constrained_planner::Params::length</definition>
+        <argsstring></argsstring>
+        <name>length</name>
+        <initializer>{1.05}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/params.h" line="55" column="22" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/params.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structslope__constrained__planner_1_1_params_1a4408f72e9ecc528fe72e05535e2962d1" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double slope_constrained_planner::Params::width</definition>
+        <argsstring></argsstring>
+        <name>width</name>
+        <initializer>{0.55}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/params.h" line="56" column="22" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/params.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structslope__constrained__planner_1_1_params_1a99cdf1bf64e99c5faf68ceca2767efd6" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double slope_constrained_planner::Params::height</definition>
+        <argsstring></argsstring>
+        <name>height</name>
+        <initializer>{0.2}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/params.h" line="57" column="22" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/params.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structslope__constrained__planner_1_1_params_1a2502b7406679e7b095f89eaf197c98b6" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double slope_constrained_planner::Params::x</definition>
+        <argsstring></argsstring>
+        <name>x</name>
+        <initializer>{0.0}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/params.h" line="60" column="24" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/params.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structslope__constrained__planner_1_1_params_1aec47b31776184e403a5f51679000197e" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double slope_constrained_planner::Params::y</definition>
+        <argsstring></argsstring>
+        <name>y</name>
+        <initializer>{0.0}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/params.h" line="61" column="24" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/params.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structslope__constrained__planner_1_1_params_1aa481f3ea36e1217aba44b89f95524189" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double slope_constrained_planner::Params::z</definition>
+        <argsstring></argsstring>
+        <name>z</name>
+        <initializer>{0.0}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/params.h" line="62" column="24" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/params.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structslope__constrained__planner_1_1_params_1ab05f17daf97bb164af483f0efdfdf5b3" prot="public" static="no" mutable="no">
+        <type>struct slope_constrained_planner::Params::@3::@4::@6</type>
+        <definition>struct slope_constrained_planner::Params::@3::@4::@6 slope_constrained_planner::Params::offset</definition>
+        <argsstring></argsstring>
+        <name>offset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/params.h" line="63" column="14"/>
+      </memberdef>
+      <memberdef kind="variable" id="structslope__constrained__planner_1_1_params_1a3e3eff30a0a93f805a16e097b0200a85" prot="public" static="no" mutable="no">
+        <type>struct slope_constrained_planner::Params::@3::@4</type>
+        <definition>struct slope_constrained_planner::Params::@3::@4 slope_constrained_planner::Params::torso</definition>
+        <argsstring></argsstring>
+        <name>torso</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/params.h" line="65" column="11"/>
+      </memberdef>
+      <memberdef kind="variable" id="structslope__constrained__planner_1_1_params_1a80763da73ba6543622419ad006cf4cf4" prot="public" static="no" mutable="no">
+        <type>struct slope_constrained_planner::Params::@3::@5::@7</type>
+        <definition>struct slope_constrained_planner::Params::@3::@5::@7 slope_constrained_planner::Params::offset</definition>
+        <argsstring></argsstring>
+        <name>offset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/params.h" line="73" column="14"/>
+      </memberdef>
+      <memberdef kind="variable" id="structslope__constrained__planner_1_1_params_1aa9a71cada5d716fca08117e30eade8e1" prot="public" static="no" mutable="no">
+        <type>struct slope_constrained_planner::Params::@3::@5::@8</type>
+        <definition>struct slope_constrained_planner::Params::@3::@5::@8 slope_constrained_planner::Params::reach</definition>
+        <argsstring></argsstring>
+        <name>reach</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/params.h" line="79" column="13"/>
+      </memberdef>
+      <memberdef kind="variable" id="structslope__constrained__planner_1_1_params_1a174189a08b0cf5b4bd02ac4cc8bce278" prot="public" static="no" mutable="no">
+        <type>struct slope_constrained_planner::Params::@3::@5</type>
+        <definition>struct slope_constrained_planner::Params::@3::@5 slope_constrained_planner::Params::feet</definition>
+        <argsstring></argsstring>
+        <name>feet</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/params.h" line="81" column="10"/>
+      </memberdef>
+      <memberdef kind="variable" id="structslope__constrained__planner_1_1_params_1a9bebd9d7ba61cc7b8ae8803b0fb3900f" prot="public" static="no" mutable="no">
+        <type>struct slope_constrained_planner::Params::@3</type>
+        <definition>struct slope_constrained_planner::Params::@3 slope_constrained_planner::Params::robot</definition>
+        <argsstring></argsstring>
+        <name>robot</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/params.h" line="83" column="9"/>
+      </memberdef>
+      <memberdef kind="variable" id="structslope__constrained__planner_1_1_params_1af5a1b5770d39056edd2175fb74dbc8af" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool slope_constrained_planner::Params::verbose</definition>
+        <argsstring></argsstring>
+        <name>verbose</name>
+        <initializer>{true}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/params.h" line="85" column="8" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/params.h" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/params.h" line="17" column="13" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/params.h" bodystart="17" bodyend="87"/>
+    <listofallmembers>
+      <member refid="structslope__constrained__planner_1_1_params_1a2a58966f054396249f55ccacce28eea4" prot="public" virt="non-virtual"><scope>slope_constrained_planner::Params</scope><name>base_frame</name></member>
+      <member refid="structslope__constrained__planner_1_1_params_1a57e7c049baf846da623d3043d0ba2efb" prot="public" virt="non-virtual"><scope>slope_constrained_planner::Params</scope><name>consider_theta</name></member>
+      <member refid="structslope__constrained__planner_1_1_params_1a8e9f6ef8a8961c6f15b0eaf591486b2b" prot="public" virt="non-virtual"><scope>slope_constrained_planner::Params</scope><name>elevation_layer</name></member>
+      <member refid="structslope__constrained__planner_1_1_params_1a174189a08b0cf5b4bd02ac4cc8bce278" prot="public" virt="non-virtual"><scope>slope_constrained_planner::Params</scope><name>feet</name></member>
+      <member refid="structslope__constrained__planner_1_1_params_1a99cdf1bf64e99c5faf68ceca2767efd6" prot="public" virt="non-virtual"><scope>slope_constrained_planner::Params</scope><name>height</name></member>
+      <member refid="structslope__constrained__planner_1_1_params_1a0e5b6f05ac8e0eb21272e1f3bfd65cf4" prot="public" virt="non-virtual"><scope>slope_constrained_planner::Params</scope><name>length</name></member>
+      <member refid="structslope__constrained__planner_1_1_params_1a18a981fd03d13736e93bae4937b0d1b4" prot="public" virt="non-virtual"><scope>slope_constrained_planner::Params</scope><name>max_motion_length</name></member>
+      <member refid="structslope__constrained__planner_1_1_params_1a9efd71fb0c53bb0ba9cb9fd7cc7e91a7" prot="public" virt="non-virtual"><scope>slope_constrained_planner::Params</scope><name>max_motion_slope</name></member>
+      <member refid="structslope__constrained__planner_1_1_params_1a82aae156079b9f4ea700a06bd5619b91" prot="public" virt="non-virtual"><scope>slope_constrained_planner::Params</scope><name>max_motion_slope_yaw_diff_free</name></member>
+      <member refid="structslope__constrained__planner_1_1_params_1ae1b75053d7f76c37914dbcd968fcf71c" prot="public" virt="non-virtual"><scope>slope_constrained_planner::Params</scope><name>max_motion_yaw_diff</name></member>
+      <member refid="structslope__constrained__planner_1_1_params_1af8ebff1a07d6e2de22e9105bb1965090" prot="public" virt="non-virtual"><scope>slope_constrained_planner::Params</scope><name>max_pitch_pert</name></member>
+      <member refid="structslope__constrained__planner_1_1_params_1a8b6527669c10260b1fe7326610c7ce22" prot="public" virt="non-virtual"><scope>slope_constrained_planner::Params</scope><name>max_prob_unknown_samples</name></member>
+      <member refid="structslope__constrained__planner_1_1_params_1ae94497953d5c346a3e7cdef37830f62b" prot="public" virt="non-virtual"><scope>slope_constrained_planner::Params</scope><name>max_roll_pert</name></member>
+      <member refid="structslope__constrained__planner_1_1_params_1af9f44f1a364796ee2ec225a31680511b" prot="public" virt="non-virtual"><scope>slope_constrained_planner::Params</scope><name>max_state_phi</name></member>
+      <member refid="structslope__constrained__planner_1_1_params_1acb146f56395b8c5f2a4c2e7a34cf5b3a" prot="public" virt="non-virtual"><scope>slope_constrained_planner::Params</scope><name>max_state_theta</name></member>
+      <member refid="structslope__constrained__planner_1_1_params_1a34689238f9c5b69f66d3c716be36675a" prot="public" virt="non-virtual"><scope>slope_constrained_planner::Params</scope><name>min_motion_length</name></member>
+      <member refid="structslope__constrained__planner_1_1_params_1ad85e62c1eabdea9fc377de1ef9646c73" prot="public" virt="non-virtual"><scope>slope_constrained_planner::Params</scope><name>n_threads</name></member>
+      <member refid="structslope__constrained__planner_1_1_params_1a70f73c2f66e9f1e9660c229086ef898e" prot="public" virt="non-virtual"><scope>slope_constrained_planner::Params</scope><name>name</name></member>
+      <member refid="structslope__constrained__planner_1_1_params_1ab05f17daf97bb164af483f0efdfdf5b3" prot="public" virt="non-virtual"><scope>slope_constrained_planner::Params</scope><name>offset</name></member>
+      <member refid="structslope__constrained__planner_1_1_params_1a80763da73ba6543622419ad006cf4cf4" prot="public" virt="non-virtual"><scope>slope_constrained_planner::Params</scope><name>offset</name></member>
+      <member refid="structslope__constrained__planner_1_1_params_1a2960bec67a6d483210f39ae40d3620be" prot="public" virt="non-virtual"><scope>slope_constrained_planner::Params</scope><name>plan_time</name></member>
+      <member refid="structslope__constrained__planner_1_1_params_1ad1b6c49bc3de33d4e46af9bf722216af" prot="public" virt="non-virtual"><scope>slope_constrained_planner::Params</scope><name>planner</name></member>
+      <member refid="structslope__constrained__planner_1_1_params_1aa9a71cada5d716fca08117e30eade8e1" prot="public" virt="non-virtual"><scope>slope_constrained_planner::Params</scope><name>reach</name></member>
+      <member refid="structslope__constrained__planner_1_1_params_1a526ad71a18421c6d5111210ea9bb420c" prot="public" virt="non-virtual"><scope>slope_constrained_planner::Params</scope><name>reach_min_phi</name></member>
+      <member refid="structslope__constrained__planner_1_1_params_1acceb376ad640d94a7211a8c9bce197a7" prot="public" virt="non-virtual"><scope>slope_constrained_planner::Params</scope><name>replan_freq</name></member>
+      <member refid="structslope__constrained__planner_1_1_params_1a9bebd9d7ba61cc7b8ae8803b0fb3900f" prot="public" virt="non-virtual"><scope>slope_constrained_planner::Params</scope><name>robot</name></member>
+      <member refid="structslope__constrained__planner_1_1_params_1aa83aedc9ef75e4bc467a8df95e6c93c6" prot="public" virt="non-virtual"><scope>slope_constrained_planner::Params</scope><name>sample_from_distribution</name></member>
+      <member refid="structslope__constrained__planner_1_1_params_1add9cf2ce071e218af9913f32faa10b9a" prot="public" virt="non-virtual"><scope>slope_constrained_planner::Params</scope><name>sampler</name></member>
+      <member refid="structslope__constrained__planner_1_1_params_1a3b01fd30f86c2dee7f4e4c142f18900d" prot="public" virt="non-virtual"><scope>slope_constrained_planner::Params</scope><name>simplify_solution</name></member>
+      <member refid="structslope__constrained__planner_1_1_params_1ab8af7bc5ecd2d932d6b0c14f602fd911" prot="public" virt="non-virtual"><scope>slope_constrained_planner::Params</scope><name>snap_goal_to_map</name></member>
+      <member refid="structslope__constrained__planner_1_1_params_1a3e3eff30a0a93f805a16e097b0200a85" prot="public" virt="non-virtual"><scope>slope_constrained_planner::Params</scope><name>torso</name></member>
+      <member refid="structslope__constrained__planner_1_1_params_1a0ea6e1d8d55c04f7f6a6ecdfc31fb40c" prot="public" virt="non-virtual"><scope>slope_constrained_planner::Params</scope><name>use_inverse_vertex_density</name></member>
+      <member refid="structslope__constrained__planner_1_1_params_1a7dbd53ce10d1aa88bc1026849452c1df" prot="public" virt="non-virtual"><scope>slope_constrained_planner::Params</scope><name>use_max_prob_unknown_samples</name></member>
+      <member refid="structslope__constrained__planner_1_1_params_1a662fd4d32d973759cb5d121d31224de2" prot="public" virt="non-virtual"><scope>slope_constrained_planner::Params</scope><name>validator</name></member>
+      <member refid="structslope__constrained__planner_1_1_params_1af5a1b5770d39056edd2175fb74dbc8af" prot="public" virt="non-virtual"><scope>slope_constrained_planner::Params</scope><name>verbose</name></member>
+      <member refid="structslope__constrained__planner_1_1_params_1a4408f72e9ecc528fe72e05535e2962d1" prot="public" virt="non-virtual"><scope>slope_constrained_planner::Params</scope><name>width</name></member>
+      <member refid="structslope__constrained__planner_1_1_params_1a2502b7406679e7b095f89eaf197c98b6" prot="public" virt="non-virtual"><scope>slope_constrained_planner::Params</scope><name>x</name></member>
+      <member refid="structslope__constrained__planner_1_1_params_1aec47b31776184e403a5f51679000197e" prot="public" virt="non-virtual"><scope>slope_constrained_planner::Params</scope><name>y</name></member>
+      <member refid="structslope__constrained__planner_1_1_params_1aa481f3ea36e1217aba44b89f95524189" prot="public" virt="non-virtual"><scope>slope_constrained_planner::Params</scope><name>z</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

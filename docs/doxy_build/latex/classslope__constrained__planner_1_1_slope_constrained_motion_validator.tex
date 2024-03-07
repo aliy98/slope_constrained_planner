@@ -1,0 +1,105 @@
+\hypertarget{classslope__constrained__planner_1_1_slope_constrained_motion_validator}{}\doxysection{slope\+\_\+constrained\+\_\+planner\+::Slope\+Constrained\+Motion\+Validator Class Reference}
+\label{classslope__constrained__planner_1_1_slope_constrained_motion_validator}\index{slope\_constrained\_planner::SlopeConstrainedMotionValidator@{slope\_constrained\_planner::SlopeConstrainedMotionValidator}}
+
+
+Custom motion validator class which checks the slope of motion between two states.  
+
+
+
+
+{\ttfamily \#include $<$motion\+\_\+validator.\+h$>$}
+
+
+
+Inheritance diagram for slope\+\_\+constrained\+\_\+planner\+::Slope\+Constrained\+Motion\+Validator\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=266pt]{classslope__constrained__planner_1_1_slope_constrained_motion_validator__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classslope__constrained__planner_1_1_slope_constrained_motion_validator_a15dfb0484bca9851d72537699b721af6}{Slope\+Constrained\+Motion\+Validator}} (const ob\+::\+Space\+Information\+Ptr \&si, const Params\+Const\+Ptr \&params)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classslope__constrained__planner_1_1_slope_constrained_motion_validator_ac0c338d8e69bcb6f25c65115f09c4281}{check\+Motion}} (const ob\+::\+State $\ast$s1, const ob\+::\+State $\ast$s2) const override
+\begin{DoxyCompactList}\small\item\em Checks the slope of the motion using the first and second states position, if the slope is below the threshold, it returns true otherwise it would return false. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classslope__constrained__planner_1_1_slope_constrained_motion_validator_a1bc62801fb5825999cffffa9ebf416d6}{check\+Motion}} (const ob\+::\+State $\ast$s1, const ob\+::\+State $\ast$s2, std\+::pair$<$ ob\+::\+State $\ast$, double $>$ \&last\+Valid) const override
+\begin{DoxyCompactList}\small\item\em Checks the slope of the motion using the first and second states position, if the slope is below the threshold, it returns true otherwise it would return false. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classslope__constrained__planner_1_1_slope_constrained_motion_validator_a4d553ca82c40e8b6b7cc2e1e5400fbdc}\label{classslope__constrained__planner_1_1_slope_constrained_motion_validator_a4d553ca82c40e8b6b7cc2e1e5400fbdc}} 
+Params\+Const\+Ptr \mbox{\hyperlink{classslope__constrained__planner_1_1_slope_constrained_motion_validator_a4d553ca82c40e8b6b7cc2e1e5400fbdc}{params\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Parameters containing the data for map layers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Custom motion validator class which checks the slope of motion between two states. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classslope__constrained__planner_1_1_slope_constrained_motion_validator_a15dfb0484bca9851d72537699b721af6}\label{classslope__constrained__planner_1_1_slope_constrained_motion_validator_a15dfb0484bca9851d72537699b721af6}} 
+\index{slope\_constrained\_planner::SlopeConstrainedMotionValidator@{slope\_constrained\_planner::SlopeConstrainedMotionValidator}!SlopeConstrainedMotionValidator@{SlopeConstrainedMotionValidator}}
+\index{SlopeConstrainedMotionValidator@{SlopeConstrainedMotionValidator}!slope\_constrained\_planner::SlopeConstrainedMotionValidator@{slope\_constrained\_planner::SlopeConstrainedMotionValidator}}
+\doxysubsubsection{\texorpdfstring{SlopeConstrainedMotionValidator()}{SlopeConstrainedMotionValidator()}}
+{\footnotesize\ttfamily Slope\+Constrained\+Motion\+Validator\+::\+Slope\+Constrained\+Motion\+Validator (\begin{DoxyParamCaption}\item[{const ob\+::\+Space\+Information\+Ptr \&}]{si,  }\item[{const Params\+Const\+Ptr \&}]{params }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em si} & space information of the state space \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classslope__constrained__planner_1_1_slope_constrained_motion_validator_ac0c338d8e69bcb6f25c65115f09c4281}\label{classslope__constrained__planner_1_1_slope_constrained_motion_validator_ac0c338d8e69bcb6f25c65115f09c4281}} 
+\index{slope\_constrained\_planner::SlopeConstrainedMotionValidator@{slope\_constrained\_planner::SlopeConstrainedMotionValidator}!checkMotion@{checkMotion}}
+\index{checkMotion@{checkMotion}!slope\_constrained\_planner::SlopeConstrainedMotionValidator@{slope\_constrained\_planner::SlopeConstrainedMotionValidator}}
+\doxysubsubsection{\texorpdfstring{checkMotion()}{checkMotion()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool Slope\+Constrained\+Motion\+Validator\+::check\+Motion (\begin{DoxyParamCaption}\item[{const ob\+::\+State $\ast$}]{s1,  }\item[{const ob\+::\+State $\ast$}]{s2 }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+Checks the slope of the motion using the first and second states position, if the slope is below the threshold, it returns true otherwise it would return false. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s1} & First state in the motion \\
+\hline
+{\em s2} & Second state in the motion \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+validity of motion 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classslope__constrained__planner_1_1_slope_constrained_motion_validator_a1bc62801fb5825999cffffa9ebf416d6}\label{classslope__constrained__planner_1_1_slope_constrained_motion_validator_a1bc62801fb5825999cffffa9ebf416d6}} 
+\index{slope\_constrained\_planner::SlopeConstrainedMotionValidator@{slope\_constrained\_planner::SlopeConstrainedMotionValidator}!checkMotion@{checkMotion}}
+\index{checkMotion@{checkMotion}!slope\_constrained\_planner::SlopeConstrainedMotionValidator@{slope\_constrained\_planner::SlopeConstrainedMotionValidator}}
+\doxysubsubsection{\texorpdfstring{checkMotion()}{checkMotion()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool Slope\+Constrained\+Motion\+Validator\+::check\+Motion (\begin{DoxyParamCaption}\item[{const ob\+::\+State $\ast$}]{s1,  }\item[{const ob\+::\+State $\ast$}]{s2,  }\item[{std\+::pair$<$ ob\+::\+State $\ast$, double $>$ \&}]{last\+Valid }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+Checks the slope of the motion using the first and second states position, if the slope is below the threshold, it returns true otherwise it would return false. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s1} & First state in the motion \\
+\hline
+{\em s2} & Second state in the motion \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+validity of motion 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/ali/ros\+\_\+ws/src/slope\+\_\+constrained\+\_\+planner/slope\+\_\+constrained\+\_\+planner/include/slope\+\_\+constrained\+\_\+planner/\mbox{\hyperlink{motion__validator_8h}{motion\+\_\+validator.\+h}}\item 
+/home/ali/ros\+\_\+ws/src/slope\+\_\+constrained\+\_\+planner/slope\+\_\+constrained\+\_\+planner/src/\mbox{\hyperlink{motion__validator_8cpp}{motion\+\_\+validator.\+cpp}}\end{DoxyCompactItemize}

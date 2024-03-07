@@ -1,0 +1,415 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classpath__follower_1_1_path_follower" kind="class" language="Python" prot="public">
+    <compoundname>path_follower::PathFollower</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classpath__follower_1_1_path_follower_1abf49371beb6ce3192cdbe4b2bbbe0f9a" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>path_follower.PathFollower::listener</definition>
+        <argsstring></argsstring>
+        <name>listener</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/path_follower.py" line="133" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/path_follower.py" bodystart="133" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classpath__follower_1_1_path_follower_1a34bc6933ac776fea7a0e08e3a75dc52d" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>path_follower.PathFollower::pub_twist</definition>
+        <argsstring></argsstring>
+        <name>pub_twist</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/path_follower.py" line="134" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/path_follower.py" bodystart="134" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classpath__follower_1_1_path_follower_1ad89cce9956d576ed6fd172f5db300d93" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>path_follower.PathFollower::pub_path</definition>
+        <argsstring></argsstring>
+        <name>pub_path</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/path_follower.py" line="135" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/path_follower.py" bodystart="135" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classpath__follower_1_1_path_follower_1aab4535a076fe45d410aa2364c9a311c1" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>path_follower.PathFollower::sub</definition>
+        <argsstring></argsstring>
+        <name>sub</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/path_follower.py" line="136" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/path_follower.py" bodystart="136" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classpath__follower_1_1_path_follower_1af6cf3ff86bcc321c255c71d3c9bef6ef" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>path_follower.PathFollower::dummy_srv</definition>
+        <argsstring></argsstring>
+        <name>dummy_srv</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/path_follower.py" line="137" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/path_follower.py" bodystart="137" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classpath__follower_1_1_path_follower_1ae7d5850d92a5a60b4cd68a30749b51cb" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>path_follower.PathFollower::current_pose</definition>
+        <argsstring></argsstring>
+        <name>current_pose</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/path_follower.py" line="138" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/path_follower.py" bodystart="138" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classpath__follower_1_1_path_follower_1ab6be347d42e27c01920c1d75891878af" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>path_follower.PathFollower::goal_pose</definition>
+        <argsstring></argsstring>
+        <name>goal_pose</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/path_follower.py" line="139" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/path_follower.py" bodystart="139" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classpath__follower_1_1_path_follower_1ab01a3ec29a1298f6b7de801f19536d00" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>path_follower.PathFollower::fixed_frame</definition>
+        <argsstring></argsstring>
+        <name>fixed_frame</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/path_follower.py" line="140" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/path_follower.py" bodystart="140" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classpath__follower_1_1_path_follower_1a26dfa36f2474861cf30160a1b405f751" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>path_follower.PathFollower::path</definition>
+        <argsstring></argsstring>
+        <name>path</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/path_follower.py" line="141" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/path_follower.py" bodystart="141" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classpath__follower_1_1_path_follower_1af397b8fe049d6f1f4ff06e24672e1ce2" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>path_follower.PathFollower::path_ros</definition>
+        <argsstring></argsstring>
+        <name>path_ros</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/path_follower.py" line="142" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/path_follower.py" bodystart="142" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classpath__follower_1_1_path_follower_1a6dc63b4fce746d27a075e6c271531964" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>path_follower.PathFollower::largest_valid_index</definition>
+        <argsstring></argsstring>
+        <name>largest_valid_index</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/path_follower.py" line="143" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/path_follower.py" bodystart="143" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classpath__follower_1_1_path_follower_1a9b9e67dfc878a5d7123fd371ce57bcf9" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>path_follower.PathFollower::gain_pid_pos</definition>
+        <argsstring></argsstring>
+        <name>gain_pid_pos</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/path_follower.py" line="144" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/path_follower.py" bodystart="144" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classpath__follower_1_1_path_follower_1a840866a7d772b01edc0d6b9db027d80d" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>path_follower.PathFollower::gain_pid_ang</definition>
+        <argsstring></argsstring>
+        <name>gain_pid_ang</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/path_follower.py" line="145" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/path_follower.py" bodystart="145" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classpath__follower_1_1_path_follower_1a00f131ec94380c1613caa2c7182cd15e" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>path_follower.PathFollower::i</definition>
+        <argsstring></argsstring>
+        <name>i</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/path_follower.py" line="146" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/path_follower.py" bodystart="146" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classpath__follower_1_1_path_follower_1ab5145c59780036b629260a0ce387e167" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def path_follower.PathFollower.__init__</definition>
+        <argsstring>(self)</argsstring>
+        <name>__init__</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/path_follower.py" line="132" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/path_follower.py" bodystart="132" bodyend="150"/>
+      </memberdef>
+      <memberdef kind="function" id="classpath__follower_1_1_path_follower_1a6fdde725852e46ee44401e5d515664c8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def path_follower.PathFollower.pathCallback</definition>
+        <argsstring>(self, path_msg)</argsstring>
+        <name>pathCallback</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>path_msg</type>
+          <defname>path_msg</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>    Callback function which triggers once the found path is available 
+
+    Args:
+path_msg
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/path_follower.py" line="151" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/path_follower.py" bodystart="151" bodyend="180"/>
+      </memberdef>
+      <memberdef kind="function" id="classpath__follower_1_1_path_follower_1a5e51e354875257d51db38e0d91f86826" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def path_follower.PathFollower.dummyCallback</definition>
+        <argsstring>(self, request)</argsstring>
+        <name>dummyCallback</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>request</type>
+          <defname>request</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>    A dummy rosservice, used for notifying the presence of this node to the planner.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/path_follower.py" line="181" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/path_follower.py" bodystart="181" bodyend="187"/>
+      </memberdef>
+      <memberdef kind="function" id="classpath__follower_1_1_path_follower_1a65b0f8aaf485585defd989fbd86b3d34" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def path_follower.PathFollower.updateCurrentPose</definition>
+        <argsstring>(self)</argsstring>
+        <name>updateCurrentPose</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>    Updates robot current position using tf tree data
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/path_follower.py" line="188" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/path_follower.py" bodystart="188" bodyend="204"/>
+      </memberdef>
+      <memberdef kind="function" id="classpath__follower_1_1_path_follower_1ac7229a00acc42d5b5773e8c126caf0e5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def path_follower.PathFollower.publishPath</definition>
+        <argsstring>(self)</argsstring>
+        <name>publishPath</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>    Publishes the followed path so far, with its frame id
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/path_follower.py" line="205" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/path_follower.py" bodystart="205" bodyend="219"/>
+      </memberdef>
+      <memberdef kind="function" id="classpath__follower_1_1_path_follower_1a4c3bbb55d9cc378be7cd46a1b53eb70f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def path_follower.PathFollower.removePathNodesBeforeIndex</definition>
+        <argsstring>(self, index)</argsstring>
+        <name>removePathNodesBeforeIndex</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>index</type>
+          <defname>index</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>    Removes the path points before current index
+
+    Args:
+index
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/path_follower.py" line="220" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/path_follower.py" bodystart="220" bodyend="231"/>
+      </memberdef>
+      <memberdef kind="function" id="classpath__follower_1_1_path_follower_1a6d8a96c47affd19378dff85a5ea4975c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def path_follower.PathFollower.updateCurrentGoalPose</definition>
+        <argsstring>(self)</argsstring>
+        <name>updateCurrentGoalPose</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>    Updates current goal pose considering the remaining path points
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/path_follower.py" line="232" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/path_follower.py" bodystart="232" bodyend="275"/>
+      </memberdef>
+      <memberdef kind="function" id="classpath__follower_1_1_path_follower_1a3c633f224dddcf7e79b24383965447d6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def path_follower.PathFollower.getYawTarget</definition>
+        <argsstring>(self)</argsstring>
+        <name>getYawTarget</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>    Gets yaw angle of target frame
+
+    Returns:
+yaw_target
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/path_follower.py" line="276" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/path_follower.py" bodystart="276" bodyend="299"/>
+      </memberdef>
+      <memberdef kind="function" id="classpath__follower_1_1_path_follower_1afa7f824dff13f54b8b7840d60828a635" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def path_follower.PathFollower.computeAndPublishTwist</definition>
+        <argsstring>(self)</argsstring>
+        <name>computeAndPublishTwist</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>    Computes the twist value and publishes it on the ``/cmd_vel`` topic
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/path_follower.py" line="300" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/path_follower.py" bodystart="300" bodyend="350"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>Path follower class which defines the corresponding node with its initial configurations 
+and member functions.
+</verbatim> </para>
+    </detaileddescription>
+    <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/path_follower.py" line="127" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/path_follower.py" bodystart="127" bodyend="351"/>
+    <listofallmembers>
+      <member refid="classpath__follower_1_1_path_follower_1ab5145c59780036b629260a0ce387e167" prot="public" virt="non-virtual"><scope>path_follower::PathFollower</scope><name>__init__</name></member>
+      <member refid="classpath__follower_1_1_path_follower_1afa7f824dff13f54b8b7840d60828a635" prot="public" virt="non-virtual"><scope>path_follower::PathFollower</scope><name>computeAndPublishTwist</name></member>
+      <member refid="classpath__follower_1_1_path_follower_1ae7d5850d92a5a60b4cd68a30749b51cb" prot="public" virt="non-virtual"><scope>path_follower::PathFollower</scope><name>current_pose</name></member>
+      <member refid="classpath__follower_1_1_path_follower_1af6cf3ff86bcc321c255c71d3c9bef6ef" prot="public" virt="non-virtual"><scope>path_follower::PathFollower</scope><name>dummy_srv</name></member>
+      <member refid="classpath__follower_1_1_path_follower_1a5e51e354875257d51db38e0d91f86826" prot="public" virt="non-virtual"><scope>path_follower::PathFollower</scope><name>dummyCallback</name></member>
+      <member refid="classpath__follower_1_1_path_follower_1ab01a3ec29a1298f6b7de801f19536d00" prot="public" virt="non-virtual"><scope>path_follower::PathFollower</scope><name>fixed_frame</name></member>
+      <member refid="classpath__follower_1_1_path_follower_1a840866a7d772b01edc0d6b9db027d80d" prot="public" virt="non-virtual"><scope>path_follower::PathFollower</scope><name>gain_pid_ang</name></member>
+      <member refid="classpath__follower_1_1_path_follower_1a9b9e67dfc878a5d7123fd371ce57bcf9" prot="public" virt="non-virtual"><scope>path_follower::PathFollower</scope><name>gain_pid_pos</name></member>
+      <member refid="classpath__follower_1_1_path_follower_1a3c633f224dddcf7e79b24383965447d6" prot="public" virt="non-virtual"><scope>path_follower::PathFollower</scope><name>getYawTarget</name></member>
+      <member refid="classpath__follower_1_1_path_follower_1ab6be347d42e27c01920c1d75891878af" prot="public" virt="non-virtual"><scope>path_follower::PathFollower</scope><name>goal_pose</name></member>
+      <member refid="classpath__follower_1_1_path_follower_1a00f131ec94380c1613caa2c7182cd15e" prot="public" virt="non-virtual"><scope>path_follower::PathFollower</scope><name>i</name></member>
+      <member refid="classpath__follower_1_1_path_follower_1a6dc63b4fce746d27a075e6c271531964" prot="public" virt="non-virtual"><scope>path_follower::PathFollower</scope><name>largest_valid_index</name></member>
+      <member refid="classpath__follower_1_1_path_follower_1abf49371beb6ce3192cdbe4b2bbbe0f9a" prot="public" virt="non-virtual"><scope>path_follower::PathFollower</scope><name>listener</name></member>
+      <member refid="classpath__follower_1_1_path_follower_1a26dfa36f2474861cf30160a1b405f751" prot="public" virt="non-virtual"><scope>path_follower::PathFollower</scope><name>path</name></member>
+      <member refid="classpath__follower_1_1_path_follower_1af397b8fe049d6f1f4ff06e24672e1ce2" prot="public" virt="non-virtual"><scope>path_follower::PathFollower</scope><name>path_ros</name></member>
+      <member refid="classpath__follower_1_1_path_follower_1a6fdde725852e46ee44401e5d515664c8" prot="public" virt="non-virtual"><scope>path_follower::PathFollower</scope><name>pathCallback</name></member>
+      <member refid="classpath__follower_1_1_path_follower_1ad89cce9956d576ed6fd172f5db300d93" prot="public" virt="non-virtual"><scope>path_follower::PathFollower</scope><name>pub_path</name></member>
+      <member refid="classpath__follower_1_1_path_follower_1a34bc6933ac776fea7a0e08e3a75dc52d" prot="public" virt="non-virtual"><scope>path_follower::PathFollower</scope><name>pub_twist</name></member>
+      <member refid="classpath__follower_1_1_path_follower_1ac7229a00acc42d5b5773e8c126caf0e5" prot="public" virt="non-virtual"><scope>path_follower::PathFollower</scope><name>publishPath</name></member>
+      <member refid="classpath__follower_1_1_path_follower_1a4c3bbb55d9cc378be7cd46a1b53eb70f" prot="public" virt="non-virtual"><scope>path_follower::PathFollower</scope><name>removePathNodesBeforeIndex</name></member>
+      <member refid="classpath__follower_1_1_path_follower_1aab4535a076fe45d410aa2364c9a311c1" prot="public" virt="non-virtual"><scope>path_follower::PathFollower</scope><name>sub</name></member>
+      <member refid="classpath__follower_1_1_path_follower_1a6d8a96c47affd19378dff85a5ea4975c" prot="public" virt="non-virtual"><scope>path_follower::PathFollower</scope><name>updateCurrentGoalPose</name></member>
+      <member refid="classpath__follower_1_1_path_follower_1a65b0f8aaf485585defd989fbd86b3d34" prot="public" virt="non-virtual"><scope>path_follower::PathFollower</scope><name>updateCurrentPose</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

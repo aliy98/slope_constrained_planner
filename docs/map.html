@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>map &mdash; slope_constrained_planner 1.0 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="motion_validator" href="motion_validator.html" />
+    <link rel="prev" title="sampler" href="sampler.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            slope_constrained_planner
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="simulation_environment.html">Simulation Environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="real_world.html">Real World</a></li>
+<li class="toctree-l1"><a class="reference internal" href="software_architecture.html">Software Architucture</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sequence_diagram.html">Sequence Diagram</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="source_files.html">Source Files and Scripts</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="slope_constrained_planner.html">slope_constrained_planner</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="planner.html">planner</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sampler.html">sampler</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">map</a></li>
+<li class="toctree-l3"><a class="reference internal" href="motion_validator.html">motion_validator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="params.html">params</a></li>
+<li class="toctree-l3"><a class="reference internal" href="utils.html">utils</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="slope_constrained_planner_ros.html">slope_constrained_planner_ros</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="usage.html">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="working_hypothesis.html">System hypothesis and future work</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">slope_constrained_planner</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="source_files.html">Source Files and Scripts</a></li>
+          <li class="breadcrumb-item"><a href="slope_constrained_planner.html">slope_constrained_planner</a></li>
+      <li class="breadcrumb-item active">map</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/map.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="map">
+<h1>map<a class="headerlink" href="#map" title="Permalink to this heading"></a></h1>
+<p>Grid map data class. Represents the grid map of the environment containing the defined layers. </p>
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv425slope_constrained_planner">
+<span id="_CPPv325slope_constrained_planner"></span><span id="_CPPv225slope_constrained_planner"></span><span id="slope_constrained_planner"></span><span class="target" id="namespaceslope__constrained__planner"></span><span class="k"><span class="pre">namespace</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">slope_constrained_planner</span></span></span><br /></dt>
+<dd><dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N25slope_constrained_planner3MapE">
+<span id="_CPPv3N25slope_constrained_planner3MapE"></span><span id="_CPPv2N25slope_constrained_planner3MapE"></span><span id="slope_constrained_planner::Map"></span><span class="target" id="classslope__constrained__planner_1_1_map"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Map</span></span></span><a class="headerlink" href="#_CPPv4N25slope_constrained_planner3MapE" title="Permalink to this definition"></a><br /></dt>
+<dd><div class="docutils container">
+<em>#include &lt;map.h&gt;</em></div>
+<p>Grid map data class. Represents the grid map of the environment containing the defined layers. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N25slope_constrained_planner3Map3MapERK14ParamsConstPtr">
+<span id="_CPPv3N25slope_constrained_planner3Map3MapERK14ParamsConstPtr"></span><span id="_CPPv2N25slope_constrained_planner3Map3MapERK14ParamsConstPtr"></span><span id="slope_constrained_planner::Map::Map__ParamsConstPtrCR"></span><span class="target" id="classslope__constrained__planner_1_1_map_1a07b14a4ae2b5936a199c45e774beecdf"></span><span class="sig-name descname"><span class="n"><span class="pre">Map</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="params.html#_CPPv4N25slope_constrained_planner14ParamsConstPtrE" title="slope_constrained_planner::ParamsConstPtr"><span class="n"><span class="pre">ParamsConstPtr</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">params</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N25slope_constrained_planner3Map3MapERK14ParamsConstPtr" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Constructs an empty map, without underlying grid map. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>params</strong> – Contains grid map layers info </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N25slope_constrained_planner3Map6setMapERR10GridMapPtr">
+<span id="_CPPv3N25slope_constrained_planner3Map6setMapERR10GridMapPtr"></span><span id="_CPPv2N25slope_constrained_planner3Map6setMapERR10GridMapPtr"></span><span id="slope_constrained_planner::Map::setMap__GridMapPtrRR"></span><span class="target" id="classslope__constrained__planner_1_1_map_1ad4a26fe219df3e053e4657939b014da4"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setMap</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">GridMapPtr</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">map</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N25slope_constrained_planner3Map6setMapERR10GridMapPtr" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Sets the underlying grid map by taking ownership of it. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>map</strong> – Grid map to be set </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N25slope_constrained_planner3Map4copyERK3Map">
+<span id="_CPPv3N25slope_constrained_planner3Map4copyERK3Map"></span><span id="_CPPv2N25slope_constrained_planner3Map4copyERK3Map"></span><span id="slope_constrained_planner::Map::copy__MapCR"></span><span class="target" id="classslope__constrained__planner_1_1_map_1a67bacd5ce0a0b760a75eaaf5dfe30d3d"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">copy</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N25slope_constrained_planner3MapE" title="slope_constrained_planner::Map"><span class="n"><span class="pre">Map</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">map</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N25slope_constrained_planner3Map4copyERK3Map" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Copies the underlying map and parameters of another map object. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>map</strong> – Grid map to be copied </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N25slope_constrained_planner3Map9getLayersEv">
+<span id="_CPPv3N25slope_constrained_planner3Map9getLayersEv"></span><span id="_CPPv2N25slope_constrained_planner3Map9getLayersEv"></span><span id="slope_constrained_planner::Map::getLayers"></span><span class="target" id="classslope__constrained__planner_1_1_map_1a89eafdc195d181d1e7e35d7e28ec7f5b"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getLayers</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N25slope_constrained_planner3Map9getLayersEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Returns the layers available in the grid map. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK25slope_constrained_planner3Map8isInsideERKN8grid_map8PositionE">
+<span id="_CPPv3NK25slope_constrained_planner3Map8isInsideERKN8grid_map8PositionE"></span><span id="_CPPv2NK25slope_constrained_planner3Map8isInsideERKN8grid_map8PositionE"></span><span id="slope_constrained_planner::Map::isInside__grid_map::PositionCRC"></span><span class="target" id="classslope__constrained__planner_1_1_map_1a9c6d7dde362eb8ec8ab9927835682325"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isInside</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">grid_map</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Position</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">pos</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK25slope_constrained_planner3Map8isInsideERKN8grid_map8PositionE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Checks whether position is inside of map bounds. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>pos</strong> – Position of the state to br checked </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Whether the state is inside the map or not </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK25slope_constrained_planner3Map18getPositionOfIndexERKN8grid_map5IndexE">
+<span id="_CPPv3NK25slope_constrained_planner3Map18getPositionOfIndexERKN8grid_map5IndexE"></span><span id="_CPPv2NK25slope_constrained_planner3Map18getPositionOfIndexERKN8grid_map5IndexE"></span><span id="slope_constrained_planner::Map::getPositionOfIndex__grid_map::IndexCRC"></span><span class="target" id="classslope__constrained__planner_1_1_map_1a49ab2e1c2ceec8057b40efc0645d1576"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">grid_map</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Position</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getPositionOfIndex</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">grid_map</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Index</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">ind</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK25slope_constrained_planner3Map18getPositionOfIndexERKN8grid_map5IndexE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Gets the position of state with a particular index in the grid map. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>ind</strong> – Index of the state in the grid map </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>pos Position of the state </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK25slope_constrained_planner3Map16getHeightAtIndexERKN8grid_map5IndexE">
+<span id="_CPPv3NK25slope_constrained_planner3Map16getHeightAtIndexERKN8grid_map5IndexE"></span><span id="_CPPv2NK25slope_constrained_planner3Map16getHeightAtIndexERKN8grid_map5IndexE"></span><span id="slope_constrained_planner::Map::getHeightAtIndex__grid_map::IndexCRC"></span><span class="target" id="classslope__constrained__planner_1_1_map_1a1a6be8d7208cf289349423234ba8508c"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getHeightAtIndex</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">grid_map</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Index</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">ind</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK25slope_constrained_planner3Map16getHeightAtIndexERKN8grid_map5IndexE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Gets the height value at a certain map index. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>ind</strong> – Index of the state in the grid map </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Height of state </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK25slope_constrained_planner3Map19getHeightAtPositionERKN8grid_map8PositionE">
+<span id="_CPPv3NK25slope_constrained_planner3Map19getHeightAtPositionERKN8grid_map8PositionE"></span><span id="_CPPv2NK25slope_constrained_planner3Map19getHeightAtPositionERKN8grid_map8PositionE"></span><span id="slope_constrained_planner::Map::getHeightAtPosition__grid_map::PositionCRC"></span><span class="target" id="classslope__constrained__planner_1_1_map_1ad9678701798d729e2d6bd92837f2c3f9"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getHeightAtPosition</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">grid_map</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Position</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">pos</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK25slope_constrained_planner3Map19getHeightAtPositionERKN8grid_map8PositionE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Gets the height value at a certain map position. Might throw exceptions if position is outside map boundaries. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>pos</strong> – Position of the state </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Height of state position </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK25slope_constrained_planner3Map20getUpdatedAtPositionERKN8grid_map8PositionE">
+<span id="_CPPv3NK25slope_constrained_planner3Map20getUpdatedAtPositionERKN8grid_map8PositionE"></span><span id="_CPPv2NK25slope_constrained_planner3Map20getUpdatedAtPositionERKN8grid_map8PositionE"></span><span id="slope_constrained_planner::Map::getUpdatedAtPosition__grid_map::PositionCRC"></span><span class="target" id="classslope__constrained__planner_1_1_map_1a56ca41fa28f58d99f22afea0157429c5"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getUpdatedAtPosition</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">grid_map</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Position</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">pos</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK25slope_constrained_planner3Map20getUpdatedAtPositionERKN8grid_map8PositionE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Return whether this cell was updated in the last map update. Might throw exceptions if position is outside map boundaries. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>pos</strong> – Position of the state </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N25slope_constrained_planner3Map16getUpdatedOnLineERKN8grid_map8PositionERKN8grid_map8PositionE">
+<span id="_CPPv3N25slope_constrained_planner3Map16getUpdatedOnLineERKN8grid_map8PositionERKN8grid_map8PositionE"></span><span id="_CPPv2N25slope_constrained_planner3Map16getUpdatedOnLineERKN8grid_map8PositionERKN8grid_map8PositionE"></span><span id="slope_constrained_planner::Map::getUpdatedOnLine__grid_map::PositionCR.grid_map::PositionCR"></span><span class="target" id="classslope__constrained__planner_1_1_map_1ad4147a233ba9ae6c9541c86cbeb786b0"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getUpdatedOnLine</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">grid_map</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Position</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">start</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">grid_map</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Position</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">end</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N25slope_constrained_planner3Map16getUpdatedOnLineERKN8grid_map8PositionERKN8grid_map8PositionE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Updates the grid map data from and starting to the ending position. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>start</strong> – Starting position </p></li>
+<li><p><strong>end</strong> – Ending position </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Whether the grid map data is updated </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK25slope_constrained_planner3Map9getNormalERKN8grid_map5IndexE">
+<span id="_CPPv3NK25slope_constrained_planner3Map9getNormalERKN8grid_map5IndexE"></span><span id="_CPPv2NK25slope_constrained_planner3Map9getNormalERKN8grid_map5IndexE"></span><span id="slope_constrained_planner::Map::getNormal__grid_map::IndexCRC"></span><span class="target" id="classslope__constrained__planner_1_1_map_1abfd6fa0d5e97bcca627507c31ec7e76e"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">Eigen</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Vector3d</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getNormal</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">grid_map</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Index</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">ind</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK25slope_constrained_planner3Map9getNormalERKN8grid_map5IndexE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Gets the terrain normal at a certain map index. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>ind</strong> – Index of state in the grid map </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Normal Vector at the index </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK25slope_constrained_planner3Map18getIndexOfPositionERKN8grid_map8PositionE">
+<span id="_CPPv3NK25slope_constrained_planner3Map18getIndexOfPositionERKN8grid_map8PositionE"></span><span id="_CPPv2NK25slope_constrained_planner3Map18getIndexOfPositionERKN8grid_map8PositionE"></span><span id="slope_constrained_planner::Map::getIndexOfPosition__grid_map::PositionCRC"></span><span class="target" id="classslope__constrained__planner_1_1_map_1a35997507b4e11fe8c4eac996d2ef9941"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">grid_map</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Index</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getIndexOfPosition</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">grid_map</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Position</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">pos</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK25slope_constrained_planner3Map18getIndexOfPositionERKN8grid_map8PositionE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Gets the map index of a certain position. Might throw exception if position is out of bounds. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>pos</strong> – Position of the state </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>ind Index of position </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK25slope_constrained_planner3Map17getPlaneFitStdDevERKN8grid_map5IndexE">
+<span id="_CPPv3NK25slope_constrained_planner3Map17getPlaneFitStdDevERKN8grid_map5IndexE"></span><span id="_CPPv2NK25slope_constrained_planner3Map17getPlaneFitStdDevERKN8grid_map5IndexE"></span><span id="slope_constrained_planner::Map::getPlaneFitStdDev__grid_map::IndexCRC"></span><span class="target" id="classslope__constrained__planner_1_1_map_1a024cc703c42081643eaff2cb0e12d609"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getPlaneFitStdDev</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">grid_map</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Index</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">ind</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK25slope_constrained_planner3Map17getPlaneFitStdDevERKN8grid_map5IndexE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Gets the standard deviation of a plane fit error at the given map index. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>ind</strong> – Index of the state at the grid map </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Standard deviation of plane </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK25slope_constrained_planner3Map8getLayerERKNSt6stringE">
+<span id="_CPPv3NK25slope_constrained_planner3Map8getLayerERKNSt6stringE"></span><span id="_CPPv2NK25slope_constrained_planner3Map8getLayerERKNSt6stringE"></span><span id="slope_constrained_planner::Map::getLayer__ssCRC"></span><span class="target" id="classslope__constrained__planner_1_1_map_1a4535d9affab5d0e7e97559032bd090c5"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">grid_map</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Matrix</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">getLayer</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">layer</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK25slope_constrained_planner3Map8getLayerERKNSt6stringE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Gets the required layer from the grid map. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>layer</strong> – Required layer name </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Layer data </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N25slope_constrained_planner3Map8addLayerERKNSt6stringERKN8grid_map6MatrixE">
+<span id="_CPPv3N25slope_constrained_planner3Map8addLayerERKNSt6stringERKN8grid_map6MatrixE"></span><span id="_CPPv2N25slope_constrained_planner3Map8addLayerERKNSt6stringERKN8grid_map6MatrixE"></span><span id="slope_constrained_planner::Map::addLayer__ssCR.grid_map::MatrixCR"></span><span class="target" id="classslope__constrained__planner_1_1_map_1a39f8df43bd13aed0efd0a737a60e88c7"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">addLayer</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">layer_name</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">grid_map</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Matrix</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">data</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N25slope_constrained_planner3Map8addLayerERKNSt6stringERKN8grid_map6MatrixE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Adds a layer to the grid map. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>layer_name</strong> – Name of the layer to be added </p></li>
+<li><p><strong>data</strong> – Layer data </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N25slope_constrained_planner3Map8addLayerERKNSt6stringEKd">
+<span id="_CPPv3N25slope_constrained_planner3Map8addLayerERKNSt6stringEKd"></span><span id="_CPPv2N25slope_constrained_planner3Map8addLayerERKNSt6stringEKd"></span><span id="slope_constrained_planner::Map::addLayer__ssCR.doubleC"></span><span class="target" id="classslope__constrained__planner_1_1_map_1a56e85f6523b4ed6b92e2992582703691"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">addLayer</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">layer_name</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">val</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N25slope_constrained_planner3Map8addLayerERKNSt6stringEKd" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Adds a layer to the grid map. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>layer_name</strong> – Name of the layer to be added </p></li>
+<li><p><strong>val</strong> – Layer value </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK25slope_constrained_planner3Map17lengthToCellCountERKd">
+<span id="_CPPv3NK25slope_constrained_planner3Map17lengthToCellCountERKd"></span><span id="_CPPv2NK25slope_constrained_planner3Map17lengthToCellCountERKd"></span><span id="slope_constrained_planner::Map::lengthToCellCount__doubleCRC"></span><span class="target" id="classslope__constrained__planner_1_1_map_1a7c7af810d73e15185fbbb681b247e399"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">Eigen</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Index</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">lengthToCellCount</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">length</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK25slope_constrained_planner3Map17lengthToCellCountERKd" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Gets the length to cell resolution ratio of the grid map. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>length</strong> – Length to be checked </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Length to cell </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK25slope_constrained_planner3Map6getMapEv">
+<span id="_CPPv3NK25slope_constrained_planner3Map6getMapEv"></span><span id="_CPPv2NK25slope_constrained_planner3Map6getMapEv"></span><span id="slope_constrained_planner::Map::getMapC"></span><span class="target" id="classslope__constrained__planner_1_1_map_1aca8af462221428421e42a313c1852f89"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">grid_map</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">GridMap</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">getMap</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK25slope_constrained_planner3Map6getMapEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Gets the map from the corresponding class attribute. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Grid map data </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N25slope_constrained_planner3Map20reApplyPreprocessingEv">
+<span id="_CPPv3N25slope_constrained_planner3Map20reApplyPreprocessingEv"></span><span id="_CPPv2N25slope_constrained_planner3Map20reApplyPreprocessingEv"></span><span id="slope_constrained_planner::Map::reApplyPreprocessing"></span><span class="target" id="classslope__constrained__planner_1_1_map_1adc6f0bca7166478e7786fa3c71d7638d"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">reApplyPreprocessing</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N25slope_constrained_planner3Map20reApplyPreprocessingEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Performs the pre-processing on the map again. </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-private-members">Private Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N25slope_constrained_planner3Map4map_E">
+<span id="_CPPv3N25slope_constrained_planner3Map4map_E"></span><span id="_CPPv2N25slope_constrained_planner3Map4map_E"></span><span id="slope_constrained_planner::Map::map___GridMapPtr"></span><span class="target" id="classslope__constrained__planner_1_1_map_1aa212a330c745cd2695d5117cb5cf7538"></span><span class="n"><span class="pre">GridMapPtr</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">map_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="k"><span class="pre">new</span></span><span class="w"> </span><span class="n"><span class="pre">grid_map</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">GridMap</span></span><span class="p"><span class="pre">(</span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N25slope_constrained_planner3Map4map_E" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Grid map object attribute. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N25slope_constrained_planner3Map7params_E">
+<span id="_CPPv3N25slope_constrained_planner3Map7params_E"></span><span id="_CPPv2N25slope_constrained_planner3Map7params_E"></span><span id="slope_constrained_planner::Map::params___ParamsConstPtr"></span><span class="target" id="classslope__constrained__planner_1_1_map_1a0c9f440d18014d12a6e5edaf1685201a"></span><a class="reference internal" href="params.html#_CPPv4N25slope_constrained_planner14ParamsConstPtrE" title="slope_constrained_planner::ParamsConstPtr"><span class="n"><span class="pre">ParamsConstPtr</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">params_</span></span></span><a class="headerlink" href="#_CPPv4N25slope_constrained_planner3Map7params_E" title="Permalink to this definition"></a><br /></dt>
+<dd><p><a class="reference internal" href="params.html#structslope__constrained__planner_1_1_params"><span class="std std-ref">Params</span></a> containing the grid map layers info. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N25slope_constrained_planner3Map6mutex_E">
+<span id="_CPPv3N25slope_constrained_planner3Map6mutex_E"></span><span id="_CPPv2N25slope_constrained_planner3Map6mutex_E"></span><span id="slope_constrained_planner::Map::mutex___std::mutex"></span><span class="target" id="classslope__constrained__planner_1_1_map_1a4c37cf61e472e1475d1f34264ac56f24"></span><span class="k"><span class="pre">mutable</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">mutex</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">mutex_</span></span></span><a class="headerlink" href="#_CPPv4N25slope_constrained_planner3Map6mutex_E" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Grid map process mutex. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N25slope_constrained_planner3Map18map_pre_processor_E">
+<span id="_CPPv3N25slope_constrained_planner3Map18map_pre_processor_E"></span><span id="_CPPv2N25slope_constrained_planner3Map18map_pre_processor_E"></span><span id="slope_constrained_planner::Map::map_pre_processor___ChainNewMap"></span><span class="target" id="classslope__constrained__planner_1_1_map_1a26183e9548dd13f96237c71e9ba8df70"></span><span class="n"><span class="pre">ChainNewMap</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">map_pre_processor_</span></span></span><a class="headerlink" href="#_CPPv4N25slope_constrained_planner3Map18map_pre_processor_E" title="Permalink to this definition"></a><br /></dt>
+<dd><p><a class="reference internal" href="#classslope__constrained__planner_1_1_map"><span class="std std-ref">Map</span></a> pre-processor attribute to be used in setting map. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N25slope_constrained_planner3Map23old_map_post_processor_E">
+<span id="_CPPv3N25slope_constrained_planner3Map23old_map_post_processor_E"></span><span id="_CPPv2N25slope_constrained_planner3Map23old_map_post_processor_E"></span><span id="slope_constrained_planner::Map::old_map_post_processor___ChainOldMap"></span><span class="target" id="classslope__constrained__planner_1_1_map_1a6daff4c895699d1e4a4ca0c13e373624"></span><span class="n"><span class="pre">ChainOldMap</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">old_map_post_processor_</span></span></span><a class="headerlink" href="#_CPPv4N25slope_constrained_planner3Map23old_map_post_processor_E" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Old map post-processor attribute to be used in setting map. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="sampler.html" class="btn btn-neutral float-left" title="sampler" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="motion_validator.html" class="btn btn-neutral float-right" title="motion_validator" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Ali Yousefi.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

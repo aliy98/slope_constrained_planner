@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>goal_publisher &mdash; slope_constrained_planner 1.0 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Usage" href="usage.html" />
+    <link rel="prev" title="path_follower" href="path_follower.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            slope_constrained_planner
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="simulation_environment.html">Simulation Environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="real_world.html">Real World</a></li>
+<li class="toctree-l1"><a class="reference internal" href="software_architecture.html">Software Architucture</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sequence_diagram.html">Sequence Diagram</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="source_files.html">Source Files and Scripts</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="slope_constrained_planner.html">slope_constrained_planner</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="slope_constrained_planner_ros.html">slope_constrained_planner_ros</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="planner_ros.html">planner_ros</a></li>
+<li class="toctree-l3"><a class="reference internal" href="converter.html">converter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="utils_ros.html">utils</a></li>
+<li class="toctree-l3"><a class="reference internal" href="plan_to_goal_client.html">plan_to_goal_client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="path_follower.html">path_follower</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">goal_publisher</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#slope_constrained_planner_ros.scripts.goal_publisher.GoalPublisher"><code class="docutils literal notranslate"><span class="pre">GoalPublisher</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#slope_constrained_planner_ros.scripts.goal_publisher.getAngleError"><code class="docutils literal notranslate"><span class="pre">getAngleError()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#slope_constrained_planner_ros.scripts.goal_publisher.getConstrainedYaw"><code class="docutils literal notranslate"><span class="pre">getConstrainedYaw()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#slope_constrained_planner_ros.scripts.goal_publisher.getQuatFromYaw"><code class="docutils literal notranslate"><span class="pre">getQuatFromYaw()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#slope_constrained_planner_ros.scripts.goal_publisher.getYaw"><code class="docutils literal notranslate"><span class="pre">getYaw()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="usage.html">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="working_hypothesis.html">Working Hypothesis and Environment</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">slope_constrained_planner</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="source_files.html">Source Files and Scripts</a></li>
+          <li class="breadcrumb-item"><a href="slope_constrained_planner_ros.html">slope_constrained_planner_ros</a></li>
+      <li class="breadcrumb-item active">goal_publisher</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/goal_publisher.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-slope_constrained_planner_ros.scripts.goal_publisher">
+<span id="goal-publisher"></span><h1>goal_publisher<a class="headerlink" href="#module-slope_constrained_planner_ros.scripts.goal_publisher" title="Permalink to this heading"></a></h1>
+<span class="target" id="module-goal_publisher"></span><dl>
+<dt>Subscribes to:</dt><dd><p>/slope_constrained_planner/path</p>
+</dd>
+<dt>Publishes to:</dt><dd><p>/spot/goaltospot</p>
+<p>/slope_constrained_planner/followed_path</p>
+</dd>
+</dl>
+<p>An auxiliary node, used only in real world mode, gets the next wapoint to go, and publishes it to the <code class="docutils literal notranslate"><span class="pre">gotopoint</span></code> local path planner.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="slope_constrained_planner_ros.scripts.goal_publisher.GoalPublisher">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">slope_constrained_planner_ros.scripts.goal_publisher.</span></span><span class="sig-name descname"><span class="pre">GoalPublisher</span></span><a class="reference internal" href="_modules/slope_constrained_planner_ros/scripts/goal_publisher.html#GoalPublisher"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#slope_constrained_planner_ros.scripts.goal_publisher.GoalPublisher" title="Permalink to this definition"></a></dt>
+<dd><p>Goal publisher class which defines the corresponding node with its initial configurations
+and member functions.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="slope_constrained_planner_ros.scripts.goal_publisher.GoalPublisher.computeAndPublishGoal">
+<span class="sig-name descname"><span class="pre">computeAndPublishGoal</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/slope_constrained_planner_ros/scripts/goal_publisher.html#GoalPublisher.computeAndPublishGoal"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#slope_constrained_planner_ros.scripts.goal_publisher.GoalPublisher.computeAndPublishGoal" title="Permalink to this definition"></a></dt>
+<dd><p>Computes the Goal value and publishes it on the <code class="docutils literal notranslate"><span class="pre">/goaltospot</span></code> topic</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="slope_constrained_planner_ros.scripts.goal_publisher.GoalPublisher.dummyCallback">
+<span class="sig-name descname"><span class="pre">dummyCallback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/slope_constrained_planner_ros/scripts/goal_publisher.html#GoalPublisher.dummyCallback"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#slope_constrained_planner_ros.scripts.goal_publisher.GoalPublisher.dummyCallback" title="Permalink to this definition"></a></dt>
+<dd><p>A dummy rosservice, used for notifying the presence of this node to the planner.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="slope_constrained_planner_ros.scripts.goal_publisher.GoalPublisher.getYawTarget">
+<span class="sig-name descname"><span class="pre">getYawTarget</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/slope_constrained_planner_ros/scripts/goal_publisher.html#GoalPublisher.getYawTarget"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#slope_constrained_planner_ros.scripts.goal_publisher.GoalPublisher.getYawTarget" title="Permalink to this definition"></a></dt>
+<dd><p>Gets yaw angle of target frame</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>yaw_target</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="slope_constrained_planner_ros.scripts.goal_publisher.GoalPublisher.pathCallback">
+<span class="sig-name descname"><span class="pre">pathCallback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path_msg</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/slope_constrained_planner_ros/scripts/goal_publisher.html#GoalPublisher.pathCallback"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#slope_constrained_planner_ros.scripts.goal_publisher.GoalPublisher.pathCallback" title="Permalink to this definition"></a></dt>
+<dd><p>Callback function which triggers once the found path is available</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>path_msg</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="slope_constrained_planner_ros.scripts.goal_publisher.GoalPublisher.publishPath">
+<span class="sig-name descname"><span class="pre">publishPath</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/slope_constrained_planner_ros/scripts/goal_publisher.html#GoalPublisher.publishPath"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#slope_constrained_planner_ros.scripts.goal_publisher.GoalPublisher.publishPath" title="Permalink to this definition"></a></dt>
+<dd><p>Publishes the followed path so far, with its frame id</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="slope_constrained_planner_ros.scripts.goal_publisher.GoalPublisher.removePathNodesBeforeIndex">
+<span class="sig-name descname"><span class="pre">removePathNodesBeforeIndex</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/slope_constrained_planner_ros/scripts/goal_publisher.html#GoalPublisher.removePathNodesBeforeIndex"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#slope_constrained_planner_ros.scripts.goal_publisher.GoalPublisher.removePathNodesBeforeIndex" title="Permalink to this definition"></a></dt>
+<dd><p>Removes the path waypoints before current index</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>index</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="slope_constrained_planner_ros.scripts.goal_publisher.GoalPublisher.updateCurrentGoalPose">
+<span class="sig-name descname"><span class="pre">updateCurrentGoalPose</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/slope_constrained_planner_ros/scripts/goal_publisher.html#GoalPublisher.updateCurrentGoalPose"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#slope_constrained_planner_ros.scripts.goal_publisher.GoalPublisher.updateCurrentGoalPose" title="Permalink to this definition"></a></dt>
+<dd><p>Updates current goal pose considering the remaining path waypoints</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="slope_constrained_planner_ros.scripts.goal_publisher.GoalPublisher.updateCurrentPose">
+<span class="sig-name descname"><span class="pre">updateCurrentPose</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/slope_constrained_planner_ros/scripts/goal_publisher.html#GoalPublisher.updateCurrentPose"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#slope_constrained_planner_ros.scripts.goal_publisher.GoalPublisher.updateCurrentPose" title="Permalink to this definition"></a></dt>
+<dd><p>Updates robot current position using tf tree data</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="slope_constrained_planner_ros.scripts.goal_publisher.getAngleError">
+<span class="sig-prename descclassname"><span class="pre">slope_constrained_planner_ros.scripts.goal_publisher.</span></span><span class="sig-name descname"><span class="pre">getAngleError</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">target</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">current</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/slope_constrained_planner_ros/scripts/goal_publisher.html#getAngleError"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#slope_constrained_planner_ros.scripts.goal_publisher.getAngleError" title="Permalink to this definition"></a></dt>
+<dd><p>Gets the difference between two given angles</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>target</strong> – </p></li>
+<li><p><strong>current</strong> – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>dyaw</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="slope_constrained_planner_ros.scripts.goal_publisher.getConstrainedYaw">
+<span class="sig-prename descclassname"><span class="pre">slope_constrained_planner_ros.scripts.goal_publisher.</span></span><span class="sig-name descname"><span class="pre">getConstrainedYaw</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">yaw</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/slope_constrained_planner_ros/scripts/goal_publisher.html#getConstrainedYaw"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#slope_constrained_planner_ros.scripts.goal_publisher.getConstrainedYaw" title="Permalink to this definition"></a></dt>
+<dd><p>Gets constrained value of yaw angle between -2pi and 2pi</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>yaw</strong> – </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>yaw</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="slope_constrained_planner_ros.scripts.goal_publisher.getQuatFromYaw">
+<span class="sig-prename descclassname"><span class="pre">slope_constrained_planner_ros.scripts.goal_publisher.</span></span><span class="sig-name descname"><span class="pre">getQuatFromYaw</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">yaw</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/slope_constrained_planner_ros/scripts/goal_publisher.html#getQuatFromYaw"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#slope_constrained_planner_ros.scripts.goal_publisher.getQuatFromYaw" title="Permalink to this definition"></a></dt>
+<dd><p>Gets quaternoid representation from euler representation</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>yaw</strong> – </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>quat</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="slope_constrained_planner_ros.scripts.goal_publisher.getYaw">
+<span class="sig-prename descclassname"><span class="pre">slope_constrained_planner_ros.scripts.goal_publisher.</span></span><span class="sig-name descname"><span class="pre">getYaw</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">quat</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/slope_constrained_planner_ros/scripts/goal_publisher.html#getYaw"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#slope_constrained_planner_ros.scripts.goal_publisher.getYaw" title="Permalink to this definition"></a></dt>
+<dd><p>Gets yaw angle from quaternoid representation</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>quat</strong> – </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>yaw</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="path_follower.html" class="btn btn-neutral float-left" title="path_follower" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="usage.html" class="btn btn-neutral float-right" title="Usage" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Ali Yousefi.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

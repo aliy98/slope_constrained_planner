@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="plan__to__goal__client_8py" kind="file" language="Python">
+    <compoundname>plan_to_goal_client.py</compoundname>
+    <innerclass refid="classplan__to__goal__client_1_1_path_to_goal_client" prot="public">plan_to_goal_client::PathToGoalClient</innerclass>
+    <innernamespace refid="namespaceplan__to__goal__client">plan_to_goal_client</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="namespaceplan__to__goal__client" refkind="compound"><highlight class="comment">#!/usr/bin/env<sp/>python3</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="stringliteral">&quot;&quot;&quot;</highlight></codeline>
+<codeline lineno="3"><highlight class="stringliteral">..<sp/>module::<sp/>plan_to_goal_client</highlight></codeline>
+<codeline lineno="4"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>:platform:<sp/>Unix</highlight></codeline>
+<codeline lineno="5"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>:synopsis:<sp/>the<sp/>plan_to_goal_client<sp/>python<sp/>script<sp/>in<sp/>slope_constrained_planner<sp/>package</highlight></codeline>
+<codeline lineno="6"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="7"><highlight class="stringliteral">Subscribes<sp/>to:</highlight></codeline>
+<codeline lineno="8"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>/goal</highlight></codeline>
+<codeline lineno="9"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="10"><highlight class="stringliteral">Uses<sp/>Action:</highlight></codeline>
+<codeline lineno="11"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>/slope_constrained_planner/plan_to_goal</highlight></codeline>
+<codeline lineno="12"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="13"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="14"><highlight class="stringliteral">A<sp/>helper<sp/>planner<sp/>client<sp/>node<sp/>which<sp/>waits<sp/>for<sp/>the<sp/>target<sp/>point<sp/>to<sp/>be<sp/>set,<sp/>and<sp/>then<sp/>sends<sp/>it<sp/>to<sp/>the<sp/></highlight></codeline>
+<codeline lineno="15"><highlight class="stringliteral">planner<sp/>action<sp/>server.</highlight></codeline>
+<codeline lineno="16"><highlight class="stringliteral">&quot;&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>rospy</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/>geometry_msgs.msg<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>PoseStamped</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>actionlib</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>slope_constrained_planner_msgs.msg</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="classplan__to__goal__client_1_1_path_to_goal_client" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classplan__to__goal__client_1_1_path_to_goal_client" kindref="compound">PathToGoalClient</ref>:</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;&quot;&quot;</highlight></codeline>
+<codeline lineno="26"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>Planner<sp/>client<sp/>class<sp/>which<sp/>defines<sp/>the<sp/>subcription<sp/>and<sp/>action<sp/>client<sp/>info.<sp/>Additionally,</highlight></codeline>
+<codeline lineno="27"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>it<sp/>has<sp/>a<sp/>member<sp/>function<sp/>for<sp/>goal<sp/>callback<sp/>to<sp/>send<sp/>the<sp/>goal<sp/>to<sp/>planner<sp/>action<sp/>server</highlight></codeline>
+<codeline lineno="28"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>&quot;&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal"><ref refid="classplan__to__goal__client_1_1_path_to_goal_client_1a1759f1c8b2fbffe43ed22631cef63159" kindref="member">goalCallback</ref>(self,<sp/>msg):</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;&quot;&quot;</highlight></codeline>
+<codeline lineno="32"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Callback<sp/>function<sp/>for<sp/>``/goal``<sp/>topic<sp/>subscription.<sp/>Waits<sp/>for<sp/>the<sp/>planner<sp/>action<sp/>server<sp/></highlight></codeline>
+<codeline lineno="33"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>to<sp/>be<sp/>available<sp/>and<sp/>sends<sp/>the<sp/>goal<sp/>point.</highlight></codeline>
+<codeline lineno="34"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>goal<sp/>=<sp/>slope_constrained_planner_msgs.msg.PlanToGoalGoal()</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>goal.goal<sp/>=<sp/>msg</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.<ref refid="classplan__to__goal__client_1_1_path_to_goal_client_1accf699f571efa471fe2cfb01565cc21a" kindref="member">client</ref>.wait_for_server()</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.<ref refid="classplan__to__goal__client_1_1_path_to_goal_client_1accf699f571efa471fe2cfb01565cc21a" kindref="member">client</ref>.send_goal(goal)</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal"><ref refid="classplan__to__goal__client_1_1_path_to_goal_client_1a2e2e8e3acf8aaf11880fd1670929aec3" kindref="member">__init__</ref>(self):</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;&quot;&quot;</highlight></codeline>
+<codeline lineno="42"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Defines<sp/>the<sp/>subscription<sp/>to<sp/>``/goal``<sp/>topic<sp/>and<sp/>planner<sp/>action<sp/>server<sp/>client<sp/>node.</highlight></codeline>
+<codeline lineno="43"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.<ref refid="classplan__to__goal__client_1_1_path_to_goal_client_1a55e91e55aeed3a3143b30b6e40b1ce40" kindref="member">sub</ref><sp/>=<sp/>rospy.Subscriber(</highlight><highlight class="stringliteral">&apos;/goal&apos;</highlight><highlight class="normal">,<sp/>PoseStamped,<sp/>self.<ref refid="classplan__to__goal__client_1_1_path_to_goal_client_1a1759f1c8b2fbffe43ed22631cef63159" kindref="member">goalCallback</ref>)</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.<ref refid="classplan__to__goal__client_1_1_path_to_goal_client_1accf699f571efa471fe2cfb01565cc21a" kindref="member">client</ref><sp/>=<sp/>actionlib.SimpleActionClient(</highlight><highlight class="stringliteral">&apos;/slope_constrained_planner/plan_to_goal&apos;</highlight><highlight class="normal">,<sp/>slope_constrained_planner_msgs.msg.PlanToGoalAction)</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>print(</highlight><highlight class="stringliteral">&apos;Waiting<sp/>for<sp/>plan_to_goal<sp/>server<sp/>to<sp/>appear...&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.<ref refid="classplan__to__goal__client_1_1_path_to_goal_client_1accf699f571efa471fe2cfb01565cc21a" kindref="member">client</ref>.wait_for_server()</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>print(</highlight><highlight class="stringliteral">&apos;Found<sp/>server.&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>__name__<sp/>==<sp/></highlight><highlight class="stringliteral">&apos;__main__&apos;</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>Initializes<sp/>a<sp/>rospy<sp/>node<sp/>so<sp/>that<sp/>the<sp/>SimpleActionClient<sp/>can</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>publish<sp/>and<sp/>subscribe<sp/>over<sp/>ROS.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>rospy.init_node(</highlight><highlight class="stringliteral">&apos;path_to_goal_client&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>client<sp/>=<sp/><ref refid="classplan__to__goal__client_1_1_path_to_goal_client" kindref="compound">PathToGoalClient</ref>()</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>rospy.spin()</highlight></codeline>
+    </programlisting>
+    <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/plan_to_goal_client.py"/>
+  </compounddef>
+</doxygen>

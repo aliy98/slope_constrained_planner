@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="dir_8a742f26d61398459d6484b7be2f1afb" kind="dir">
+    <compoundname>/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/build/catkin_generated/installspace</compoundname>
+    <innerfile refid="ros_2build_2catkin__generated_2installspace_2__setup__util_8py">_setup_util.py</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/build/catkin_generated/installspace/"/>
+  </compounddef>
+</doxygen>

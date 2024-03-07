@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="build_2catkin__generated_2pkg_8develspace_8context_8pc_8py" kind="file" language="Python">
+    <compoundname>pkg.develspace.context.pc.py</compoundname>
+    <innernamespace refid="namespacepkg">pkg</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">#<sp/>generated<sp/>from<sp/>catkin/cmake/template/pkg.context.pc.in</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal">CATKIN_PACKAGE_PREFIX<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal">PROJECT_PKG_CONFIG_INCLUDE_DIRS<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include;/opt/ros/noetic/include/ompl-1.6;/usr/include;/usr/include/eigen3&quot;</highlight><highlight class="normal">.split(</highlight><highlight class="stringliteral">&apos;;&apos;</highlight><highlight class="normal">)<sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include;/opt/ros/noetic/include/ompl-1.6;/usr/include;/usr/include/eigen3&quot;</highlight><highlight class="normal"><sp/>!=<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>[]</highlight></codeline>
+<codeline lineno="4"><highlight class="normal">PROJECT_CATKIN_DEPENDS<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;grid_map_core&quot;</highlight><highlight class="normal">.replace(</highlight><highlight class="stringliteral">&apos;;&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;<sp/>&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="5"><highlight class="normal">PKG_CONFIG_LIBRARIES_WITH_PREFIX<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;-lslope_constrained_planner;/opt/ros/noetic/lib/x86_64-linux-gnu/libompl.so;/usr/lib/x86_64-linux-gnu/libboost_serialization.so;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;/usr/lib/x86_64-linux-gnu/libboost_system.so;-lode&quot;</highlight><highlight class="normal">.split(</highlight><highlight class="stringliteral">&apos;;&apos;</highlight><highlight class="normal">)<sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;-lslope_constrained_planner;/opt/ros/noetic/lib/x86_64-linux-gnu/libompl.so;/usr/lib/x86_64-linux-gnu/libboost_serialization.so;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;/usr/lib/x86_64-linux-gnu/libboost_system.so;-lode&quot;</highlight><highlight class="normal"><sp/>!=<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>[]</highlight></codeline>
+<codeline lineno="6"><highlight class="normal">PROJECT_NAME<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;slope_constrained_planner&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal">PROJECT_SPACE_DIR<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/build/devel&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal">PROJECT_VERSION<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;0.0.0&quot;</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/build/catkin_generated/pkg.develspace.context.pc.py"/>
+  </compounddef>
+</doxygen>

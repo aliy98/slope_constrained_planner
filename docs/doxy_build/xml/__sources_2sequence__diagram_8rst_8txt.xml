@@ -1,0 +1,167 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="__sources_2sequence__diagram_8rst_8txt" kind="file" language="C++">
+    <compoundname>sequence_diagram.rst.txt</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="__sources_2sequence__diagram_8rst_8txt_1ae2fbac3b663d2ad400150066e9dae8f7" prot="public" static="no" mutable="no">
+        <type>Sequence</type>
+        <definition>Sequence Diagram</definition>
+        <argsstring></argsstring>
+        <name>Diagram</name>
+        <initializer>==================
+
+The sequnce diagram of this experiment is represented in the following figures.
+
+Simulation:
+
+.. image:: diagrams/sequence.png
+  :width: 1000
+  :align: center
+  :alt: sequence
+  
+
+Real world:
+
+.. image:: diagrams/sequence2.png
+  :width: 1000
+  :align: center
+  :alt: sequence2
+  
+
+In the first loop</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="_sources/sequence_diagram.rst.txt" line="1" column="10" bodyfile="_sources/sequence_diagram.rst.txt" bodystart="2" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="__sources_2sequence__diagram_8rst_8txt_1a673a579168f7601e39fe3f42a4755408" prot="public" static="no" mutable="no">
+        <type>Sequence in which the path planning</type>
+        <definition>Sequence in which the path planning occurs</definition>
+        <argsstring></argsstring>
+        <name>occurs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="_sources/sequence_diagram.rst.txt" line="22" column="29" bodyfile="_sources/sequence_diagram.rst.txt" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="__sources_2sequence__diagram_8rst_8txt_1a588f59175001649de07d3639f179242e" prot="public" static="no" mutable="no">
+        <type>Sequence in which the path planning the planner gets the goal state as an action</type>
+        <definition>Sequence in which the path planning the planner gets the goal state as an action goal</definition>
+        <argsstring></argsstring>
+        <name>goal</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="_sources/sequence_diagram.rst.txt" line="23" column="20" bodyfile="_sources/sequence_diagram.rst.txt" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="__sources_2sequence__diagram_8rst_8txt_1a5fcd86befc2bf82ad3009d1f2664a702" prot="public" static="no" mutable="no">
+        <type>Sequence in which the path planning the planner gets the goal state as an action elevation map</type>
+        <definition>Sequence in which the path planning the planner gets the goal state as an action elevation map data</definition>
+        <argsstring></argsstring>
+        <name>data</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="_sources/sequence_diagram.rst.txt" line="23" column="39" bodyfile="_sources/sequence_diagram.rst.txt" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="__sources_2sequence__diagram_8rst_8txt_1a763ec0c2f7a55e54bad777e9cade8a20" prot="public" static="no" mutable="no">
+        <type>Sequence in which the path planning the planner gets the goal state as an action elevation map and robot’s current state Once the solution is</type>
+        <definition>Sequence in which the path planning the planner gets the goal state as an action elevation map and robot’s current state Once the solution is found</definition>
+        <argsstring></argsstring>
+        <name>found</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="_sources/sequence_diagram.rst.txt" line="24" column="13" bodyfile="_sources/sequence_diagram.rst.txt" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="__sources_2sequence__diagram_8rst_8txt_1abcefcbe08c70fd6b4f6c46a6786933d6" prot="public" static="no" mutable="no">
+        <type>Sequence in which the path planning the planner gets the goal state as an action elevation map and robot’s current state Once the solution is it triggers the second</type>
+        <definition>Sequence in which the path planning the planner gets the goal state as an action elevation map and robot’s current state Once the solution is it triggers the second loop</definition>
+        <argsstring></argsstring>
+        <name>loop</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="_sources/sequence_diagram.rst.txt" line="24" column="42" bodyfile="_sources/sequence_diagram.rst.txt" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="__sources_2sequence__diagram_8rst_8txt_1aff5e712ad87b05d7592cfe4d7ef15cd5" prot="public" static="no" mutable="no">
+        <type>Sequence in which the path planning the planner gets the goal state as an action elevation map and robot’s current state Once the solution is it triggers the second which is for path following task In simulation</type>
+        <definition>Sequence in which the path planning the planner gets the goal state as an action elevation map and robot’s current state Once the solution is it triggers the second which is for path following task In simulation mode</definition>
+        <argsstring></argsstring>
+        <name>mode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="_sources/sequence_diagram.rst.txt" line="25" column="15" bodyfile="_sources/sequence_diagram.rst.txt" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="__sources_2sequence__diagram_8rst_8txt_1a8bfa76aef768b666151bcc50d7f1c9b6" prot="public" static="no" mutable="no">
+        <type>Sequence in which the path planning the planner gets the goal state as an action elevation map and robot’s current state Once the solution is it triggers the second which is for path following task In simulation path_follower would act as</type>
+        <definition>Sequence in which the path planning the planner gets the goal state as an action elevation map and robot’s current state Once the solution is it triggers the second which is for path following task In simulation path_follower would act as planner</definition>
+        <argsstring></argsstring>
+        <name>planner</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="_sources/sequence_diagram.rst.txt" line="25" column="53" bodyfile="_sources/sequence_diagram.rst.txt" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">Sequence<sp/>Diagram</highlight></codeline>
+<codeline lineno="2"><highlight class="normal">==================</highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal">The<sp/>sequnce<sp/>diagram<sp/>of<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/>experiment<sp/>is<sp/>represented<sp/>in<sp/>the<sp/>following<sp/>figures.</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal">Simulation:</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal">..<sp/>image::<sp/>diagrams/sequence.png</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/>:width:<sp/>1000</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/>:align:<sp/>center</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/>:alt:<sp/>sequence</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal">Real<sp/>world:</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal">..<sp/>image::<sp/>diagrams/sequence2.png</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/>:width:<sp/>1000</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/>:align:<sp/>center</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/>:alt:<sp/>sequence2</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal">In<sp/>the<sp/>first<sp/>loop,<sp/>in<sp/>which<sp/>the<sp/>path<sp/>planning<sp/>occurs,<sp/>the<sp/>planner<sp/>gets<sp/>the<sp/>goal</highlight></codeline>
+<codeline lineno="23"><highlight class="normal">state<sp/>as<sp/>an<sp/>action<sp/>goal,<sp/>elevation<sp/>map<sp/>data,<sp/>and<sp/>robot’s<sp/>current<sp/>state.<sp/>Once<sp/>the</highlight></codeline>
+<codeline lineno="24"><highlight class="normal">solution<sp/>is<sp/>found,<sp/>it<sp/>triggers<sp/>the<sp/>second<sp/>loop,<sp/>which<sp/>is<sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>path<sp/>following<sp/>task.</highlight></codeline>
+<codeline lineno="25"><highlight class="normal">In<sp/>simulation<sp/>mode,<sp/>``<ref refid="namespacepath__follower" kindref="compound">path_follower</ref>``<sp/>would<sp/>act<sp/>as<sp/>local<sp/>planner,<sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>a<sp/>PID<sp/>controller,<sp/></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>in<sp/>the<sp/>real<sp/>world<sp/>experiment,<sp/>``<ref refid="namespacegoal__publisher" kindref="compound">goal_publisher</ref>``<sp/>sends<sp/>the<sp/>next<sp/>waypoint<sp/>to<sp/>the<sp/>Spot<sp/>robot</highlight><highlight class="stringliteral">&apos;s<sp/></highlight></codeline>
+<codeline lineno="27"><highlight class="stringliteral">available<sp/>local<sp/>planner.<sp/></highlight></codeline>
+    </programlisting>
+    <location file="_sources/sequence_diagram.rst.txt"/>
+  </compounddef>
+</doxygen>

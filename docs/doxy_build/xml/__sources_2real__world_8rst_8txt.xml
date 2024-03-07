@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="__sources_2real__world_8rst_8txt" kind="file" language="C++">
+    <compoundname>real_world.rst.txt</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="__sources_2real__world_8rst_8txt_1aa1fd04cfe90259fa9e2a6afeccc0225a" prot="public" static="no" mutable="no">
+        <type>Real</type>
+        <definition>Real World</definition>
+        <argsstring></argsstring>
+        <name>World</name>
+        <initializer>==============
+The experiments in real world were done inside the University of Genoa</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="_sources/real_world.rst.txt" line="1" column="6" bodyfile="_sources/real_world.rst.txt" bodystart="2" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="__sources_2real__world_8rst_8txt_1a9265d3522228775ad1b9386f5dc13f92" prot="public" static="no" mutable="no">
+        <type>Real in front of the building</type>
+        <definition>Real in front of the building G</definition>
+        <argsstring></argsstring>
+        <name>G</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="_sources/real_world.rst.txt" line="4" column="17" bodyfile="_sources/real_world.rst.txt" bodystart="4" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="__sources_2real__world_8rst_8txt_1ad55ffc75c8ec8c84244e6989e5d66bea" prot="public" static="no" mutable="no">
+        <type>Real in front of the building and</type>
+        <definition>Real in front of the building and E</definition>
+        <argsstring></argsstring>
+        <name>E</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="_sources/real_world.rst.txt" line="4" column="23" bodyfile="_sources/real_world.rst.txt" bodystart="4" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="__sources_2real__world_8rst_8txt_1a2beb6a00097ed92540a9e05d86f08e63" prot="public" static="no" mutable="no">
+        <type>Real in front of the building and address via dell’Opera Pia There were two ramps with different slopes planner s performance image::diagrams low_slope</type>
+        <definition>Real in front of the building and address via dell’Opera Pia There were two ramps with different slopes planner s performance image:: diagrams low_slope png</definition>
+        <argsstring></argsstring>
+        <name>png</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="_sources/real_world.rst.txt" line="8" column="27" bodyfile="_sources/real_world.rst.txt" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">Real<sp/>World</highlight></codeline>
+<codeline lineno="2"><highlight class="normal">==============</highlight></codeline>
+<codeline lineno="3"><highlight class="normal">The<sp/>experiments<sp/>in<sp/>real<sp/>world<sp/>were<sp/>done<sp/>inside<sp/>the<sp/>University<sp/>of<sp/>Genoa,<sp/>in<sp/>front</highlight></codeline>
+<codeline lineno="4"><highlight class="normal">of<sp/>the<sp/>building<sp/>G,<sp/>and<sp/>E,<sp/>address<sp/>via<sp/>dell’Opera<sp/>Pia<sp/>13.<sp/>There<sp/>were<sp/>two<sp/>ramps</highlight></codeline>
+<codeline lineno="5"><highlight class="normal">with<sp/>different<sp/>slopes<sp/>planner</highlight><highlight class="stringliteral">&apos;s<sp/>performance.</highlight></codeline>
+<codeline lineno="6"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="7"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="8"><highlight class="stringliteral">..<sp/>image::<sp/>diagrams/low_slope.png</highlight></codeline>
+<codeline lineno="9"><highlight class="stringliteral"><sp/><sp/>:width:<sp/>500</highlight></codeline>
+<codeline lineno="10"><highlight class="stringliteral"><sp/><sp/>:align:<sp/>center</highlight></codeline>
+<codeline lineno="11"><highlight class="stringliteral"><sp/><sp/>:alt:<sp/>low_slope</highlight></codeline>
+<codeline lineno="12"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="13"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="14"><highlight class="stringliteral">|</highlight></codeline>
+<codeline lineno="15"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="16"><highlight class="stringliteral">..<sp/>image::<sp/>diagrams/high_slope.jpg</highlight></codeline>
+<codeline lineno="17"><highlight class="stringliteral"><sp/><sp/>:width:<sp/>500</highlight></codeline>
+<codeline lineno="18"><highlight class="stringliteral"><sp/><sp/>:align:<sp/>center</highlight></codeline>
+<codeline lineno="19"><highlight class="stringliteral"><sp/><sp/>:alt:<sp/>high_slope</highlight></codeline>
+<codeline lineno="20"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="21"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="22"><highlight class="stringliteral">|</highlight></codeline>
+<codeline lineno="23"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="24"><highlight class="stringliteral">Here<sp/>is<sp/>a<sp/>preview<sp/>from<sp/>the<sp/>experiments<sp/>done<sp/>with<sp/>Boston<sp/>Dynamics<sp/>Spot<sp/>robot<sp/>in<sp/>a<sp/>real<sp/>world<sp/>scenario,<sp/></highlight></codeline>
+<codeline lineno="25"><highlight class="stringliteral">applying<sp/>different<sp/>configurations<sp/>on<sp/>the<sp/>planner.</highlight></codeline>
+<codeline lineno="26"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="27"><highlight class="stringliteral">..<sp/>raw::<sp/>html</highlight></codeline>
+<codeline lineno="28"><highlight class="stringliteral"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="29"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>&lt;iframe<sp/>width=&quot;560&quot;<sp/>height=&quot;315&quot;<sp/>src=&quot;https://youtu.be/11ZInRj7VGc?feature=shared&quot;<sp/>title=&quot;YouTube<sp/>video<sp/>player&quot;<sp/>frameborder=&quot;0&quot;<sp/>allow=&quot;accelerometer;<sp/>autoplay;<sp/>clipboard-write;<sp/>encrypted-media;<sp/>gyroscope;<sp/>picture-in-picture;<sp/>web-share&quot;<sp/>allowfullscreen&gt;&lt;/iframe&gt;</highlight></codeline>
+    </programlisting>
+    <location file="_sources/real_world.rst.txt"/>
+  </compounddef>
+</doxygen>

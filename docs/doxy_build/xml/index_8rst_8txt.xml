@@ -1,0 +1,287 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="index_8rst_8txt" kind="file" language="C++">
+    <compoundname>index.rst.txt</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="index_8rst_8txt_1a5c94c599fa8eb0ad9e7307d56dd83d6b" prot="public" static="no" mutable="no">
+        <type>slope_constrained_planner documentation master</type>
+        <definition>slope_constrained_planner documentation master file</definition>
+        <argsstring></argsstring>
+        <name>file</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="_sources/index.rst.txt" line="1" column="49" bodyfile="_sources/index.rst.txt" bodystart="1" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="index_8rst_8txt_1a9283046a18d982d245289d525e30a652" prot="public" static="no" mutable="no">
+        <type>slope_constrained_planner documentation master created by sphinx quickstart on Mon</type>
+        <definition>slope_constrained_planner documentation master created by sphinx quickstart on Mon May</definition>
+        <argsstring></argsstring>
+        <name>May</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="_sources/index.rst.txt" line="2" column="28" bodyfile="_sources/index.rst.txt" bodystart="3" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="index_8rst_8txt_1aeaed35ba892358e8e585626b16b82e18" prot="public" static="no" mutable="no">
+        <type>slope_constrained_planner documentation master created by sphinx quickstart on Mon but it should at least contain the root toctree directive Master</type>
+        <definition>slope_constrained_planner documentation master created by sphinx quickstart on Mon but it should at least contain the root toctree directive Master Thesis</definition>
+        <argsstring></argsstring>
+        <name>Thesis</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="_sources/index.rst.txt" line="6" column="8" bodyfile="_sources/index.rst.txt" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="index_8rst_8txt_1ad0c7c4466a3e809d1804b185e52ab456" prot="public" static="no" mutable="no">
+        <type>slope_constrained_planner documentation master created by sphinx quickstart on Mon but it should at least contain the root toctree directive Master on the</type>
+        <definition>slope_constrained_planner documentation master created by sphinx quickstart on Mon but it should at least contain the root toctree directive Master on the Internet</definition>
+        <argsstring></argsstring>
+        <name>Internet</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="_sources/index.rst.txt" line="16" column="9" bodyfile="_sources/index.rst.txt" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="index_8rst_8txt_1a4f65738bdaf81580c311ab7fead07959" prot="public" static="no" mutable="no">
+        <type>slope_constrained_planner documentation master created by sphinx quickstart on Mon but it should at least contain the root toctree directive Master on the and TV They are characterized by outstanding mechanical design and control</type>
+        <definition>slope_constrained_planner documentation master created by sphinx quickstart on Mon but it should at least contain the root toctree directive Master on the and TV They are characterized by outstanding mechanical design and control making them capable of doing unprecedented including climbing stairs and stepping on obstacles on their path These robots might play a crucial role in different from outdoor transportation in areas not reachable through roads to search and rescue after environmental e earthquakes despite their unprecedented capabilities</definition>
+        <argsstring></argsstring>
+        <name>capabilities</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="_sources/index.rst.txt" line="17" column="76" bodyfile="_sources/index.rst.txt" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="index_8rst_8txt_1a48f0451a23004b9a441c9852f25252af" prot="public" static="no" mutable="no">
+        <type>slope_constrained_planner documentation master created by sphinx quickstart on Mon but it should at least contain the root toctree directive Master on the and TV They are characterized by outstanding mechanical design and control making them capable of doing unprecedented</type>
+        <definition>slope_constrained_planner documentation master created by sphinx quickstart on Mon but it should at least contain the root toctree directive Master on the and TV They are characterized by outstanding mechanical design and control making them capable of doing unprecedented things</definition>
+        <argsstring></argsstring>
+        <name>things</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="_sources/index.rst.txt" line="18" column="32" bodyfile="_sources/index.rst.txt" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="index_8rst_8txt_1a7dfe1dcf27fe4411f9b8b63a9d96be3b" prot="public" static="no" mutable="no">
+        <type>slope_constrained_planner documentation master created by sphinx quickstart on Mon but it should at least contain the root toctree directive Master on the and TV They are characterized by outstanding mechanical design and control making them capable of doing unprecedented including climbing stairs and stepping on obstacles on their path These robots might play a crucial role in different</type>
+        <definition>slope_constrained_planner documentation master created by sphinx quickstart on Mon but it should at least contain the root toctree directive Master on the and TV They are characterized by outstanding mechanical design and control making them capable of doing unprecedented including climbing stairs and stepping on obstacles on their path These robots might play a crucial role in different scenarios</definition>
+        <argsstring></argsstring>
+        <name>scenarios</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="_sources/index.rst.txt" line="19" column="53" bodyfile="_sources/index.rst.txt" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="index_8rst_8txt_1a598bc286a9b9719449e36859c077e1af" prot="public" static="no" mutable="no">
+        <type>slope_constrained_planner documentation master created by sphinx quickstart on Mon but it should at least contain the root toctree directive Master on the and TV They are characterized by outstanding mechanical design and control making them capable of doing unprecedented including climbing stairs and stepping on obstacles on their path These robots might play a crucial role in different from outdoor transportation in areas not reachable through roads to search and rescue after environmental</type>
+        <definition>slope_constrained_planner documentation master created by sphinx quickstart on Mon but it should at least contain the root toctree directive Master on the and TV They are characterized by outstanding mechanical design and control making them capable of doing unprecedented including climbing stairs and stepping on obstacles on their path These robots might play a crucial role in different from outdoor transportation in areas not reachable through roads to search and rescue after environmental disasters</definition>
+        <argsstring></argsstring>
+        <name>disasters</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="_sources/index.rst.txt" line="20" column="66" bodyfile="_sources/index.rst.txt" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="index_8rst_8txt_1a7a31677c1b1b97f960dd6ae3c245cbb8" prot="public" static="no" mutable="no">
+        <type>slope_constrained_planner documentation master created by sphinx quickstart on Mon but it should at least contain the root toctree directive Master on the and TV They are characterized by outstanding mechanical design and control making them capable of doing unprecedented including climbing stairs and stepping on obstacles on their path These robots might play a crucial role in different from outdoor transportation in areas not reachable through roads to search and rescue after environmental e</type>
+        <definition>slope_constrained_planner documentation master created by sphinx quickstart on Mon but it should at least contain the root toctree directive Master on the and TV They are characterized by outstanding mechanical design and control making them capable of doing unprecedented including climbing stairs and stepping on obstacles on their path These robots might play a crucial role in different from outdoor transportation in areas not reachable through roads to search and rescue after environmental e earthquakes despite their unprecedented it turns out that they still lack fully autonomous they lack the capability of autonomously finding a safe path in hazardous for when moving uphill or downhill on rough outdoor e g</definition>
+        <argsstring></argsstring>
+        <name>g</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="_sources/index.rst.txt" line="20" column="77" bodyfile="_sources/index.rst.txt" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="index_8rst_8txt_1a955d9e037f046ae3fb75850ec8d104a0" prot="public" static="no" mutable="no">
+        <type>slope_constrained_planner documentation master created by sphinx quickstart on Mon but it should at least contain the root toctree directive Master on the and TV They are characterized by outstanding mechanical design and control making them capable of doing unprecedented including climbing stairs and stepping on obstacles on their path These robots might play a crucial role in different from outdoor transportation in areas not reachable through roads to search and rescue after environmental e earthquakes</type>
+        <definition>slope_constrained_planner documentation master created by sphinx quickstart on Mon but it should at least contain the root toctree directive Master on the and TV They are characterized by outstanding mechanical design and control making them capable of doing unprecedented including climbing stairs and stepping on obstacles on their path These robots might play a crucial role in different from outdoor transportation in areas not reachable through roads to search and rescue after environmental e earthquakes However</definition>
+        <argsstring></argsstring>
+        <name>However</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="_sources/index.rst.txt" line="22" column="1" bodyfile="_sources/index.rst.txt" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="index_8rst_8txt_1aadf2ed11ee773be44e4ad5131177df68" prot="public" static="no" mutable="no">
+        <type>slope_constrained_planner documentation master created by sphinx quickstart on Mon but it should at least contain the root toctree directive Master on the and TV They are characterized by outstanding mechanical design and control making them capable of doing unprecedented including climbing stairs and stepping on obstacles on their path These robots might play a crucial role in different from outdoor transportation in areas not reachable through roads to search and rescue after environmental e earthquakes despite their unprecedented it turns out that they still lack fully autonomous</type>
+        <definition>slope_constrained_planner documentation master created by sphinx quickstart on Mon but it should at least contain the root toctree directive Master on the and TV They are characterized by outstanding mechanical design and control making them capable of doing unprecedented including climbing stairs and stepping on obstacles on their path These robots might play a crucial role in different from outdoor transportation in areas not reachable through roads to search and rescue after environmental e earthquakes despite their unprecedented it turns out that they still lack fully autonomous behavior</definition>
+        <argsstring></argsstring>
+        <name>behavior</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="_sources/index.rst.txt" line="23" column="1" bodyfile="_sources/index.rst.txt" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="index_8rst_8txt_1a694889bff181cc9112cd2a5ed7cb98dd" prot="public" static="no" mutable="no">
+        <type>slope_constrained_planner documentation master created by sphinx quickstart on Mon but it should at least contain the root toctree directive Master on the and TV They are characterized by outstanding mechanical design and control making them capable of doing unprecedented including climbing stairs and stepping on obstacles on their path These robots might play a crucial role in different from outdoor transportation in areas not reachable through roads to search and rescue after environmental e earthquakes despite their unprecedented it turns out that they still lack fully autonomous they lack the capability of autonomously finding a safe path in hazardous</type>
+        <definition>slope_constrained_planner documentation master created by sphinx quickstart on Mon but it should at least contain the root toctree directive Master on the and TV They are characterized by outstanding mechanical design and control making them capable of doing unprecedented including climbing stairs and stepping on obstacles on their path These robots might play a crucial role in different from outdoor transportation in areas not reachable through roads to search and rescue after environmental e earthquakes despite their unprecedented it turns out that they still lack fully autonomous they lack the capability of autonomously finding a safe path in hazardous conditions</definition>
+        <argsstring></argsstring>
+        <name>conditions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="_sources/index.rst.txt" line="24" column="1" bodyfile="_sources/index.rst.txt" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="index_8rst_8txt_1a232b7079eaaac7f78a368e3bb2ed8d5a" prot="public" static="no" mutable="no">
+        <type>slope_constrained_planner documentation master created by sphinx quickstart on Mon but it should at least contain the root toctree directive Master on the and TV They are characterized by outstanding mechanical design and control making them capable of doing unprecedented including climbing stairs and stepping on obstacles on their path These robots might play a crucial role in different from outdoor transportation in areas not reachable through roads to search and rescue after environmental e earthquakes despite their unprecedented it turns out that they still lack fully autonomous they lack the capability of autonomously finding a safe path in hazardous for</type>
+        <definition>slope_constrained_planner documentation master created by sphinx quickstart on Mon but it should at least contain the root toctree directive Master on the and TV They are characterized by outstanding mechanical design and control making them capable of doing unprecedented including climbing stairs and stepping on obstacles on their path These robots might play a crucial role in different from outdoor transportation in areas not reachable through roads to search and rescue after environmental e earthquakes despite their unprecedented it turns out that they still lack fully autonomous they lack the capability of autonomously finding a safe path in hazardous for instance</definition>
+        <argsstring></argsstring>
+        <name>instance</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="_sources/index.rst.txt" line="24" column="16" bodyfile="_sources/index.rst.txt" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="index_8rst_8txt_1ab25b831d82d8d3f8aff56ac1e49a44b4" prot="public" static="no" mutable="no">
+        <type>slope_constrained_planner documentation master created by sphinx quickstart on Mon but it should at least contain the root toctree directive Master on the and TV They are characterized by outstanding mechanical design and control making them capable of doing unprecedented including climbing stairs and stepping on obstacles on their path These robots might play a crucial role in different from outdoor transportation in areas not reachable through roads to search and rescue after environmental e earthquakes despite their unprecedented it turns out that they still lack fully autonomous they lack the capability of autonomously finding a safe path in hazardous for when moving uphill or downhill on rough outdoor</type>
+        <definition>slope_constrained_planner documentation master created by sphinx quickstart on Mon but it should at least contain the root toctree directive Master on the and TV They are characterized by outstanding mechanical design and control making them capable of doing unprecedented including climbing stairs and stepping on obstacles on their path These robots might play a crucial role in different from outdoor transportation in areas not reachable through roads to search and rescue after environmental e earthquakes despite their unprecedented it turns out that they still lack fully autonomous they lack the capability of autonomously finding a safe path in hazardous for when moving uphill or downhill on rough outdoor e climbing a hill Please notice as an the popular Boston Dynamics’ SPOT cannot manage slopes of more than degrees This thesis aims to make quadruped robots capable of finding a safe given a start and a goal on uneven outdoor terrain</definition>
+        <argsstring></argsstring>
+        <name>terrain</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="_sources/index.rst.txt" line="24" column="73" bodyfile="_sources/index.rst.txt" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="index_8rst_8txt_1a18d451793edc3573fd3458d399b87b32" prot="public" static="no" mutable="no">
+        <type>slope_constrained_planner documentation master created by sphinx quickstart on Mon but it should at least contain the root toctree directive Master on the and TV They are characterized by outstanding mechanical design and control making them capable of doing unprecedented including climbing stairs and stepping on obstacles on their path These robots might play a crucial role in different from outdoor transportation in areas not reachable through roads to search and rescue after environmental e earthquakes despite their unprecedented it turns out that they still lack fully autonomous they lack the capability of autonomously finding a safe path in hazardous for when moving uphill or downhill on rough outdoor e climbing a hill Please notice</type>
+        <definition>slope_constrained_planner documentation master created by sphinx quickstart on Mon but it should at least contain the root toctree directive Master on the and TV They are characterized by outstanding mechanical design and control making them capable of doing unprecedented including climbing stairs and stepping on obstacles on their path These robots might play a crucial role in different from outdoor transportation in areas not reachable through roads to search and rescue after environmental e earthquakes despite their unprecedented it turns out that they still lack fully autonomous they lack the capability of autonomously finding a safe path in hazardous for when moving uphill or downhill on rough outdoor e climbing a hill Please notice that</definition>
+        <argsstring></argsstring>
+        <name>that</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="_sources/index.rst.txt" line="25" column="15" bodyfile="_sources/index.rst.txt" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="index_8rst_8txt_1ab347f3bed2759e7346746dd5e84e95a6" prot="public" static="no" mutable="no">
+        <type>slope_constrained_planner documentation master created by sphinx quickstart on Mon but it should at least contain the root toctree directive Master on the and TV They are characterized by outstanding mechanical design and control making them capable of doing unprecedented including climbing stairs and stepping on obstacles on their path These robots might play a crucial role in different from outdoor transportation in areas not reachable through roads to search and rescue after environmental e earthquakes despite their unprecedented it turns out that they still lack fully autonomous they lack the capability of autonomously finding a safe path in hazardous for when moving uphill or downhill on rough outdoor e climbing a hill Please notice as an</type>
+        <definition>slope_constrained_planner documentation master created by sphinx quickstart on Mon but it should at least contain the root toctree directive Master on the and TV They are characterized by outstanding mechanical design and control making them capable of doing unprecedented including climbing stairs and stepping on obstacles on their path These robots might play a crucial role in different from outdoor transportation in areas not reachable through roads to search and rescue after environmental e earthquakes despite their unprecedented it turns out that they still lack fully autonomous they lack the capability of autonomously finding a safe path in hazardous for when moving uphill or downhill on rough outdoor e climbing a hill Please notice as an example</definition>
+        <argsstring></argsstring>
+        <name>example</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="_sources/index.rst.txt" line="25" column="26" bodyfile="_sources/index.rst.txt" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="index_8rst_8txt_1a016269d54d8af45209b384dbfe53a122" prot="public" static="no" mutable="no">
+        <type>slope_constrained_planner documentation master created by sphinx quickstart on Mon but it should at least contain the root toctree directive Master on the and TV They are characterized by outstanding mechanical design and control making them capable of doing unprecedented including climbing stairs and stepping on obstacles on their path These robots might play a crucial role in different from outdoor transportation in areas not reachable through roads to search and rescue after environmental e earthquakes despite their unprecedented it turns out that they still lack fully autonomous they lack the capability of autonomously finding a safe path in hazardous for when moving uphill or downhill on rough outdoor e climbing a hill Please notice as an the popular Boston Dynamics’ SPOT cannot manage slopes of more than degrees This thesis aims to make quadruped robots capable of finding a safe</type>
+        <definition>slope_constrained_planner documentation master created by sphinx quickstart on Mon but it should at least contain the root toctree directive Master on the and TV They are characterized by outstanding mechanical design and control making them capable of doing unprecedented including climbing stairs and stepping on obstacles on their path These robots might play a crucial role in different from outdoor transportation in areas not reachable through roads to search and rescue after environmental e earthquakes despite their unprecedented it turns out that they still lack fully autonomous they lack the capability of autonomously finding a safe path in hazardous for when moving uphill or downhill on rough outdoor e climbing a hill Please notice as an the popular Boston Dynamics’ SPOT cannot manage slopes of more than degrees This thesis aims to make quadruped robots capable of finding a safe path</definition>
+        <argsstring></argsstring>
+        <name>path</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="_sources/index.rst.txt" line="28" column="69" bodyfile="_sources/index.rst.txt" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">..<sp/>slope_constrained_planner<sp/>documentation<sp/>master<sp/>file,<sp/>created<sp/>by</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"><sp/><sp/><sp/>sphinx-quickstart<sp/>on<sp/>Mon<sp/>May<sp/>15<sp/>19:15:01<sp/>2023.</highlight></codeline>
+<codeline lineno="3"><highlight class="normal"><sp/><sp/><sp/>You<sp/>can<sp/>adapt<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/>file<sp/>completely<sp/>to<sp/>your<sp/>liking,<sp/>but<sp/>it<sp/>should<sp/>at<sp/>least</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"><sp/><sp/><sp/>contain<sp/>the<sp/>root<sp/>`toctree`<sp/>directive.</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal">Master<sp/>Thesis:<sp/>Making<sp/>quadruped<sp/>robots<sp/>able<sp/>to<sp/>find<sp/>safe<sp/>uphill<sp/>and<sp/>downhill<sp/>paths<sp/>outdoors.</highlight></codeline>
+<codeline lineno="7"><highlight class="normal">==============================================================================================</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal">..<sp/>toctree::</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/>:maxdepth:<sp/>2</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/>:caption:<sp/>Contents:</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal">Overview</highlight></codeline>
+<codeline lineno="15"><highlight class="normal">==========</highlight></codeline>
+<codeline lineno="16"><highlight class="normal">We<sp/>are<sp/>getting<sp/>used<sp/>to<sp/>seeing<sp/>quadruped<sp/>(and<sp/>biped)<sp/>robots<sp/>everywhere:<sp/>at<sp/>the<sp/>cinema,<sp/>on<sp/>the<sp/>Internet,<sp/></highlight></codeline>
+<codeline lineno="17"><highlight class="normal">and<sp/>TV.<sp/>They<sp/>are<sp/>characterized<sp/>by<sp/>outstanding<sp/>mechanical<sp/>design<sp/>and<sp/>control<sp/>capabilities,<sp/>making<sp/>them<sp/></highlight></codeline>
+<codeline lineno="18"><highlight class="normal">capable<sp/>of<sp/>doing<sp/>unprecedented<sp/>things,<sp/>including<sp/>climbing<sp/>stairs<sp/>and<sp/>stepping<sp/>on<sp/>obstacles<sp/>on<sp/>their<sp/>path.<sp/></highlight></codeline>
+<codeline lineno="19"><highlight class="normal">These<sp/>robots<sp/>might<sp/>play<sp/>a<sp/>crucial<sp/>role<sp/>in<sp/>different<sp/>scenarios,<sp/>from<sp/>outdoor<sp/>transportation<sp/>in<sp/>areas<sp/>not<sp/></highlight></codeline>
+<codeline lineno="20"><highlight class="normal">reachable<sp/>through<sp/>roads<sp/>to<sp/>search<sp/>and<sp/>rescue<sp/>after<sp/>environmental<sp/>disasters,<sp/>e.g.,<sp/>earthquakes.</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal">However,<sp/>despite<sp/>their<sp/>unprecedented<sp/>capabilities,<sp/>it<sp/>turns<sp/>out<sp/>that<sp/>they<sp/>still<sp/>lack<sp/>fully<sp/>autonomous</highlight></codeline>
+<codeline lineno="23"><highlight class="normal">behavior:<sp/>in<sp/>particular,<sp/>they<sp/>lack<sp/>the<sp/>capability<sp/>of<sp/>autonomously<sp/>finding<sp/>a<sp/>safe<sp/>path<sp/>in<sp/>hazardous<sp/></highlight></codeline>
+<codeline lineno="24"><highlight class="normal">conditions,<sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>instance,<sp/>when<sp/>moving<sp/>uphill<sp/>or<sp/>downhill<sp/>on<sp/>rough<sp/>outdoor<sp/>terrain,<sp/>e.g.,<sp/>climbing<sp/>a<sp/>hill.</highlight></codeline>
+<codeline lineno="25"><highlight class="normal">Please<sp/>notice<sp/>that,<sp/>as<sp/>an<sp/>example,<sp/>the<sp/>popular<sp/>Boston<sp/>Dynamics’<sp/>SPOT<sp/>cannot<sp/>manage<sp/>slopes<sp/>of<sp/>more<sp/>than<sp/></highlight></codeline>
+<codeline lineno="26"><highlight class="normal">+/-<sp/>30<sp/>degrees.</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal">This<sp/>thesis<sp/>aims<sp/>to<sp/>make<sp/>quadruped<sp/>robots<sp/>capable<sp/>of<sp/>finding<sp/>a<sp/>safe<sp/>path,<sp/>given<sp/>a<sp/>start<sp/>and<sp/>a<sp/>goal<sp/>on<sp/></highlight></codeline>
+<codeline lineno="29"><highlight class="normal">uneven<sp/>outdoor<sp/>terrain,<sp/>by<sp/>identifying<sp/>an<sp/>uphill/downhill<sp/>path<sp/>from<sp/>a<sp/>start<sp/>to<sp/>a<sp/>goal<sp/>location<sp/>that<sp/></highlight></codeline>
+<codeline lineno="30"><highlight class="normal">ensures<sp/>that<sp/>the<sp/>maximum<sp/>slope<sp/>is<sp/>always<sp/>within<sp/>the<sp/>allowed<sp/>+/-<sp/>30<sp/>degrees.</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal">Contents</highlight></codeline>
+<codeline lineno="34"><highlight class="normal">==========</highlight></codeline>
+<codeline lineno="35"><highlight class="normal">..<sp/>toctree::</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/>:maxdepth:<sp/>1</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/>simulation_environment</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/>software_architecture</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/>sequence_diagram</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/>source_files</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/>usage</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/>working_hypothesis</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="47"><highlight class="normal">Indices<sp/>and<sp/>tables</highlight></codeline>
+<codeline lineno="48"><highlight class="normal">==================</highlight></codeline>
+<codeline lineno="49"><highlight class="normal">*<sp/>:ref:`genindex`</highlight></codeline>
+<codeline lineno="50"><highlight class="normal">*<sp/>:ref:`modindex`</highlight></codeline>
+<codeline lineno="51"><highlight class="normal">*<sp/>:ref:`search`</highlight></codeline>
+    </programlisting>
+    <location file="_sources/index.rst.txt"/>
+  </compounddef>
+</doxygen>

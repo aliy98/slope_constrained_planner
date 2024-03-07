@@ -1,0 +1,87 @@
+\hypertarget{classslope__constrained__planner_1_1_sampler}{}\doxysection{slope\+\_\+constrained\+\_\+planner\+::Sampler Class Reference}
+\label{classslope__constrained__planner_1_1_sampler}\index{slope\_constrained\_planner::Sampler@{slope\_constrained\_planner::Sampler}}
+
+
+Defines a custom sampler which only samples an state with the heading angle below the threshold.  
+
+
+
+
+{\ttfamily \#include $<$sampler.\+h$>$}
+
+
+
+Inheritance diagram for slope\+\_\+constrained\+\_\+planner\+::Sampler\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=227pt]{classslope__constrained__planner_1_1_sampler__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classslope__constrained__planner_1_1_sampler_a0c4af1c0a4484edc16744670b5c8bbb7}{Sampler}} (const ob\+::\+State\+Space $\ast$si, const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classslope__constrained__planner_1_1_map}{Map}} $>$ \&map, const Params\+Const\+Ptr \&params)
+\begin{DoxyCompactList}\small\item\em Constructor for {\ttfamily \mbox{\hyperlink{classslope__constrained__planner_1_1_sampler}{Sampler}}} class. Defines the space bounderies using the grid map info. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classslope__constrained__planner_1_1_sampler_a58c6239b7b5135499054771b86f9cc5e}{sample\+Uniform}} (ob\+::\+State $\ast$state) override
+\begin{DoxyCompactList}\small\item\em Overriden function from the base class {\ttfamily State\+Sampler}, uses {\ttfamily sample\+Position\+In\+Map()} function to find state position. Uses {\ttfamily get\+Normal(ind)} function to find roll and pitch angles for the state orientation. Keeps rotating the state frame along its z-\/axis until the heading angle gets below threshold. If previously found state was valid, use its reverse orientation for the next state. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classslope__constrained__planner_1_1_sampler_a3e33ebfe4ac63db796c1a57686139e86}\label{classslope__constrained__planner_1_1_sampler_a3e33ebfe4ac63db796c1a57686139e86}} 
+virtual void \mbox{\hyperlink{classslope__constrained__planner_1_1_sampler_a3e33ebfe4ac63db796c1a57686139e86}{sample\+Uniform\+Near}} (ob\+::\+State $\ast$, const ob\+::\+State $\ast$, double) override
+\begin{DoxyCompactList}\small\item\em Not implemented in this software architecture. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classslope__constrained__planner_1_1_sampler_ac7fc4c70ce26d67a578708054058065c}\label{classslope__constrained__planner_1_1_sampler_ac7fc4c70ce26d67a578708054058065c}} 
+virtual void \mbox{\hyperlink{classslope__constrained__planner_1_1_sampler_ac7fc4c70ce26d67a578708054058065c}{sample\+Gaussian}} (ob\+::\+State $\ast$, const ob\+::\+State $\ast$, double) override
+\begin{DoxyCompactList}\small\item\em Not implemented in this software architecture. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classslope__constrained__planner_1_1_sampler_a91e7049f0ac790fa68734d171a8659c4}\label{classslope__constrained__planner_1_1_sampler_a91e7049f0ac790fa68734d171a8659c4}} 
+bool {\bfseries check\+Sample\+Distance} (const ob\+::\+Scoped\+State$<$$>$ \&sample)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Defines a custom sampler which only samples an state with the heading angle below the threshold. 
+
+Description\+: A custom sampler which randomly samples a state position within map bounderies. Regarding the state orientation, the yaw angle would be chosen randomly within (-\/pi, pi), roll and pitch angles are found by getting the normal vector of the state cell in the map. In order to get the desired orientation, state frame rotates along its z-\/axis until the heading angle gets below the threshold. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classslope__constrained__planner_1_1_sampler_a0c4af1c0a4484edc16744670b5c8bbb7}\label{classslope__constrained__planner_1_1_sampler_a0c4af1c0a4484edc16744670b5c8bbb7}} 
+\index{slope\_constrained\_planner::Sampler@{slope\_constrained\_planner::Sampler}!Sampler@{Sampler}}
+\index{Sampler@{Sampler}!slope\_constrained\_planner::Sampler@{slope\_constrained\_planner::Sampler}}
+\doxysubsubsection{\texorpdfstring{Sampler()}{Sampler()}}
+{\footnotesize\ttfamily Sampler\+::\+Sampler (\begin{DoxyParamCaption}\item[{const ob\+::\+State\+Space $\ast$}]{si,  }\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classslope__constrained__planner_1_1_map}{Map}} $>$ \&}]{map,  }\item[{const Params\+Const\+Ptr \&}]{params }\end{DoxyParamCaption})}
+
+
+
+Constructor for {\ttfamily \mbox{\hyperlink{classslope__constrained__planner_1_1_sampler}{Sampler}}} class. Defines the space bounderies using the grid map info. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em space} & state space in which the sampler would find the states \\
+\hline
+{\em map} & grid map of the environment \\
+\hline
+{\em params} & contains required info about the map layers \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classslope__constrained__planner_1_1_sampler_a58c6239b7b5135499054771b86f9cc5e}\label{classslope__constrained__planner_1_1_sampler_a58c6239b7b5135499054771b86f9cc5e}} 
+\index{slope\_constrained\_planner::Sampler@{slope\_constrained\_planner::Sampler}!sampleUniform@{sampleUniform}}
+\index{sampleUniform@{sampleUniform}!slope\_constrained\_planner::Sampler@{slope\_constrained\_planner::Sampler}}
+\doxysubsubsection{\texorpdfstring{sampleUniform()}{sampleUniform()}}
+{\footnotesize\ttfamily void Sampler\+::sample\+Uniform (\begin{DoxyParamCaption}\item[{ob\+::\+State $\ast$}]{state }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Overriden function from the base class {\ttfamily State\+Sampler}, uses {\ttfamily sample\+Position\+In\+Map()} function to find state position. Uses {\ttfamily get\+Normal(ind)} function to find roll and pitch angles for the state orientation. Keeps rotating the state frame along its z-\/axis until the heading angle gets below threshold. If previously found state was valid, use its reverse orientation for the next state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & The sampled state data \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/ali/ros\+\_\+ws/src/slope\+\_\+constrained\+\_\+planner/slope\+\_\+constrained\+\_\+planner/include/slope\+\_\+constrained\+\_\+planner/\mbox{\hyperlink{sampler_8h}{sampler.\+h}}\item 
+/home/ali/ros\+\_\+ws/src/slope\+\_\+constrained\+\_\+planner/slope\+\_\+constrained\+\_\+planner/src/\mbox{\hyperlink{sampler_8cpp}{sampler.\+cpp}}\end{DoxyCompactItemize}

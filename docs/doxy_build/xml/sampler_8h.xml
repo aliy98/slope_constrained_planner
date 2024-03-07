@@ -1,0 +1,292 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="sampler_8h" kind="file" language="C++">
+    <compoundname>sampler.h</compoundname>
+    <includes local="no">mutex</includes>
+    <includes local="no">ompl/base/ScopedState.h</includes>
+    <includes local="no">ompl/base/StateSpace.h</includes>
+    <includes local="no">ompl/base/spaces/SE3StateSpace.h</includes>
+    <includes local="no">ompl/base/spaces/SO2StateSpace.h</includes>
+    <includes local="no">ompl/base/spaces/SO3StateSpace.h</includes>
+    <includes local="no">ompl/base/spaces/RealVectorStateSpace.h</includes>
+    <includes refid="map_8h" local="yes">slope_constrained_planner/map.h</includes>
+    <includedby refid="planner_8h" local="yes">/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/planner.h</includedby>
+    <includedby refid="sampler_8cpp" local="yes">/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/src/sampler.cpp</includedby>
+    <incdepgraph>
+      <node id="6">
+        <label>ompl/base/spaces/SO2StateSpace.h</label>
+      </node>
+      <node id="10">
+        <label>functional</label>
+      </node>
+      <node id="1">
+        <label>/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/sampler.h</label>
+        <link refid="sampler_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>cmath</label>
+      </node>
+      <node id="3">
+        <label>ompl/base/ScopedState.h</label>
+      </node>
+      <node id="17">
+        <label>string</label>
+      </node>
+      <node id="7">
+        <label>ompl/base/spaces/SO3StateSpace.h</label>
+      </node>
+      <node id="13">
+        <label>slope_constrained_planner/utils.h</label>
+        <link refid="include_2slope__constrained__planner_2utils_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>ompl/base/spaces/RealVectorStateSpace.h</label>
+      </node>
+      <node id="15">
+        <label>Eigen/Dense</label>
+      </node>
+      <node id="14">
+        <label>vector</label>
+      </node>
+      <node id="16">
+        <label>slope_constrained_planner/params.h</label>
+        <link refid="params_8h"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>ompl/base/spaces/SE3StateSpace.h</label>
+      </node>
+      <node id="2">
+        <label>mutex</label>
+      </node>
+      <node id="4">
+        <label>ompl/base/StateSpace.h</label>
+      </node>
+      <node id="12">
+        <label>grid_map_core/GridMap.hpp</label>
+      </node>
+      <node id="9">
+        <label>slope_constrained_planner/map.h</label>
+        <link refid="map_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>slope_constrained_planner/chain.h</label>
+        <link refid="chain_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>memory</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="8">
+        <label>/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/src/converter.cpp</label>
+        <link refid="converter_8cpp"/>
+      </node>
+      <node id="1">
+        <label>/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/sampler.h</label>
+        <link refid="sampler_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/src/planner_ros_node.cpp</label>
+        <link refid="planner__ros__node_8cpp"/>
+      </node>
+      <node id="3">
+        <label>/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/src/planner.cpp</label>
+        <link refid="planner_8cpp"/>
+      </node>
+      <node id="9">
+        <label>/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/src/sampler.cpp</label>
+        <link refid="sampler_8cpp"/>
+      </node>
+      <node id="2">
+        <label>/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/planner.h</label>
+        <link refid="planner_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/include/slope_constrained_planner_ros/converter.h</label>
+        <link refid="converter_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/src/planner_ros.cpp</label>
+        <link refid="planner__ros_8cpp"/>
+      </node>
+      <node id="5">
+        <label>/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/include/slope_constrained_planner_ros/planner_ros.h</label>
+        <link refid="planner__ros_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classslope__constrained__planner_1_1_sampler" prot="public">slope_constrained_planner::Sampler</innerclass>
+    <innerclass refid="classslope__constrained__planner_1_1_sampler_allocator" prot="public">slope_constrained_planner::SamplerAllocator</innerclass>
+    <innernamespace refid="namespaceslope__constrained__planner">slope_constrained_planner</innernamespace>
+    <briefdescription>
+<para>Defines a custom sampler which only samples an state with the heading angle below the threshold. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="6"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;mutex&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;ompl/base/ScopedState.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;ompl/base/StateSpace.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;ompl/base/spaces/SE3StateSpace.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;ompl/base/spaces/SO2StateSpace.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;ompl/base/spaces/SO3StateSpace.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;ompl/base/spaces/RealVectorStateSpace.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="map_8h" kindref="compound">slope_constrained_planner/map.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">ob<sp/>=<sp/>ompl::base;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">slope_constrained_planner<sp/>{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="classslope__constrained__planner_1_1_sampler" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classslope__constrained__planner_1_1_sampler" kindref="compound">Sampler</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>ob::StateSampler<sp/>{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/>ParamsConstPtr<sp/>params_;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/>ob::StateSpacePtr<sp/>space_real_vec_;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/>ob::StateSpacePtr<sp/>space_rot_;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/>std::shared_ptr&lt;ob::RealVectorBounds&gt;<sp/>bounds_se3_;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/>ob::ScopedState&lt;ob::RealVectorStateSpace&gt;<sp/>state_pos_;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/>grid_map::Position<sp/>prev_pos_;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>sample_is_near_robot_;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/>ob::ScopedState&lt;ob::SE3StateSpace&gt;<sp/>state_rot_;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/>ob::RealVectorStateSampler<sp/>base_real_vec_;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/>std::shared_ptr&lt;Map&gt;<sp/>map_;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">mutable</highlight><highlight class="normal"><sp/>std::mutex<sp/>map_mutex_;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>prev_state_is_valid_;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>prev_yaw_;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>prev_phi_;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/>grid_map::Position<sp/>samplePositionInMap();</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><ref refid="classslope__constrained__planner_1_1_sampler_1a0c4af1c0a4484edc16744670b5c8bbb7" kindref="member">Sampler</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ob::StateSpace*<sp/>si,</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::shared_ptr&lt;Map&gt;&amp;<sp/>map,</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ParamsConstPtr&amp;<sp/>params);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classslope__constrained__planner_1_1_sampler_1a58c6239b7b5135499054771b86f9cc5e" kindref="member">sampleUniform</ref>(ob::State*<sp/>state)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classslope__constrained__planner_1_1_sampler_1a3e33ebfe4ac63db796c1a57686139e86" kindref="member">sampleUniformNear</ref>(ob::State*<sp/></highlight><highlight class="comment">/*state*/</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ob::State*<sp/></highlight><highlight class="comment">/*near*/</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/></highlight><highlight class="comment">/*distance*/</highlight><highlight class="normal">)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classslope__constrained__planner_1_1_sampler_1ac7fc4c70ce26d67a578708054058065c" kindref="member">sampleGaussian</ref>(ob::State*<sp/></highlight><highlight class="comment">/*state*/</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ob::State*<sp/></highlight><highlight class="comment">/*mean*/</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/></highlight><highlight class="comment">/*std_dev*/</highlight><highlight class="normal">)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>checkSampleDistance(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ob::ScopedState&lt;&gt;&amp;<sp/>sample);</highlight></codeline>
+<codeline lineno="126"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132" refid="classslope__constrained__planner_1_1_sampler_allocator" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classslope__constrained__planner_1_1_sampler_allocator" kindref="compound">SamplerAllocator</ref><sp/>{</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/>ParamsConstPtr<sp/>params_;</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/>std::shared_ptr&lt;Map&gt;<sp/>map_;</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classslope__constrained__planner_1_1_sampler_allocator" kindref="compound">SamplerAllocator</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ParamsConstPtr&amp;<sp/>params)<sp/>:</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>params_(params)<sp/>{}</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classslope__constrained__planner_1_1_sampler_allocator_1a6c08b70c6c16e4c4bc259a47c36c37f8" kindref="member">setMap</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::shared_ptr&lt;Map&gt;&amp;<sp/>map);</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/>std::shared_ptr&lt;Sampler&gt;<sp/><ref refid="classslope__constrained__planner_1_1_sampler_allocator_1a95a897b0212f9925c5b912b7974524db" kindref="member">getSampler</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ob::StateSpace*<sp/>space);</highlight></codeline>
+<codeline lineno="161"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/sampler.h"/>
+  </compounddef>
+</doxygen>

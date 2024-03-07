@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="usage_8rst_8txt" kind="file" language="C++">
+    <compoundname>usage.rst.txt</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">Usage</highlight></codeline>
+<codeline lineno="2"><highlight class="normal">=====</highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal">Installation</highlight></codeline>
+<codeline lineno="5"><highlight class="normal">------------</highlight></codeline>
+<codeline lineno="6"><highlight class="normal">*<sp/>The<sp/>software<sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/>planner<sp/>is<sp/>based<sp/>on<sp/>`OMPL<sp/>&lt;https:</highlight><highlight class="comment">//ompl.kavrakilab.org/index.html&gt;`_,<sp/>which<sp/>consists<sp/>of<sp/>many<sp/>state-of-the-art<sp/>sampling-based<sp/>motion<sp/>planning<sp/>algorithms.<sp/>The<sp/>required<sp/>dependencies<sp/>could<sp/>be<sp/>installed<sp/>using<sp/>the<sp/>following<sp/>command:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="8"><highlight class="normal">..<sp/>code-block::<sp/>console</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/>sudo<sp/>apt<sp/>install<sp/>ros-noetic-ompl<sp/>ros-noetic-grid-map-core<sp/>ros-noetic-actionlib<sp/>ros-noetic-geometry-msgs<sp/>ros-noetic-grid-map-msgs<sp/>ros-noetic-grid-map-ros<sp/>ros-noetic-nav-msgs<sp/>ros-noetic-roscpp<sp/>ros-noetic-tf2-geometry-msgs<sp/>ros-noetic-tf2-ros`</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal">*<sp/>Additionally,<sp/>`elevation_mapping<sp/>&lt;https:</highlight><highlight class="comment">//github.com/ANYbotics/elevation_mapping&gt;`_<sp/><sp/>ROS<sp/>package<sp/>was<sp/>used<sp/>to<sp/>create<sp/>a<sp/>2.5D<sp/>map<sp/>of<sp/>the<sp/>environment.<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal">*<sp/>In<sp/>order<sp/>to<sp/>test<sp/>the<sp/>software<sp/></highlight><highlight class="keyword">package<sp/></highlight><highlight class="normal">in<sp/>simulation<sp/>environment,<sp/>`WoLF<sp/>&lt;https:</highlight><highlight class="comment">//github.com/graiola/wolf-setup&gt;`_<sp/>was<sp/>used.<sp/>This<sp/>package<sp/>provides<sp/>whole-body<sp/>controller,<sp/>along<sp/>with<sp/>the<sp/>robot<sp/>description<sp/>files<sp/>and<sp/>some<sp/>interesting<sp/>worlds<sp/>for<sp/>Boston<sp/>Dynamics<sp/>Spot<sp/>robot,<sp/>as<sp/>well<sp/>as<sp/>several<sp/>other<sp/>famous<sp/>quadruped<sp/>robots.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal">Once<sp/>the<sp/>dependencies<sp/>are<sp/>met,<sp/>the<sp/>package<sp/>can<sp/>be<sp/>installed<sp/>as<sp/>it<sp/>follows:</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal">..<sp/>code-block::<sp/>console</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/>mkdir<sp/>-p<sp/>catkin_ws/src</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/>cd<sp/>catkin_ws/src</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/>git<sp/>clone<sp/>https:</highlight><highlight class="comment">//github.com/aliy98/slope_constrained_planner</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/>cd<sp/>..</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/>source<sp/>/opt/ros/&lt;distro&gt;/setup.bash</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/>catkin_make</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal">Running</highlight></codeline>
+<codeline lineno="28"><highlight class="normal">--------</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal">In<sp/>order<sp/>to<sp/>run<sp/>the<sp/>simulation<sp/>environemnt,<sp/>along<sp/>with<sp/>the<sp/>elevation<sp/>mapping<sp/>package,<sp/>the<sp/>following<sp/>launch<sp/>file<sp/>could<sp/>be<sp/>used:</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal">..<sp/>code-block::<sp/>console</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/>roslaunch<sp/>slope_constrained_planner_ros<sp/>simulation.launch</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal">Once<sp/>the<sp/>robot<sp/>is<sp/>spawned<sp/>in<sp/>a<sp/>random<sp/>point<sp/>by<sp/>``go0.py``<sp/>script,<sp/>a<sp/>random<sp/>goal<sp/>point<sp/>would<sp/>be<sp/>chosen<sp/>on<sp/>the<sp/>map<sp/>with<sp/>a<sp/>particular<sp/>distance<sp/>to<sp/>robot.<sp/>Then,<sp/>robot<sp/>would<sp/>align<sp/>to<sp/>the<sp/>goal<sp/>point,<sp/>and<sp/>it<sp/>would<sp/>tilt<sp/>along<sp/>it&apos;s<sp/>y-axiz<sp/>by<sp/>``tilt_robot.py``<sp/>script,<sp/>in<sp/>order<sp/>to<sp/>have<sp/>a<sp/>better<sp/>view<sp/>in<sp/>the<sp/>elevation<sp/>map.</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal">The<sp/>planner<sp/>node,<sp/>could<sp/>be<sp/>launched<sp/>using<sp/>the<sp/>following<sp/>command:</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal">..<sp/>code-block::<sp/>console</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/>roslaunch<sp/>slope_constrained_planner_ros<sp/>planner.launch<sp/></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal">Once<sp/>the<sp/>solution<sp/>path<sp/>is<sp/>found<sp/>by<sp/>the<sp/>planner,<sp/>the<sp/>robot<sp/>could<sp/>move<sp/>along<sp/>the<sp/>path,<sp/>using<sp/>the<sp/>provided<sp/>`path_follower.py`<sp/>script:</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal">..<sp/>code-block::<sp/>console</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/>roslaunch<sp/>slope_constrained_planner_ros<sp/>path_follower.launch</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="_sources/usage.rst.txt"/>
+  </compounddef>
+</doxygen>

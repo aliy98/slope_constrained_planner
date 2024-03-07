@@ -1,0 +1,316 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classslope__constrained__planner_1_1_planner" kind="class" language="C++" prot="public">
+    <compoundname>slope_constrained_planner::Planner</compoundname>
+    <derivedcompoundref refid="classslope__constrained__planner_1_1_planner_ros" prot="protected" virt="non-virtual">slope_constrained_planner::PlannerRos</derivedcompoundref>
+    <includes refid="planner_8h" local="no">planner.h</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classslope__constrained__planner_1_1_planner_1af82f641a6a3127ebfc9c175a9f397e3a" prot="protected" static="no" mutable="no">
+        <type>std::shared_ptr&lt; og::SimpleSetup &gt;</type>
+        <definition>std::shared_ptr&lt;og::SimpleSetup&gt; slope_constrained_planner::Planner::ss_</definition>
+        <argsstring></argsstring>
+        <name>ss_</name>
+        <briefdescription>
+<para>Simple setup attribute. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/planner.h" line="38" column="19" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/planner.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classslope__constrained__planner_1_1_planner_1a98e443185ca9ba15dc2b4d4ced711d18" prot="protected" static="no" mutable="no">
+        <type>ParamsConstPtr</type>
+        <definition>ParamsConstPtr slope_constrained_planner::Planner::params_</definition>
+        <argsstring></argsstring>
+        <name>params_</name>
+        <briefdescription>
+<para>Contains some parameters such as planner name, verbose and map layers. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/planner.h" line="41" column="18" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/planner.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classslope__constrained__planner_1_1_planner_1a58c09c72b5b20afa65d62fd1b8e4d22f" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool slope_constrained_planner::Planner::solved_</definition>
+        <argsstring></argsstring>
+        <name>solved_</name>
+        <initializer>{false}</initializer>
+        <briefdescription>
+<para>Status of planner. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/planner.h" line="44" column="8" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/planner.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classslope__constrained__planner_1_1_planner_1a5901f39bb29fba110207e4bd634ffc7f" prot="protected" static="no" mutable="no">
+        <type>std::shared_ptr&lt; ob::SE3StateSpace &gt;</type>
+        <definition>std::shared_ptr&lt;ob::SE3StateSpace&gt; slope_constrained_planner::Planner::space_</definition>
+        <argsstring></argsstring>
+        <name>space_</name>
+        <briefdescription>
+<para>Defines the states in se3. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/planner.h" line="47" column="19" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/planner.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classslope__constrained__planner_1_1_planner_1a027abf9b46ebcf78ff22655d52ae125b" prot="protected" static="no" mutable="no">
+        <type>ob::StateSpacePtr</type>
+        <definition>ob::StateSpacePtr slope_constrained_planner::Planner::space_real_vec_</definition>
+        <argsstring></argsstring>
+        <name>space_real_vec_</name>
+        <briefdescription>
+<para>Defines the states in R(3) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/planner.h" line="50" column="21" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/planner.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classslope__constrained__planner_1_1_planner_1a71fe62f1d6dba59e23ba4abccdd00189" prot="protected" static="no" mutable="no">
+        <type>ob::ScopedState&lt; ob::RealVectorStateSpace &gt;</type>
+        <definition>ob::ScopedState&lt;ob::RealVectorStateSpace&gt; slope_constrained_planner::Planner::state_pos_</definition>
+        <argsstring></argsstring>
+        <name>state_pos_</name>
+        <briefdescription>
+<para>An scoped state in R(3) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/planner.h" line="53" column="19" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/planner.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classslope__constrained__planner_1_1_planner_1ab19106c550139e33cfa958e98792126e" prot="protected" static="no" mutable="no">
+        <type>std::shared_ptr&lt; <ref refid="classslope__constrained__planner_1_1_map" kindref="compound">Map</ref> &gt;</type>
+        <definition>std::shared_ptr&lt;Map&gt; slope_constrained_planner::Planner::map_</definition>
+        <argsstring></argsstring>
+        <name>map_</name>
+        <briefdescription>
+<para>Grid map data. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/planner.h" line="56" column="19" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/planner.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classslope__constrained__planner_1_1_planner_1a9b26ad02ff998e87df1716a6518129be" prot="protected" static="no" mutable="yes">
+        <type>std::mutex</type>
+        <definition>std::mutex slope_constrained_planner::Planner::map_mutex_</definition>
+        <argsstring></argsstring>
+        <name>map_mutex_</name>
+        <briefdescription>
+<para>Grid map process mutex. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/planner.h" line="59" column="22" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/planner.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classslope__constrained__planner_1_1_planner_1aa73d6c4462dcb0a47dc4913e027e5ab5" prot="protected" static="no" mutable="no">
+        <type><ref refid="classslope__constrained__planner_1_1_sampler_allocator" kindref="compound">SamplerAllocator</ref></type>
+        <definition>SamplerAllocator slope_constrained_planner::Planner::sampler_allocator_</definition>
+        <argsstring></argsstring>
+        <name>sampler_allocator_</name>
+        <briefdescription>
+<para>Sets the custom sampler class. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/planner.h" line="62" column="20" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/planner.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classslope__constrained__planner_1_1_planner_1a43c270cd945bb131fc4b6c0ce524b4e2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Planner::Planner</definition>
+        <argsstring>(const ParamsConstPtr &amp;params=std::make_shared&lt; const Params &gt;())</argsstring>
+        <name>Planner</name>
+        <param>
+          <type>const ParamsConstPtr &amp;</type>
+          <declname>params</declname>
+          <defval>std::make_shared&lt; const <ref refid="structslope__constrained__planner_1_1_params" kindref="compound">Params</ref> &gt;()</defval>
+        </param>
+        <briefdescription>
+<para>Constructor for <computeroutput><ref refid="classslope__constrained__planner_1_1_planner" kindref="compound">Planner</ref></computeroutput> class. Defines the state space and problem, sets the custom sampler and motion validator, and the planner algorithm. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>params</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>contains required info about the planner name </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/planner.h" line="73" column="3" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/src/planner.cpp" bodystart="23" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="classslope__constrained__planner_1_1_planner_1aad1f0d58a764e4901ad2c8d410688190" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Planner::setMap</definition>
+        <argsstring>(std::unique_ptr&lt; grid_map::GridMap &gt; &amp;&amp;map)</argsstring>
+        <name>setMap</name>
+        <param>
+          <type>std::unique_ptr&lt; grid_map::GridMap &gt; &amp;&amp;</type>
+          <declname>map</declname>
+        </param>
+        <briefdescription>
+<para>Sets the grid map&apos;s different layers. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>map</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>grid map of the environment </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/planner.h" line="81" column="8" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/src/planner.cpp" bodystart="67" bodyend="94"/>
+      </memberdef>
+      <memberdef kind="function" id="classslope__constrained__planner_1_1_planner_1ac1a95cde31df950e5040b2fe293d1316" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>PlannerStatus</type>
+        <definition>PlannerStatus Planner::plan</definition>
+        <argsstring>(const ob::ScopedState&lt;&gt; &amp;start, const ob::ScopedState&lt;&gt; &amp;goal)</argsstring>
+        <name>plan</name>
+        <param>
+          <type>const ob::ScopedState&lt;&gt; &amp;</type>
+          <declname>start</declname>
+        </param>
+        <param>
+          <type>const ob::ScopedState&lt;&gt; &amp;</type>
+          <declname>goal</declname>
+        </param>
+        <briefdescription>
+<para>Plans a path between start and goal states. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>start</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Robots current state </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>goal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Chosen target state</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>PlannerStatus </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/planner.h" line="92" column="17" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/src/planner.cpp" bodystart="97" bodyend="187"/>
+      </memberdef>
+      <memberdef kind="function" id="classslope__constrained__planner_1_1_planner_1afe7a99869c5b483d9531e26a91638da0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>og::PathGeometric</type>
+        <definition>og::PathGeometric Planner::getSolutionPath</definition>
+        <argsstring>(const bool &amp;simplify=false) const</argsstring>
+        <name>getSolutionPath</name>
+        <param>
+          <type>const bool &amp;</type>
+          <declname>simplify</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>Plans a path between start and goal states. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>simplify</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Specifies whether the path would be simplified or not (default = false)</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>PathGeometric Found solution path computed by the geometric planner </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/planner.h" line="103" column="21" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/src/planner.cpp" bodystart="190" bodyend="223"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Implements the planner based on different path planning algorithms, which are provided in OMPL. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Desciption: The main class in the software architecture. Creates an object from the chosen planner, sets the custom sampler and motion validator, and tries to find a path between the starting and goal points in the provided grid map. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>slope_constrained_planner::Planner</label>
+        <link refid="classslope__constrained__planner_1_1_planner"/>
+      </node>
+      <node id="2">
+        <label>slope_constrained_planner::PlannerRos</label>
+        <link refid="classslope__constrained__planner_1_1_planner_ros"/>
+        <childnode refid="1" relation="protected-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>slope_constrained_planner::Planner</label>
+        <link refid="classslope__constrained__planner_1_1_planner"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>sampler_allocator_</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>slope_constrained_planner::SamplerAllocator</label>
+        <link refid="classslope__constrained__planner_1_1_sampler_allocator"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/planner.h" line="33" column="14" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/planner.h" bodystart="33" bodyend="104"/>
+    <listofallmembers>
+      <member refid="classslope__constrained__planner_1_1_planner_1afe7a99869c5b483d9531e26a91638da0" prot="public" virt="non-virtual"><scope>slope_constrained_planner::Planner</scope><name>getSolutionPath</name></member>
+      <member refid="classslope__constrained__planner_1_1_planner_1ab19106c550139e33cfa958e98792126e" prot="protected" virt="non-virtual"><scope>slope_constrained_planner::Planner</scope><name>map_</name></member>
+      <member refid="classslope__constrained__planner_1_1_planner_1a9b26ad02ff998e87df1716a6518129be" prot="protected" virt="non-virtual"><scope>slope_constrained_planner::Planner</scope><name>map_mutex_</name></member>
+      <member refid="classslope__constrained__planner_1_1_planner_1a98e443185ca9ba15dc2b4d4ced711d18" prot="protected" virt="non-virtual"><scope>slope_constrained_planner::Planner</scope><name>params_</name></member>
+      <member refid="classslope__constrained__planner_1_1_planner_1ac1a95cde31df950e5040b2fe293d1316" prot="public" virt="non-virtual"><scope>slope_constrained_planner::Planner</scope><name>plan</name></member>
+      <member refid="classslope__constrained__planner_1_1_planner_1a43c270cd945bb131fc4b6c0ce524b4e2" prot="public" virt="non-virtual"><scope>slope_constrained_planner::Planner</scope><name>Planner</name></member>
+      <member refid="classslope__constrained__planner_1_1_planner_1aa73d6c4462dcb0a47dc4913e027e5ab5" prot="protected" virt="non-virtual"><scope>slope_constrained_planner::Planner</scope><name>sampler_allocator_</name></member>
+      <member refid="classslope__constrained__planner_1_1_planner_1aad1f0d58a764e4901ad2c8d410688190" prot="public" virt="non-virtual"><scope>slope_constrained_planner::Planner</scope><name>setMap</name></member>
+      <member refid="classslope__constrained__planner_1_1_planner_1a58c09c72b5b20afa65d62fd1b8e4d22f" prot="protected" virt="non-virtual"><scope>slope_constrained_planner::Planner</scope><name>solved_</name></member>
+      <member refid="classslope__constrained__planner_1_1_planner_1a5901f39bb29fba110207e4bd634ffc7f" prot="protected" virt="non-virtual"><scope>slope_constrained_planner::Planner</scope><name>space_</name></member>
+      <member refid="classslope__constrained__planner_1_1_planner_1a027abf9b46ebcf78ff22655d52ae125b" prot="protected" virt="non-virtual"><scope>slope_constrained_planner::Planner</scope><name>space_real_vec_</name></member>
+      <member refid="classslope__constrained__planner_1_1_planner_1af82f641a6a3127ebfc9c175a9f397e3a" prot="protected" virt="non-virtual"><scope>slope_constrained_planner::Planner</scope><name>ss_</name></member>
+      <member refid="classslope__constrained__planner_1_1_planner_1a71fe62f1d6dba59e23ba4abccdd00189" prot="protected" virt="non-virtual"><scope>slope_constrained_planner::Planner</scope><name>state_pos_</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

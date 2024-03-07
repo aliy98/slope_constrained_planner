@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="conf_8py" kind="file" language="Python">
+    <compoundname>conf.py</compoundname>
+    <innernamespace refid="namespaceconf">conf</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">#<sp/>Configuration<sp/>file<sp/>for<sp/>the<sp/>Sphinx<sp/>documentation<sp/>builder.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">#</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">#<sp/>For<sp/>the<sp/>full<sp/>list<sp/>of<sp/>built-in<sp/>configuration<sp/>values,<sp/>see<sp/>the<sp/>documentation:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">#<sp/>https://www.sphinx-doc.org/en/master/usage/configuration.html</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">#<sp/>--<sp/>Path<sp/>setup<sp/>--------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">#<sp/>If<sp/>extensions<sp/>(or<sp/>modules<sp/>to<sp/>document<sp/>with<sp/>autodoc)<sp/>are<sp/>in<sp/>another<sp/>directory,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">#<sp/>add<sp/>these<sp/>directories<sp/>to<sp/>sys.path<sp/>here.<sp/>If<sp/>the<sp/>directory<sp/>is<sp/>relative<sp/>to<sp/>the</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">#<sp/>documentation<sp/>root,<sp/>use<sp/>os.path.abspath<sp/>to<sp/>make<sp/>it<sp/>absolute,<sp/>like<sp/>shown<sp/>here.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">#</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>os</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>subprocess</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>sys</highlight></codeline>
+<codeline lineno="15"><highlight class="normal">sys.path.insert(0,<sp/>os.path.abspath(</highlight><highlight class="stringliteral">&apos;..&apos;</highlight><highlight class="normal">))</highlight></codeline>
+<codeline lineno="16"><highlight class="normal">subprocess.call(</highlight><highlight class="stringliteral">&apos;doxygen<sp/>Doxyfile&apos;</highlight><highlight class="normal">,<sp/>shell=</highlight><highlight class="keyword">True</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="comment">#<sp/>--<sp/>Project<sp/>information<sp/>-----------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="comment">#<sp/>https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal">project<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;slope_constrained_planner&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal">copyright<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;2023,<sp/>Ali<sp/>Yousefi&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal">author<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;Ali<sp/>Yousefi&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal">release<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;1.0&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="comment">#<sp/>--<sp/>General<sp/>configuration<sp/>---------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="comment">#<sp/>https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal">extensions<sp/>=<sp/>[</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="stringliteral">&apos;sphinx.ext.autodoc&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="stringliteral">&apos;sphinx.ext.doctest&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="stringliteral">&apos;sphinx.ext.intersphinx&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="stringliteral">&apos;sphinx.ext.todo&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="stringliteral">&apos;sphinx.ext.coverage&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="stringliteral">&apos;sphinx.ext.mathjax&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="stringliteral">&apos;sphinx.ext.ifconfig&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="stringliteral">&apos;sphinx.ext.viewcode&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="stringliteral">&apos;sphinx.ext.githubpages&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="stringliteral">&quot;sphinx.ext.napoleon&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="stringliteral">&apos;sphinx.ext.inheritance_diagram&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="stringliteral">&apos;sphinx_toolbox.formatting&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="stringliteral">&apos;breathe&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/>]</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal">templates_path<sp/>=<sp/>[</highlight><highlight class="stringliteral">&apos;_templates&apos;</highlight><highlight class="normal">]</highlight></codeline>
+<codeline lineno="46"><highlight class="normal">exclude_patterns<sp/>=<sp/>[</highlight><highlight class="stringliteral">&apos;_build&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;Thumbs.db&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;.DS_Store&apos;</highlight><highlight class="normal">]</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="comment">#<sp/>--<sp/>Options<sp/>for<sp/>HTML<sp/>output<sp/>-------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="comment">#<sp/>https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal">highlight_language<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;c++&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal">source_suffix<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;.rst&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal">master_doc<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;index&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal">html_theme<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;sphinx_rtd_theme&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal">html_static_path<sp/>=<sp/>[</highlight><highlight class="stringliteral">&apos;_static&apos;</highlight><highlight class="normal">]</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="comment">#<sp/>--<sp/>Extension<sp/>configuration<sp/>-------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="comment">#<sp/>--<sp/>Options<sp/>for<sp/>intersphinx<sp/>extension<sp/>---------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="comment">#<sp/>Example<sp/>configuration<sp/>for<sp/>intersphinx:<sp/>refer<sp/>to<sp/>the<sp/>Python<sp/>standard<sp/>library.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal">intersphinx_mapping<sp/>=<sp/>{</highlight><highlight class="stringliteral">&apos;https://docs.python.org/&apos;</highlight><highlight class="normal">:<sp/></highlight><highlight class="keywordtype">None</highlight><highlight class="normal">}</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="comment">#<sp/>--<sp/>Options<sp/>for<sp/>todo<sp/>extension<sp/>----------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="comment">#<sp/>If<sp/>true,<sp/>`todo`<sp/>and<sp/>`todoList`<sp/>produce<sp/>output,<sp/>else<sp/>they<sp/>produce<sp/>nothing.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal">todo_include_todos<sp/>=<sp/></highlight><highlight class="keyword">True</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="comment">#<sp/>--<sp/>Options<sp/>for<sp/>breathe</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal">breathe_projects<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="stringliteral">&quot;slope_constrained_planner&quot;</highlight><highlight class="normal">:<sp/></highlight><highlight class="stringliteral">&quot;doxy_build/xml/&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="71"><highlight class="normal">breathe_default_project<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;slope_constrained_planner&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal">breathe_default_members<sp/>=<sp/>(</highlight><highlight class="stringliteral">&apos;members&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;undoc-members&apos;</highlight><highlight class="normal">)</highlight></codeline>
+    </programlisting>
+    <location file="conf.py"/>
+  </compounddef>
+</doxygen>

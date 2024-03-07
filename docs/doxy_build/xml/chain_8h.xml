@@ -1,0 +1,159 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="chain_8h" kind="file" language="C++">
+    <compoundname>chain.h</compoundname>
+    <includes local="no">memory</includes>
+    <includes local="no">grid_map_core/GridMap.hpp</includes>
+    <includedby refid="map_8h" local="yes">/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/map.h</includedby>
+    <incdepgraph>
+      <node id="3">
+        <label>grid_map_core/GridMap.hpp</label>
+      </node>
+      <node id="1">
+        <label>/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/chain.h</label>
+        <link refid="chain_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>memory</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="9">
+        <label>/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/src/converter.cpp</label>
+        <link refid="converter_8cpp"/>
+      </node>
+      <node id="10">
+        <label>/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/sampler.h</label>
+        <link refid="sampler_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/src/planner_ros_node.cpp</label>
+        <link refid="planner__ros__node_8cpp"/>
+      </node>
+      <node id="4">
+        <label>/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/src/planner.cpp</label>
+        <link refid="planner_8cpp"/>
+      </node>
+      <node id="12">
+        <label>/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/src/map.cpp</label>
+        <link refid="map_8cpp"/>
+      </node>
+      <node id="11">
+        <label>/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/src/sampler.cpp</label>
+        <link refid="sampler_8cpp"/>
+      </node>
+      <node id="3">
+        <label>/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/planner.h</label>
+        <link refid="planner_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/include/slope_constrained_planner_ros/converter.h</label>
+        <link refid="converter_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/src/planner_ros.cpp</label>
+        <link refid="planner__ros_8cpp"/>
+      </node>
+      <node id="2">
+        <label>/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/map.h</label>
+        <link refid="map_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/chain.h</label>
+        <link refid="chain_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/include/slope_constrained_planner_ros/planner_ros.h</label>
+        <link refid="planner__ros_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classslope__constrained__planner_1_1_chain" prot="public">slope_constrained_planner::Chain</innerclass>
+    <innernamespace refid="namespaceslope__constrained__planner">slope_constrained_planner</innernamespace>
+    <briefdescription>
+<para>A helper library to be used for processing the grid map data. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="6"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;memory&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;grid_map_core/GridMap.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">slope_constrained_planner<sp/>{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16" refid="chain_8h_1a595d75a6899eaa7dc358d5238ed17405" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="chain_8h_1a595d75a6899eaa7dc358d5238ed17405" kindref="member">GridMapPtr</ref><sp/>=<sp/>std::unique_ptr&lt;grid_map::GridMap&gt;;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>...Args&gt;</highlight></codeline>
+<codeline lineno="20" refid="classslope__constrained__planner_1_1_chain" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classslope__constrained__planner_1_1_chain" kindref="compound">Chain</ref><sp/>{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>ProcFunc<sp/>=<sp/>std::function&lt;void<sp/>(Args...)&gt;;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/>std::vector&lt;ProcFunc&gt;<sp/>functions_;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>process(Args...<sp/>args)<sp/>{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;&amp;<sp/>func:<sp/>functions_)<sp/>{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>func(args...);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>appendFunction(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ProcFunc&amp;<sp/>func)<sp/>{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>functions_.push_back(func);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>appendFunction(ProcFunc&amp;&amp;<sp/>func)<sp/>{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>functions_.push_back(std::move(func));</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Args<sp/>passed<sp/>=<sp/>(map_new).</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="comment">//using<sp/>ChainNewMap<sp/>=<sp/>Chain&lt;const<sp/>GridMapPtr&amp;&gt;;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classslope__constrained__planner_1_1_chain" kindref="compound">ChainNewMap</ref><sp/>=<sp/><ref refid="classslope__constrained__planner_1_1_chain" kindref="compound">Chain&lt;const GridMapPtr&amp;&gt;</ref>;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Args<sp/>passed<sp/>=<sp/>(map_new,<sp/>map_old).</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classslope__constrained__planner_1_1_chain" kindref="compound">ChainOldMap</ref><sp/>=<sp/><ref refid="classslope__constrained__planner_1_1_chain" kindref="compound">Chain&lt;const GridMapPtr&amp;, const GridMapPtr&amp;&gt;</ref>;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal">}<sp/></highlight></codeline>
+    </programlisting>
+    <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/chain.h"/>
+  </compounddef>
+</doxygen>

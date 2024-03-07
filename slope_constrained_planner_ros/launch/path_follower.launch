@@ -1,0 +1,5 @@
+<?xml version="1.0" ?>
+<launch>
+    <node name="path_follower" pkg="slope_constrained_planner_ros" type="path_follower.py" output="screen" />
+    <node name="rqt_gui" pkg="rqt_gui" type="rqt_gui" output="screen" />
+</launch>

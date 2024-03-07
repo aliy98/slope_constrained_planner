@@ -1,0 +1,263 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="__sources_2index_8rst_8txt" kind="file" language="C++">
+    <compoundname>index.rst.txt</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="__sources_2index_8rst_8txt_1a5c94c599fa8eb0ad9e7307d56dd83d6b" prot="public" static="no" mutable="no">
+        <type>slope_constrained_planner documentation master</type>
+        <definition>slope_constrained_planner documentation master file</definition>
+        <argsstring></argsstring>
+        <name>file</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="_sources/index.rst.txt" line="1" column="49" bodyfile="_sources/index.rst.txt" bodystart="1" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="__sources_2index_8rst_8txt_1a9283046a18d982d245289d525e30a652" prot="public" static="no" mutable="no">
+        <type>slope_constrained_planner documentation master created by sphinx quickstart on Mon</type>
+        <definition>slope_constrained_planner documentation master created by sphinx quickstart on Mon May</definition>
+        <argsstring></argsstring>
+        <name>May</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="_sources/index.rst.txt" line="2" column="28" bodyfile="_sources/index.rst.txt" bodystart="3" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="__sources_2index_8rst_8txt_1adedced8f13a0d52bd3c7d5b3ed87f2ae" prot="public" static="no" mutable="no">
+        <type>slope_constrained_planner documentation master created by sphinx quickstart on Mon but it should at least contain the root toctree directive Slope Informed Global Path Planning for Quadruped</type>
+        <definition>slope_constrained_planner documentation master created by sphinx quickstart on Mon but it should at least contain the root toctree directive Slope Informed Global Path Planning for Quadruped Robots</definition>
+        <argsstring></argsstring>
+        <name>Robots</name>
+        <initializer>==============================================================================================
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Contents:
+
+
+Overview
+==========
+This work describes the initial steps in developing a global path planner for a quadruped robot designed
+to traverse outdoor environments with uneven terrains. The ultimate goal is to generate paths that strike
+a balance between path length</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="_sources/index.rst.txt" line="6" column="50" bodyfile="_sources/index.rst.txt" bodystart="7" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="__sources_2index_8rst_8txt_1afac8fa9e3490aa34a871b96fffd9f0e8" prot="public" static="no" mutable="no">
+        <type>slope_constrained_planner documentation master created by sphinx quickstart on Mon but it should at least contain the root toctree directive Slope Informed Global Path Planning for Quadruped</type>
+        <definition>slope_constrained_planner documentation master created by sphinx quickstart on Mon but it should at least contain the root toctree directive Slope Informed Global Path Planning for Quadruped tortuousness</definition>
+        <argsstring></argsstring>
+        <name>tortuousness</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="_sources/index.rst.txt" line="18" column="2" bodyfile="_sources/index.rst.txt" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="__sources_2index_8rst_8txt_1a95ccc79e0ccf0591d1e3a28533ca67c7" prot="public" static="no" mutable="no">
+        <type>slope_constrained_planner documentation master created by sphinx quickstart on Mon but it should at least contain the root toctree directive Slope Informed Global Path Planning for Quadruped energy</type>
+        <definition>slope_constrained_planner documentation master created by sphinx quickstart on Mon but it should at least contain the root toctree directive Slope Informed Global Path Planning for Quadruped energy efficiency</definition>
+        <argsstring></argsstring>
+        <name>efficiency</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="_sources/index.rst.txt" line="18" column="22" bodyfile="_sources/index.rst.txt" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="__sources_2index_8rst_8txt_1a3f037548be7911e92a45c5d5ac765d06" prot="public" static="no" mutable="no">
+        <type>slope_constrained_planner documentation master created by sphinx quickstart on Mon but it should at least contain the root toctree directive Slope Informed Global Path Planning for Quadruped energy and safety when encountering slopes The article details the system architecture and the implemented planning</type>
+        <definition>slope_constrained_planner documentation master created by sphinx quickstart on Mon but it should at least contain the root toctree directive Slope Informed Global Path Planning for Quadruped energy and safety when encountering slopes The article details the system architecture and the implemented planning method</definition>
+        <argsstring></argsstring>
+        <name>method</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="_sources/index.rst.txt" line="19" column="74" bodyfile="_sources/index.rst.txt" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="__sources_2index_8rst_8txt_1aa2620142264ce28a46a7e9f120204ea9" prot="public" static="no" mutable="no">
+        <type>slope_constrained_planner documentation master created by sphinx quickstart on Mon but it should at least contain the root toctree directive Slope Informed Global Path Planning for Quadruped energy and safety when encountering slopes The article details the system architecture and the implemented planning which incorporates slope constraints into a roadmap based approach to generate paths with various characteristics The algorithm has undergone extensive</type>
+        <definition>slope_constrained_planner documentation master created by sphinx quickstart on Mon but it should at least contain the root toctree directive Slope Informed Global Path Planning for Quadruped energy and safety when encountering slopes The article details the system architecture and the implemented planning which incorporates slope constraints into a roadmap based approach to generate paths with various characteristics The algorithm has undergone extensive testing</definition>
+        <argsstring></argsstring>
+        <name>testing</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="_sources/index.rst.txt" line="21" column="35" bodyfile="_sources/index.rst.txt" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="__sources_2index_8rst_8txt_1ac0ff6e45df5cfa1866a91c21e27deea0" prot="public" static="no" mutable="no">
+        <type>slope_constrained_planner documentation master created by sphinx quickstart on Mon but it should at least contain the root toctree directive Slope Informed Global Path Planning for Quadruped energy and safety when encountering slopes The article details the system architecture and the implemented planning which incorporates slope constraints into a roadmap based approach to generate paths with various characteristics The algorithm has undergone extensive both in simulation and with the Spot robot from Boston Dynamics In both sets of</type>
+        <definition>slope_constrained_planner documentation master created by sphinx quickstart on Mon but it should at least contain the root toctree directive Slope Informed Global Path Planning for Quadruped energy and safety when encountering slopes The article details the system architecture and the implemented planning which incorporates slope constraints into a roadmap based approach to generate paths with various characteristics The algorithm has undergone extensive both in simulation and with the Spot robot from Boston Dynamics In both sets of experiments</definition>
+        <argsstring></argsstring>
+        <name>experiments</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="_sources/index.rst.txt" line="22" column="26" bodyfile="_sources/index.rst.txt" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="__sources_2index_8rst_8txt_1a2dc211a8d9bac74a7077d114fb940ef0" prot="public" static="no" mutable="no">
+        <type>slope_constrained_planner documentation master created by sphinx quickstart on Mon but it should at least contain the root toctree directive Slope Informed Global Path Planning for Quadruped energy and safety when encountering slopes The article details the system architecture and the implemented planning which incorporates slope constraints into a roadmap based approach to generate paths with various characteristics The algorithm has undergone extensive both in simulation and with the Spot robot from Boston Dynamics In both sets of noticeable differences were observed when adjusting the constraints on the robot’s maximum allowable inclination angles</type>
+        <definition>slope_constrained_planner documentation master created by sphinx quickstart on Mon but it should at least contain the root toctree directive Slope Informed Global Path Planning for Quadruped energy and safety when encountering slopes The article details the system architecture and the implemented planning which incorporates slope constraints into a roadmap based approach to generate paths with various characteristics The algorithm has undergone extensive both in simulation and with the Spot robot from Boston Dynamics In both sets of noticeable differences were observed when adjusting the constraints on the robot’s maximum allowable inclination angles Authors</definition>
+        <argsstring></argsstring>
+        <name>Authors</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="_sources/index.rst.txt" line="25" column="1" bodyfile="_sources/index.rst.txt" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="__sources_2index_8rst_8txt_1a2e3b820705739d9ab24c82ed87ea9ac4" prot="public" static="no" mutable="no">
+        <type>slope_constrained_planner documentation master created by sphinx quickstart on Mon but it should at least contain the root toctree directive Slope Informed Global Path Planning for Quadruped energy and safety when encountering slopes The article details the system architecture and the implemented planning which incorporates slope constraints into a roadmap based approach to generate paths with various characteristics The algorithm has undergone extensive both in simulation and with the Spot robot from Boston Dynamics In both sets of noticeable differences were observed when adjusting the constraints on the robot’s maximum allowable inclination angles s5265866 studenti unige it *Zoe</type>
+        <definition>slope_constrained_planner documentation master created by sphinx quickstart on Mon but it should at least contain the root toctree directive Slope Informed Global Path Planning for Quadruped energy and safety when encountering slopes The article details the system architecture and the implemented planning which incorporates slope constraints into a roadmap based approach to generate paths with various characteristics The algorithm has undergone extensive both in simulation and with the Spot robot from Boston Dynamics In both sets of noticeable differences were observed when adjusting the constraints on the robot’s maximum allowable inclination angles s5265866 studenti unige it* Zoe Betta</definition>
+        <argsstring></argsstring>
+        <name>Betta</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="_sources/index.rst.txt" line="28" column="6" bodyfile="_sources/index.rst.txt" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="__sources_2index_8rst_8txt_1a82724b3dca6624cd9ad0c2cd0e2c48a7" prot="public" static="no" mutable="no">
+        <type>slope_constrained_planner documentation master created by sphinx quickstart on Mon but it should at least contain the root toctree directive Slope Informed Global Path Planning for Quadruped energy and safety when encountering slopes The article details the system architecture and the implemented planning which incorporates slope constraints into a roadmap based approach to generate paths with various characteristics The algorithm has undergone extensive both in simulation and with the Spot robot from Boston Dynamics In both sets of noticeable differences were observed when adjusting the constraints on the robot’s maximum allowable inclination angles s5265866 studenti unige it *Zoe zoe betta edu unige it *Antonio</type>
+        <definition>slope_constrained_planner documentation master created by sphinx quickstart on Mon but it should at least contain the root toctree directive Slope Informed Global Path Planning for Quadruped energy and safety when encountering slopes The article details the system architecture and the implemented planning which incorporates slope constraints into a roadmap based approach to generate paths with various characteristics The algorithm has undergone extensive both in simulation and with the Spot robot from Boston Dynamics In both sets of noticeable differences were observed when adjusting the constraints on the robot’s maximum allowable inclination angles s5265866 studenti unige it* Zoe zoe betta edu unige it* Antonio Sgorbissa</definition>
+        <argsstring></argsstring>
+        <name>Sgorbissa</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="_sources/index.rst.txt" line="29" column="10" bodyfile="_sources/index.rst.txt" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="__sources_2index_8rst_8txt_1aba41d2db9a35d235eaaf8cd29b33c2d2" prot="public" static="no" mutable="no">
+        <type>slope_constrained_planner documentation master created by sphinx quickstart on Mon but it should at least contain the root toctree directive Slope Informed Global Path Planning for Quadruped energy and safety when encountering slopes The article details the system architecture and the implemented planning which incorporates slope constraints into a roadmap based approach to generate paths with various characteristics The algorithm has undergone extensive both in simulation and with the Spot robot from Boston Dynamics In both sets of noticeable differences were observed when adjusting the constraints on the robot’s maximum allowable inclination angles s5265866 studenti unige it *Zoe zoe betta edu unige it *Antonio antonio sgorbissa unige it *Carmine Tommaso</type>
+        <definition>slope_constrained_planner documentation master created by sphinx quickstart on Mon but it should at least contain the root toctree directive Slope Informed Global Path Planning for Quadruped energy and safety when encountering slopes The article details the system architecture and the implemented planning which incorporates slope constraints into a roadmap based approach to generate paths with various characteristics The algorithm has undergone extensive both in simulation and with the Spot robot from Boston Dynamics In both sets of noticeable differences were observed when adjusting the constraints on the robot’s maximum allowable inclination angles s5265866 studenti unige it* Zoe zoe betta edu unige it* Antonio antonio sgorbissa unige it* Carmine Tommaso Recchiuto</definition>
+        <argsstring></argsstring>
+        <name>Recchiuto</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="_sources/index.rst.txt" line="30" column="18" bodyfile="_sources/index.rst.txt" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="__sources_2index_8rst_8txt_1a7adf4980e2e661df6ec5376f334d7535" prot="public" static="no" mutable="no">
+        <type>slope_constrained_planner documentation master created by sphinx quickstart on Mon but it should at least contain the root toctree directive Slope Informed Global Path Planning for Quadruped energy and safety when encountering slopes The article details the system architecture and the implemented planning which incorporates slope constraints into a roadmap based approach to generate paths with various characteristics The algorithm has undergone extensive both in simulation and with the Spot robot from Boston Dynamics In both sets of noticeable differences were observed when adjusting the constraints on the robot’s maximum allowable inclination angles s5265866 studenti unige it *Zoe zoe betta edu unige it *Antonio antonio sgorbissa unige it *Carmine Tommaso carmine recchiuto unige it ©2023 RICE</type>
+        <definition>slope_constrained_planner documentation master created by sphinx quickstart on Mon but it should at least contain the root toctree directive Slope Informed Global Path Planning for Quadruped energy and safety when encountering slopes The article details the system architecture and the implemented planning which incorporates slope constraints into a roadmap based approach to generate paths with various characteristics The algorithm has undergone extensive both in simulation and with the Spot robot from Boston Dynamics In both sets of noticeable differences were observed when adjusting the constraints on the robot’s maximum allowable inclination angles s5265866 studenti unige it* Zoe zoe betta edu unige it* Antonio antonio sgorbissa unige it* Carmine Tommaso carmine recchiuto unige it ©2023 RICE DIBRIS</definition>
+        <argsstring></argsstring>
+        <name>DIBRIS</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="_sources/index.rst.txt" line="32" column="14" bodyfile="_sources/index.rst.txt" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">..<sp/>slope_constrained_planner<sp/>documentation<sp/>master<sp/>file,<sp/>created<sp/>by</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"><sp/><sp/><sp/>sphinx-quickstart<sp/>on<sp/>Mon<sp/>May<sp/>15<sp/>19:15:01<sp/>2023.</highlight></codeline>
+<codeline lineno="3"><highlight class="normal"><sp/><sp/><sp/>You<sp/>can<sp/>adapt<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/>file<sp/>completely<sp/>to<sp/>your<sp/>liking,<sp/>but<sp/>it<sp/>should<sp/>at<sp/>least</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"><sp/><sp/><sp/>contain<sp/>the<sp/>root<sp/>`toctree`<sp/>directive.</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal">Slope-Informed<sp/>Global<sp/>Path<sp/>Planning<sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>Quadruped<sp/>Robots.</highlight></codeline>
+<codeline lineno="7"><highlight class="normal">==============================================================================================</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal">..<sp/>toctree::</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/>:maxdepth:<sp/>2</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/>:caption:<sp/>Contents:</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal">Overview</highlight></codeline>
+<codeline lineno="15"><highlight class="normal">==========</highlight></codeline>
+<codeline lineno="16"><highlight class="normal">This<sp/>work<sp/>describes<sp/>the<sp/>initial<sp/>steps<sp/>in<sp/>developing<sp/>a<sp/>global<sp/>path<sp/>planner<sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>a<sp/>quadruped<sp/>robot<sp/>designed</highlight></codeline>
+<codeline lineno="17"><highlight class="normal">to<sp/>traverse<sp/>outdoor<sp/>environments<sp/>with<sp/>uneven<sp/>terrains.<sp/>The<sp/>ultimate<sp/>goal<sp/>is<sp/>to<sp/>generate<sp/>paths<sp/>that<sp/>strike</highlight></codeline>
+<codeline lineno="18"><highlight class="normal">a<sp/>balance<sp/>between<sp/>path<sp/>length,<sp/>tortuousness,<sp/>energy<sp/>efficiency,<sp/>and<sp/>safety<sp/>when<sp/>encountering<sp/>slopes.<sp/></highlight></codeline>
+<codeline lineno="19"><highlight class="normal">The<sp/>article<sp/>details<sp/>the<sp/>system<sp/>architecture<sp/>and<sp/>the<sp/>implemented<sp/>planning<sp/>method,<sp/>which<sp/>incorporates<sp/></highlight></codeline>
+<codeline lineno="20"><highlight class="normal">slope<sp/>constraints<sp/>into<sp/>a<sp/>roadmap-based<sp/>approach<sp/>to<sp/>generate<sp/>paths<sp/>with<sp/>various<sp/>characteristics.<sp/>The<sp/></highlight></codeline>
+<codeline lineno="21"><highlight class="normal">algorithm<sp/>has<sp/>undergone<sp/>extensive<sp/>testing,<sp/>both<sp/>in<sp/>simulation<sp/>and<sp/>with<sp/>the<sp/>Spot<sp/>robot<sp/>from<sp/>Boston<sp/></highlight></codeline>
+<codeline lineno="22"><highlight class="normal">Dynamics.<sp/>In<sp/>both<sp/>sets<sp/>of<sp/>experiments,<sp/>noticeable<sp/>differences<sp/>were<sp/>observed<sp/>when<sp/>adjusting<sp/>the<sp/>constraints<sp/></highlight></codeline>
+<codeline lineno="23"><highlight class="normal">on<sp/>the<sp/>robot’s<sp/>maximum<sp/>allowable<sp/>inclination<sp/>angles.</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal">Authors:</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal">*<sp/>Ali<sp/>Yousefi,<sp/>s5265866@studenti.unige.it</highlight></codeline>
+<codeline lineno="28"><highlight class="normal">*<sp/>Zoe<sp/>Betta,<sp/>zoe.betta@edu.unige.it</highlight></codeline>
+<codeline lineno="29"><highlight class="normal">*<sp/>Antonio<sp/>Sgorbissa,<sp/>antonio.sgorbissa@unige.it</highlight></codeline>
+<codeline lineno="30"><highlight class="normal">*<sp/>Carmine<sp/>Tommaso<sp/>Recchiuto,<sp/>carmine.recchiuto@unige.it</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal">©2023<sp/>RICE<sp/>-<sp/>DIBRIS,<sp/>University<sp/>of<sp/>Genova</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal">..<sp/>image::<sp/>diagrams/rice_logo.jpg</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/>:width:<sp/>150</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/>:align:<sp/>left</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/>:alt:<sp/>rice_logo</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal">|</highlight></codeline>
+<codeline lineno="41"><highlight class="normal">|</highlight></codeline>
+<codeline lineno="42"><highlight class="normal">|</highlight></codeline>
+<codeline lineno="43"><highlight class="normal">|</highlight></codeline>
+<codeline lineno="44"><highlight class="normal">|</highlight></codeline>
+<codeline lineno="45"><highlight class="normal">|</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal">Contents</highlight></codeline>
+<codeline lineno="49"><highlight class="normal">==========</highlight></codeline>
+<codeline lineno="50"><highlight class="normal">..<sp/>toctree::</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/>:maxdepth:<sp/>1</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/>simulation_environment</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/>real_world</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/>software_architecture</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/>sequence_diagram</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/>source_files</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/>usage</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/>working_hypothesis</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="63"><highlight class="normal">Indices<sp/>and<sp/>tables</highlight></codeline>
+<codeline lineno="64"><highlight class="normal">==================</highlight></codeline>
+<codeline lineno="65"><highlight class="normal">*<sp/>:ref:`genindex`</highlight></codeline>
+<codeline lineno="66"><highlight class="normal">*<sp/>:ref:`modindex`</highlight></codeline>
+<codeline lineno="67"><highlight class="normal">*<sp/>:ref:`search`</highlight></codeline>
+    </programlisting>
+    <location file="_sources/index.rst.txt"/>
+  </compounddef>
+</doxygen>

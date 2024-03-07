@@ -1,0 +1,147 @@
+\hypertarget{namespacepath__follower}{}\doxysection{path\+\_\+follower Namespace Reference}
+\label{namespacepath__follower}\index{path\_follower@{path\_follower}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classpath__follower_1_1_path_follower}{Path\+Follower}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacepath__follower_abdb81427ae3d272a13fc262b4e6d5e51}{get\+Yaw}} (quat)
+\item 
+def \mbox{\hyperlink{namespacepath__follower_a99b617a1e400d20acf6acd7dc82d0b33}{get\+Roll}} (quat)
+\item 
+def \mbox{\hyperlink{namespacepath__follower_a3ccda87442fcaf43e7ce9781c5f659e6}{get\+Pitch}} (quat)
+\item 
+def \mbox{\hyperlink{namespacepath__follower_a2abadf5160999916490241fda5a9a639}{get\+Constrained\+Yaw}} (yaw)
+\item 
+def \mbox{\hyperlink{namespacepath__follower_a5377a586616d11f6bb383d3ac7c24cbd}{get\+Angle\+Error}} (target, current)
+\item 
+def \mbox{\hyperlink{namespacepath__follower_ad549fb440c511c078da3af64ca56560e}{get\+Quat\+From\+Yaw}} (yaw)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespacepath__follower_afe4e5c8903e8189a3b746c3af543b669}\label{namespacepath__follower_afe4e5c8903e8189a3b746c3af543b669}} 
+string {\bfseries R\+O\+B\+O\+T\+\_\+\+F\+R\+A\+ME} = \textquotesingle{}base\+\_\+link\textquotesingle{}
+\item 
+\mbox{\Hypertarget{namespacepath__follower_a495f7debd9f26e9cff0fd55e3306e9dc}\label{namespacepath__follower_a495f7debd9f26e9cff0fd55e3306e9dc}} 
+float {\bfseries G\+O\+A\+L\+\_\+\+T\+H\+R\+E\+S\+\_\+\+P\+OS} = 0.\+1
+\item 
+\mbox{\Hypertarget{namespacepath__follower_a2f5037c89062146b10fa5f6a64ebe09a}\label{namespacepath__follower_a2f5037c89062146b10fa5f6a64ebe09a}} 
+float {\bfseries G\+O\+A\+L\+\_\+\+T\+H\+R\+E\+S\+\_\+\+A\+NG} = 0.\+2
+\item 
+\mbox{\Hypertarget{namespacepath__follower_aaa0bb52344b0d394f71b7053ebf0c527}\label{namespacepath__follower_aaa0bb52344b0d394f71b7053ebf0c527}} 
+float {\bfseries F\+A\+C\+E\+\_\+\+G\+O\+A\+L\+\_\+\+D\+I\+ST} = 1.\+0
+\item 
+\mbox{\Hypertarget{namespacepath__follower_ab92a9cc6e77d2860e41bff16f19ff65d}\label{namespacepath__follower_ab92a9cc6e77d2860e41bff16f19ff65d}} 
+{\bfseries follower} = \mbox{\hyperlink{classpath__follower_1_1_path_follower}{Path\+Follower}}()
+\item 
+\mbox{\Hypertarget{namespacepath__follower_a91ae2c90e8b11e64250782d4cb3d7f27}\label{namespacepath__follower_a91ae2c90e8b11e64250782d4cb3d7f27}} 
+{\bfseries rate} = rospy.\+Rate(10)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}.. module:: path_follower
+    :platform: Unix
+    :synopsis: the path_follower python script in slope_constrained_planner package
+
+Subscribes to:
+    /slope_constrained_planner/path
+
+Publishes to:
+    /spot/wolf_controller/twist
+
+    /slope_constrained_planner/followed_path
+
+
+A provided path follower, used only in simulation mode, based on PID control to be used for testing on a mobile robot
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacepath__follower_a5377a586616d11f6bb383d3ac7c24cbd}\label{namespacepath__follower_a5377a586616d11f6bb383d3ac7c24cbd}} 
+\index{path\_follower@{path\_follower}!getAngleError@{getAngleError}}
+\index{getAngleError@{getAngleError}!path\_follower@{path\_follower}}
+\doxysubsubsection{\texorpdfstring{getAngleError()}{getAngleError()}}
+{\footnotesize\ttfamily def path\+\_\+follower.\+get\+Angle\+Error (\begin{DoxyParamCaption}\item[{}]{target,  }\item[{}]{current }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}    Gets the difference between two given angles
+
+    Args:
+        target
+        current
+    
+    Returns:
+        dyaw
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacepath__follower_a2abadf5160999916490241fda5a9a639}\label{namespacepath__follower_a2abadf5160999916490241fda5a9a639}} 
+\index{path\_follower@{path\_follower}!getConstrainedYaw@{getConstrainedYaw}}
+\index{getConstrainedYaw@{getConstrainedYaw}!path\_follower@{path\_follower}}
+\doxysubsubsection{\texorpdfstring{getConstrainedYaw()}{getConstrainedYaw()}}
+{\footnotesize\ttfamily def path\+\_\+follower.\+get\+Constrained\+Yaw (\begin{DoxyParamCaption}\item[{}]{yaw }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}    Gets constrained value of yaw angle between -2pi and 2pi
+
+    Args: 
+        yaw
+    
+    Returns:
+        yaw
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacepath__follower_a3ccda87442fcaf43e7ce9781c5f659e6}\label{namespacepath__follower_a3ccda87442fcaf43e7ce9781c5f659e6}} 
+\index{path\_follower@{path\_follower}!getPitch@{getPitch}}
+\index{getPitch@{getPitch}!path\_follower@{path\_follower}}
+\doxysubsubsection{\texorpdfstring{getPitch()}{getPitch()}}
+{\footnotesize\ttfamily def path\+\_\+follower.\+get\+Pitch (\begin{DoxyParamCaption}\item[{}]{quat }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}    Gets pitch angle from quaternoid representation
+
+    Args: 
+        quat
+
+    Returns:
+        pitch\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacepath__follower_ad549fb440c511c078da3af64ca56560e}\label{namespacepath__follower_ad549fb440c511c078da3af64ca56560e}} 
+\index{path\_follower@{path\_follower}!getQuatFromYaw@{getQuatFromYaw}}
+\index{getQuatFromYaw@{getQuatFromYaw}!path\_follower@{path\_follower}}
+\doxysubsubsection{\texorpdfstring{getQuatFromYaw()}{getQuatFromYaw()}}
+{\footnotesize\ttfamily def path\+\_\+follower.\+get\+Quat\+From\+Yaw (\begin{DoxyParamCaption}\item[{}]{yaw }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}    Gets quaternoid representation from euler representation
+
+    Args:
+        yaw
+    
+    Returns:
+        quat
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacepath__follower_a99b617a1e400d20acf6acd7dc82d0b33}\label{namespacepath__follower_a99b617a1e400d20acf6acd7dc82d0b33}} 
+\index{path\_follower@{path\_follower}!getRoll@{getRoll}}
+\index{getRoll@{getRoll}!path\_follower@{path\_follower}}
+\doxysubsubsection{\texorpdfstring{getRoll()}{getRoll()}}
+{\footnotesize\ttfamily def path\+\_\+follower.\+get\+Roll (\begin{DoxyParamCaption}\item[{}]{quat }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}    Gets roll angle from quaternoid representation
+
+    Args: 
+        quat
+
+    Returns:
+        roll\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacepath__follower_abdb81427ae3d272a13fc262b4e6d5e51}\label{namespacepath__follower_abdb81427ae3d272a13fc262b4e6d5e51}} 
+\index{path\_follower@{path\_follower}!getYaw@{getYaw}}
+\index{getYaw@{getYaw}!path\_follower@{path\_follower}}
+\doxysubsubsection{\texorpdfstring{getYaw()}{getYaw()}}
+{\footnotesize\ttfamily def path\+\_\+follower.\+get\+Yaw (\begin{DoxyParamCaption}\item[{}]{quat }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}    Gets yaw angle from quaternoid representation
+
+    Args: 
+        quat
+
+    Returns:
+        yaw\end{DoxyVerb}
+ 

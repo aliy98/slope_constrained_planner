@@ -1,0 +1,146 @@
+\hypertarget{classslope__constrained__planner_1_1_planner}{}\doxysection{slope\+\_\+constrained\+\_\+planner\+::Planner Class Reference}
+\label{classslope__constrained__planner_1_1_planner}\index{slope\_constrained\_planner::Planner@{slope\_constrained\_planner::Planner}}
+
+
+Implements the planner based on different path planning algorithms, which are provided in O\+M\+PL.  
+
+
+
+
+{\ttfamily \#include $<$planner.\+h$>$}
+
+
+
+Inheritance diagram for slope\+\_\+constrained\+\_\+planner\+::Planner\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=227pt]{classslope__constrained__planner_1_1_planner__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classslope__constrained__planner_1_1_planner_a43c270cd945bb131fc4b6c0ce524b4e2}{Planner}} (const Params\+Const\+Ptr \&params=std\+::make\+\_\+shared$<$ const \mbox{\hyperlink{structslope__constrained__planner_1_1_params}{Params}} $>$())
+\begin{DoxyCompactList}\small\item\em Constructor for {\ttfamily \mbox{\hyperlink{classslope__constrained__planner_1_1_planner}{Planner}}} class. Defines the state space and problem, sets the custom sampler and motion validator, and the planner algorithm. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classslope__constrained__planner_1_1_planner_aad1f0d58a764e4901ad2c8d410688190}{set\+Map}} (std\+::unique\+\_\+ptr$<$ grid\+\_\+map\+::\+Grid\+Map $>$ \&\&map)
+\begin{DoxyCompactList}\small\item\em Sets the grid map\textquotesingle{}s different layers. \end{DoxyCompactList}\item 
+Planner\+Status \mbox{\hyperlink{classslope__constrained__planner_1_1_planner_ac1a95cde31df950e5040b2fe293d1316}{plan}} (const ob\+::\+Scoped\+State$<$$>$ \&start, const ob\+::\+Scoped\+State$<$$>$ \&goal)
+\begin{DoxyCompactList}\small\item\em Plans a path between start and goal states. \end{DoxyCompactList}\item 
+og\+::\+Path\+Geometric \mbox{\hyperlink{classslope__constrained__planner_1_1_planner_afe7a99869c5b483d9531e26a91638da0}{get\+Solution\+Path}} (const bool \&simplify=false) const
+\begin{DoxyCompactList}\small\item\em Plans a path between start and goal states. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classslope__constrained__planner_1_1_planner_af82f641a6a3127ebfc9c175a9f397e3a}\label{classslope__constrained__planner_1_1_planner_af82f641a6a3127ebfc9c175a9f397e3a}} 
+std\+::shared\+\_\+ptr$<$ og\+::\+Simple\+Setup $>$ \mbox{\hyperlink{classslope__constrained__planner_1_1_planner_af82f641a6a3127ebfc9c175a9f397e3a}{ss\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Simple setup attribute. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classslope__constrained__planner_1_1_planner_a98e443185ca9ba15dc2b4d4ced711d18}\label{classslope__constrained__planner_1_1_planner_a98e443185ca9ba15dc2b4d4ced711d18}} 
+Params\+Const\+Ptr \mbox{\hyperlink{classslope__constrained__planner_1_1_planner_a98e443185ca9ba15dc2b4d4ced711d18}{params\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Contains some parameters such as planner name, verbose and map layers. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classslope__constrained__planner_1_1_planner_a58c09c72b5b20afa65d62fd1b8e4d22f}\label{classslope__constrained__planner_1_1_planner_a58c09c72b5b20afa65d62fd1b8e4d22f}} 
+bool \mbox{\hyperlink{classslope__constrained__planner_1_1_planner_a58c09c72b5b20afa65d62fd1b8e4d22f}{solved\+\_\+}} \{false\}
+\begin{DoxyCompactList}\small\item\em Status of planner. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classslope__constrained__planner_1_1_planner_a5901f39bb29fba110207e4bd634ffc7f}\label{classslope__constrained__planner_1_1_planner_a5901f39bb29fba110207e4bd634ffc7f}} 
+std\+::shared\+\_\+ptr$<$ ob\+::\+S\+E3\+State\+Space $>$ \mbox{\hyperlink{classslope__constrained__planner_1_1_planner_a5901f39bb29fba110207e4bd634ffc7f}{space\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Defines the states in se3. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classslope__constrained__planner_1_1_planner_a027abf9b46ebcf78ff22655d52ae125b}\label{classslope__constrained__planner_1_1_planner_a027abf9b46ebcf78ff22655d52ae125b}} 
+ob\+::\+State\+Space\+Ptr \mbox{\hyperlink{classslope__constrained__planner_1_1_planner_a027abf9b46ebcf78ff22655d52ae125b}{space\+\_\+real\+\_\+vec\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Defines the states in R(3) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classslope__constrained__planner_1_1_planner_a71fe62f1d6dba59e23ba4abccdd00189}\label{classslope__constrained__planner_1_1_planner_a71fe62f1d6dba59e23ba4abccdd00189}} 
+ob\+::\+Scoped\+State$<$ ob\+::\+Real\+Vector\+State\+Space $>$ \mbox{\hyperlink{classslope__constrained__planner_1_1_planner_a71fe62f1d6dba59e23ba4abccdd00189}{state\+\_\+pos\+\_\+}}
+\begin{DoxyCompactList}\small\item\em An scoped state in R(3) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classslope__constrained__planner_1_1_planner_ab19106c550139e33cfa958e98792126e}\label{classslope__constrained__planner_1_1_planner_ab19106c550139e33cfa958e98792126e}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classslope__constrained__planner_1_1_map}{Map}} $>$ \mbox{\hyperlink{classslope__constrained__planner_1_1_planner_ab19106c550139e33cfa958e98792126e}{map\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Grid map data. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classslope__constrained__planner_1_1_planner_a9b26ad02ff998e87df1716a6518129be}\label{classslope__constrained__planner_1_1_planner_a9b26ad02ff998e87df1716a6518129be}} 
+std\+::mutex \mbox{\hyperlink{classslope__constrained__planner_1_1_planner_a9b26ad02ff998e87df1716a6518129be}{map\+\_\+mutex\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Grid map process mutex. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classslope__constrained__planner_1_1_planner_aa73d6c4462dcb0a47dc4913e027e5ab5}\label{classslope__constrained__planner_1_1_planner_aa73d6c4462dcb0a47dc4913e027e5ab5}} 
+\mbox{\hyperlink{classslope__constrained__planner_1_1_sampler_allocator}{Sampler\+Allocator}} \mbox{\hyperlink{classslope__constrained__planner_1_1_planner_aa73d6c4462dcb0a47dc4913e027e5ab5}{sampler\+\_\+allocator\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Sets the custom sampler class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implements the planner based on different path planning algorithms, which are provided in O\+M\+PL. 
+
+Desciption\+: The main class in the software architecture. Creates an object from the chosen planner, sets the custom sampler and motion validator, and tries to find a path between the starting and goal points in the provided grid map. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classslope__constrained__planner_1_1_planner_a43c270cd945bb131fc4b6c0ce524b4e2}\label{classslope__constrained__planner_1_1_planner_a43c270cd945bb131fc4b6c0ce524b4e2}} 
+\index{slope\_constrained\_planner::Planner@{slope\_constrained\_planner::Planner}!Planner@{Planner}}
+\index{Planner@{Planner}!slope\_constrained\_planner::Planner@{slope\_constrained\_planner::Planner}}
+\doxysubsubsection{\texorpdfstring{Planner()}{Planner()}}
+{\footnotesize\ttfamily Planner\+::\+Planner (\begin{DoxyParamCaption}\item[{const Params\+Const\+Ptr \&}]{params = {\ttfamily std\+:\+:make\+\_\+shared$<$const~\mbox{\hyperlink{structslope__constrained__planner_1_1_params}{Params}}$>$()} }\end{DoxyParamCaption})}
+
+
+
+Constructor for {\ttfamily \mbox{\hyperlink{classslope__constrained__planner_1_1_planner}{Planner}}} class. Defines the state space and problem, sets the custom sampler and motion validator, and the planner algorithm. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em params} & contains required info about the planner name \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classslope__constrained__planner_1_1_planner_afe7a99869c5b483d9531e26a91638da0}\label{classslope__constrained__planner_1_1_planner_afe7a99869c5b483d9531e26a91638da0}} 
+\index{slope\_constrained\_planner::Planner@{slope\_constrained\_planner::Planner}!getSolutionPath@{getSolutionPath}}
+\index{getSolutionPath@{getSolutionPath}!slope\_constrained\_planner::Planner@{slope\_constrained\_planner::Planner}}
+\doxysubsubsection{\texorpdfstring{getSolutionPath()}{getSolutionPath()}}
+{\footnotesize\ttfamily og\+::\+Path\+Geometric Planner\+::get\+Solution\+Path (\begin{DoxyParamCaption}\item[{const bool \&}]{simplify = {\ttfamily false} }\end{DoxyParamCaption}) const}
+
+
+
+Plans a path between start and goal states. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em simplify} & Specifies whether the path would be simplified or not (default = false)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Path\+Geometric Found solution path computed by the geometric planner 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classslope__constrained__planner_1_1_planner_ac1a95cde31df950e5040b2fe293d1316}\label{classslope__constrained__planner_1_1_planner_ac1a95cde31df950e5040b2fe293d1316}} 
+\index{slope\_constrained\_planner::Planner@{slope\_constrained\_planner::Planner}!plan@{plan}}
+\index{plan@{plan}!slope\_constrained\_planner::Planner@{slope\_constrained\_planner::Planner}}
+\doxysubsubsection{\texorpdfstring{plan()}{plan()}}
+{\footnotesize\ttfamily Planner\+Status Planner\+::plan (\begin{DoxyParamCaption}\item[{const ob\+::\+Scoped\+State$<$$>$ \&}]{start,  }\item[{const ob\+::\+Scoped\+State$<$$>$ \&}]{goal }\end{DoxyParamCaption})}
+
+
+
+Plans a path between start and goal states. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em start} & Robots current state \\
+\hline
+{\em goal} & Chosen target state\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Planner\+Status 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classslope__constrained__planner_1_1_planner_aad1f0d58a764e4901ad2c8d410688190}\label{classslope__constrained__planner_1_1_planner_aad1f0d58a764e4901ad2c8d410688190}} 
+\index{slope\_constrained\_planner::Planner@{slope\_constrained\_planner::Planner}!setMap@{setMap}}
+\index{setMap@{setMap}!slope\_constrained\_planner::Planner@{slope\_constrained\_planner::Planner}}
+\doxysubsubsection{\texorpdfstring{setMap()}{setMap()}}
+{\footnotesize\ttfamily void Planner\+::set\+Map (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ grid\+\_\+map\+::\+Grid\+Map $>$ \&\&}]{map }\end{DoxyParamCaption})}
+
+
+
+Sets the grid map\textquotesingle{}s different layers. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em map} & grid map of the environment \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/ali/ros\+\_\+ws/src/slope\+\_\+constrained\+\_\+planner/slope\+\_\+constrained\+\_\+planner/include/slope\+\_\+constrained\+\_\+planner/\mbox{\hyperlink{planner_8h}{planner.\+h}}\item 
+/home/ali/ros\+\_\+ws/src/slope\+\_\+constrained\+\_\+planner/slope\+\_\+constrained\+\_\+planner/src/\mbox{\hyperlink{planner_8cpp}{planner.\+cpp}}\end{DoxyCompactItemize}

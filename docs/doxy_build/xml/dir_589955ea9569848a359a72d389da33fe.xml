@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="dir_589955ea9569848a359a72d389da33fe" kind="dir">
+    <compoundname>/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/build/atomic_configure</compoundname>
+    <innerfile refid="build_2atomic__configure_2__setup__util_8py">_setup_util.py</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/build/atomic_configure/"/>
+  </compounddef>
+</doxygen>

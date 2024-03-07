@@ -1,0 +1,4 @@
+<map id="slope_constrained_planner::Sampler" name="slope_constrained_planner::Sampler">
+<area shape="rect" id="node1" title="Defines a custom sampler which only samples an state with the heading angle below the threshold." alt="" coords="5,80,201,121"/>
+<area shape="rect" id="node2" title=" " alt="" coords="36,5,171,32"/>
+</map>

@@ -1,0 +1,162 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="motion__validator_8cpp" kind="file" language="C++">
+    <compoundname>motion_validator.cpp</compoundname>
+    <includes refid="motion__validator_8h" local="no">slope_constrained_planner/motion_validator.h</includes>
+    <incdepgraph>
+      <node id="7">
+        <label>ompl/base/goals/GoalState.h</label>
+      </node>
+      <node id="2">
+        <label>slope_constrained_planner/motion_validator.h</label>
+        <link refid="motion__validator_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>cmath</label>
+      </node>
+      <node id="14">
+        <label>string</label>
+      </node>
+      <node id="8">
+        <label>slope_constrained_planner/utils.h</label>
+        <link refid="include_2slope__constrained__planner_2utils_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>Eigen/Dense</label>
+      </node>
+      <node id="10">
+        <label>vector</label>
+      </node>
+      <node id="13">
+        <label>slope_constrained_planner/params.h</label>
+        <link refid="params_8h"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>ompl/base/spaces/SE3StateSpace.h</label>
+      </node>
+      <node id="3">
+        <label>ompl/base/MotionValidator.h</label>
+      </node>
+      <node id="1">
+        <label>/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/src/motion_validator.cpp</label>
+        <link refid="motion__validator_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>grid_map_core/GridMap.hpp</label>
+      </node>
+      <node id="6">
+        <label>ompl/geometric/SimpleSetup.h</label>
+      </node>
+      <node id="9">
+        <label>memory</label>
+      </node>
+      <node id="5">
+        <label>ompl/base/StateValidityChecker.h</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+<para>Contains the definition of public member functions of <computeroutput>MotionValidator</computeroutput> class. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="6"><highlight class="preprocessor">#include<sp/>&lt;<ref refid="motion__validator_8h" kindref="compound">slope_constrained_planner/motion_validator.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">slope_constrained_planner;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><ref refid="classslope__constrained__planner_1_1_slope_constrained_motion_validator_1a15dfb0484bca9851d72537699b721af6" kindref="member">SlopeConstrainedMotionValidator::SlopeConstrainedMotionValidator</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ob::SpaceInformationPtr<sp/>&amp;si,</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ParamsConstPtr&amp;<sp/>params)</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/>:<sp/>ob::MotionValidator(si),</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>params_(params)<sp/>{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>SlopeConstrainedMotionValidator::checkMotion(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ob::State*<sp/>s1,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ob::State*<sp/>s2)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ob::SE3StateSpace::StateType*<sp/>s1_se3<sp/>=<sp/>s1-&gt;as&lt;ob::SE3StateSpace::StateType&gt;();<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ob::SE3StateSpace::StateType*<sp/>s2_se3<sp/>=<sp/>s2-&gt;as&lt;ob::SE3StateSpace::StateType&gt;();</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x1<sp/>=<sp/>s1_se3-&gt;getX();</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x2<sp/>=<sp/>s2_se3-&gt;getX();</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>y1<sp/>=<sp/>s1_se3-&gt;getY();</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>y2<sp/>=<sp/>s2_se3-&gt;getY();</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>z1<sp/>=<sp/>s1_se3-&gt;getZ();</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>z2<sp/>=<sp/>s2_se3-&gt;getZ();</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>diff_x<sp/>=<sp/>x2<sp/>-<sp/>x1;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>diff_y<sp/>=<sp/>y2<sp/>-<sp/>y1;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>diff_z<sp/>=<sp/>z2<sp/>-<sp/>z1;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>phi<sp/>=<sp/>atan(diff_z<sp/>/<sp/>sqrt(diff_x*diff_x<sp/>+<sp/>diff_y*diff_y));</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>yaw1<sp/>=<sp/><ref refid="include_2slope__constrained__planner_2utils_8h_1a4da0e01e16937554779f163c6b8e16ae" kindref="member">getYawFromSO3</ref>(s1_se3-&gt;rotation());</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>yaw2<sp/>=<sp/><ref refid="include_2slope__constrained__planner_2utils_8h_1a4da0e01e16937554779f163c6b8e16ae" kindref="member">getYawFromSO3</ref>(s2_se3-&gt;rotation());</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>roll1<sp/>=<sp/><ref refid="include_2slope__constrained__planner_2utils_8h_1a48e1f90cc8391f010fe7efa11f179bb1" kindref="member">getRollFromSO3</ref>(s1_se3-&gt;rotation());</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>roll2<sp/>=<sp/><ref refid="include_2slope__constrained__planner_2utils_8h_1a48e1f90cc8391f010fe7efa11f179bb1" kindref="member">getRollFromSO3</ref>(s2_se3-&gt;rotation());</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>pitch1<sp/>=<sp/><ref refid="include_2slope__constrained__planner_2utils_8h_1a428d7014957c631f7b624a5cac7b16a3" kindref="member">getPitchFromSO3</ref>(s1_se3-&gt;rotation());</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>pitch2<sp/>=<sp/><ref refid="include_2slope__constrained__planner_2utils_8h_1a428d7014957c631f7b624a5cac7b16a3" kindref="member">getPitchFromSO3</ref>(s2_se3-&gt;rotation());</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>delta<sp/>=<sp/><ref refid="classslope__constrained__planner_1_1_slope_constrained_motion_validator_1a4d553ca82c40e8b6b7cc2e1e5400fbdc" kindref="member">params_</ref>-&gt;validator.max_motion_slope_yaw_diff_free;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(abs(roll1)<sp/>&lt;<sp/>delta<sp/>&amp;&amp;<sp/>abs(roll2)<sp/>&lt;<sp/>delta<sp/>&amp;&amp;<sp/>abs(pitch1)<sp/>&lt;<sp/>delta<sp/>&amp;&amp;<sp/>abs(pitch2)<sp/>&lt;<sp/>delta)<sp/>{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(abs(phi)<sp/>*<sp/>180<sp/>/<sp/>M_PI<sp/>&gt;<sp/><ref refid="classslope__constrained__planner_1_1_slope_constrained_motion_validator_1a4d553ca82c40e8b6b7cc2e1e5400fbdc" kindref="member">params_</ref>-&gt;validator.max_motion_slope<sp/></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>||<sp/>sqrt(diff_x*diff_x<sp/>+<sp/>diff_y*diff_y)<sp/>&gt;<sp/><ref refid="classslope__constrained__planner_1_1_slope_constrained_motion_validator_1a4d553ca82c40e8b6b7cc2e1e5400fbdc" kindref="member">params_</ref>-&gt;validator.max_motion_length<sp/></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>||<sp/>sqrt(diff_x*diff_x<sp/>+<sp/>diff_y*diff_y)<sp/>&lt;<sp/><ref refid="classslope__constrained__planner_1_1_slope_constrained_motion_validator_1a4d553ca82c40e8b6b7cc2e1e5400fbdc" kindref="member">params_</ref>-&gt;validator.min_motion_length)<sp/></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(abs(phi)<sp/>*<sp/>180<sp/>/<sp/>M_PI<sp/>&gt;<sp/><ref refid="classslope__constrained__planner_1_1_slope_constrained_motion_validator_1a4d553ca82c40e8b6b7cc2e1e5400fbdc" kindref="member">params_</ref>-&gt;validator.max_motion_slope<sp/></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>||<sp/>sqrt(diff_x*diff_x<sp/>+<sp/>diff_y*diff_y)<sp/>&gt;<sp/><ref refid="classslope__constrained__planner_1_1_slope_constrained_motion_validator_1a4d553ca82c40e8b6b7cc2e1e5400fbdc" kindref="member">params_</ref>-&gt;validator.max_motion_length<sp/></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>||<sp/>sqrt(diff_x*diff_x<sp/>+<sp/>diff_y*diff_y)<sp/>&lt;<sp/><ref refid="classslope__constrained__planner_1_1_slope_constrained_motion_validator_1a4d553ca82c40e8b6b7cc2e1e5400fbdc" kindref="member">params_</ref>-&gt;validator.min_motion_length</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>||<sp/>abs(yaw2<sp/>-<sp/>yaw1)<sp/>*<sp/>180<sp/>/<sp/>M_PI<sp/>&gt;<sp/><ref refid="classslope__constrained__planner_1_1_slope_constrained_motion_validator_1a4d553ca82c40e8b6b7cc2e1e5400fbdc" kindref="member">params_</ref>-&gt;validator.max_motion_yaw_diff)<sp/></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="61"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classslope__constrained__planner_1_1_slope_constrained_motion_validator_1ac0c338d8e69bcb6f25c65115f09c4281" kindref="member">SlopeConstrainedMotionValidator::checkMotion</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ob::State<sp/>*s1,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ob::State<sp/>*s2,<sp/>std::pair&lt;ob::State<sp/>*,<sp/>double&gt;<sp/>&amp;lastValid)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>std::cout&lt;&lt;&quot;TRUE&quot;&lt;&lt;std::endl;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/src/motion_validator.cpp"/>
+  </compounddef>
+</doxygen>

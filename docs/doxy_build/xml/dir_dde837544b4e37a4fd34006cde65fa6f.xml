@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="dir_dde837544b4e37a4fd34006cde65fa6f" kind="dir">
+    <compoundname>/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/include/slope_constrained_planner_ros</compoundname>
+    <innerfile refid="converter_8h">converter.h</innerfile>
+    <innerfile refid="planner__ros_8h">planner_ros.h</innerfile>
+    <innerfile refid="ros_2include_2slope__constrained__planner__ros_2utils_8h">utils.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/include/slope_constrained_planner_ros/"/>
+  </compounddef>
+</doxygen>

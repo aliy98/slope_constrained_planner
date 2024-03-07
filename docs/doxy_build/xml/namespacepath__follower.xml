@@ -1,0 +1,267 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="namespacepath__follower" kind="namespace" language="Python">
+    <compoundname>path_follower</compoundname>
+    <innerclass refid="classpath__follower_1_1_path_follower" prot="public">path_follower::PathFollower</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="namespacepath__follower_1afe4e5c8903e8189a3b746c3af543b669" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string path_follower.ROBOT_FRAME</definition>
+        <argsstring></argsstring>
+        <name>ROBOT_FRAME</name>
+        <initializer>=  &apos;base_link&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/path_follower.py" line="29" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/path_follower.py" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacepath__follower_1a495f7debd9f26e9cff0fd55e3306e9dc" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float path_follower.GOAL_THRES_POS</definition>
+        <argsstring></argsstring>
+        <name>GOAL_THRES_POS</name>
+        <initializer>=  0.1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/path_follower.py" line="30" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/path_follower.py" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacepath__follower_1a2f5037c89062146b10fa5f6a64ebe09a" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float path_follower.GOAL_THRES_ANG</definition>
+        <argsstring></argsstring>
+        <name>GOAL_THRES_ANG</name>
+        <initializer>=  0.2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/path_follower.py" line="31" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/path_follower.py" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacepath__follower_1aaa0bb52344b0d394f71b7053ebf0c527" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float path_follower.FACE_GOAL_DIST</definition>
+        <argsstring></argsstring>
+        <name>FACE_GOAL_DIST</name>
+        <initializer>=  1.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/path_follower.py" line="32" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/path_follower.py" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacepath__follower_1ab92a9cc6e77d2860e41bff16f19ff65d" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>path_follower.follower</definition>
+        <argsstring></argsstring>
+        <name>follower</name>
+        <initializer>=  <ref refid="classpath__follower_1_1_path_follower" kindref="compound">PathFollower</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/path_follower.py" line="354" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/path_follower.py" bodystart="354" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacepath__follower_1a91ae2c90e8b11e64250782d4cb3d7f27" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>path_follower.rate</definition>
+        <argsstring></argsstring>
+        <name>rate</name>
+        <initializer>=  rospy.Rate(10)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/path_follower.py" line="356" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/path_follower.py" bodystart="356" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespacepath__follower_1abdb81427ae3d272a13fc262b4e6d5e51" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def path_follower.getYaw</definition>
+        <argsstring>(quat)</argsstring>
+        <name>getYaw</name>
+        <param>
+          <type>quat</type>
+          <defname>quat</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>    Gets yaw angle from quaternoid representation
+
+    Args: 
+        quat
+
+    Returns:
+        yaw</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/path_follower.py" line="36" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/path_follower.py" bodystart="36" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacepath__follower_1a99b617a1e400d20acf6acd7dc82d0b33" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def path_follower.getRoll</definition>
+        <argsstring>(quat)</argsstring>
+        <name>getRoll</name>
+        <param>
+          <type>quat</type>
+          <defname>quat</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>    Gets roll angle from quaternoid representation
+
+    Args: 
+        quat
+
+    Returns:
+        roll</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/path_follower.py" line="51" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/path_follower.py" bodystart="51" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacepath__follower_1a3ccda87442fcaf43e7ce9781c5f659e6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def path_follower.getPitch</definition>
+        <argsstring>(quat)</argsstring>
+        <name>getPitch</name>
+        <param>
+          <type>quat</type>
+          <defname>quat</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>    Gets pitch angle from quaternoid representation
+
+    Args: 
+        quat
+
+    Returns:
+        pitch</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/path_follower.py" line="66" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/path_follower.py" bodystart="66" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacepath__follower_1a2abadf5160999916490241fda5a9a639" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def path_follower.getConstrainedYaw</definition>
+        <argsstring>(yaw)</argsstring>
+        <name>getConstrainedYaw</name>
+        <param>
+          <type>yaw</type>
+          <defname>yaw</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>    Gets constrained value of yaw angle between -2pi and 2pi
+
+    Args: 
+        yaw
+    
+    Returns:
+        yaw
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/path_follower.py" line="81" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/path_follower.py" bodystart="81" bodyend="97"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacepath__follower_1a5377a586616d11f6bb383d3ac7c24cbd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def path_follower.getAngleError</definition>
+        <argsstring>(target, current)</argsstring>
+        <name>getAngleError</name>
+        <param>
+          <type>target</type>
+          <defname>target</defname>
+        </param>
+        <param>
+          <type>current</type>
+          <defname>current</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>    Gets the difference between two given angles
+
+    Args:
+        target
+        current
+    
+    Returns:
+        dyaw
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/path_follower.py" line="98" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/path_follower.py" bodystart="98" bodyend="112"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacepath__follower_1ad549fb440c511c078da3af64ca56560e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def path_follower.getQuatFromYaw</definition>
+        <argsstring>(yaw)</argsstring>
+        <name>getQuatFromYaw</name>
+        <param>
+          <type>yaw</type>
+          <defname>yaw</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>    Gets quaternoid representation from euler representation
+
+    Args:
+        yaw
+    
+    Returns:
+        quat
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/path_follower.py" line="113" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/path_follower.py" bodystart="113" bodyend="126"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>.. module:: path_follower
+    :platform: Unix
+    :synopsis: the path_follower python script in slope_constrained_planner package
+
+Subscribes to:
+    /slope_constrained_planner/path
+
+Publishes to:
+    /spot/wolf_controller/twist
+
+    /slope_constrained_planner/followed_path
+
+
+A provided path follower, used only in simulation mode, based on PID control to be used for testing on a mobile robot
+</verbatim> </para>
+    </detaileddescription>
+    <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/path_follower.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

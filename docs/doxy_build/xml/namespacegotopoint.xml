@@ -1,0 +1,238 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="namespacegotopoint" kind="namespace" language="Python">
+    <compoundname>gotopoint</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="gotopoint_8py_1a10a5a43ff0860655ebf8853f2b8dd943" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float gotopoint.VELOCITY_CMD_DURATION</definition>
+        <argsstring></argsstring>
+        <name>VELOCITY_CMD_DURATION</name>
+        <initializer>=  0.6</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/gotopoint.py" line="34" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/gotopoint.py" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="gotopoint_8py_1ad36e6d709ebf9e92758905153837053a" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>gotopoint.LOGGER</definition>
+        <argsstring></argsstring>
+        <name>LOGGER</name>
+        <initializer>=  logging.getLogger()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/gotopoint.py" line="35" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/gotopoint.py" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="gotopoint_8py_1aaa37e45e8e9c11c586744c6147a4d862" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>gotopoint._robot_command_client</definition>
+        <argsstring></argsstring>
+        <name>_robot_command_client</name>
+        <initializer>= None</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/gotopoint.py" line="36" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/gotopoint.py" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="gotopoint_8py_1a8749bc50e55032396ed30971f542b719" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>gotopoint._robot</definition>
+        <argsstring></argsstring>
+        <name>_robot</name>
+        <initializer>= None</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/gotopoint.py" line="37" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/gotopoint.py" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="gotopoint_8py_1a74edd75d95c3c4278eec6f5d25cdbb07" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool gotopoint._powered_on</definition>
+        <argsstring></argsstring>
+        <name>_powered_on</name>
+        <initializer>= False</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/gotopoint.py" line="38" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/gotopoint.py" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="gotopoint_8py_1ae594295cdf1628f91a78c8d12880163a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def gotopoint.set_mobility_params</definition>
+        <argsstring>()</argsstring>
+        <name>set_mobility_params</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/gotopoint.py" line="39" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/gotopoint.py" bodystart="39" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="gotopoint_8py_1a56e4a20883053630b3dce4d995800476" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def gotopoint.euler_from_quaternion</definition>
+        <argsstring>(x, y, z, w)</argsstring>
+        <name>euler_from_quaternion</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>y</type>
+          <defname>y</defname>
+        </param>
+        <param>
+          <type>z</type>
+          <defname>z</defname>
+        </param>
+        <param>
+          <type>w</type>
+          <defname>w</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Convert a quaternion into euler angles (roll, pitch, yaw)
+roll is rotation around x in radians (counterclockwise)
+pitch is rotation around y in radians (counterclockwise)
+yaw is rotation around z in radians (counterclockwise)
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/gotopoint.py" line="60" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/gotopoint.py" bodystart="60" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="function" id="gotopoint_8py_1a80916734d27806630db650fc23eaeaeb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def gotopoint.goal_clbk</definition>
+        <argsstring>(goal)</argsstring>
+        <name>goal_clbk</name>
+        <param>
+          <type>goal</type>
+          <defname>goal</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/gotopoint.py" line="82" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/gotopoint.py" bodystart="82" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="function" id="gotopoint_8py_1a108ade4e98147ab51ba65f892b43d49e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def gotopoint.tilt_robot</definition>
+        <argsstring>(req)</argsstring>
+        <name>tilt_robot</name>
+        <param>
+          <type>req</type>
+          <defname>req</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/gotopoint.py" line="94" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/gotopoint.py" bodystart="94" bodyend="100"/>
+      </memberdef>
+      <memberdef kind="function" id="gotopoint_8py_1a9eb9ed77f43398d01a91963f89225a96" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def gotopoint.orientation_cmd_helper</definition>
+        <argsstring>(yaw=0.0, roll=0.0, pitch=0.0, height=0.0)</argsstring>
+        <name>orientation_cmd_helper</name>
+        <param>
+          <type>yaw</type>
+          <defname>yaw</defname>
+          <defval>0.0</defval>
+        </param>
+        <param>
+          <type>roll</type>
+          <defname>roll</defname>
+          <defval>0.0</defval>
+        </param>
+        <param>
+          <type>pitch</type>
+          <defname>pitch</defname>
+          <defval>0.0</defval>
+        </param>
+        <param>
+          <type>height</type>
+          <defname>height</defname>
+          <defval>0.0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/gotopoint.py" line="101" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/gotopoint.py" bodystart="101" bodyend="111"/>
+      </memberdef>
+      <memberdef kind="function" id="gotopoint_8py_1a51a4cb3d3d2448e707a4458b4c99d6e9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def gotopoint.power_on</definition>
+        <argsstring>()</argsstring>
+        <name>power_on</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/gotopoint.py" line="112" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/gotopoint.py" bodystart="112" bodyend="116"/>
+      </memberdef>
+      <memberdef kind="function" id="gotopoint_8py_1afb40e83464d11ea789aa5076240a0f89" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def gotopoint.power_off</definition>
+        <argsstring>()</argsstring>
+        <name>power_off</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/gotopoint.py" line="117" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/gotopoint.py" bodystart="117" bodyend="123"/>
+      </memberdef>
+      <memberdef kind="function" id="gotopoint_8py_1a376c62da55a6d1439074b1455d4ade3c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def gotopoint.node</definition>
+        <argsstring>()</argsstring>
+        <name>node</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/gotopoint.py" line="124" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/gotopoint.py" bodystart="124" bodyend="159"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/gotopoint.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

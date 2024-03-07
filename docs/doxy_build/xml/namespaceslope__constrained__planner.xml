@@ -1,0 +1,901 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="namespaceslope__constrained__planner" kind="namespace" language="C++">
+    <compoundname>slope_constrained_planner</compoundname>
+    <innerclass refid="classslope__constrained__planner_1_1_chain" prot="public">slope_constrained_planner::Chain</innerclass>
+    <innerclass refid="classslope__constrained__planner_1_1_converter" prot="public">slope_constrained_planner::Converter</innerclass>
+    <innerclass refid="classslope__constrained__planner_1_1_map" prot="public">slope_constrained_planner::Map</innerclass>
+    <innerclass refid="structslope__constrained__planner_1_1_params" prot="public">slope_constrained_planner::Params</innerclass>
+    <innerclass refid="classslope__constrained__planner_1_1_planner" prot="public">slope_constrained_planner::Planner</innerclass>
+    <innerclass refid="classslope__constrained__planner_1_1_planner_ros" prot="public">slope_constrained_planner::PlannerRos</innerclass>
+    <innerclass refid="classslope__constrained__planner_1_1_sampler" prot="public">slope_constrained_planner::Sampler</innerclass>
+    <innerclass refid="classslope__constrained__planner_1_1_sampler_allocator" prot="public">slope_constrained_planner::SamplerAllocator</innerclass>
+    <innerclass refid="classslope__constrained__planner_1_1_slope_constrained_motion_validator" prot="public">slope_constrained_planner::SlopeConstrainedMotionValidator</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="planner__status_8h_1a35d720992933e9b949add04b084fbd7b" prot="public" static="no" strong="no">
+        <type></type>
+        <name>PlannerStatus</name>
+        <enumvalue id="planner__status_8h_1a35d720992933e9b949add04b084fbd7ba144125fcf160046883b265679b5df88f" prot="public">
+          <name>UNKNOWN</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="planner__status_8h_1a35d720992933e9b949add04b084fbd7babdb122151ec188e836c768d6e111c2d2" prot="public">
+          <name>INVALID_START</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="planner__status_8h_1a35d720992933e9b949add04b084fbd7ba62500c6002d7474d6df90406a0fddc72" prot="public">
+          <name>INVALID_GOAL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="planner__status_8h_1a35d720992933e9b949add04b084fbd7ba2da3be260d71c264a7af45eee9d51d6b" prot="public">
+          <name>NO_MAP</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="planner__status_8h_1a35d720992933e9b949add04b084fbd7ba7e44f59f4f7796ab248dfd7199be7b87" prot="public">
+          <name>NOT_SOLVED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="planner__status_8h_1a35d720992933e9b949add04b084fbd7ba11cdecf2354905bdc8a4cf69ae118ba7" prot="public">
+          <name>SOLVED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/planner_status.h" line="12" column="19" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/planner_status.h" bodystart="12" bodyend="19"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="chain_8h_1a595d75a6899eaa7dc358d5238ed17405" prot="public" static="no">
+        <type>std::unique_ptr&lt; grid_map::GridMap &gt;</type>
+        <definition>typedef std::unique_ptr&lt; grid_map::GridMap &gt; slope_constrained_planner::GridMapPtr</definition>
+        <argsstring></argsstring>
+        <name>GridMapPtr</name>
+        <briefdescription>
+<para>definition of an object from grid map class </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/chain.h" line="16" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/chain.h" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="chain_8h_1ac0e6c4c629a812ac0dc40758f0537d73" prot="public" static="no">
+        <type><ref refid="classslope__constrained__planner_1_1_chain" kindref="compound">Chain</ref>&lt; const <ref refid="chain_8h_1a595d75a6899eaa7dc358d5238ed17405" kindref="member">GridMapPtr</ref> &amp; &gt;</type>
+        <definition>using slope_constrained_planner::ChainNewMap = typedef Chain&lt;const GridMapPtr&amp;&gt;</definition>
+        <argsstring></argsstring>
+        <name>ChainNewMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/chain.h" line="46" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/chain.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="chain_8h_1a00af2749f7af77e05e65e6b1523add33" prot="public" static="no">
+        <type><ref refid="classslope__constrained__planner_1_1_chain" kindref="compound">Chain</ref>&lt; const <ref refid="chain_8h_1a595d75a6899eaa7dc358d5238ed17405" kindref="member">GridMapPtr</ref> &amp;, const <ref refid="chain_8h_1a595d75a6899eaa7dc358d5238ed17405" kindref="member">GridMapPtr</ref> &amp; &gt;</type>
+        <definition>using slope_constrained_planner::ChainOldMap = typedef Chain&lt;const GridMapPtr&amp;, const GridMapPtr&amp;&gt;</definition>
+        <argsstring></argsstring>
+        <name>ChainOldMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/chain.h" line="49" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/chain.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="params_8h_1aaa99759c76ecdf954c613257bc577356" prot="public" static="no">
+        <type>std::shared_ptr&lt; <ref refid="structslope__constrained__planner_1_1_params" kindref="compound">Params</ref> &gt;</type>
+        <definition>using slope_constrained_planner::ParamsPtr = typedef std::shared_ptr&lt;Params&gt;</definition>
+        <argsstring></argsstring>
+        <name>ParamsPtr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/params.h" line="91" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/params.h" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="params_8h_1ad11a845ea561f4a817ddf2f7e603ae5d" prot="public" static="no">
+        <type>std::shared_ptr&lt; const <ref refid="structslope__constrained__planner_1_1_params" kindref="compound">Params</ref> &gt;</type>
+        <definition>using slope_constrained_planner::ParamsConstPtr = typedef std::shared_ptr&lt;const Params&gt;</definition>
+        <argsstring></argsstring>
+        <name>ParamsConstPtr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/params.h" line="92" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/params.h" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="include_2slope__constrained__planner_2utils_8h_1a03a12f308166d2d30d64f3d3fa282bda" prot="public" static="no">
+        <type>float</type>
+        <definition>using slope_constrained_planner::Scalar = typedef float</definition>
+        <argsstring></argsstring>
+        <name>Scalar</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/utils.h" line="23" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/utils.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="include_2slope__constrained__planner_2utils_8h_1a8d3ffc5bb1e509c663a996336d9151f5" prot="public" static="no">
+        <type>Eigen::Transform&lt; Scalar, 3, Eigen::Affine &gt;</type>
+        <definition>using slope_constrained_planner::Pose3 = typedef Eigen::Transform&lt;Scalar,3,Eigen::Affine&gt;</definition>
+        <argsstring></argsstring>
+        <name>Pose3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/utils.h" line="24" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/utils.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="include_2slope__constrained__planner_2utils_8h_1a28d6b6d2b77f680176dd7b625fc84f85" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt; double &gt; slope_constrained_planner::global_start_</definition>
+        <argsstring></argsstring>
+        <name>global_start_</name>
+        <initializer>= {0.0}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/src/planner.cpp" line="17" column="15" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/src/planner.cpp" bodystart="17" bodyend="-1" declfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/utils.h" declline="21" declcolumn="20"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="include_2slope__constrained__planner_2utils_8h_1aaa1afa706c6eea0820d109fea72fe72f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Pose3</type>
+        <definition>Pose3 slope_constrained_planner::Pose3FromSE3</definition>
+        <argsstring>(const ob::State *state)</argsstring>
+        <name>Pose3FromSE3</name>
+        <param>
+          <type>const ob::State *</type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+<para>Gets position of state from its SE3 representation. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>State info </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Position of state </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/utils.h" line="32" column="14" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/utils.h" bodystart="32" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="include_2slope__constrained__planner_2utils_8h_1a803385a13df77f5c9f0524be3917c4bf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Pose3</type>
+        <definition>Pose3 slope_constrained_planner::Pose3FromXYZ</definition>
+        <argsstring>(Scalar x, Scalar y, Scalar z)</argsstring>
+        <name>Pose3FromXYZ</name>
+        <param>
+          <type>Scalar</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>Scalar</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>Scalar</type>
+          <declname>z</declname>
+        </param>
+        <briefdescription>
+<para>Gets the position of state from its x-y-z representation. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>State&apos;s x value </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>State&apos;s y value </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>z</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>State&apos;s z value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Position of the state </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/utils.h" line="55" column="14" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/utils.h" bodystart="55" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="function" id="include_2slope__constrained__planner_2utils_8h_1a33fbcc7fcabcb7a710ab618bb812b7fd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double slope_constrained_planner::lateralDistance</definition>
+        <argsstring>(const ob::State *from, const ob::State *to)</argsstring>
+        <name>lateralDistance</name>
+        <param>
+          <type>const ob::State *</type>
+          <declname>from</declname>
+        </param>
+        <param>
+          <type>const ob::State *</type>
+          <declname>to</declname>
+        </param>
+        <briefdescription>
+<para>Gets the lateral distance between two states. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>from</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Starting state </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>to</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Ending state </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Lateral distance between from and to states </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/utils.h" line="70" column="15" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/utils.h" bodystart="70" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="include_2slope__constrained__planner_2utils_8h_1aa8430341802109b3203bfe726e3eea91" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>T</type>
+        <definition>T slope_constrained_planner::getRollFromQuat</definition>
+        <argsstring>(T w, T x, T y, T z)</argsstring>
+        <name>getRollFromQuat</name>
+        <param>
+          <type>T</type>
+          <declname>w</declname>
+        </param>
+        <param>
+          <type>T</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>T</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>T</type>
+          <declname>z</declname>
+        </param>
+        <briefdescription>
+<para>Gets roll angle from quaternion represntation. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>w</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Quaternion w value </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Quaternion x value </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Quaternion y value </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>z</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Quaternion z value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Roll angle </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/utils.h" line="91" column="10" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/utils.h" bodystart="91" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="function" id="include_2slope__constrained__planner_2utils_8h_1a51006fe8c71b68332c03b87390505ad3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>T</type>
+        <definition>T slope_constrained_planner::getPitchFromQuat</definition>
+        <argsstring>(T w, T x, T y, T z)</argsstring>
+        <name>getPitchFromQuat</name>
+        <param>
+          <type>T</type>
+          <declname>w</declname>
+        </param>
+        <param>
+          <type>T</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>T</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>T</type>
+          <declname>z</declname>
+        </param>
+        <briefdescription>
+<para>Gets pitch angle from quaternion represntation. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>w</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Quaternion w value </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Quaternion x value </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Quaternion y value </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>z</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Quaternion z value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Pitch angle </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/utils.h" line="105" column="10" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/utils.h" bodystart="105" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="function" id="include_2slope__constrained__planner_2utils_8h_1a6852c8698b81bd3f2b692a44266d0634" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>T</type>
+        <definition>T slope_constrained_planner::getYawFromQuat</definition>
+        <argsstring>(T w, T x, T y, T z)</argsstring>
+        <name>getYawFromQuat</name>
+        <param>
+          <type>T</type>
+          <declname>w</declname>
+        </param>
+        <param>
+          <type>T</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>T</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>T</type>
+          <declname>z</declname>
+        </param>
+        <briefdescription>
+<para>Gets yaw angle from quaternion represntation. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>w</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Quaternion w value </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Quaternion x value </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Quaternion y value </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>z</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Quaternion z value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Yaw angle </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/utils.h" line="119" column="10" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/utils.h" bodystart="119" bodyend="121"/>
+      </memberdef>
+      <memberdef kind="function" id="include_2slope__constrained__planner_2utils_8h_1a4da0e01e16937554779f163c6b8e16ae" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Scalar</type>
+        <definition>Scalar slope_constrained_planner::getYawFromSO3</definition>
+        <argsstring>(const ob::SO3StateSpace::StateType &amp;s)</argsstring>
+        <name>getYawFromSO3</name>
+        <param>
+          <type>const ob::SO3StateSpace::StateType &amp;</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+<para>Gets yaw angle from SO3 represntation. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>State data </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Yaw angle </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/utils.h" line="129" column="15" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/utils.h" bodystart="129" bodyend="131"/>
+      </memberdef>
+      <memberdef kind="function" id="include_2slope__constrained__planner_2utils_8h_1a48e1f90cc8391f010fe7efa11f179bb1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Scalar</type>
+        <definition>Scalar slope_constrained_planner::getRollFromSO3</definition>
+        <argsstring>(const ob::SO3StateSpace::StateType &amp;s)</argsstring>
+        <name>getRollFromSO3</name>
+        <param>
+          <type>const ob::SO3StateSpace::StateType &amp;</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+<para>Gets roll angle from SO3 represntation. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>State data </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Roll angle </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/utils.h" line="139" column="15" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/utils.h" bodystart="139" bodyend="141"/>
+      </memberdef>
+      <memberdef kind="function" id="include_2slope__constrained__planner_2utils_8h_1a428d7014957c631f7b624a5cac7b16a3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Scalar</type>
+        <definition>Scalar slope_constrained_planner::getPitchFromSO3</definition>
+        <argsstring>(const ob::SO3StateSpace::StateType &amp;s)</argsstring>
+        <name>getPitchFromSO3</name>
+        <param>
+          <type>const ob::SO3StateSpace::StateType &amp;</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+<para>Gets pitch angle from SO3 represntation. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>State data </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Pitch angle </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/utils.h" line="149" column="15" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/utils.h" bodystart="149" bodyend="151"/>
+      </memberdef>
+      <memberdef kind="function" id="include_2slope__constrained__planner_2utils_8h_1a795e026e29385a30e9028219b748b09e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void slope_constrained_planner::setSO3FromYaw</definition>
+        <argsstring>(ob::SO3StateSpace::StateType &amp;s, double yaw)</argsstring>
+        <name>setSO3FromYaw</name>
+        <param>
+          <type>ob::SO3StateSpace::StateType &amp;</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>yaw</declname>
+        </param>
+        <briefdescription>
+<para>Gets SO3 represntation from yaw angle. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>State data </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>yaw</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Yaw angle </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/utils.h" line="159" column="13" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/utils.h" bodystart="159" bodyend="164"/>
+      </memberdef>
+      <memberdef kind="function" id="include_2slope__constrained__planner_2utils_8h_1a991f425b1a0e14d5c750fc1406972fa2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void slope_constrained_planner::setSO3FromRPY</definition>
+        <argsstring>(ob::SO3StateSpace::StateType &amp;s, double *rpy)</argsstring>
+        <name>setSO3FromRPY</name>
+        <param>
+          <type>ob::SO3StateSpace::StateType &amp;</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>rpy</declname>
+        </param>
+        <briefdescription>
+<para>Sets SO3 represntation using RPY representation. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>State data </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>rpy</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Roll, pitch and yaw angles </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/utils.h" line="172" column="13" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/utils.h" bodystart="172" bodyend="186"/>
+      </memberdef>
+      <memberdef kind="function" id="include_2slope__constrained__planner_2utils_8h_1a3ce8763c5dba4aa0847e7c59881ebff9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void slope_constrained_planner::estimateNormals</definition>
+        <argsstring>(grid_map::GridMap &amp;map, double estimation_radius, const std::string &amp;input_layer, const std::string &amp;output_layer_prefix=&quot;normal&quot;)</argsstring>
+        <name>estimateNormals</name>
+        <param>
+          <type>grid_map::GridMap &amp;</type>
+          <declname>map</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>estimation_radius</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>input_layer</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>output_layer_prefix</declname>
+          <defval>&quot;normal&quot;</defval>
+        </param>
+        <briefdescription>
+<para>Estimates the normal vectors in a grid map cell. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>map</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Grid map data </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>estimation_radius</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The dimension of estimation </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>input_layer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the input layer </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>output_layer_prefix</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Prefix of output layer </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/utils.h" line="196" column="6" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/src/utils.cpp" bodystart="12" bodyend="103" declfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/utils.h" declline="196" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="ros_2include_2slope__constrained__planner__ros_2utils_8h_1a2862edbb20fbd068da4c21867b014c71" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>T</type>
+        <definition>T slope_constrained_planner::getParamWithDefaultWarning</definition>
+        <argsstring>(const ros::NodeHandle &amp;nh, const std::string &amp;name, const T &amp;default_val)</argsstring>
+        <name>getParamWithDefaultWarning</name>
+        <param>
+          <type>const ros::NodeHandle &amp;</type>
+          <declname>nh</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>const T &amp;</type>
+          <declname>default_val</declname>
+        </param>
+        <briefdescription>
+<para>Gets an specific ROS param name and sets its default value in a node handler. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nh</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Node handler </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Param&apos;s name </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>default_val</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Param&apos;s default value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/include/slope_constrained_planner_ros/utils.h" line="24" column="10" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/include/slope_constrained_planner_ros/utils.h" bodystart="24" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="ros_2include_2slope__constrained__planner__ros_2utils_8h_1ace5b515509c8b45d0d9505d368defa54" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+        </templateparamlist>
+        <type>unsigned int</type>
+        <definition>unsigned int slope_constrained_planner::getParamWithDefaultWarning&lt; unsigned int &gt;</definition>
+        <argsstring>(const ros::NodeHandle &amp;nh, const std::string &amp;name, const unsigned int &amp;default_val)</argsstring>
+        <name>getParamWithDefaultWarning&lt; unsigned int &gt;</name>
+        <param>
+          <type>const ros::NodeHandle &amp;</type>
+          <declname>nh</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>const unsigned int &amp;</type>
+          <declname>default_val</declname>
+        </param>
+        <briefdescription>
+<para>Gets an specific ROS param name and sets its default value in a node handler. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nh</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Node handler </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Param&apos;s name </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>default_val</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Param&apos;s default value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/include/slope_constrained_planner_ros/utils.h" line="44" column="17" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/include/slope_constrained_planner_ros/utils.h" bodystart="44" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="ros_2include_2slope__constrained__planner__ros_2utils_8h_1ab9e1e0d8de4e0f3b4537c194a97f2313" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>ParamsPtr</type>
+        <definition>ParamsPtr slope_constrained_planner::loadRosParameters</definition>
+        <argsstring>(const ros::NodeHandle &amp;nh)</argsstring>
+        <name>loadRosParameters</name>
+        <param>
+          <type>const ros::NodeHandle &amp;</type>
+          <declname>nh</declname>
+        </param>
+        <briefdescription>
+<para>Gets the provided params in <computeroutput>config</computeroutput> directory and sets them in the node handler using <computeroutput>getParamWithDefaultWarning(nh, name, default_val)</computeroutput> funciton. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nh</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Node handler </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/include/slope_constrained_planner_ros/utils.h" line="56" column="11" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/src/utils.cpp" bodystart="11" bodyend="192" declfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/include/slope_constrained_planner_ros/utils.h" declline="56" declcolumn="11"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/chain.h" line="13" column="35"/>
+  </compounddef>
+</doxygen>

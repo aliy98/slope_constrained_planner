@@ -1,0 +1,153 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="motion__validator_8h" kind="file" language="C++">
+    <compoundname>motion_validator.h</compoundname>
+    <includes local="no">ompl/base/MotionValidator.h</includes>
+    <includes local="no">ompl/base/spaces/SE3StateSpace.h</includes>
+    <includes local="no">ompl/base/StateValidityChecker.h</includes>
+    <includes local="no">ompl/geometric/SimpleSetup.h</includes>
+    <includes local="no">ompl/base/goals/GoalState.h</includes>
+    <includes refid="include_2slope__constrained__planner_2utils_8h" local="no">slope_constrained_planner/utils.h</includes>
+    <includes refid="params_8h" local="no">slope_constrained_planner/params.h</includes>
+    <includedby refid="motion__validator_8cpp" local="no">/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/src/motion_validator.cpp</includedby>
+    <includedby refid="planner_8cpp" local="no">/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/src/planner.cpp</includedby>
+    <incdepgraph>
+      <node id="6">
+        <label>ompl/base/goals/GoalState.h</label>
+      </node>
+      <node id="1">
+        <label>/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/motion_validator.h</label>
+        <link refid="motion__validator_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>cmath</label>
+      </node>
+      <node id="13">
+        <label>string</label>
+      </node>
+      <node id="7">
+        <label>slope_constrained_planner/utils.h</label>
+        <link refid="include_2slope__constrained__planner_2utils_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>Eigen/Dense</label>
+      </node>
+      <node id="9">
+        <label>vector</label>
+      </node>
+      <node id="12">
+        <label>slope_constrained_planner/params.h</label>
+        <link refid="params_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>ompl/base/spaces/SE3StateSpace.h</label>
+      </node>
+      <node id="2">
+        <label>ompl/base/MotionValidator.h</label>
+      </node>
+      <node id="11">
+        <label>grid_map_core/GridMap.hpp</label>
+      </node>
+      <node id="5">
+        <label>ompl/geometric/SimpleSetup.h</label>
+      </node>
+      <node id="8">
+        <label>memory</label>
+      </node>
+      <node id="4">
+        <label>ompl/base/StateValidityChecker.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/motion_validator.h</label>
+        <link refid="motion__validator_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/src/planner.cpp</label>
+        <link refid="planner_8cpp"/>
+      </node>
+      <node id="2">
+        <label>/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/src/motion_validator.cpp</label>
+        <link refid="motion__validator_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classslope__constrained__planner_1_1_slope_constrained_motion_validator" prot="public">slope_constrained_planner::SlopeConstrainedMotionValidator</innerclass>
+    <innernamespace refid="namespaceslope__constrained__planner">slope_constrained_planner</innernamespace>
+    <briefdescription>
+<para>Custom motion validator class which checks the slope of motion between two states. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="6"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;ompl/base/MotionValidator.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;ompl/base/spaces/SE3StateSpace.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;ompl/base/StateValidityChecker.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;ompl/geometric/SimpleSetup.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;ompl/base/goals/GoalState.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="include_2slope__constrained__planner_2utils_8h" kindref="compound">slope_constrained_planner/utils.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="params_8h" kindref="compound">slope_constrained_planner/params.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">ob<sp/>=<sp/>ompl::base;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">og<sp/>=<sp/>ompl::geometric;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">slope_constrained_planner<sp/>{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="classslope__constrained__planner_1_1_slope_constrained_motion_validator" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classslope__constrained__planner_1_1_slope_constrained_motion_validator" kindref="compound">SlopeConstrainedMotionValidator</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>ob::MotionValidator<sp/>{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="32" refid="classslope__constrained__planner_1_1_slope_constrained_motion_validator_1a4d553ca82c40e8b6b7cc2e1e5400fbdc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ParamsConstPtr<sp/><ref refid="classslope__constrained__planner_1_1_slope_constrained_motion_validator_1a4d553ca82c40e8b6b7cc2e1e5400fbdc" kindref="member">params_</ref>;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classslope__constrained__planner_1_1_slope_constrained_motion_validator_1a15dfb0484bca9851d72537699b721af6" kindref="member">SlopeConstrainedMotionValidator</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ob::SpaceInformationPtr<sp/>&amp;si,</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ParamsConstPtr&amp;<sp/>params);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classslope__constrained__planner_1_1_slope_constrained_motion_validator_1ac0c338d8e69bcb6f25c65115f09c4281" kindref="member">checkMotion</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ob::State*<sp/>s1,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ob::State*<sp/>s2)<sp/></highlight><highlight class="keyword">const<sp/>override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classslope__constrained__planner_1_1_slope_constrained_motion_validator_1ac0c338d8e69bcb6f25c65115f09c4281" kindref="member">checkMotion</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ob::State<sp/>*s1,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ob::State<sp/>*s2,<sp/>std::pair&lt;ob::State<sp/>*,<sp/>double&gt;<sp/>&amp;lastValid)<sp/></highlight><highlight class="keyword">const<sp/>override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/motion_validator.h"/>
+  </compounddef>
+</doxygen>

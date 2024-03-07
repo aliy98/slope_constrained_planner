@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="dir_64e15716f05980cd2226e229857e43b7" kind="dir">
+    <compoundname>/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner</compoundname>
+    <innerfile refid="chain_8h">chain.h</innerfile>
+    <innerfile refid="map_8h">map.h</innerfile>
+    <innerfile refid="motion__validator_8h">motion_validator.h</innerfile>
+    <innerfile refid="params_8h">params.h</innerfile>
+    <innerfile refid="planner_8h">planner.h</innerfile>
+    <innerfile refid="planner__status_8h">planner_status.h</innerfile>
+    <innerfile refid="sampler_8h">sampler.h</innerfile>
+    <innerfile refid="include_2slope__constrained__planner_2utils_8h">utils.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/"/>
+  </compounddef>
+</doxygen>

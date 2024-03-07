@@ -1,0 +1,440 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="planner_8cpp" kind="file" language="C++">
+    <compoundname>planner.cpp</compoundname>
+    <includes refid="planner_8h" local="no">slope_constrained_planner/planner.h</includes>
+    <includes local="no">ompl/geometric/planners/prm/PRMstar.h</includes>
+    <includes local="no">ompl/geometric/planners/prm/LazyPRMstar.h</includes>
+    <includes local="no">ompl/geometric/planners/rrt/RRTstar.h</includes>
+    <includes local="no">ompl/geometric/planners/rrt/RRTsharp.h</includes>
+    <includes refid="motion__validator_8h" local="no">slope_constrained_planner/motion_validator.h</includes>
+    <includes refid="include_2slope__constrained__planner_2utils_8h" local="yes">slope_constrained_planner/utils.h</includes>
+    <incdepgraph>
+      <node id="21">
+        <label>ompl/base/spaces/SO2StateSpace.h</label>
+      </node>
+      <node id="8">
+        <label>functional</label>
+      </node>
+      <node id="18">
+        <label>slope_constrained_planner/sampler.h</label>
+        <link refid="sampler_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="31">
+        <label>ompl/base/goals/GoalState.h</label>
+      </node>
+      <node id="28">
+        <label>slope_constrained_planner/motion_validator.h</label>
+        <link refid="motion__validator_8h"/>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>cmath</label>
+      </node>
+      <node id="17">
+        <label>slope_constrained_planner/planner_status.h</label>
+        <link refid="planner__status_8h"/>
+      </node>
+      <node id="19">
+        <label>ompl/base/ScopedState.h</label>
+      </node>
+      <node id="14">
+        <label>string</label>
+      </node>
+      <node id="22">
+        <label>ompl/base/spaces/SO3StateSpace.h</label>
+      </node>
+      <node id="27">
+        <label>ompl/geometric/planners/rrt/RRTsharp.h</label>
+      </node>
+      <node id="10">
+        <label>slope_constrained_planner/utils.h</label>
+        <link refid="include_2slope__constrained__planner_2utils_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/src/planner.cpp</label>
+        <link refid="planner_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>ompl/geometric/planners/rrt/RRTstar.h</label>
+      </node>
+      <node id="23">
+        <label>ompl/base/spaces/RealVectorStateSpace.h</label>
+      </node>
+      <node id="12">
+        <label>Eigen/Dense</label>
+      </node>
+      <node id="25">
+        <label>ompl/geometric/planners/prm/LazyPRMstar.h</label>
+      </node>
+      <node id="2">
+        <label>slope_constrained_planner/planner.h</label>
+        <link refid="planner_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>vector</label>
+      </node>
+      <node id="13">
+        <label>slope_constrained_planner/params.h</label>
+        <link refid="params_8h"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>ompl/geometric/planners/prm/PRMstar.h</label>
+      </node>
+      <node id="6">
+        <label>ompl/base/spaces/SE3StateSpace.h</label>
+      </node>
+      <node id="29">
+        <label>ompl/base/MotionValidator.h</label>
+      </node>
+      <node id="3">
+        <label>mutex</label>
+      </node>
+      <node id="20">
+        <label>ompl/base/StateSpace.h</label>
+      </node>
+      <node id="4">
+        <label>grid_map_core/GridMap.hpp</label>
+      </node>
+      <node id="7">
+        <label>slope_constrained_planner/map.h</label>
+        <link refid="map_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>slope_constrained_planner/chain.h</label>
+        <link refid="chain_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>ompl/geometric/SimpleSetup.h</label>
+      </node>
+      <node id="9">
+        <label>memory</label>
+      </node>
+      <node id="30">
+        <label>ompl/base/StateValidityChecker.h</label>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespaceslope__constrained__planner">slope_constrained_planner</innernamespace>
+    <innernamespace refid="namespacestd_1_1placeholders">std::placeholders</innernamespace>
+    <briefdescription>
+<para>Contains the definition of public member functions of <computeroutput>Planner</computeroutput> class. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="6"><highlight class="preprocessor">#include<sp/>&lt;<ref refid="planner_8h" kindref="compound">slope_constrained_planner/planner.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;ompl/geometric/planners/prm/PRMstar.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;ompl/geometric/planners/prm/LazyPRMstar.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;ompl/geometric/planners/rrt/RRTstar.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;ompl/geometric/planners/rrt/RRTsharp.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="motion__validator_8h" kindref="compound">slope_constrained_planner/motion_validator.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="include_2slope__constrained__planner_2utils_8h" kindref="compound">slope_constrained_planner/utils.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">slope_constrained_planner<sp/>{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/>std::vector&lt;double&gt;<sp/>global_start_<sp/>=<sp/>{0.0};</highlight></codeline>
+<codeline lineno="18"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">slope_constrained_planner;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">std::placeholders;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><ref refid="classslope__constrained__planner_1_1_planner_1a43c270cd945bb131fc4b6c0ce524b4e2" kindref="member">Planner::Planner</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ParamsConstPtr&amp;<sp/>params)<sp/></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>:<sp/>params_(params),</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>space_real_vec_(new<sp/>ob::RealVectorStateSpace(3)),</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>state_pos_(space_real_vec_),</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>map_(std::make_shared&lt;<ref refid="classslope__constrained__planner_1_1_map" kindref="compound">Map</ref>&gt;(params)),</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>sampler_allocator_{params_}<sp/>{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Define<sp/>State<sp/>Space<sp/>and<sp/>Problem</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>space_<sp/>=<sp/>std::make_shared&lt;ob::SE3StateSpace&gt;();</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>ss_<sp/>=<sp/>std::make_shared&lt;og::SimpleSetup&gt;(space_);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(params_-&gt;verbose)<sp/>{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>ompl::msg::setLogLevel(ompl::msg::LogLevel::LOG_DEBUG);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>ompl::msg::setLogLevel(ompl::msg::LogLevel::LOG_ERROR);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>motion<sp/>validator</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>si<sp/>=<sp/>ss_-&gt;getSpaceInformation();</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>si-&gt;setMotionValidator(std::make_shared&lt;SlopeConstrainedMotionValidator&gt;(si,<sp/>params_));<sp/></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>planner<sp/>algorithm</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(params_-&gt;planner.name<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;prm_star&quot;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>constrained_planner(std::make_shared&lt;og::PRMstar&gt;(si));</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>ss_-&gt;setPlanner(constrained_planner);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(params_-&gt;planner.name<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;lazy_prm_star&quot;</highlight><highlight class="normal">){</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>constrained_planner(std::make_shared&lt;og::LazyPRMstar&gt;(si));</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>ss_-&gt;setPlanner(constrained_planner);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(params_-&gt;planner.name<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;rrt_star&quot;</highlight><highlight class="normal">){</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>constrained_planner(std::make_shared&lt;og::LazyPRMstar&gt;(si));</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>ss_-&gt;setPlanner(constrained_planner);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(params_-&gt;planner.name<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;rrt_sharp&quot;</highlight><highlight class="normal">){</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>constrained_planner(std::make_shared&lt;og::RRTsharp&gt;(si));</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>ss_-&gt;setPlanner(constrained_planner);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>sampler.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>sampler_allocator_.setMap(map_);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>space_-&gt;setStateSamplerAllocator(std::bind(&amp;SamplerAllocator::getSampler,</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sampler_allocator_,</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::placeholders::_1));</highlight></codeline>
+<codeline lineno="64"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Planner::setMap(std::unique_ptr&lt;grid_map::GridMap&gt;&amp;&amp;<sp/>map)<sp/>{</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!map-&gt;exists(<ref refid="classslope__constrained__planner_1_1_planner_1a98e443185ca9ba15dc2b4d4ced711d18" kindref="member">params_</ref>-&gt;planner.elevation_layer))<sp/>{</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classslope__constrained__planner_1_1_planner_1a98e443185ca9ba15dc2b4d4ced711d18" kindref="member">params_</ref>-&gt;verbose)<sp/>{</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Grid<sp/>map<sp/>does<sp/>not<sp/>have<sp/>\&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/><ref refid="classslope__constrained__planner_1_1_planner_1a98e443185ca9ba15dc2b4d4ced711d18" kindref="member">params_</ref>-&gt;planner.elevation_layer</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;\&quot;<sp/>layer.&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>pos<sp/>=<sp/>map-&gt;getPosition();</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>length<sp/>=<sp/>map-&gt;getLength();</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/>ob::RealVectorBounds<sp/>bounds(3);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/>bounds.setLow(0,<sp/>pos.x()<sp/>-<sp/>length.x());</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/>bounds.setLow(1,<sp/>pos.y()<sp/>-<sp/>length.y());</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/>bounds.setLow(2,<sp/>map-&gt;get(<ref refid="classslope__constrained__planner_1_1_planner_1a98e443185ca9ba15dc2b4d4ced711d18" kindref="member">params_</ref>-&gt;planner.elevation_layer).minCoeffOfFinites()</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/><ref refid="classslope__constrained__planner_1_1_planner_1a98e443185ca9ba15dc2b4d4ced711d18" kindref="member">params_</ref>-&gt;robot.feet.reach.z/2);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/>bounds.setHigh(0,<sp/>pos.x()<sp/>+<sp/>length.x());</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/>bounds.setHigh(1,<sp/>pos.y()<sp/>+<sp/>length.y());</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/>bounds.setHigh(2,<sp/>map-&gt;get(<ref refid="classslope__constrained__planner_1_1_planner_1a98e443185ca9ba15dc2b4d4ced711d18" kindref="member">params_</ref>-&gt;planner.elevation_layer).maxCoeffOfFinites()</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/><ref refid="classslope__constrained__planner_1_1_planner_1a98e443185ca9ba15dc2b4d4ced711d18" kindref="member">params_</ref>-&gt;robot.feet.reach.z/2);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/>std::lock_guard&lt;std::mutex&gt;<sp/>lock(<ref refid="classslope__constrained__planner_1_1_planner_1a9b26ad02ff998e87df1716a6518129be" kindref="member">map_mutex_</ref>);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><ref refid="classslope__constrained__planner_1_1_planner_1a5901f39bb29fba110207e4bd634ffc7f" kindref="member">space_</ref>-&gt;setBounds(bounds);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><ref refid="classslope__constrained__planner_1_1_planner_1ab19106c550139e33cfa958e98792126e" kindref="member">map_</ref>-&gt;setMap(std::move(map));</highlight></codeline>
+<codeline lineno="94"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal">PlannerStatus<sp/><ref refid="classslope__constrained__planner_1_1_planner_1ac1a95cde31df950e5040b2fe293d1316" kindref="member">Planner::plan</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ob::ScopedState&lt;&gt;&amp;<sp/>start,</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ob::ScopedState&lt;&gt;&amp;<sp/>goal)<sp/>{</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/>std::lock_guard&lt;std::mutex&gt;<sp/>lock(<ref refid="classslope__constrained__planner_1_1_planner_1a9b26ad02ff998e87df1716a6518129be" kindref="member">map_mutex_</ref>);</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Enforce<sp/>goal<sp/>pose<sp/>inside<sp/>bounds.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>space<sp/>=<sp/><ref refid="classslope__constrained__planner_1_1_planner_1af82f641a6a3127ebfc9c175a9f397e3a" kindref="member">ss_</ref>-&gt;getStateSpace();</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/>ob::ScopedState&lt;&gt;<sp/>goal_clipped(goal);</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/>ob::ScopedState&lt;&gt;<sp/>start_clipped(start);</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>start_clipped_ptr<sp/>=<sp/>start_clipped-&gt;as&lt;ob::SE3StateSpace::StateType&gt;();</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>goal_clipped_ptr<sp/>=<sp/>goal_clipped-&gt;as&lt;ob::SE3StateSpace::StateType&gt;();</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/>global_start_.clear();</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/>global_start_.push_back(start_clipped_ptr-&gt;getX());</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/>global_start_.push_back(start_clipped_ptr-&gt;getY());</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/>global_start_.push_back(start_clipped_ptr-&gt;getZ());</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/>global_start_.push_back(start_clipped_ptr-&gt;rotation().w);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/>global_start_.push_back(start_clipped_ptr-&gt;rotation().x);</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/>global_start_.push_back(start_clipped_ptr-&gt;rotation().y);</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/>global_start_.push_back(start_clipped_ptr-&gt;rotation().z);</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="classslope__constrained__planner_1_1_planner_1a5901f39bb29fba110207e4bd634ffc7f" kindref="member">space_</ref>-&gt;satisfiesBounds(goal_clipped.get()))<sp/>{</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="classslope__constrained__planner_1_1_planner_1a98e443185ca9ba15dc2b4d4ced711d18" kindref="member">params_</ref>-&gt;verbose)<sp/>{</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Original<sp/>goal<sp/>[%f\t%f\t%f],<sp/>&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>goal_clipped_ptr-&gt;getX(),</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>goal_clipped_ptr-&gt;getY(),</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>goal_clipped_ptr-&gt;getZ());</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classslope__constrained__planner_1_1_planner_1af82f641a6a3127ebfc9c175a9f397e3a" kindref="member">ss_</ref>-&gt;getStateSpace()-&gt;enforceBounds(goal_clipped.get());</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classslope__constrained__planner_1_1_planner_1a98e443185ca9ba15dc2b4d4ced711d18" kindref="member">params_</ref>-&gt;verbose)<sp/>{</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;clipped<sp/>to<sp/>[%f\t%f\t%f].\n&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>goal_clipped_ptr-&gt;getX(),</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>goal_clipped_ptr-&gt;getY(),</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>goal_clipped_ptr-&gt;getZ());</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Get<sp/>goal<sp/>height<sp/>from<sp/>elevation<sp/>map.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classslope__constrained__planner_1_1_planner_1ab19106c550139e33cfa958e98792126e" kindref="member">map_</ref>-&gt;isInside(grid_map::Position(goal_clipped_ptr-&gt;getX(),<sp/>goal_clipped_ptr-&gt;getY())))<sp/>{</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Get<sp/>height,<sp/>roll,<sp/>pitch<sp/>from<sp/>height<sp/>map.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/>grid_map::Position<sp/>pos;</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/>pos.x()<sp/>=<sp/>goal_clipped_ptr-&gt;getX();</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/>pos.y()<sp/>=<sp/>goal_clipped_ptr-&gt;getY();</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>ind<sp/>=<sp/><ref refid="classslope__constrained__planner_1_1_planner_1ab19106c550139e33cfa958e98792126e" kindref="member">map_</ref>-&gt;getIndexOfPosition(pos);</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/>goal_clipped_ptr-&gt;setZ(<ref refid="classslope__constrained__planner_1_1_planner_1ab19106c550139e33cfa958e98792126e" kindref="member">map_</ref>-&gt;getHeightAtIndex(ind));</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classslope__constrained__planner_1_1_planner_1a71fe62f1d6dba59e23ba4abccdd00189" kindref="member">state_pos_</ref>.get()-&gt;values[2]<sp/>=<sp/><ref refid="include_2slope__constrained__planner_2utils_8h_1a4da0e01e16937554779f163c6b8e16ae" kindref="member">getYawFromSO3</ref>(goal_clipped_ptr-&gt;rotation());</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>goal_yaw<sp/>=<sp/><ref refid="classslope__constrained__planner_1_1_planner_1a71fe62f1d6dba59e23ba4abccdd00189" kindref="member">state_pos_</ref>.get()-&gt;values[2];</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>start_yaw<sp/>=<sp/><ref refid="include_2slope__constrained__planner_2utils_8h_1a4da0e01e16937554779f163c6b8e16ae" kindref="member">getYawFromSO3</ref>(start_clipped_ptr-&gt;rotation());</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>diff_yaw<sp/>=<sp/>goal_yaw<sp/>-<sp/>start_yaw;</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(std::abs(diff_yaw)<sp/>&gt;<sp/>M_PI_2)<sp/><ref refid="classslope__constrained__planner_1_1_planner_1a71fe62f1d6dba59e23ba4abccdd00189" kindref="member">state_pos_</ref>.get()-&gt;values[2]<sp/>-=<sp/>M_PI;</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Eigen::Quaterniond<sp/>R_wb(Eigen::AngleAxisd(<ref refid="classslope__constrained__planner_1_1_planner_1a71fe62f1d6dba59e23ba4abccdd00189" kindref="member">state_pos_</ref>.get()-&gt;values[2],<sp/>Eigen::Vector3d::UnitZ()));</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Eigen::Vector3d<sp/>normal_w<sp/>=<sp/><ref refid="classslope__constrained__planner_1_1_planner_1ab19106c550139e33cfa958e98792126e" kindref="member">map_</ref>-&gt;getNormal(ind);</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>normal_b<sp/>=<sp/>R_wb.inverse()<sp/>*<sp/>normal_w;</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classslope__constrained__planner_1_1_planner_1a71fe62f1d6dba59e23ba4abccdd00189" kindref="member">state_pos_</ref>.get()-&gt;values[0]<sp/>=<sp/>-atan2(normal_b.y(),<sp/>normal_b.z());<sp/></highlight><highlight class="comment">//<sp/>Roll.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classslope__constrained__planner_1_1_planner_1a71fe62f1d6dba59e23ba4abccdd00189" kindref="member">state_pos_</ref>.get()-&gt;values[1]<sp/>=<sp/>atan2(normal_b.x(),<sp/>normal_b.z());<sp/></highlight><highlight class="comment">//<sp/>Pitch.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="include_2slope__constrained__planner_2utils_8h_1a991f425b1a0e14d5c750fc1406972fa2" kindref="member">setSO3FromRPY</ref>(goal_clipped_ptr-&gt;rotation(),<sp/><ref refid="classslope__constrained__planner_1_1_planner_1a71fe62f1d6dba59e23ba4abccdd00189" kindref="member">state_pos_</ref>.get()-&gt;values);</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Setting<sp/>start<sp/>and<sp/>goal<sp/>points.&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Reset<sp/>planner<sp/>and<sp/>start<sp/>planning.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><ref refid="classslope__constrained__planner_1_1_planner_1af82f641a6a3127ebfc9c175a9f397e3a" kindref="member">ss_</ref>-&gt;getPlanner()-&gt;clearQuery();</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><ref refid="classslope__constrained__planner_1_1_planner_1af82f641a6a3127ebfc9c175a9f397e3a" kindref="member">ss_</ref>-&gt;setStartAndGoalStates(start,<sp/>goal_clipped);</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Planning...&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>attempt<sp/>to<sp/>solve<sp/>the<sp/>planning<sp/>problem<sp/>within<sp/>one<sp/>second<sp/>of<sp/>planning<sp/>time</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/>ob::PlannerStatus<sp/>solved;</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">try</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/>solved<sp/>=<sp/><ref refid="classslope__constrained__planner_1_1_planner_1af82f641a6a3127ebfc9c175a9f397e3a" kindref="member">ss_</ref>-&gt;solve(<ref refid="classslope__constrained__planner_1_1_planner_1a98e443185ca9ba15dc2b4d4ced711d18" kindref="member">params_</ref>-&gt;planner.plan_time);</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classslope__constrained__planner_1_1_planner_1a58c09c72b5b20afa65d62fd1b8e4d22f" kindref="member">solved_</ref><sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">bool</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(solved);</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">catch</highlight><highlight class="normal"><sp/>(ompl::Exception&amp;<sp/>e)<sp/>{</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>All<sp/>graph<sp/>edges<sp/>to<sp/>goal<sp/>where<sp/>actually<sp/>invalid.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/>e.what()<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classslope__constrained__planner_1_1_planner_1a58c09c72b5b20afa65d62fd1b8e4d22f" kindref="member">solved_</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>PlannerStatus::NOT_SOLVED;</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(ob::PlannerStatus::StatusType(solved))<sp/>{</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>ob::PlannerStatus::INVALID_START:<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>PlannerStatus::INVALID_START;</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>ob::PlannerStatus::INVALID_GOAL:<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>PlannerStatus::INVALID_GOAL;</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>ob::PlannerStatus::UNRECOGNIZED_GOAL_TYPE:<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>PlannerStatus::INVALID_GOAL;</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>ob::PlannerStatus::TIMEOUT:<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>PlannerStatus::NOT_SOLVED;</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>ob::PlannerStatus::EXACT_SOLUTION:<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>PlannerStatus::SOLVED;</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>PlannerStatus::UNKNOWN;</highlight></codeline>
+<codeline lineno="187"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal">og::PathGeometric<sp/><ref refid="classslope__constrained__planner_1_1_planner_1afe7a99869c5b483d9531e26a91638da0" kindref="member">Planner::getSolutionPath</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">&amp;<sp/>simplify)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>path<sp/>=<sp/><ref refid="classslope__constrained__planner_1_1_planner_1af82f641a6a3127ebfc9c175a9f397e3a" kindref="member">ss_</ref>-&gt;getSolutionPath();</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>path.interpolate();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="classslope__constrained__planner_1_1_planner_1a58c09c72b5b20afa65d62fd1b8e4d22f" kindref="member">solved_</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>ompl::Exception(</highlight><highlight class="stringliteral">&quot;Requested<sp/>failed<sp/>solution<sp/>path.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(simplify)<sp/>{</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classslope__constrained__planner_1_1_planner_1af82f641a6a3127ebfc9c175a9f397e3a" kindref="member">ss_</ref>-&gt;simplifySolution();</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>path_simple<sp/>=<sp/><ref refid="classslope__constrained__planner_1_1_planner_1af82f641a6a3127ebfc9c175a9f397e3a" kindref="member">ss_</ref>-&gt;getSolutionPath();</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"></highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>checkAndRepair()<sp/>inside<sp/>of<sp/>simplifySolution<sp/>might<sp/>fail,<sp/>but<sp/>the<sp/>result<sp/>of<sp/>that</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>operation<sp/>is<sp/>not<sp/>accessible<sp/>through<sp/>SimpleSetup.<sp/>That&apos;s<sp/>why<sp/>we<sp/>need<sp/>to<sp/>do<sp/>the</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>following<sp/>checks<sp/>to<sp/>catch<sp/>this<sp/>case.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!path_simple.check())<sp/>{</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Simplified<sp/>path<sp/>is<sp/>invalid.<sp/>Returning<sp/>original.&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>obj<sp/>=<sp/><ref refid="classslope__constrained__planner_1_1_planner_1af82f641a6a3127ebfc9c175a9f397e3a" kindref="member">ss_</ref>-&gt;getOptimizationObjective();</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>cost_simple<sp/>=<sp/>path_simple.cost(obj);</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>cost_orig<sp/>=<sp/>path.cost(obj);</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classslope__constrained__planner_1_1_planner_1a98e443185ca9ba15dc2b4d4ced711d18" kindref="member">params_</ref>-&gt;verbose)<sp/>{</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;cost_simple<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>cost_simple<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;cost_orig<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>cost_orig<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(obj-&gt;isCostBetterThan(cost_orig,<sp/>cost_simple))<sp/>{</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classslope__constrained__planner_1_1_planner_1a98e443185ca9ba15dc2b4d4ced711d18" kindref="member">params_</ref>-&gt;verbose)<sp/>{</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Original<sp/>path<sp/>cost<sp/>is<sp/>lower<sp/>than<sp/>simplified.<sp/>Returning<sp/>original.&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>path<sp/>=<sp/>path_simple;</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>path;</highlight></codeline>
+<codeline lineno="223"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/src/planner.cpp"/>
+  </compounddef>
+</doxygen>

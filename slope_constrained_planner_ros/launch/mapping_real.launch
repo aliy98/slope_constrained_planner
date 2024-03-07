@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+<launch>
+
+    <!-- Frames -->
+    <arg name="odom_frame"   default="odom"/>
+    <arg name="base_frame"   default="base_link"/>
+
+    <!-- Publish tf 'base_footprint' as pose.-->
+    <node pkg="elevation_mapping_demos" type="tf_to_pose_publisher.py" name="robot_pose_publisher">
+        <param name="from_frame" type="string" value="$(arg odom_frame)" />
+        <param name="to_frame"   type="string" value="$(arg base_frame)" />
+    </node>
+    
+
+    <!-- Launch elevation mapping node. -->
+    <node pkg="elevation_mapping" type="elevation_mapping" name="elevation_mapping" output="screen">
+        <rosparam command="load" file="$(find slope_constrained_planner_ros)/config/map_real.yaml" />
+        <rosparam command="load" file="$(find elevation_mapping)/config/sensor_processors/velodyne_HDL-32E.yaml" />
+        <rosparam command="load" file="$(find slope_constrained_planner_ros)/config/postprocessor_pipeline.yaml" />
+    </node>
+
+    <!-- Launch RViz -->
+    <arg name="rviz_config"             default="$(find slope_constrained_planner_ros)/rviz/spot.rviz"/>
+    <include file="$(find spot_viz)/launch/view_robot.launch" >
+       <arg name="rviz_config"             value="$(arg rviz_config)"/>
+    </include> 
+
+</launch>

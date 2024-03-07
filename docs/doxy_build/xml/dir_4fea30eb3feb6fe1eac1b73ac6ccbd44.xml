@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="dir_4fea30eb3feb6fe1eac1b73ac6ccbd44" kind="dir">
+    <compoundname>/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts</compoundname>
+    <innerfile refid="goal__publisher_8py">goal_publisher.py</innerfile>
+    <innerfile refid="gotopoint_8py">gotopoint.py</innerfile>
+    <innerfile refid="path__follower_8py">path_follower.py</innerfile>
+    <innerfile refid="plan__to__goal__client_8py">plan_to_goal_client.py</innerfile>
+    <innerfile refid="tilt__robot_8py">tilt_robot.py</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="class_sampler_allocator" kind="class" language="C++" prot="public">
+    <compoundname>SamplerAllocator</compoundname>
+    <includes refid="sampler_8h" local="no">sampler.h</includes>
+    <briefdescription>
+<para>Allocates the custom sampler class in the planner. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/sampler.h" line="128" column="1"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

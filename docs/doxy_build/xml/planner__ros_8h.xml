@@ -1,0 +1,416 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="planner__ros_8h" kind="file" language="C++">
+    <compoundname>planner_ros.h</compoundname>
+    <includes local="no">thread</includes>
+    <includes local="no">actionlib/server/simple_action_server.h</includes>
+    <includes refid="planner_8h" local="no">slope_constrained_planner/planner.h</includes>
+    <includes local="no">slope_constrained_planner_msgs/PlanToGoalAction.h</includes>
+    <includes local="no">geometry_msgs/PoseStamped.h</includes>
+    <includes local="no">grid_map_msgs/GridMap.h</includes>
+    <includes local="no">nav_msgs/GetPlan.h</includes>
+    <includes local="no">std_msgs/Float64.h</includes>
+    <includes local="no">ros/ros.h</includes>
+    <includes local="no">tf2_ros/transform_listener.h</includes>
+    <includes refid="converter_8h" local="no">slope_constrained_planner_ros/converter.h</includes>
+    <includes refid="params_8h" local="no">slope_constrained_planner/params.h</includes>
+    <includedby refid="planner__ros_8cpp" local="yes">/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/src/planner_ros.cpp</includedby>
+    <includedby refid="planner__ros__node_8cpp" local="yes">/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/src/planner_ros_node.cpp</includedby>
+    <incdepgraph>
+      <node id="23">
+        <label>ompl/base/spaces/SO2StateSpace.h</label>
+      </node>
+      <node id="10">
+        <label>functional</label>
+      </node>
+      <node id="26">
+        <label>slope_constrained_planner_msgs/PlanToGoalAction.h</label>
+      </node>
+      <node id="29">
+        <label>nav_msgs/GetPlan.h</label>
+      </node>
+      <node id="20">
+        <label>slope_constrained_planner/sampler.h</label>
+        <link refid="sampler_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>cmath</label>
+      </node>
+      <node id="19">
+        <label>slope_constrained_planner/planner_status.h</label>
+        <link refid="planner__status_8h"/>
+      </node>
+      <node id="21">
+        <label>ompl/base/ScopedState.h</label>
+      </node>
+      <node id="16">
+        <label>string</label>
+      </node>
+      <node id="24">
+        <label>ompl/base/spaces/SO3StateSpace.h</label>
+      </node>
+      <node id="12">
+        <label>slope_constrained_planner/utils.h</label>
+        <link refid="include_2slope__constrained__planner_2utils_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="30">
+        <label>std_msgs/Float64.h</label>
+      </node>
+      <node id="25">
+        <label>ompl/base/spaces/RealVectorStateSpace.h</label>
+      </node>
+      <node id="3">
+        <label>actionlib/server/simple_action_server.h</label>
+      </node>
+      <node id="14">
+        <label>Eigen/Dense</label>
+      </node>
+      <node id="35">
+        <label>ompl/geometric/PathGeometric.h</label>
+      </node>
+      <node id="27">
+        <label>geometry_msgs/PoseStamped.h</label>
+      </node>
+      <node id="4">
+        <label>slope_constrained_planner/planner.h</label>
+        <link refid="planner_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>vector</label>
+      </node>
+      <node id="15">
+        <label>slope_constrained_planner/params.h</label>
+        <link refid="params_8h"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="34">
+        <label>nav_msgs/Path.h</label>
+      </node>
+      <node id="33">
+        <label>slope_constrained_planner_ros/converter.h</label>
+        <link refid="converter_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="31">
+        <label>ros/ros.h</label>
+      </node>
+      <node id="8">
+        <label>ompl/base/spaces/SE3StateSpace.h</label>
+      </node>
+      <node id="5">
+        <label>mutex</label>
+      </node>
+      <node id="32">
+        <label>tf2_ros/transform_listener.h</label>
+      </node>
+      <node id="22">
+        <label>ompl/base/StateSpace.h</label>
+      </node>
+      <node id="6">
+        <label>grid_map_core/GridMap.hpp</label>
+      </node>
+      <node id="2">
+        <label>thread</label>
+      </node>
+      <node id="9">
+        <label>slope_constrained_planner/map.h</label>
+        <link refid="map_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>grid_map_msgs/GridMap.h</label>
+      </node>
+      <node id="18">
+        <label>slope_constrained_planner/chain.h</label>
+        <link refid="chain_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/include/slope_constrained_planner_ros/planner_ros.h</label>
+        <link refid="planner__ros_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>ompl/geometric/SimpleSetup.h</label>
+      </node>
+      <node id="11">
+        <label>memory</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3">
+        <label>/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/src/planner_ros_node.cpp</label>
+        <link refid="planner__ros__node_8cpp"/>
+      </node>
+      <node id="2">
+        <label>/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/src/planner_ros.cpp</label>
+        <link refid="planner__ros_8cpp"/>
+      </node>
+      <node id="1">
+        <label>/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/include/slope_constrained_planner_ros/planner_ros.h</label>
+        <link refid="planner__ros_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classslope__constrained__planner_1_1_planner_ros" prot="public">slope_constrained_planner::PlannerRos</innerclass>
+    <innernamespace refid="namespaceslope__constrained__planner">slope_constrained_planner</innernamespace>
+    <briefdescription>
+<para>An inheritance of the <computeroutput>Planner</computeroutput> class to be used in the ROS environment. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><bold>Subscribes to:</bold> /elevation_mapping/elevation_map_raw</para>
+<para><bold>Publishes to:</bold> /slope_constrained_planner/path</para>
+<para><bold>Uses Action:</bold> /slope_constrained_planner/plan_to_goal </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="16"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;thread&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;actionlib/server/simple_action_server.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="planner_8h" kindref="compound">slope_constrained_planner/planner.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;slope_constrained_planner_msgs/PlanToGoalAction.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;geometry_msgs/PoseStamped.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;grid_map_msgs/GridMap.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;nav_msgs/GetPlan.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;std_msgs/Float64.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;ros/ros.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;tf2_ros/transform_listener.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="converter_8h" kindref="compound">slope_constrained_planner_ros/converter.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="params_8h" kindref="compound">slope_constrained_planner/params.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">slope_constrained_planner<sp/>{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="classslope__constrained__planner_1_1_planner_ros" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classslope__constrained__planner_1_1_planner_ros" kindref="compound">PlannerRos</ref><sp/>:<sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/><ref refid="classslope__constrained__planner_1_1_planner" kindref="compound">Planner</ref><sp/>{</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>ROS<sp/>members.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>PlanningActionServer<sp/>=<sp/>actionlib::SimpleActionServer&lt;slope_constrained_planner_msgs::PlanToGoalAction&gt;;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>Feedback<sp/>=<sp/>slope_constrained_planner_msgs::PlanToGoalFeedback;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>FeedbackStatus<sp/>=<sp/>Feedback::_status_type;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47" refid="classslope__constrained__planner_1_1_planner_ros_1a58ac628582dd6070e5ede1f5dfea37f0" refkind="member"><highlight class="normal"><sp/><sp/>ros::NodeHandle<sp/><ref refid="classslope__constrained__planner_1_1_planner_ros_1a58ac628582dd6070e5ede1f5dfea37f0" kindref="member">nh_</ref>;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50" refid="classslope__constrained__planner_1_1_planner_ros_1a1cb287ac590bf6bf62cc709e739af242" refkind="member"><highlight class="normal"><sp/><sp/>ros::Subscriber<sp/><ref refid="classslope__constrained__planner_1_1_planner_ros_1a1cb287ac590bf6bf62cc709e739af242" kindref="member">map_sub_</ref>;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="classslope__constrained__planner_1_1_planner_ros_1a12bc765f2915af12d821038b1400d68e" refkind="member"><highlight class="normal"><sp/><sp/>std::unique_ptr&lt;PlanningActionServer&gt;<sp/><ref refid="classslope__constrained__planner_1_1_planner_ros_1a12bc765f2915af12d821038b1400d68e" kindref="member">plan_act_srv_</ref>;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56" refid="classslope__constrained__planner_1_1_planner_ros_1a64f99f07429250056b2797b46e72b063" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classslope__constrained__planner_1_1_planner_ros_1a64f99f07429250056b2797b46e72b063" kindref="member">planning_time_start_</ref>;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>planning_time_end_;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60" refid="classslope__constrained__planner_1_1_planner_ros_1a97e5b2549bd1568e8851e441dd4f6f15" refkind="member"><highlight class="normal"><sp/><sp/>ros::Publisher<sp/><ref refid="classslope__constrained__planner_1_1_planner_ros_1a97e5b2549bd1568e8851e441dd4f6f15" kindref="member">path_pub_</ref>;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63" refid="classslope__constrained__planner_1_1_planner_ros_1a78c00b73bc8dd2b848f88e04d4a2ec64" refkind="member"><highlight class="normal"><sp/><sp/>ros::Publisher<sp/><ref refid="classslope__constrained__planner_1_1_planner_ros_1a78c00b73bc8dd2b848f88e04d4a2ec64" kindref="member">phi_pub_</ref>;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66" refid="classslope__constrained__planner_1_1_planner_ros_1a128421675ebf20c24792a98efc7531e3" refkind="member"><highlight class="normal"><sp/><sp/>ros::Publisher<sp/><ref refid="classslope__constrained__planner_1_1_planner_ros_1a128421675ebf20c24792a98efc7531e3" kindref="member">theta_pub_</ref>;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69" refid="classslope__constrained__planner_1_1_planner_ros_1a1f064e70048f7594dddf344099d107e2" refkind="member"><highlight class="normal"><sp/><sp/>ros::Publisher<sp/><ref refid="classslope__constrained__planner_1_1_planner_ros_1a1f064e70048f7594dddf344099d107e2" kindref="member">map_pub_</ref>;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72" refid="classslope__constrained__planner_1_1_planner_ros_1a8cfe2cd9b86319a14f8bf580131148da" refkind="member"><highlight class="normal"><sp/><sp/>tf2_ros::Buffer<sp/><ref refid="classslope__constrained__planner_1_1_planner_ros_1a8cfe2cd9b86319a14f8bf580131148da" kindref="member">tf_buffer_</ref>;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75" refid="classslope__constrained__planner_1_1_planner_ros_1a22cd3efc93817ffc21f3bd31b831829a" refkind="member"><highlight class="normal"><sp/><sp/>tf2_ros::TransformListener<sp/><ref refid="classslope__constrained__planner_1_1_planner_ros_1a22cd3efc93817ffc21f3bd31b831829a" kindref="member">tf_listener_</ref>{<ref refid="classslope__constrained__planner_1_1_planner_ros_1a8cfe2cd9b86319a14f8bf580131148da" kindref="member">tf_buffer_</ref>};</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79" refid="classslope__constrained__planner_1_1_planner_ros_1abc8e1517848328f3b86329fb358e3e57" refkind="member"><highlight class="normal"><sp/><sp/>geometry_msgs::PoseStamped<sp/><ref refid="classslope__constrained__planner_1_1_planner_ros_1abc8e1517848328f3b86329fb358e3e57" kindref="member">pose_goal_</ref>;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82" refid="classslope__constrained__planner_1_1_planner_ros_1ae8fc405bdd3b1b12815a7e321fc277d4" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">mutable</highlight><highlight class="normal"><sp/>std::mutex<sp/><ref refid="classslope__constrained__planner_1_1_planner_ros_1ae8fc405bdd3b1b12815a7e321fc277d4" kindref="member">pose_goal_mutex_</ref>;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85" refid="classslope__constrained__planner_1_1_planner_ros_1a522a786cc281f66e265e8881a3c1f532" refkind="member"><highlight class="normal"><sp/><sp/>std::atomic&lt;bool&gt;<sp/><ref refid="classslope__constrained__planner_1_1_planner_ros_1a522a786cc281f66e265e8881a3c1f532" kindref="member">planning_continuously_</ref>{</highlight><highlight class="keyword">false</highlight><highlight class="normal">};</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88" refid="classslope__constrained__planner_1_1_planner_ros_1a6789bd93c97a23455e9f68e009d7d245" refkind="member"><highlight class="normal"><sp/><sp/>std::atomic&lt;bool&gt;<sp/><ref refid="classslope__constrained__planner_1_1_planner_ros_1a6789bd93c97a23455e9f68e009d7d245" kindref="member">thread_built_</ref>{</highlight><highlight class="keyword">false</highlight><highlight class="normal">};</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91" refid="classslope__constrained__planner_1_1_planner_ros_1a07d910406b27f6cd2383c00e040336bf" refkind="member"><highlight class="normal"><sp/><sp/>std::atomic&lt;bool&gt;<sp/><ref refid="classslope__constrained__planner_1_1_planner_ros_1a07d910406b27f6cd2383c00e040336bf" kindref="member">publish_path_</ref>{</highlight><highlight class="keyword">false</highlight><highlight class="normal">};</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94" refid="classslope__constrained__planner_1_1_planner_ros_1ae154d85cd66182bea183e511cc1e9069" refkind="member"><highlight class="normal"><sp/><sp/>std::thread<sp/><ref refid="classslope__constrained__planner_1_1_planner_ros_1ae154d85cd66182bea183e511cc1e9069" kindref="member">continuous_planning_thread_</ref>;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97" refid="classslope__constrained__planner_1_1_planner_ros_1a290ab282e2a4b128b03d8b3a5b696715" refkind="member"><highlight class="normal"><sp/><sp/>std::thread<sp/><ref refid="classslope__constrained__planner_1_1_planner_ros_1a290ab282e2a4b128b03d8b3a5b696715" kindref="member">publish_path_thread_</ref>;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100" refid="classslope__constrained__planner_1_1_planner_ros_1a33c526aa43af66266e15ad6438f93bd7" refkind="member"><highlight class="normal"><sp/><sp/>std::thread<sp/><ref refid="classslope__constrained__planner_1_1_planner_ros_1a33c526aa43af66266e15ad6438f93bd7" kindref="member">publish_phi_thread_</ref>;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103" refid="classslope__constrained__planner_1_1_planner_ros_1a67804d619eb7e42c6fe0beab05644df8" refkind="member"><highlight class="normal"><sp/><sp/>std::mutex<sp/><ref refid="classslope__constrained__planner_1_1_planner_ros_1a67804d619eb7e42c6fe0beab05644df8" kindref="member">planning_thread_mutex_</ref>;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106" refid="classslope__constrained__planner_1_1_planner_ros_1ab505b592685246dde1330b08c9e35700" refkind="member"><highlight class="normal"><sp/><sp/>nav_msgs::Path<sp/><ref refid="classslope__constrained__planner_1_1_planner_ros_1ab505b592685246dde1330b08c9e35700" kindref="member">plan_ros_</ref>;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109" refid="classslope__constrained__planner_1_1_planner_ros_1a7a9014d01c5f0ef98c3ca7eea4d5415d" refkind="member"><highlight class="normal"><sp/><sp/>grid_map_msgs::GridMapInfo<sp/><ref refid="classslope__constrained__planner_1_1_planner_ros_1a7a9014d01c5f0ef98c3ca7eea4d5415d" kindref="member">planning_map_info_</ref>;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/>std::unique_ptr&lt;grid_map::GridMap&gt;<sp/>map;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/>grid_map_msgs::GridMapInfo<sp/>info;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/>}<sp/><ref refid="classslope__constrained__planner_1_1_planner_ros_1ad5e6f0375cb666186bdfb06a9229b087" kindref="member">map_queue_</ref>;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118" refid="classslope__constrained__planner_1_1_planner_ros_1a7ec265b1b5375f591b031e4537e9f989" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">mutable</highlight><highlight class="normal"><sp/>std::mutex<sp/><ref refid="classslope__constrained__planner_1_1_planner_ros_1a7ec265b1b5375f591b031e4537e9f989" kindref="member">map_queue_mutex_</ref>;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121" refid="classslope__constrained__planner_1_1_planner_ros_1ae4dea1ec9fe6574af6b55d2066676ef4" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classslope__constrained__planner_1_1_converter" kindref="compound">Converter</ref><sp/><ref refid="classslope__constrained__planner_1_1_planner_ros_1ae4dea1ec9fe6574af6b55d2066676ef4" kindref="member">converter_</ref>;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classslope__constrained__planner_1_1_planner_ros_1a568fe882074dbb9479a45c41638103b7" kindref="member">stopPlanningContinuously</ref>();</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classslope__constrained__planner_1_1_planner_ros_1a8f53eb958303c2510e900ec837442d3c" kindref="member">planContinuouslyThread</ref>();</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classslope__constrained__planner_1_1_planner_ros_1a72fcbabf0f887c30c2a6e91aef73c409" kindref="member">publishPathThread</ref>();</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classslope__constrained__planner_1_1_planner_ros_1a52a9558c7647fe5e723390a433fac43e" kindref="member">publishPhiThread</ref>();</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classslope__constrained__planner_1_1_planner_ros_1a9fb368342800d4ea2592cb0e4f78a3da" kindref="member">planFromCurrentRobotPose</ref>();</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classslope__constrained__planner_1_1_planner_ros_1a99a77159afe8b0e573bcb0e850d4e955" kindref="member">getCurrentRobotPose</ref>(geometry_msgs::PoseStamped<sp/>*pose)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classslope__constrained__planner_1_1_planner_ros_1a6211651325ad8df677f9234e8e733d51" kindref="member">publishFeedback</ref>(FeedbackStatus<sp/>feedback)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classslope__constrained__planner_1_1_planner_ros_1adcb24882b45b76e1c22650016e9fb007" kindref="member">mapCallback</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>grid_map_msgs::GridMapConstPtr&amp;<sp/>map_msg);</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classslope__constrained__planner_1_1_planner_ros_1a0a22ded61ccc45059309beaba21499d1" kindref="member">cancelGoalCallback</ref>();</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classslope__constrained__planner_1_1_planner_ros_1a09e11aa38ee41d72f6db293180f17049" kindref="member">goalCallback</ref>();</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classslope__constrained__planner_1_1_planner_ros_1a07c100591f74660ef073b683749dc9f8" kindref="member">goalPoseCallback</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>slope_constrained_planner_msgs::PlanToGoalGoalConstPtr&amp;<sp/>goal);</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"></highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classslope__constrained__planner_1_1_planner_ros_1a4d71301db89dfaa5dfc9ad7b371553d7" kindref="member">publishPath</ref>(nav_msgs::Path<sp/>path);</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"></highlight></codeline>
+<codeline lineno="203"><highlight class="normal"></highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classslope__constrained__planner_1_1_planner_ros_1a8caa92d0739bf0010915c9346ed7ead8" kindref="member">publishPhi</ref>(std_msgs::Float64<sp/>phi);</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"></highlight></codeline>
+<codeline lineno="210"><highlight class="normal"></highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classslope__constrained__planner_1_1_planner_ros_1a0288fae0b0b04393ac7fa5c0d1a1fed0" kindref="member">publishTheta</ref>(std_msgs::Float64<sp/>theta);</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"></highlight></codeline>
+<codeline lineno="217"><highlight class="normal"></highlight></codeline>
+<codeline lineno="218"><highlight class="normal"></highlight><highlight class="comment"><sp/><sp/>/***</highlight></codeline>
+<codeline lineno="219"><highlight class="comment"><sp/><sp/><sp/>*<sp/>@brief<sp/>Updates<sp/>the<sp/>grid<sp/>map<sp/>data</highlight></codeline>
+<codeline lineno="220"><highlight class="comment"><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>updateMap();</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"></highlight></codeline>
+<codeline lineno="223"><highlight class="normal"></highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classslope__constrained__planner_1_1_planner_ros_1a55a36ac22ecf67bb0f2c38d6d7f8ac94" kindref="member">publishMap</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"></highlight></codeline>
+<codeline lineno="229"><highlight class="normal"></highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/>PlannerStatus<sp/><ref refid="classslope__constrained__planner_1_1_planner_ros_1a8c6afcd6b27a28fb71858307ffe3cada" kindref="member">updateMapAndPlanFromCurrentRobotPose</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ob::ScopedState&lt;&gt;&amp;<sp/>goal);</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"></highlight></codeline>
+<codeline lineno="237"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"></highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><ref refid="classslope__constrained__planner_1_1_planner_ros_1aedfa28780e68db414efe5f66f60e7579" kindref="member">~PlannerRos</ref>();</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"></highlight></codeline>
+<codeline lineno="244"><highlight class="normal"></highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classslope__constrained__planner_1_1_planner_ros_1aca23b645f43a64ebdc12c502fcc056ca" kindref="member">PlannerRos</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ros::NodeHandle&amp;<sp/>nh);</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"></highlight></codeline>
+<codeline lineno="251"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"></highlight></codeline>
+<codeline lineno="253"><highlight class="normal"></highlight></codeline>
+<codeline lineno="254"><highlight class="normal"></highlight></codeline>
+<codeline lineno="255"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/include/slope_constrained_planner_ros/planner_ros.h"/>
+  </compounddef>
+</doxygen>

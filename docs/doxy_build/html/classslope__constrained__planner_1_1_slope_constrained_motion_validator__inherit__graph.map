@@ -1,0 +1,4 @@
+<map id="slope_constrained_planner::SlopeConstrainedMotionValidator" name="slope_constrained_planner::SlopeConstrainedMotionValidator">
+<area shape="rect" id="node1" title="Custom motion validator class which checks the slope of motion between two states." alt="" coords="5,80,253,121"/>
+<area shape="rect" id="node2" title=" " alt="" coords="54,5,205,32"/>
+</map>

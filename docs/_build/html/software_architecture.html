@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Software Architucture &mdash; slope_constrained_planner 1.0 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Sequence Diagram" href="sequence_diagram.html" />
+    <link rel="prev" title="Real World" href="real_world.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            slope_constrained_planner
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="simulation_environment.html">Simulation Environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="real_world.html">Real World</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Software Architucture</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#slope-constrained-planner">slope_constrained_planner</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#elevation-mapping">elevation_mapping</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="sequence_diagram.html">Sequence Diagram</a></li>
+<li class="toctree-l1"><a class="reference internal" href="source_files.html">Source Files and Scripts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage.html">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="working_hypothesis.html">Working Hypothesis and Environment</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">slope_constrained_planner</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Software Architucture</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/software_architecture.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="software-architucture">
+<h1>Software Architucture<a class="headerlink" href="#software-architucture" title="Permalink to this heading"></a></h1>
+<p>The software architucture of this experiment for both simulation and real world scenarios are
+represented in the following figures.</p>
+<p>Simulation:</p>
+<a class="reference internal image-reference" href="_images/sofar.png"><img alt="sofar" class="align-center" src="_images/sofar.png" style="width: 1000px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Real world:</p>
+<a class="reference internal image-reference" href="_images/sofar2.png"><img alt="sofar2" class="align-center" src="_images/sofar2.png" style="width: 1000px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>The components of this software architucture can be described as follows:</p>
+<section id="slope-constrained-planner">
+<h2>slope_constrained_planner<a class="headerlink" href="#slope-constrained-planner" title="Permalink to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p><strong>sampler</strong>: Uses the grid map data provided by the <code class="docutils literal notranslate"><span class="pre">elevation_mapping</span></code> node to sample random states. Each sampled state cosists of the position and orientation (in quaternion representation) data. In order to implement the robot’s heading constraint, once a random state is sampled from the grid map, roll and pitch angles are dervied from map, and then the state frame would rotate along its z-axis until the heading angle reaches the desired threshold.</p></li>
+<li><p><strong>motion_validator</strong>: Considers the motion slope and length constraint. Additionally, if the motion slope is greater than a small value, the yaw difference between two states should not be greater than a threshold.</p></li>
+<li><p><strong>planner</strong>: Uses the states found by the sampler and considering the motion constraints, tries to find the most optimal path (path length optimization objective), based on different planning algorithms provided by OMPL (e.g. PRMstar, LazyPRMstar, RRTstar and RRTsharp), and publishes it on <code class="docutils literal notranslate"><span class="pre">/path</span></code> topic.</p></li>
+<li><p><strong>planner_ros</strong>: An inheritance from the <code class="docutils literal notranslate"><span class="pre">planner</span></code> base class, in order to be implemented in ROS environment.</p></li>
+<li><p><strong>plan_to_goal_client</strong>: A helper node to get the goal pose from <code class="docutils literal notranslate"><span class="pre">RViz</span></code> and send it as a goal to the <code class="docutils literal notranslate"><span class="pre">PlanningActionServer</span></code>.</p></li>
+<li><p><strong>path_follower (simulation)</strong>: Implement a PID controller on the robot’s base, in order to move it through the found path.</p></li>
+<li><p><strong>goal_publisher (real world)</strong>: An auxiliary node, gets the next wapoint to go, and publishes it to the <code class="docutils literal notranslate"><span class="pre">gotopoint</span></code> local path planner.</p></li>
+</ol>
+</section>
+<section id="elevation-mapping">
+<h2>elevation_mapping<a class="headerlink" href="#elevation-mapping" title="Permalink to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p><strong>tf_to_pose</strong>: A helper node to convert the <code class="docutils literal notranslate"><span class="pre">/tf</span></code> data to pose in order to be used in the <code class="docutils literal notranslate"><span class="pre">elevation_mappin</span></code> node.</p></li>
+<li><p><strong>elevation_mapping</strong>: Provides a <code class="docutils literal notranslate"><span class="pre">grid_map</span></code> of the environment using the <code class="docutils literal notranslate"><span class="pre">/velodyne_point</span></code>, <code class="docutils literal notranslate"><span class="pre">/pose</span></code> and <code class="docutils literal notranslate"><span class="pre">/tf</span></code> topics, and publishes it on the <code class="docutils literal notranslate"><span class="pre">/elevation_mapping_raw</span></code> topics.</p></li>
+</ol>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="real_world.html" class="btn btn-neutral float-left" title="Real World" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="sequence_diagram.html" class="btn btn-neutral float-right" title="Sequence Diagram" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Ali Yousefi.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

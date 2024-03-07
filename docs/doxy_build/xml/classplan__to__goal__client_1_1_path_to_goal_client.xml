@@ -1,0 +1,93 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classplan__to__goal__client_1_1_path_to_goal_client" kind="class" language="Python" prot="public">
+    <compoundname>plan_to_goal_client::PathToGoalClient</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classplan__to__goal__client_1_1_path_to_goal_client_1a55e91e55aeed3a3143b30b6e40b1ce40" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>plan_to_goal_client.PathToGoalClient::sub</definition>
+        <argsstring></argsstring>
+        <name>sub</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/plan_to_goal_client.py" line="44" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/plan_to_goal_client.py" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classplan__to__goal__client_1_1_path_to_goal_client_1accf699f571efa471fe2cfb01565cc21a" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>plan_to_goal_client.PathToGoalClient::client</definition>
+        <argsstring></argsstring>
+        <name>client</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/plan_to_goal_client.py" line="46" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/plan_to_goal_client.py" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classplan__to__goal__client_1_1_path_to_goal_client_1a1759f1c8b2fbffe43ed22631cef63159" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def plan_to_goal_client.PathToGoalClient.goalCallback</definition>
+        <argsstring>(self, msg)</argsstring>
+        <name>goalCallback</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>msg</type>
+          <defname>msg</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>    Callback function for ``/goal`` topic subscription. Waits for the planner action server 
+    to be available and sends the goal point.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/plan_to_goal_client.py" line="30" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/plan_to_goal_client.py" bodystart="30" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="classplan__to__goal__client_1_1_path_to_goal_client_1a2e2e8e3acf8aaf11880fd1670929aec3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def plan_to_goal_client.PathToGoalClient.__init__</definition>
+        <argsstring>(self)</argsstring>
+        <name>__init__</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>    Defines the subscription to ``/goal`` topic and planner action server client node.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/plan_to_goal_client.py" line="40" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/plan_to_goal_client.py" bodystart="40" bodyend="53"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>Planner client class which defines the subcription and action client info. Additionally,
+it has a member function for goal callback to send the goal to planner action server
+</verbatim> </para>
+    </detaileddescription>
+    <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/plan_to_goal_client.py" line="24" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/plan_to_goal_client.py" bodystart="24" bodyend="54"/>
+    <listofallmembers>
+      <member refid="classplan__to__goal__client_1_1_path_to_goal_client_1a2e2e8e3acf8aaf11880fd1670929aec3" prot="public" virt="non-virtual"><scope>plan_to_goal_client::PathToGoalClient</scope><name>__init__</name></member>
+      <member refid="classplan__to__goal__client_1_1_path_to_goal_client_1accf699f571efa471fe2cfb01565cc21a" prot="public" virt="non-virtual"><scope>plan_to_goal_client::PathToGoalClient</scope><name>client</name></member>
+      <member refid="classplan__to__goal__client_1_1_path_to_goal_client_1a1759f1c8b2fbffe43ed22631cef63159" prot="public" virt="non-virtual"><scope>plan_to_goal_client::PathToGoalClient</scope><name>goalCallback</name></member>
+      <member refid="classplan__to__goal__client_1_1_path_to_goal_client_1a55e91e55aeed3a3143b30b6e40b1ce40" prot="public" virt="non-virtual"><scope>plan_to_goal_client::PathToGoalClient</scope><name>sub</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

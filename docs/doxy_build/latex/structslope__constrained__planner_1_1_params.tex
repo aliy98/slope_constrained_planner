@@ -1,0 +1,86 @@
+\hypertarget{structslope__constrained__planner_1_1_params}{}\doxysection{slope\+\_\+constrained\+\_\+planner\+::Params Struct Reference}
+\label{structslope__constrained__planner_1_1_params}\index{slope\_constrained\_planner::Params@{slope\_constrained\_planner::Params}}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structslope__constrained__planner_1_1_params_ad1b6c49bc3de33d4e46af9bf722216af}\label{structslope__constrained__planner_1_1_params_ad1b6c49bc3de33d4e46af9bf722216af}} 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>std::string {\bfseries name} \{\char`\"{}prm\_star\char`\"{}\}\\
+\>std::string {\bfseries elevation\_layer} \{\char`\"{}elevation\char`\"{}\}\\
+\>double {\bfseries plan\_time} \{1.0\}\\
+\>unsigned int {\bfseries n\_threads} \{1\}\\
+\>double {\bfseries replan\_freq} \{0.5\}\\
+\>bool {\bfseries simplify\_solution} \{false\}\\
+\>bool {\bfseries snap\_goal\_to\_map} \{true\}\\
+\} {\bfseries planner}\\
+
+\end{tabbing}\item 
+\mbox{\Hypertarget{structslope__constrained__planner_1_1_params_add9cf2ce071e218af9913f32faa10b9a}\label{structslope__constrained__planner_1_1_params_add9cf2ce071e218af9913f32faa10b9a}} 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>double {\bfseries max\_pitch\_pert} \{10.0 / 180$\ast$M\_PI\}\\
+\>double {\bfseries max\_roll\_pert} \{3.33 / 180$\ast$M\_PI\}\\
+\>bool {\bfseries sample\_from\_distribution} \{true\}\\
+\>bool {\bfseries use\_inverse\_vertex\_density} \{false\}\\
+\>bool {\bfseries use\_max\_prob\_unknown\_samples} \{false\}\\
+\>double {\bfseries max\_prob\_unknown\_samples} \{0.1\}\\
+\>bool {\bfseries reach\_min\_phi} \{false\}\\
+\>bool {\bfseries consider\_theta} \{false\}\\
+\} {\bfseries sampler}\\
+
+\end{tabbing}\item 
+\mbox{\Hypertarget{structslope__constrained__planner_1_1_params_a662fd4d32d973759cb5d121d31224de2}\label{structslope__constrained__planner_1_1_params_a662fd4d32d973759cb5d121d31224de2}} 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>double {\bfseries max\_motion\_slope} \{15.0\}\\
+\>double {\bfseries max\_motion\_length} \{2.0\}\\
+\>double {\bfseries min\_motion\_length} \{1.0\}\\
+\>double {\bfseries max\_motion\_yaw\_diff} \{30.0\}\\
+\>double {\bfseries max\_motion\_slope\_yaw\_diff\_free} \{5.0\}\\
+\>double {\bfseries max\_state\_phi} \{10.0\}\\
+\>double {\bfseries max\_state\_theta} \{10.0\}\\
+\} {\bfseries validator}\\
+
+\end{tabbing}\item 
+\mbox{\Hypertarget{structslope__constrained__planner_1_1_params_a9bebd9d7ba61cc7b8ae8803b0fb3900f}\label{structslope__constrained__planner_1_1_params_a9bebd9d7ba61cc7b8ae8803b0fb3900f}} 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>std::string {\bfseries base\_frame} \{\char`\"{}base\_link\char`\"{}\}\\
+\>struct \{\\
+\>\>double {\bfseries length} \{1.05\}\\
+\>\>double {\bfseries width} \{0.55\}\\
+\>\>double {\bfseries height} \{0.2\}\\
+\>\>struct \{\\
+\>\>\>double {\bfseries x} \{0.0\}\\
+\>\>\>double {\bfseries y} \{0.0\}\\
+\>\>\>double {\bfseries z} \{0.0\}\\
+\>\>\} {\bfseries offset}\\
+\>\} {\bfseries torso}\\
+\>struct \{\\
+\>\>struct \{\\
+\>\>\>double {\bfseries x} \{0.362\}\\
+\>\>\>double {\bfseries y} \{0.225\}\\
+\>\>\>double {\bfseries z} \{-\/0.525\}\\
+\>\>\} {\bfseries offset}\\
+\>\>struct \{\\
+\>\>\>double {\bfseries x} \{0.25\}\\
+\>\>\>double {\bfseries y} \{0.1\}\\
+\>\>\>double {\bfseries z} \{0.15\}\\
+\>\>\} {\bfseries reach}\\
+\>\} {\bfseries feet}\\
+\} {\bfseries robot}\\
+
+\end{tabbing}\item 
+\mbox{\Hypertarget{structslope__constrained__planner_1_1_params_af5a1b5770d39056edd2175fb74dbc8af}\label{structslope__constrained__planner_1_1_params_af5a1b5770d39056edd2175fb74dbc8af}} 
+bool {\bfseries verbose} \{true\}
+\end{DoxyCompactItemize}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/ali/ros\+\_\+ws/src/slope\+\_\+constrained\+\_\+planner/slope\+\_\+constrained\+\_\+planner/include/slope\+\_\+constrained\+\_\+planner/\mbox{\hyperlink{params_8h}{params.\+h}}\end{DoxyCompactItemize}

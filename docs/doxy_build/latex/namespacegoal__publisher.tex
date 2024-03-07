@@ -1,0 +1,117 @@
+\hypertarget{namespacegoal__publisher}{}\doxysection{goal\+\_\+publisher Namespace Reference}
+\label{namespacegoal__publisher}\index{goal\_publisher@{goal\_publisher}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classgoal__publisher_1_1_goal_publisher}{Goal\+Publisher}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacegoal__publisher_a11daf38666fb837665b5cba6b3f79e96}{get\+Yaw}} (quat)
+\item 
+def \mbox{\hyperlink{namespacegoal__publisher_a549afd51c7a2fcbcf5bb77ba15db2b3f}{get\+Constrained\+Yaw}} (yaw)
+\item 
+def \mbox{\hyperlink{namespacegoal__publisher_a8fd5c1b8e030fa2379c267a8d2ab0dbe}{get\+Angle\+Error}} (target, current)
+\item 
+def \mbox{\hyperlink{namespacegoal__publisher_acd1e2e3a6f80e5dd54a5f87bdd95f6d0}{get\+Quat\+From\+Yaw}} (yaw)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespacegoal__publisher_a36c17a7359c67308edc2283b1650f044}\label{namespacegoal__publisher_a36c17a7359c67308edc2283b1650f044}} 
+string {\bfseries R\+O\+B\+O\+T\+\_\+\+F\+R\+A\+ME} = \textquotesingle{}base\+\_\+link\textquotesingle{}
+\item 
+\mbox{\Hypertarget{namespacegoal__publisher_a47e75d47ebe77f5d7be99ac0ae38466e}\label{namespacegoal__publisher_a47e75d47ebe77f5d7be99ac0ae38466e}} 
+float {\bfseries G\+O\+A\+L\+\_\+\+T\+H\+R\+E\+S\+\_\+\+P\+OS} = 0.\+1
+\item 
+\mbox{\Hypertarget{namespacegoal__publisher_ab630644b9aa235b44e76d2500fc81a71}\label{namespacegoal__publisher_ab630644b9aa235b44e76d2500fc81a71}} 
+float {\bfseries G\+O\+A\+L\+\_\+\+T\+H\+R\+E\+S\+\_\+\+A\+NG} = 0.\+2
+\item 
+\mbox{\Hypertarget{namespacegoal__publisher_a2028495bd62e527395d9afac97df2a13}\label{namespacegoal__publisher_a2028495bd62e527395d9afac97df2a13}} 
+float {\bfseries F\+A\+C\+E\+\_\+\+G\+O\+A\+L\+\_\+\+D\+I\+ST} = 1.\+0
+\item 
+\mbox{\Hypertarget{namespacegoal__publisher_a3c82639afb1477caabe71bcfb4349b94}\label{namespacegoal__publisher_a3c82639afb1477caabe71bcfb4349b94}} 
+{\bfseries goal\+\_\+pub} = \mbox{\hyperlink{classgoal__publisher_1_1_goal_publisher}{Goal\+Publisher}}()
+\item 
+\mbox{\Hypertarget{namespacegoal__publisher_aa838058efdcdc007466ef3483acd8c91}\label{namespacegoal__publisher_aa838058efdcdc007466ef3483acd8c91}} 
+{\bfseries rate} = rospy.\+Rate(10)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}.. module:: goal_publisher
+    :platform: Unix
+    :synopsis: the goal_publisher python script in slope_constrained_planner package
+
+Subscribes to:
+    /slope_constrained_planner/path
+
+Publishes to:
+    /spot/goaltospot
+
+    /slope_constrained_planner/followed_path
+
+
+An auxiliary node, used only in real world mode, gets the next wapoint to go, and publishes it to the ``gotopoint`` local path planner.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacegoal__publisher_a8fd5c1b8e030fa2379c267a8d2ab0dbe}\label{namespacegoal__publisher_a8fd5c1b8e030fa2379c267a8d2ab0dbe}} 
+\index{goal\_publisher@{goal\_publisher}!getAngleError@{getAngleError}}
+\index{getAngleError@{getAngleError}!goal\_publisher@{goal\_publisher}}
+\doxysubsubsection{\texorpdfstring{getAngleError()}{getAngleError()}}
+{\footnotesize\ttfamily def goal\+\_\+publisher.\+get\+Angle\+Error (\begin{DoxyParamCaption}\item[{}]{target,  }\item[{}]{current }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}    Gets the difference between two given angles
+
+    Args:
+        target
+        current
+    
+    Returns:
+        dyaw
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacegoal__publisher_a549afd51c7a2fcbcf5bb77ba15db2b3f}\label{namespacegoal__publisher_a549afd51c7a2fcbcf5bb77ba15db2b3f}} 
+\index{goal\_publisher@{goal\_publisher}!getConstrainedYaw@{getConstrainedYaw}}
+\index{getConstrainedYaw@{getConstrainedYaw}!goal\_publisher@{goal\_publisher}}
+\doxysubsubsection{\texorpdfstring{getConstrainedYaw()}{getConstrainedYaw()}}
+{\footnotesize\ttfamily def goal\+\_\+publisher.\+get\+Constrained\+Yaw (\begin{DoxyParamCaption}\item[{}]{yaw }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}    Gets constrained value of yaw angle between -2pi and 2pi
+
+    Args: 
+        yaw
+    
+    Returns:
+        yaw
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacegoal__publisher_acd1e2e3a6f80e5dd54a5f87bdd95f6d0}\label{namespacegoal__publisher_acd1e2e3a6f80e5dd54a5f87bdd95f6d0}} 
+\index{goal\_publisher@{goal\_publisher}!getQuatFromYaw@{getQuatFromYaw}}
+\index{getQuatFromYaw@{getQuatFromYaw}!goal\_publisher@{goal\_publisher}}
+\doxysubsubsection{\texorpdfstring{getQuatFromYaw()}{getQuatFromYaw()}}
+{\footnotesize\ttfamily def goal\+\_\+publisher.\+get\+Quat\+From\+Yaw (\begin{DoxyParamCaption}\item[{}]{yaw }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}    Gets quaternoid representation from euler representation
+
+    Args:
+        yaw
+    
+    Returns:
+        quat
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacegoal__publisher_a11daf38666fb837665b5cba6b3f79e96}\label{namespacegoal__publisher_a11daf38666fb837665b5cba6b3f79e96}} 
+\index{goal\_publisher@{goal\_publisher}!getYaw@{getYaw}}
+\index{getYaw@{getYaw}!goal\_publisher@{goal\_publisher}}
+\doxysubsubsection{\texorpdfstring{getYaw()}{getYaw()}}
+{\footnotesize\ttfamily def goal\+\_\+publisher.\+get\+Yaw (\begin{DoxyParamCaption}\item[{}]{quat }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}    Gets yaw angle from quaternoid representation
+
+    Args: 
+        quat
+
+    Returns:
+        yaw\end{DoxyVerb}
+ 

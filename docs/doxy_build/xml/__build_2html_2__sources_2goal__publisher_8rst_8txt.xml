@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="__build_2html_2__sources_2goal__publisher_8rst_8txt" kind="file" language="C++">
+    <compoundname>goal_publisher.rst.txt</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"><ref refid="namespacegoal__publisher" kindref="compound">goal_publisher</ref></highlight></codeline>
+<codeline lineno="2"><highlight class="normal">-----------------</highlight></codeline>
+<codeline lineno="3"><highlight class="normal">..<sp/>automodule::<sp/>slope_constrained_planner_ros.scripts.goal_publisher</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"><sp/><sp/><sp/>:members:</highlight></codeline>
+    </programlisting>
+    <location file="_build/html/_sources/goal_publisher.rst.txt"/>
+  </compounddef>
+</doxygen>

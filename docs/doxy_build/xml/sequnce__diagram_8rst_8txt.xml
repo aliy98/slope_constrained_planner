@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="sequnce__diagram_8rst_8txt" kind="file" language="C++">
+    <compoundname>sequnce_diagram.rst.txt</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="sequnce__diagram_8rst_8txt_1ade1f976c9fe6037e30c03fe1befbb371" prot="public" static="no" mutable="no">
+        <type>Temporal user launches the</type>
+        <definition>Temporal user launches the nodes</definition>
+        <argsstring></argsstring>
+        <name>nodes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="_sources/sequnce_diagram.rst.txt" line="3" column="34" bodyfile="_sources/sequnce_diagram.rst.txt" bodystart="3" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="sequnce__diagram_8rst_8txt_1afc759a83f621e0efbc6e850658b9c6a1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Temporal</type>
+        <definition>Temporal Diagram</definition>
+        <argsstring>(UML Sequence Diagram) ----------------------------------------- The following figure represents the UML sequence diagram of this package. In the initial state</argsstring>
+        <name>Diagram</name>
+        <param>
+          <type>UML Sequence</type>
+          <declname>Diagram</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="_sources/sequnce_diagram.rst.txt" line="1" column="10"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">Temporal<sp/>Diagram<sp/>(UML<sp/>Sequence<sp/>Diagram)</highlight></codeline>
+<codeline lineno="2"><highlight class="normal">-----------------------------------------</highlight></codeline>
+<codeline lineno="3"><highlight class="normal">The<sp/>following<sp/>figure<sp/>represents<sp/>the<sp/>UML<sp/>sequence<sp/>diagram<sp/>of<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/>package.<sp/>In<sp/>the<sp/>initial<sp/>state,<sp/>user<sp/>launches<sp/>the<sp/>nodes,</highlight></codeline>
+<codeline lineno="4"><highlight class="normal">``finite_state_machine``<sp/>calls<sp/>``move_arm``<sp/>service<sp/>to<sp/>initialze<sp/>robot<sp/>arm<sp/>movement<sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>``moveit``.<sp/>Markers<sp/></highlight></codeline>
+<codeline lineno="5"><highlight class="normal">get<sp/>scanned<sp/>by<sp/>robot<sp/>camera<sp/>and<sp/></highlight><highlight class="keywordflow">for<sp/>each</highlight><highlight class="normal"><sp/>marker<sp/>``image_id``<sp/>would<sp/>be<sp/>detected.<sp/>``finite_state_machine``<sp/>requests<sp/>``room_info``</highlight></codeline>
+<codeline lineno="6"><highlight class="normal">by<sp/>sending<sp/>room<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal"><sp/>and<sp/>build<sp/>semantic<sp/>map<sp/>in<sp/>the<sp/>ontology.<sp/>Then<sp/>``base_movement_state``<sp/>gets<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal"><sp/>by<sp/>``finite_state_machine``<sp/>node</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>enabling<sp/>``robot-states``<sp/>node<sp/>to<sp/>simulate<sp/>battery<sp/>consumption<sp/>and<sp/>target<sp/>room<sp/>position<sp/>would<sp/>be<sp/>sent<sp/>to<sp/>``moveit``</highlight></codeline>
+<codeline lineno="8"><highlight class="normal">node<sp/>to<sp/>find<sp/>the<sp/>path<sp/>and<sp/>move<sp/>the<sp/>robot<sp/>base.<sp/>Once<sp/>the<sp/>robot<sp/>gets<sp/>to<sp/>target<sp/>position<sp/>``base_movement_state``<sp/>gets<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal">and<sp/>robot<sp/>starts<sp/>exploring<sp/>the<sp/>room<sp/>like<sp/>the<sp/>beginning<sp/>of<sp/>the<sp/>sequence.<sp/></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal">..<sp/>image::<sp/>diagrams/sequence.png</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/>:width:<sp/>800</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/>:align:<sp/>center</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/>:alt:<sp/>robot_urdf</highlight></codeline>
+    </programlisting>
+    <location file="_sources/sequnce_diagram.rst.txt"/>
+  </compounddef>
+</doxygen>

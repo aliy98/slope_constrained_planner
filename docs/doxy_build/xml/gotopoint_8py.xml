@@ -1,0 +1,178 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="gotopoint_8py" kind="file" language="Python">
+    <compoundname>gotopoint.py</compoundname>
+    <innernamespace refid="namespacegotopoint">gotopoint</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">#!/usr/bin/env<sp/>python3</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>logging</highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>math</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>signal</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>sys</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>threading</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>time</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/>sys<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>platform</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>numpy<sp/></highlight><highlight class="keyword">as</highlight><highlight class="normal"><sp/>np</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>rospy<sp/></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">#!/usr/bin/env<sp/>python3</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/>math<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>atan2,<sp/>asin<sp/></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>bosdyn.client</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>bosdyn.client.util</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/>bosdyn<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>geometry</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/>bosdyn.api<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>geometry_pb2,<sp/>image_pb2,<sp/>trajectory_pb2,<sp/>world_object_pb2</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/>bosdyn.api.geometry_pb2<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>SE2Velocity,<sp/>SE2VelocityLimit,<sp/>Vec2</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/>bosdyn.api.spot<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>robot_command_pb2<sp/></highlight><highlight class="keyword">as</highlight><highlight class="normal"><sp/>spot_command_pb2</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/>bosdyn.client<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>ResponseError,<sp/>RpcError,<sp/>create_standard_sdk</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/>bosdyn.client.frame_helpers<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>(BODY_FRAME_NAME,<sp/>VISION_FRAME_NAME,<sp/>get_a_tform_b,</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>get_vision_tform_body,<sp/>ODOM_FRAME_NAME)</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/>bosdyn.client.lease<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>LeaseClient</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/>bosdyn.client.math_helpers<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>Quat,<sp/>SE3Pose</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/>bosdyn.client.power<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>PowerClient</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/>bosdyn.client.robot_command<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>RobotCommandBuilder,<sp/>RobotCommandClient,<sp/>blocking_stand</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/>bosdyn.client.robot_id<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>RobotIdClient</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/>bosdyn.client.robot_state<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>RobotStateClient</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/>bosdyn.client.world_object<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>WorldObjectClient</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/>bosdyn.geometry<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>EulerZXY</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/>spot_msgs.msg<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>TrajectoryActionGoal</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/>geometry_msgs.msg<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>PoseStamped</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/>slope_constrained_planner_msgs.srv<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>TiltRobot</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal">VELOCITY_CMD_DURATION<sp/>=<sp/>0.6<sp/><sp/></highlight><highlight class="comment">#<sp/>seconds</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal">LOGGER<sp/>=<sp/>logging.getLogger()</highlight></codeline>
+<codeline lineno="36"><highlight class="normal">_robot_command_client=</highlight><highlight class="keywordtype">None</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal">_robot=</highlight><highlight class="keywordtype">None</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal">_powered_on=</highlight><highlight class="keyword">False</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal">set_mobility_params():</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>obstacles<sp/>=<sp/>spot_command_pb2.ObstacleParams(disable_vision_body_obstacle_avoidance=</highlight><highlight class="keyword">False</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>disable_vision_foot_obstacle_avoidance=</highlight><highlight class="keyword">False</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>disable_vision_foot_constraint_avoidance=</highlight><highlight class="keyword">False</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>disable_vision_foot_obstacle_body_assist=<sp/></highlight><highlight class="keyword">False</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>disable_vision_negative_obstacles=</highlight><highlight class="keyword">False</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>obstacle_avoidance_padding=0.1)</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>footprint_R_body<sp/>=<sp/>geometry.EulerZXY()</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>position<sp/>=<sp/>geometry_pb2.Vec3(x=0.0,<sp/>y=0.0,<sp/>z=0.0)</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>rotation<sp/>=<sp/>footprint_R_body.to_quaternion()</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>pose<sp/>=<sp/>geometry_pb2.SE3Pose(position=position,<sp/>rotation=rotation)</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>point<sp/>=<sp/>trajectory_pb2.SE3TrajectoryPoint(pose=pose)</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>traj<sp/>=<sp/>trajectory_pb2.SE3Trajectory(points=[point])</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>body_control=spot_command_pb2.BodyControlParams(base_offset_rt_footprint=traj)</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>speed_limit<sp/>=<sp/>SE2VelocityLimit(max_vel=SE2Velocity(linear=Vec2(x=1.0,<sp/>y=1.0),<sp/>angular=0.7))</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>mobility_params<sp/>=<sp/>spot_command_pb2.MobilityParams(<sp/>obstacle_params=obstacles,<sp/>vel_limit=speed_limit,<sp/>body_control=body_control,<sp/>locomotion_hint=spot_command_pb2.HINT_AUTO)</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>mobility_params</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal">euler_from_quaternion(x,<sp/>y,<sp/>z,<sp/>w):</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;&quot;&quot;</highlight></codeline>
+<codeline lineno="62"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>Convert<sp/>a<sp/>quaternion<sp/>into<sp/>euler<sp/>angles<sp/>(roll,<sp/>pitch,<sp/>yaw)</highlight></codeline>
+<codeline lineno="63"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>roll<sp/>is<sp/>rotation<sp/>around<sp/>x<sp/>in<sp/>radians<sp/>(counterclockwise)</highlight></codeline>
+<codeline lineno="64"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>pitch<sp/>is<sp/>rotation<sp/>around<sp/>y<sp/>in<sp/>radians<sp/>(counterclockwise)</highlight></codeline>
+<codeline lineno="65"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>yaw<sp/>is<sp/>rotation<sp/>around<sp/>z<sp/>in<sp/>radians<sp/>(counterclockwise)</highlight></codeline>
+<codeline lineno="66"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>&quot;&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>t0<sp/>=<sp/>+2.0<sp/>*<sp/>(w<sp/>*<sp/>x<sp/>+<sp/>y<sp/>*<sp/>z)</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>t1<sp/>=<sp/>+1.0<sp/>-<sp/>2.0<sp/>*<sp/>(x<sp/>*<sp/>x<sp/>+<sp/>y<sp/>*<sp/>y)</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>roll_x<sp/>=<sp/>atan2(t0,<sp/>t1)</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>t2<sp/>=<sp/>+2.0<sp/>*<sp/>(w<sp/>*<sp/>y<sp/>-<sp/>z<sp/>*<sp/>x)</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>t2<sp/>=<sp/>+1.0<sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>t2<sp/>&gt;<sp/>+1.0<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>t2</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>t2<sp/>=<sp/>-1.0<sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>t2<sp/>&lt;<sp/>-1.0<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>t2</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>pitch_y<sp/>=<sp/>asin(t2)</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>t3<sp/>=<sp/>+2.0<sp/>*<sp/>(w<sp/>*<sp/>z<sp/>+<sp/>x<sp/>*<sp/>y)</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>t4<sp/>=<sp/>+1.0<sp/>-<sp/>2.0<sp/>*<sp/>(y<sp/>*<sp/>y<sp/>+<sp/>z<sp/>*<sp/>z)</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>yaw_z<sp/>=<sp/>atan2(t3,<sp/>t4)</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>roll_x,<sp/>pitch_y,<sp/>yaw_z<sp/></highlight><highlight class="comment">#<sp/>in<sp/>radians</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal">goal_clbk(goal):</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">global</highlight><highlight class="normal"><sp/>mobility_params,<sp/>_robot_command_client</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/>orientation=<sp/>euler_from_quaternion(goal.pose.orientation.x,<sp/>goal.pose.orientation.y,<sp/>goal.pose.orientation.z,<sp/>goal.pose.orientation.w)</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>mobility_params=<sp/>set_mobility_params()</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>tag_cmd<sp/>=<sp/>RobotCommandBuilder.synchro_se2_trajectory_point_command(</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>goal_x=goal.pose.position.x,<sp/>goal_y=goal.pose.position.y,</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>goal_heading=orientation[2],<sp/>frame_name=ODOM_FRAME_NAME,<sp/>params=mobility_params,</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>body_height=0.0,<sp/>locomotion_hint=spot_command_pb2.HINT_AUTO)</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>end_time<sp/>=<sp/>10.0</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>rospy.loginfo(</highlight><highlight class="stringliteral">&quot;command<sp/>ready&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>_robot_command_client.robot_command(lease=</highlight><highlight class="keywordtype">None</highlight><highlight class="normal">,<sp/>command=tag_cmd,end_time_secs=time.time()<sp/>+<sp/>end_time)</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal"><ref refid="namespacetilt__robot" kindref="compound">tilt_robot</ref>(req):</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>print(</highlight><highlight class="stringliteral">&quot;Tilting<sp/>robot<sp/>with<sp/>desired<sp/>orientation<sp/>[roll:<sp/>%s,<sp/>pitch:<sp/>%s,<sp/>yaw:<sp/>%s]&quot;</highlight><highlight class="normal">%(req.roll,<sp/>req.pitch,<sp/>req.yaw))</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/>roll<sp/>=<sp/>req.roll<sp/>*<sp/>math.pi<sp/>/<sp/>180</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>pitch<sp/>=<sp/>req.pitch<sp/>*<sp/>math.pi<sp/>/<sp/>180</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>yaw<sp/>=<sp/>req.yaw<sp/>*<sp/>math.pi<sp/>/<sp/>180</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/>orientation_cmd_helper(req.yaw/180*math.pi,<sp/>req.roll/180*math.pi,<sp/>req.pitch/180*math.pi,<sp/>req.height)</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal">orientation_cmd_helper(yaw=0.0,<sp/>roll=0.0,<sp/>pitch=0.0,<sp/>height=0.0):</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">not</highlight><highlight class="normal"><sp/>_powered_on:</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/>orientation<sp/>=<sp/>EulerZXY(yaw,<sp/>roll,<sp/>pitch)</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/>tag_cmd<sp/>=<sp/>RobotCommandBuilder.synchro_stand_command(body_height=0.0,</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>footprint_R_body=orientation)</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>end_time<sp/>=<sp/>10.0</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/>rospy.loginfo(</highlight><highlight class="stringliteral">&quot;command<sp/>ready&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>_robot_command_client.robot_command(lease=</highlight><highlight class="keywordtype">None</highlight><highlight class="normal">,<sp/>command=tag_cmd,end_time_secs=time.time()<sp/>+<sp/>end_time)</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal">power_on():</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">global</highlight><highlight class="normal"><sp/>_robot,<sp/>_powered_on</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/>_robot.power_on()</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/>_powered_on=</highlight><highlight class="keyword">True</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal">power_off():</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/>safe_power_off_cmd=RobotCommandBuilder.safe_power_off_command()</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/>_robot_command_client.robot_command(command=<sp/>safe_power_off_cmd)</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/>time.sleep(2.5)</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/>_powered_on=</highlight><highlight class="keyword">False</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal">node():</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">global</highlight><highlight class="normal"><sp/>goal,<sp/>mobility_params,<sp/>_robot,<sp/>_robot_id,<sp/>_power_client,<sp/>_robot_state_client<sp/>,<sp/>_robot_command_client</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/>rospy.init_node(</highlight><highlight class="stringliteral">&apos;timeretrieve&apos;</highlight><highlight class="normal">,<sp/>anonymous=</highlight><highlight class="keyword">False</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/>sdk<sp/>=<sp/>create_standard_sdk(</highlight><highlight class="stringliteral">&quot;gotopoint&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/>robot<sp/>=<sp/>sdk.create_robot(</highlight><highlight class="stringliteral">&apos;192.168.80.3&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/>robot.authenticate(</highlight><highlight class="stringliteral">&apos;user&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;wruzvkg4rce4&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/>rospy.Subscriber(</highlight><highlight class="stringliteral">&quot;goaltospot&quot;</highlight><highlight class="normal">,<sp/>PoseStamped,<sp/>goal_clbk)<sp/><sp/></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/>s<sp/>=<sp/>rospy.Service(</highlight><highlight class="stringliteral">&quot;tiltrobot&quot;</highlight><highlight class="normal">,<sp/>TiltRobot,<sp/>tilt_robot)</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/>robot.time_sync.wait_for_sync()</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/>_robot<sp/>=<sp/>robot</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/>_robot_id<sp/>=<sp/>robot.ensure_client(RobotIdClient.default_service_name).get_id(timeout=0.4)</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/>_lease_client<sp/>=<sp/>robot.ensure_client(LeaseClient.default_service_name)</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/>_power_client<sp/>=<sp/>robot.ensure_client(PowerClient.default_service_name)</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/>_robot_state_client<sp/>=<sp/>robot.ensure_client(RobotStateClient.default_service_name)</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/>_robot_command_client<sp/>=<sp/>robot.ensure_client(RobotCommandClient.default_service_name)</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/>mobility_params=<sp/>set_mobility_params()</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/>_lease<sp/>=<sp/>_lease_client.take()</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/>_lease_keepalive<sp/>=<sp/>bosdyn.client.lease.LeaseKeepAlive(_lease_client)</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/>power_on()</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/>time.sleep(5)</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/>blocking_stand(_robot_command_client)</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/>time.sleep(5)</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/>rospy.loginfo(</highlight><highlight class="stringliteral">&quot;ready<sp/>to<sp/>take<sp/>commands&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">not</highlight><highlight class="normal"><sp/>rospy.is_shutdown():</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>time.sleep(0.5)</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/>power_off()</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>__name__<sp/>==<sp/></highlight><highlight class="stringliteral">&apos;__main__&apos;</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">try</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>node()</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">except</highlight><highlight class="normal"><sp/>rospy.ROSInterruptException:</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">pass</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/gotopoint.py"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Usage &mdash; slope_constrained_planner 1.0 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="System hypothesis and future work" href="working_hypothesis.html" />
+    <link rel="prev" title="goal_publisher" href="goal_publisher.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            slope_constrained_planner
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="simulation_environment.html">Simulation Environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="real_world.html">Real World</a></li>
+<li class="toctree-l1"><a class="reference internal" href="software_architecture.html">Software Architucture</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sequence_diagram.html">Sequence Diagram</a></li>
+<li class="toctree-l1"><a class="reference internal" href="source_files.html">Source Files and Scripts</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Usage</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#dependencies">Dependencies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#usage-in-simulation">Usage in Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#usage-in-real-world">Usage in Real-World</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#configuratrion">Configuratrion</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="working_hypothesis.html">System hypothesis and future work</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">slope_constrained_planner</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Usage</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/usage.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="usage">
+<h1>Usage<a class="headerlink" href="#usage" title="Permalink to this heading"></a></h1>
+<section id="dependencies">
+<h2>Dependencies<a class="headerlink" href="#dependencies" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>The software for this planner is based on <a class="reference external" href="https://ompl.kavrakilab.org/index.html">OMPL</a>, which consists of many state-of-the-art sampling-based motion planning algorithms. The required dependencies could be installed using the following command:</p></li>
+</ul>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">sudo apt install ros-noetic-ompl ros-noetic-grid-map-core ros-noetic-actionlib ros-noetic-geometry-msgs ros-noetic-grid-map-msgs ros-noetic-grid-map-ros ros-noetic-nav-msgs ros-noetic-roscpp ros-noetic-tf2-geometry-msgs ros-noetic-tf2-ros</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Additionally, <a class="reference external" href="https://github.com/ANYbotics/elevation_mapping">elevation_mapping</a>  ROS package was used to create a 2.5D map of the environment.</p></li>
+<li><p>In order to test the software package in simulation environment, <a class="reference external" href="https://github.com/graiola/wolf-setup">WoLF</a> was used. This package provides whole-body controller, along with the robot description files and some interesting worlds for Boston Dynamics Spot robot, as well as several other famous quadruped robots.</p></li>
+</ul>
+<p>Once the dependencies are met, the package can be installed as it follows:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">mkdir -p catkin_ws/src</span>
+<span class="go">cd catkin_ws/src</span>
+<span class="go">git clone https://github.com/aliy98/slope_constrained_planner</span>
+<span class="go">cd ..</span>
+<span class="go">source /opt/ros/&lt;distro&gt;/setup.bash</span>
+<span class="go">catkin_make</span>
+</pre></div>
+</div>
+</section>
+<section id="usage-in-simulation">
+<h2>Usage in Simulation<a class="headerlink" href="#usage-in-simulation" title="Permalink to this heading"></a></h2>
+<p>In order to run the simulation environemnt, along with the elevation mapping package, the following
+launch file could be used:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">roslaunch slope_constrained_planner_ros simulation.launch</span>
+</pre></div>
+</div>
+<p>Once the robot is spawned in a random point by <code class="docutils literal notranslate"><span class="pre">go0.py</span></code> script, a random goal point would be chosen
+on the map with a particular distance to robot. Then, robot would align to the goal point, and it would
+tilt along it’s y-axiz by <code class="docutils literal notranslate"><span class="pre">tilt_robot.py</span></code> script, in order to have a better view in the elevation map.</p>
+<p>The planner node, could be launched using the following command:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">roslaunch slope_constrained_planner_ros planner.launch</span>
+</pre></div>
+</div>
+<p>Once the solution path is found by the planner, the robot could move along the path, using the provided
+<code class="docutils literal notranslate"><span class="pre">path_follower.py</span></code> script:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">roslaunch slope_constrained_planner_ros path_follower.launch</span>
+</pre></div>
+</div>
+</section>
+<section id="usage-in-real-world">
+<h2>Usage in Real-World<a class="headerlink" href="#usage-in-real-world" title="Permalink to this heading"></a></h2>
+<p>Regarding the real-world usage with Boston Dynamics Spot CORE, the elevation mapping package, and spot
+ros packages could be launched using the command:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">roslaunch slope_constrained_planner_ros navigation.launch</span>
+</pre></div>
+</div>
+<p>Moreover, the following command would make the robot stand up and wait for the waypoint on the found
+trajectory. Actually, it uses the commands on the Spot SDK, to perform the task of local path planning,
+based on the found global path by our planner.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">rosrun slope_constrained_planner_ros gotopoint.py</span>
+</pre></div>
+</div>
+<p>The planner node, could be launched using the following command:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">roslaunch slope_constrained_planner_ros planner.launch</span>
+</pre></div>
+</div>
+<p>Once the path is found, the waypoints on the trajectory would be published to the local path planner
+<code class="docutils literal notranslate"><span class="pre">gotopoint</span></code>, using the following command:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">rosrun slope_constrained_planner_ros goal_publisher.py</span>
+</pre></div>
+</div>
+</section>
+<section id="configuratrion">
+<h2>Configuratrion<a class="headerlink" href="#configuratrion" title="Permalink to this heading"></a></h2>
+<p>The parameters of planner components (e.g. sampler, motion validartor, planning algorithm), could be
+modified in the file <code class="docutils literal notranslate"><span class="pre">slope_constrained_planner/config/params.yaml</span></code>. Regarding the elevation map, the
+configuration files are located in the same directory which are named <code class="docutils literal notranslate"><span class="pre">map_sim.yaml</span></code> and <code class="docutils literal notranslate"><span class="pre">map_real.yaml</span></code>.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="goal_publisher.html" class="btn btn-neutral float-left" title="goal_publisher" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="working_hypothesis.html" class="btn btn-neutral float-right" title="System hypothesis and future work" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Ali Yousefi.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

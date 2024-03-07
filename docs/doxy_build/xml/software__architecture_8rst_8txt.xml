@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="software__architecture_8rst_8txt" kind="file" language="C++">
+    <compoundname>software_architecture.rst.txt</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">Software<sp/>Architucture</highlight></codeline>
+<codeline lineno="2"><highlight class="normal">=========================</highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal">The<sp/>software<sp/>architucture<sp/>of<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/>experiment<sp/>is<sp/>represented<sp/>in<sp/>the<sp/>following<sp/>figure.</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal">..<sp/>image::<sp/>diagrams/sofar.png</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/>:width:<sp/>1000</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/>:align:<sp/>center</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/>:alt:<sp/>sofar</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal">The<sp/>components<sp/>of<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/>software<sp/>architucture<sp/>can<sp/>be<sp/>described<sp/>as<sp/>follows:</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal">slope_constrained_planner</highlight></codeline>
+<codeline lineno="15"><highlight class="normal">--------------------------</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#.<sp/>**sampler**:<sp/>Uses<sp/>the<sp/>grid<sp/>map<sp/>data<sp/>provided<sp/>by<sp/>the<sp/>``elevation_mapping``<sp/>node<sp/>to<sp/>sample<sp/>random<sp/>states.<sp/>Each<sp/>sampled<sp/>state<sp/>cosists<sp/>of<sp/>the<sp/>position<sp/>and<sp/>orientation<sp/>(in<sp/>quaternion<sp/>representation)<sp/>data.<sp/>In<sp/>order<sp/>to<sp/>implement<sp/>the<sp/>robot&apos;s<sp/>heading<sp/>constraint,<sp/>once<sp/>a<sp/>random<sp/>state<sp/>is<sp/>sampled<sp/>from<sp/>the<sp/>grid<sp/>map,<sp/>roll<sp/>and<sp/>pitch<sp/>angles<sp/>are<sp/>dervied<sp/>from<sp/>map,<sp/>and<sp/>then<sp/>the<sp/>state<sp/>frame<sp/>would<sp/>rotate<sp/>along<sp/>its<sp/>z-axis<sp/>until<sp/>the<sp/>heading<sp/>angle<sp/>reaches<sp/>the<sp/>desired<sp/>threshold.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#.<sp/>**motion_validator**:<sp/>Considers<sp/>the<sp/>motion<sp/>slope<sp/>and<sp/>length<sp/>constraint.<sp/>Additionally,<sp/>if<sp/>the<sp/>motion<sp/>slope<sp/>is<sp/>greater<sp/>than<sp/>a<sp/>small<sp/>value,<sp/>the<sp/>yaw<sp/>difference<sp/>between<sp/>two<sp/>states<sp/>should<sp/>not<sp/>be<sp/>greater<sp/>than<sp/>a<sp/>threshold.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#.<sp/>**planner**:<sp/>Uses<sp/>the<sp/>states<sp/>found<sp/>by<sp/>the<sp/>sampler<sp/>and<sp/>considering<sp/>the<sp/>motion<sp/>constraints,<sp/>tries<sp/>to<sp/>find<sp/>the<sp/>most<sp/>optimal<sp/>path<sp/>(path<sp/>length<sp/>optimization<sp/>objective),<sp/>based<sp/>on<sp/>different<sp/>planning<sp/>algorithms<sp/>provided<sp/>by<sp/>OMPL<sp/>(e.g.<sp/>PRMstar,<sp/>LazyPRMstar,<sp/>RRTstar<sp/>and<sp/>RRTsharp),<sp/>and<sp/>publishes<sp/>it<sp/>on<sp/>``/path``<sp/>topic.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#.<sp/>**planner_ros**:<sp/>An<sp/>inheritance<sp/>from<sp/>the<sp/>``planner``<sp/>base<sp/>class,<sp/>in<sp/>order<sp/>to<sp/>be<sp/>implemented<sp/>in<sp/>ROS<sp/>environment.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#.<sp/>**plan_to_goal_client**:<sp/>A<sp/>helper<sp/>node<sp/>to<sp/>get<sp/>the<sp/>goal<sp/>pose<sp/>from<sp/>``RViz``<sp/>and<sp/>send<sp/>it<sp/>as<sp/>a<sp/>goal<sp/>to<sp/>the<sp/>``PlanningActionServer``.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#.<sp/>**path_follower**:<sp/>Implement<sp/>a<sp/>PID<sp/>controller<sp/>on<sp/>the<sp/>robot&apos;s<sp/>base,<sp/>in<sp/>order<sp/>to<sp/>move<sp/>it<sp/>through<sp/>the<sp/>found<sp/>path.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal">elevation_mapping</highlight></codeline>
+<codeline lineno="34"><highlight class="normal">------------------</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#.<sp/>**tf_to_pose**:<sp/>A<sp/>helper<sp/>node<sp/>to<sp/>convert<sp/>the<sp/>``/tf``<sp/>data<sp/>to<sp/>pose<sp/>in<sp/>order<sp/>to<sp/>be<sp/>used<sp/>in<sp/>the<sp/>``elevation_mappin``<sp/>node.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#.<sp/>**elevation_mapping**:<sp/>Provides<sp/>a<sp/>``grid_map``<sp/>of<sp/>the<sp/>environment<sp/>using<sp/>the<sp/>``/velodyne_point``,<sp/>``/pose``<sp/>and<sp/>``/tf``<sp/>topics,<sp/>and<sp/>publishes<sp/>it<sp/>on<sp/>the<sp/>``/elevation_mapping_raw``<sp/>topics.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="_sources/software_architecture.rst.txt"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<launch>
+
+    <!-- Launch spot_driver -->
+    <include file="$(find spot_driver)/launch/driver.launch"/>
+
+     <!-- Launch velodyne nodes -->
+    <node pkg="zoe_interface" type="vel2.py" respawn="false" name="velodyne"/>
+    <!--node pkg="zoe_interface" type="pointcloudconv" respawn="false" name="pointconv"/-->
+    <!--include file="$(find simpcl)/launch/mapping.launch"/-->
+    <!--node pkg="zoe_interface" type="fiducial_detection.py" respawn="false" name="fiducial"/-->
+    
+    <include file="$(find slope_constrained_planner_ros)/launch/mapping_real.launch"/>
+
+</launch>

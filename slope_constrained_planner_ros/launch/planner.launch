@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<launch>
+
+  <node name="slope_constrained_planner" pkg="slope_constrained_planner_ros" type="planner_node" output="screen" >
+    <remap from="~elevation_map" to="/elevation_mapping/elevation_map_raw"/>
+    <rosparam command="load" file="$(find slope_constrained_planner_ros)/config/params.yaml"/>
+  </node>
+
+  <group ns='slope_constrained_planner' >
+    <node name="plan_to_goal_client" pkg="slope_constrained_planner_ros" type="plan_to_goal_client.py" output="screen" />
+  </group>
+
+</launch>

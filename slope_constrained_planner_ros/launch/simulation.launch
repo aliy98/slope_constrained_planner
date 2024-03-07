@@ -1,0 +1,108 @@
+<?xml version="1.0" ?>
+<launch>
+
+    <!-- Robot related arguments -->
+    <arg name="robot_model"        default="spot"  doc="[spot/aliengo/go1/anymalc]"/>
+    <arg name="robot_name"         default=""      doc="robot namespace"/>
+    <arg name="sensors"            default="true"  doc="activate robot's sensors"/>
+    <arg name="period"             default="0.001" doc="controller period"/>
+    <arg name="arm_name"           default=""      doc="[kinova]"/>
+
+    <!-- Input device argument -->
+    <arg name="input_device" default="keyboard" doc="[ps3/xbox/keyboard/spacemouse]"/>
+
+    <!-- Gazebo related arguments -->
+    <arg name="gazebo"        default="true"    doc="start gazebo"/>
+    <arg name="gazebo_debug"  default="false"   doc="activate gazebo debug"/>
+    <arg name="engine"        default="ode"     doc="[ode/bullet/dart/simbody]"/>
+    <arg name="world_name"    default="inspection"   doc="load a specific world"/>
+    <arg name="spawn_robot"   default="true"    doc="spawn the robot in gazebo"/>
+    <arg name="initial_xyz"   default="[0,0,0]" doc="initial robot xyz position in the world"/>
+    <arg name="initial_rpy"   default="[0,0,0]" doc="initial robot rpy position in the world"/>
+
+    <!-- GUI related arguments -->
+    <arg name="gazebo_gui"      default="true"  doc="start gzclient"/>
+    <arg name="plotjuggler_gui" default="false" doc="start plotjuggler"/>
+    <arg name="rviz_gui"        default="false" doc="start rviz"/>
+    <arg name="rqt_gui"         default="true"  doc="start rqt_reconfigure"/>
+    <arg name="plot_node_gui"   default="false" doc="start controller's visualization node for rviz"/>
+    <arg name="full_gui"        default="false" doc="start all the previous gui"/>
+
+    <!-- Odometry arguments -->
+    <arg name="publish_odom_msg" default="true" doc="publish nav_msgs/Odometry message from the controller"/>
+    <arg name="publish_odom_tf"  default="true" doc="publish the odom tf frame from the controller"/>
+
+    <!-- Load the robot description and Gazebo -->
+    <group if="$(arg gazebo)">
+        <include file="$(find wolf_description_utils)/launch/world.launch">
+            <arg name="sensors"           value="$(arg sensors)" />
+            <arg name="robot_model"       value="$(arg robot_model)" />
+            <arg name="robot_name"        value="$(arg robot_name)" />
+            <arg name="world_name"        value="$(arg world_name)" />
+            <arg name="period"            value="$(arg period)" />
+            <arg name="gui"               value="$(arg gazebo_gui)"/>
+            <arg name="arm_name"          value="$(arg arm_name)"/>
+            <arg name="debug"             value="$(arg gazebo_debug)"/>
+            <arg name="engine"            value="$(arg engine)"/>
+        </include>
+    </group>
+    <group unless="$(arg gazebo)">
+        <include file="$(find wolf_description_utils)/launch/upload.launch">
+           <arg name="sensors"      value="$(arg sensors)" />
+           <arg name="robot_model"  value="$(arg robot_model)" />
+           <arg name="robot_name"   value="$(arg robot_name)" />
+           <arg name="arm_name"     value="$(arg arm_name)"/>
+           <arg name="period"       value="$(arg period)" />
+        </include>
+    </group>
+
+    <!-- Spawn the robot in Gazebo -->
+    <node name="$(anon go0)" pkg="slope_constrained_planner_ros" type="go0" output="screen" if="$(arg spawn_robot)">
+        <param name="robot_name"      value="$(arg robot_name)"/>
+        <param name="robot_model"     value="$(arg robot_model)"/>
+        <!-- <param name="initial_xyz"     value="$(arg initial_xyz)"/> -->
+        <!-- <param name="initial_rpy"     value="$(arg initial_rpy)"/> -->
+    </node>
+
+    <group if="$(eval robot_name != '')">
+         <include file="$(find wolf_controller)/launch/include/wolf_controller_ns.launch" ns="$(arg robot_name)">
+             <arg name="robot_model"      value="$(arg robot_model)"/>
+             <arg name="robot_name"       value="$(arg robot_name)"/>
+             <arg name="sensors"          value="$(arg sensors)" />
+             <arg name="period"           value="$(arg period)" />
+             <arg name="arm_name"         value="$(arg arm_name)" />
+             <arg name="input_device"     value="$(arg input_device)"/>
+             <arg name="plotjuggler_gui"  value="$(arg plotjuggler_gui)" />
+             <arg name="rviz_gui"         value="$(arg rviz_gui)" />
+             <arg name="rqt_gui"          value="$(arg rqt_gui)" />
+             <arg name="plot_node_gui"    value="$(arg plot_node_gui)" />
+             <arg name="full_gui"         value="$(arg full_gui)" />
+             <arg name="publish_odom_msg" value="$(arg publish_odom_msg)"/>
+             <arg name="publish_odom_tf"  value="$(arg publish_odom_tf)"/>
+         </include>
+    </group>
+
+    <group if="$(eval robot_name == '')">
+        <include file="$(find wolf_controller)/launch/include/wolf_controller_ns.launch">
+            <arg name="robot_model"      value="$(arg robot_model)"/>
+            <arg name="robot_name"       value="$(arg robot_name)"/>
+            <arg name="sensors"          value="$(arg sensors)" />
+            <arg name="period"           value="$(arg period)" />
+            <arg name="arm_name"         value="$(arg arm_name)" />
+            <arg name="input_device"     value="$(arg input_device)"/>
+            <arg name="plotjuggler_gui"  value="$(arg plotjuggler_gui)" />
+            <arg name="rviz_gui"         value="$(arg rviz_gui)" />
+            <arg name="rqt_gui"          value="$(arg rqt_gui)" />
+            <arg name="plot_node_gui"    value="$(arg plot_node_gui)" />
+            <arg name="full_gui"         value="$(arg full_gui)" />
+            <arg name="publish_odom_msg" value="$(arg publish_odom_msg)"/>
+            <arg name="publish_odom_tf"  value="$(arg publish_odom_tf)"/>
+        </include>
+    </group>
+
+    <include file="$(find slope_constrained_planner_ros)/launch/mapping_sim.launch"/>
+
+    <node name="tilt_robot" pkg="slope_constrained_planner_ros" type="tilt_robot.py" output="screen" />
+
+
+</launch>

@@ -1,0 +1,31 @@
+\hypertarget{chain_8h}{}\doxysection{/home/ali/ros\+\_\+ws/src/slope\+\_\+constrained\+\_\+planner/slope\+\_\+constrained\+\_\+planner/include/slope\+\_\+constrained\+\_\+planner/chain.h File Reference}
+\label{chain_8h}\index{/home/ali/ros\_ws/src/slope\_constrained\_planner/slope\_constrained\_planner/include/slope\_constrained\_planner/chain.h@{/home/ali/ros\_ws/src/slope\_constrained\_planner/slope\_constrained\_planner/include/slope\_constrained\_planner/chain.h}}
+
+
+A helper library to be used for processing the grid map data.  
+
+
+{\ttfamily \#include $<$memory$>$}\newline
+{\ttfamily \#include $<$grid\+\_\+map\+\_\+core/\+Grid\+Map.\+hpp$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classslope__constrained__planner_1_1_chain}{slope\+\_\+constrained\+\_\+planner\+::\+Chain$<$ Args $>$}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{chain_8h_a595d75a6899eaa7dc358d5238ed17405}\label{chain_8h_a595d75a6899eaa7dc358d5238ed17405}} 
+using \mbox{\hyperlink{chain_8h_a595d75a6899eaa7dc358d5238ed17405}{slope\+\_\+constrained\+\_\+planner\+::\+Grid\+Map\+Ptr}} = std\+::unique\+\_\+ptr$<$ grid\+\_\+map\+::\+Grid\+Map $>$
+\begin{DoxyCompactList}\small\item\em definition of an object from grid map class \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{chain_8h_ac0e6c4c629a812ac0dc40758f0537d73}\label{chain_8h_ac0e6c4c629a812ac0dc40758f0537d73}} 
+using {\bfseries slope\+\_\+constrained\+\_\+planner\+::\+Chain\+New\+Map} = Chain$<$ const Grid\+Map\+Ptr \& $>$
+\item 
+\mbox{\Hypertarget{chain_8h_a00af2749f7af77e05e65e6b1523add33}\label{chain_8h_a00af2749f7af77e05e65e6b1523add33}} 
+using {\bfseries slope\+\_\+constrained\+\_\+planner\+::\+Chain\+Old\+Map} = Chain$<$ const Grid\+Map\+Ptr \&, const Grid\+Map\+Ptr \& $>$
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A helper library to be used for processing the grid map data. 
+

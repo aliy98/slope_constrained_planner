@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="dir_05c29904920a2b13484682b5b9a45e86" kind="dir">
+    <compoundname>/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/build/CMakeFiles/3.26.3</compoundname>
+    <innerdir refid="dir_71cc39c78395c54e2df0e50e1decebb0">/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/build/CMakeFiles/3.26.3/CompilerIdC</innerdir>
+    <innerdir refid="dir_c24fb541f4f0f4313b28b53c04e1264a">/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/build/CMakeFiles/3.26.3/CompilerIdCXX</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/build/CMakeFiles/3.26.3/"/>
+  </compounddef>
+</doxygen>

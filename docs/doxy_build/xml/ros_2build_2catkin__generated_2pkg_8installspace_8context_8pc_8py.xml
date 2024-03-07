@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="ros_2build_2catkin__generated_2pkg_8installspace_8context_8pc_8py" kind="file" language="Python">
+    <compoundname>pkg.installspace.context.pc.py</compoundname>
+    <innernamespace refid="namespacepkg">pkg</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">#<sp/>generated<sp/>from<sp/>catkin/cmake/template/pkg.context.pc.in</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal">CATKIN_PACKAGE_PREFIX<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal">PROJECT_PKG_CONFIG_INCLUDE_DIRS<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;${prefix}/include&quot;</highlight><highlight class="normal">.split(</highlight><highlight class="stringliteral">&apos;;&apos;</highlight><highlight class="normal">)<sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;${prefix}/include&quot;</highlight><highlight class="normal"><sp/>!=<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>[]</highlight></codeline>
+<codeline lineno="4"><highlight class="normal">PROJECT_CATKIN_DEPENDS<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;actionlib;geometry_msgs;grid_map_msgs;grid_map_ros;nav_msgs;roscpp;slope_constrained_planner;sloped_constrained_planner_msgs;tf2_geometry_msgs;tf2_ros&quot;</highlight><highlight class="normal">.replace(</highlight><highlight class="stringliteral">&apos;;&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;<sp/>&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="5"><highlight class="normal">PKG_CONFIG_LIBRARIES_WITH_PREFIX<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;-lslope_constrained_planner_ros&quot;</highlight><highlight class="normal">.split(</highlight><highlight class="stringliteral">&apos;;&apos;</highlight><highlight class="normal">)<sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;-lslope_constrained_planner_ros&quot;</highlight><highlight class="normal"><sp/>!=<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>[]</highlight></codeline>
+<codeline lineno="6"><highlight class="normal">PROJECT_NAME<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;slope_constrained_planner_ros&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal">PROJECT_SPACE_DIR<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;/usr/local&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal">PROJECT_VERSION<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;0.0.0&quot;</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/build/catkin_generated/pkg.installspace.context.pc.py"/>
+  </compounddef>
+</doxygen>

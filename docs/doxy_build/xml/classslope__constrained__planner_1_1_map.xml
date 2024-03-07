@@ -1,0 +1,663 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classslope__constrained__planner_1_1_map" kind="class" language="C++" prot="public">
+    <compoundname>slope_constrained_planner::Map</compoundname>
+    <includes refid="map_8h" local="no">map.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classslope__constrained__planner_1_1_map_1aa212a330c745cd2695d5117cb5cf7538" prot="private" static="no" mutable="no">
+        <type><ref refid="chain_8h_1a595d75a6899eaa7dc358d5238ed17405" kindref="member">GridMapPtr</ref></type>
+        <definition>GridMapPtr slope_constrained_planner::Map::map_</definition>
+        <argsstring></argsstring>
+        <name>map_</name>
+        <initializer>{new grid_map::GridMap()}</initializer>
+        <briefdescription>
+<para>Grid map object attribute. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/map.h" line="32" column="14" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/map.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classslope__constrained__planner_1_1_map_1a0c9f440d18014d12a6e5edaf1685201a" prot="private" static="no" mutable="no">
+        <type>ParamsConstPtr</type>
+        <definition>ParamsConstPtr slope_constrained_planner::Map::params_</definition>
+        <argsstring></argsstring>
+        <name>params_</name>
+        <briefdescription>
+<para><ref refid="structslope__constrained__planner_1_1_params" kindref="compound">Params</ref> containing the grid map layers info. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/map.h" line="35" column="18" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/map.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classslope__constrained__planner_1_1_map_1a4c37cf61e472e1475d1f34264ac56f24" prot="private" static="no" mutable="yes">
+        <type>std::mutex</type>
+        <definition>std::mutex slope_constrained_planner::Map::mutex_</definition>
+        <argsstring></argsstring>
+        <name>mutex_</name>
+        <briefdescription>
+<para>Grid map process mutex. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/map.h" line="38" column="22" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/map.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classslope__constrained__planner_1_1_map_1a26183e9548dd13f96237c71e9ba8df70" prot="private" static="no" mutable="no">
+        <type><ref refid="classslope__constrained__planner_1_1_chain" kindref="compound">ChainNewMap</ref></type>
+        <definition>ChainNewMap slope_constrained_planner::Map::map_pre_processor_</definition>
+        <argsstring></argsstring>
+        <name>map_pre_processor_</name>
+        <briefdescription>
+<para><ref refid="classslope__constrained__planner_1_1_map" kindref="compound">Map</ref> pre-processor attribute to be used in setting map. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/map.h" line="41" column="15" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/map.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classslope__constrained__planner_1_1_map_1a6daff4c895699d1e4a4ca0c13e373624" prot="private" static="no" mutable="no">
+        <type><ref refid="classslope__constrained__planner_1_1_chain" kindref="compound">ChainOldMap</ref></type>
+        <definition>ChainOldMap slope_constrained_planner::Map::old_map_post_processor_</definition>
+        <argsstring></argsstring>
+        <name>old_map_post_processor_</name>
+        <briefdescription>
+<para>Old map post-processor attribute to be used in setting map. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/map.h" line="44" column="15" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/map.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classslope__constrained__planner_1_1_map_1a07b14a4ae2b5936a199c45e774beecdf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Map::Map</definition>
+        <argsstring>(const ParamsConstPtr &amp;params)</argsstring>
+        <name>Map</name>
+        <param>
+          <type>const ParamsConstPtr &amp;</type>
+          <declname>params</declname>
+        </param>
+        <briefdescription>
+<para>Constructs an empty map, without underlying grid map. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>params</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Contains grid map layers info </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/map.h" line="53" column="3" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/src/map.cpp" bodystart="38" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="classslope__constrained__planner_1_1_map_1ad4a26fe219df3e053e4657939b014da4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Map::setMap</definition>
+        <argsstring>(GridMapPtr &amp;&amp;map)</argsstring>
+        <name>setMap</name>
+        <param>
+          <type><ref refid="chain_8h_1a595d75a6899eaa7dc358d5238ed17405" kindref="member">GridMapPtr</ref> &amp;&amp;</type>
+          <declname>map</declname>
+        </param>
+        <briefdescription>
+<para>Sets the underlying grid map by taking ownership of it. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>map</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Grid map to be set </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/map.h" line="60" column="8" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/src/map.cpp" bodystart="18" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="classslope__constrained__planner_1_1_map_1a67bacd5ce0a0b760a75eaaf5dfe30d3d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Map::copy</definition>
+        <argsstring>(const Map &amp;map)</argsstring>
+        <name>copy</name>
+        <param>
+          <type>const <ref refid="classslope__constrained__planner_1_1_map" kindref="compound">Map</ref> &amp;</type>
+          <declname>map</declname>
+        </param>
+        <briefdescription>
+<para>Copies the underlying map and parameters of another map object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>map</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Grid map to be copied </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/map.h" line="67" column="8" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/src/map.cpp" bodystart="31" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="classslope__constrained__planner_1_1_map_1a89eafdc195d181d1e7e35d7e28ec7f5b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const std::vector&lt; std::string &gt;</type>
+        <definition>const std::vector&lt; std::string &gt; Map::getLayers</definition>
+        <argsstring>()</argsstring>
+        <name>getLayers</name>
+        <briefdescription>
+<para>Returns the layers available in the grid map. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/map.h" line="73" column="21" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/src/map.cpp" bodystart="61" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="classslope__constrained__planner_1_1_map_1a9c6d7dde362eb8ec8ab9927835682325" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool slope_constrained_planner::Map::isInside</definition>
+        <argsstring>(const grid_map::Position &amp;pos) const</argsstring>
+        <name>isInside</name>
+        <param>
+          <type>const grid_map::Position &amp;</type>
+          <declname>pos</declname>
+        </param>
+        <briefdescription>
+<para>Checks whether position is inside of map bounds. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Position of the state to br checked </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Whether the state is inside the map or not </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/map.h" line="81" column="15" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/map.h" bodystart="81" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="function" id="classslope__constrained__planner_1_1_map_1a49ab2e1c2ceec8057b40efc0645d1576" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>grid_map::Position</type>
+        <definition>grid_map::Position slope_constrained_planner::Map::getPositionOfIndex</definition>
+        <argsstring>(const grid_map::Index &amp;ind) const</argsstring>
+        <name>getPositionOfIndex</name>
+        <param>
+          <type>const grid_map::Index &amp;</type>
+          <declname>ind</declname>
+        </param>
+        <briefdescription>
+<para>Gets the position of state with a particular index in the grid map. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ind</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Index of the state in the grid map </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>pos Position of the state </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/map.h" line="92" column="22" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/map.h" bodystart="92" bodyend="97"/>
+      </memberdef>
+      <memberdef kind="function" id="classslope__constrained__planner_1_1_map_1a1a6be8d7208cf289349423234ba8508c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float slope_constrained_planner::Map::getHeightAtIndex</definition>
+        <argsstring>(const grid_map::Index &amp;ind) const</argsstring>
+        <name>getHeightAtIndex</name>
+        <param>
+          <type>const grid_map::Index &amp;</type>
+          <declname>ind</declname>
+        </param>
+        <briefdescription>
+<para>Gets the height value at a certain map index. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ind</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Index of the state in the grid map </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Height of state </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/map.h" line="105" column="16" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/map.h" bodystart="105" bodyend="108"/>
+      </memberdef>
+      <memberdef kind="function" id="classslope__constrained__planner_1_1_map_1ad9678701798d729e2d6bd92837f2c3f9" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float slope_constrained_planner::Map::getHeightAtPosition</definition>
+        <argsstring>(const grid_map::Position &amp;pos) const</argsstring>
+        <name>getHeightAtPosition</name>
+        <param>
+          <type>const grid_map::Position &amp;</type>
+          <declname>pos</declname>
+        </param>
+        <briefdescription>
+<para>Gets the height value at a certain map position. Might throw exceptions if position is outside map boundaries. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Position of the state </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Height of state position </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/map.h" line="117" column="16" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/map.h" bodystart="117" bodyend="120"/>
+      </memberdef>
+      <memberdef kind="function" id="classslope__constrained__planner_1_1_map_1a56ca41fa28f58d99f22afea0157429c5" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool slope_constrained_planner::Map::getUpdatedAtPosition</definition>
+        <argsstring>(const grid_map::Position &amp;pos) const</argsstring>
+        <name>getUpdatedAtPosition</name>
+        <param>
+          <type>const grid_map::Position &amp;</type>
+          <declname>pos</declname>
+        </param>
+        <briefdescription>
+<para>Return whether this cell was updated in the last map update. Might throw exceptions if position is outside map boundaries. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Position of the state </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/map.h" line="128" column="15" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/map.h" bodystart="128" bodyend="131"/>
+      </memberdef>
+      <memberdef kind="function" id="classslope__constrained__planner_1_1_map_1ad4147a233ba9ae6c9541c86cbeb786b0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Map::getUpdatedOnLine</definition>
+        <argsstring>(const grid_map::Position &amp;start, const grid_map::Position &amp;end)</argsstring>
+        <name>getUpdatedOnLine</name>
+        <param>
+          <type>const grid_map::Position &amp;</type>
+          <declname>start</declname>
+        </param>
+        <param>
+          <type>const grid_map::Position &amp;</type>
+          <declname>end</declname>
+        </param>
+        <briefdescription>
+<para>Updates the grid map data from and starting to the ending position. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>start</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Starting position </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>end</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Ending position </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Whether the grid map data is updated </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/map.h" line="140" column="8" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/src/map.cpp" bodystart="44" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="classslope__constrained__planner_1_1_map_1abfd6fa0d5e97bcca627507c31ec7e76e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Eigen::Vector3d</type>
+        <definition>Eigen::Vector3d slope_constrained_planner::Map::getNormal</definition>
+        <argsstring>(const grid_map::Index &amp;ind) const</argsstring>
+        <name>getNormal</name>
+        <param>
+          <type>const grid_map::Index &amp;</type>
+          <declname>ind</declname>
+        </param>
+        <briefdescription>
+<para>Gets the terrain normal at a certain map index. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ind</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Index of state in the grid map </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Normal Vector at the index </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/map.h" line="148" column="26" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/map.h" bodystart="148" bodyend="154"/>
+      </memberdef>
+      <memberdef kind="function" id="classslope__constrained__planner_1_1_map_1a35997507b4e11fe8c4eac996d2ef9941" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>grid_map::Index</type>
+        <definition>grid_map::Index slope_constrained_planner::Map::getIndexOfPosition</definition>
+        <argsstring>(const grid_map::Position &amp;pos) const</argsstring>
+        <name>getIndexOfPosition</name>
+        <param>
+          <type>const grid_map::Position &amp;</type>
+          <declname>pos</declname>
+        </param>
+        <briefdescription>
+<para>Gets the map index of a certain position. Might throw exception if position is out of bounds. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Position of the state </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ind Index of position </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/map.h" line="162" column="26" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/map.h" bodystart="162" bodyend="169"/>
+      </memberdef>
+      <memberdef kind="function" id="classslope__constrained__planner_1_1_map_1a024cc703c42081643eaff2cb0e12d609" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float slope_constrained_planner::Map::getPlaneFitStdDev</definition>
+        <argsstring>(const grid_map::Index &amp;ind) const</argsstring>
+        <name>getPlaneFitStdDev</name>
+        <param>
+          <type>const grid_map::Index &amp;</type>
+          <declname>ind</declname>
+        </param>
+        <briefdescription>
+<para>Gets the standard deviation of a plane fit error at the given map index. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ind</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Index of the state at the grid map </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Standard deviation of plane </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/map.h" line="177" column="16" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/map.h" bodystart="177" bodyend="180"/>
+      </memberdef>
+      <memberdef kind="function" id="classslope__constrained__planner_1_1_map_1a4535d9affab5d0e7e97559032bd090c5" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const grid_map::Matrix &amp;</type>
+        <definition>const grid_map::Matrix&amp; slope_constrained_planner::Map::getLayer</definition>
+        <argsstring>(const std::string &amp;layer) const</argsstring>
+        <name>getLayer</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>layer</declname>
+        </param>
+        <briefdescription>
+<para>Gets the required layer from the grid map. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>layer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Required layer name </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Layer data </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/map.h" line="188" column="33" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/map.h" bodystart="188" bodyend="191"/>
+      </memberdef>
+      <memberdef kind="function" id="classslope__constrained__planner_1_1_map_1a39f8df43bd13aed0efd0a737a60e88c7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void slope_constrained_planner::Map::addLayer</definition>
+        <argsstring>(const std::string &amp;layer_name, const grid_map::Matrix &amp;data)</argsstring>
+        <name>addLayer</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>layer_name</declname>
+        </param>
+        <param>
+          <type>const grid_map::Matrix &amp;</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+<para>Adds a layer to the grid map. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>layer_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the layer to be added </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Layer data </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/map.h" line="199" column="15" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/map.h" bodystart="199" bodyend="202"/>
+      </memberdef>
+      <memberdef kind="function" id="classslope__constrained__planner_1_1_map_1a56e85f6523b4ed6b92e2992582703691" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void slope_constrained_planner::Map::addLayer</definition>
+        <argsstring>(const std::string &amp;layer_name, const double val)</argsstring>
+        <name>addLayer</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>layer_name</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+<para>Adds a layer to the grid map. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>layer_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the layer to be added </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>val</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Layer value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/map.h" line="210" column="15" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/map.h" bodystart="210" bodyend="213"/>
+      </memberdef>
+      <memberdef kind="function" id="classslope__constrained__planner_1_1_map_1a7c7af810d73e15185fbbb681b247e399" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Eigen::Index</type>
+        <definition>Eigen::Index slope_constrained_planner::Map::lengthToCellCount</definition>
+        <argsstring>(const double &amp;length) const</argsstring>
+        <name>lengthToCellCount</name>
+        <param>
+          <type>const double &amp;</type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+<para>Gets the length to cell resolution ratio of the grid map. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Length to be checked </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Length to cell </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/map.h" line="222" column="23" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/map.h" bodystart="222" bodyend="225"/>
+      </memberdef>
+      <memberdef kind="function" id="classslope__constrained__planner_1_1_map_1aca8af462221428421e42a313c1852f89" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const grid_map::GridMap &amp;</type>
+        <definition>const grid_map::GridMap&amp; slope_constrained_planner::Map::getMap</definition>
+        <argsstring>() const</argsstring>
+        <name>getMap</name>
+        <briefdescription>
+<para>Gets the map from the corresponding class attribute. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Grid map data </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/map.h" line="232" column="34" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/map.h" bodystart="232" bodyend="235"/>
+      </memberdef>
+      <memberdef kind="function" id="classslope__constrained__planner_1_1_map_1adc6f0bca7166478e7786fa3c71d7638d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Map::reApplyPreprocessing</definition>
+        <argsstring>()</argsstring>
+        <name>reApplyPreprocessing</name>
+        <briefdescription>
+<para>Performs the pre-processing on the map again. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/map.h" line="241" column="8" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/src/map.cpp" bodystart="56" bodyend="58"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Grid map data class. Represents the grid map of the environment containing the defined layers. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/map.h" line="29" column="10" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/map.h" bodystart="29" bodyend="242"/>
+    <listofallmembers>
+      <member refid="classslope__constrained__planner_1_1_map_1a39f8df43bd13aed0efd0a737a60e88c7" prot="public" virt="non-virtual"><scope>slope_constrained_planner::Map</scope><name>addLayer</name></member>
+      <member refid="classslope__constrained__planner_1_1_map_1a56e85f6523b4ed6b92e2992582703691" prot="public" virt="non-virtual"><scope>slope_constrained_planner::Map</scope><name>addLayer</name></member>
+      <member refid="classslope__constrained__planner_1_1_map_1a67bacd5ce0a0b760a75eaaf5dfe30d3d" prot="public" virt="non-virtual"><scope>slope_constrained_planner::Map</scope><name>copy</name></member>
+      <member refid="classslope__constrained__planner_1_1_map_1a1a6be8d7208cf289349423234ba8508c" prot="public" virt="non-virtual"><scope>slope_constrained_planner::Map</scope><name>getHeightAtIndex</name></member>
+      <member refid="classslope__constrained__planner_1_1_map_1ad9678701798d729e2d6bd92837f2c3f9" prot="public" virt="non-virtual"><scope>slope_constrained_planner::Map</scope><name>getHeightAtPosition</name></member>
+      <member refid="classslope__constrained__planner_1_1_map_1a35997507b4e11fe8c4eac996d2ef9941" prot="public" virt="non-virtual"><scope>slope_constrained_planner::Map</scope><name>getIndexOfPosition</name></member>
+      <member refid="classslope__constrained__planner_1_1_map_1a4535d9affab5d0e7e97559032bd090c5" prot="public" virt="non-virtual"><scope>slope_constrained_planner::Map</scope><name>getLayer</name></member>
+      <member refid="classslope__constrained__planner_1_1_map_1a89eafdc195d181d1e7e35d7e28ec7f5b" prot="public" virt="non-virtual"><scope>slope_constrained_planner::Map</scope><name>getLayers</name></member>
+      <member refid="classslope__constrained__planner_1_1_map_1aca8af462221428421e42a313c1852f89" prot="public" virt="non-virtual"><scope>slope_constrained_planner::Map</scope><name>getMap</name></member>
+      <member refid="classslope__constrained__planner_1_1_map_1abfd6fa0d5e97bcca627507c31ec7e76e" prot="public" virt="non-virtual"><scope>slope_constrained_planner::Map</scope><name>getNormal</name></member>
+      <member refid="classslope__constrained__planner_1_1_map_1a024cc703c42081643eaff2cb0e12d609" prot="public" virt="non-virtual"><scope>slope_constrained_planner::Map</scope><name>getPlaneFitStdDev</name></member>
+      <member refid="classslope__constrained__planner_1_1_map_1a49ab2e1c2ceec8057b40efc0645d1576" prot="public" virt="non-virtual"><scope>slope_constrained_planner::Map</scope><name>getPositionOfIndex</name></member>
+      <member refid="classslope__constrained__planner_1_1_map_1a56ca41fa28f58d99f22afea0157429c5" prot="public" virt="non-virtual"><scope>slope_constrained_planner::Map</scope><name>getUpdatedAtPosition</name></member>
+      <member refid="classslope__constrained__planner_1_1_map_1ad4147a233ba9ae6c9541c86cbeb786b0" prot="public" virt="non-virtual"><scope>slope_constrained_planner::Map</scope><name>getUpdatedOnLine</name></member>
+      <member refid="classslope__constrained__planner_1_1_map_1a9c6d7dde362eb8ec8ab9927835682325" prot="public" virt="non-virtual"><scope>slope_constrained_planner::Map</scope><name>isInside</name></member>
+      <member refid="classslope__constrained__planner_1_1_map_1a7c7af810d73e15185fbbb681b247e399" prot="public" virt="non-virtual"><scope>slope_constrained_planner::Map</scope><name>lengthToCellCount</name></member>
+      <member refid="classslope__constrained__planner_1_1_map_1a07b14a4ae2b5936a199c45e774beecdf" prot="public" virt="non-virtual"><scope>slope_constrained_planner::Map</scope><name>Map</name></member>
+      <member refid="classslope__constrained__planner_1_1_map_1aa212a330c745cd2695d5117cb5cf7538" prot="private" virt="non-virtual"><scope>slope_constrained_planner::Map</scope><name>map_</name></member>
+      <member refid="classslope__constrained__planner_1_1_map_1a26183e9548dd13f96237c71e9ba8df70" prot="private" virt="non-virtual"><scope>slope_constrained_planner::Map</scope><name>map_pre_processor_</name></member>
+      <member refid="classslope__constrained__planner_1_1_map_1a4c37cf61e472e1475d1f34264ac56f24" prot="private" virt="non-virtual"><scope>slope_constrained_planner::Map</scope><name>mutex_</name></member>
+      <member refid="classslope__constrained__planner_1_1_map_1a6daff4c895699d1e4a4ca0c13e373624" prot="private" virt="non-virtual"><scope>slope_constrained_planner::Map</scope><name>old_map_post_processor_</name></member>
+      <member refid="classslope__constrained__planner_1_1_map_1a0c9f440d18014d12a6e5edaf1685201a" prot="private" virt="non-virtual"><scope>slope_constrained_planner::Map</scope><name>params_</name></member>
+      <member refid="classslope__constrained__planner_1_1_map_1adc6f0bca7166478e7786fa3c71d7638d" prot="public" virt="non-virtual"><scope>slope_constrained_planner::Map</scope><name>reApplyPreprocessing</name></member>
+      <member refid="classslope__constrained__planner_1_1_map_1ad4a26fe219df3e053e4657939b014da4" prot="public" virt="non-virtual"><scope>slope_constrained_planner::Map</scope><name>setMap</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

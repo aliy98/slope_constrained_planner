@@ -1,0 +1,308 @@
+\hypertarget{classslope__constrained__planner_1_1_planner_ros}{}\doxysection{slope\+\_\+constrained\+\_\+planner\+::Planner\+Ros Class Reference}
+\label{classslope__constrained__planner_1_1_planner_ros}\index{slope\_constrained\_planner::PlannerRos@{slope\_constrained\_planner::PlannerRos}}
+
+
+Inheritance diagram for slope\+\_\+constrained\+\_\+planner\+::Planner\+Ros\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=227pt]{classslope__constrained__planner_1_1_planner_ros__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classslope__constrained__planner_1_1_planner_ros_aedfa28780e68db414efe5f66f60e7579}\label{classslope__constrained__planner_1_1_planner_ros_aedfa28780e68db414efe5f66f60e7579}} 
+\mbox{\hyperlink{classslope__constrained__planner_1_1_planner_ros_aedfa28780e68db414efe5f66f60e7579}{$\sim$\+Planner\+Ros}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classslope__constrained__planner_1_1_planner_ros_aca23b645f43a64ebdc12c502fcc056ca}{Planner\+Ros}} (const ros\+::\+Node\+Handle \&nh)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classslope__constrained__planner_1_1_planner_ros_af5e3533579c184fd1a4079ef472f6fad}\label{classslope__constrained__planner_1_1_planner_ros_af5e3533579c184fd1a4079ef472f6fad}} 
+using {\bfseries Planning\+Action\+Server} = actionlib\+::\+Simple\+Action\+Server$<$ slope\+\_\+constrained\+\_\+planner\+\_\+msgs\+::\+Plan\+To\+Goal\+Action $>$
+\item 
+\mbox{\Hypertarget{classslope__constrained__planner_1_1_planner_ros_afa81e690d51d304a28d8441134fab670}\label{classslope__constrained__planner_1_1_planner_ros_afa81e690d51d304a28d8441134fab670}} 
+using {\bfseries Feedback} = slope\+\_\+constrained\+\_\+planner\+\_\+msgs\+::\+Plan\+To\+Goal\+Feedback
+\item 
+\mbox{\Hypertarget{classslope__constrained__planner_1_1_planner_ros_afc0b7a894c1915d7e2c4ade728844d00}\label{classslope__constrained__planner_1_1_planner_ros_afc0b7a894c1915d7e2c4ade728844d00}} 
+using {\bfseries Feedback\+Status} = Feedback\+::\+\_\+status\+\_\+type
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classslope__constrained__planner_1_1_planner_ros_a568fe882074dbb9479a45c41638103b7}\label{classslope__constrained__planner_1_1_planner_ros_a568fe882074dbb9479a45c41638103b7}} 
+void \mbox{\hyperlink{classslope__constrained__planner_1_1_planner_ros_a568fe882074dbb9479a45c41638103b7}{stop\+Planning\+Continuously}} ()
+\begin{DoxyCompactList}\small\item\em Stops the planning thread by putting false value in the corresponding class attribute. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classslope__constrained__planner_1_1_planner_ros_a8f53eb958303c2510e900ec837442d3c}\label{classslope__constrained__planner_1_1_planner_ros_a8f53eb958303c2510e900ec837442d3c}} 
+virtual void \mbox{\hyperlink{classslope__constrained__planner_1_1_planner_ros_a8f53eb958303c2510e900ec837442d3c}{plan\+Continuously\+Thread}} ()
+\begin{DoxyCompactList}\small\item\em The main thread in this class which tries to plan whithin the defined time from robot\textquotesingle{}s current position to the target point until a valid path is found. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classslope__constrained__planner_1_1_planner_ros_a72fcbabf0f887c30c2a6e91aef73c409}\label{classslope__constrained__planner_1_1_planner_ros_a72fcbabf0f887c30c2a6e91aef73c409}} 
+virtual void \mbox{\hyperlink{classslope__constrained__planner_1_1_planner_ros_a72fcbabf0f887c30c2a6e91aef73c409}{publish\+Path\+Thread}} ()
+\begin{DoxyCompactList}\small\item\em Publishes the path to corresponding topic continusly, once a valid path is found by the planner thread. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classslope__constrained__planner_1_1_planner_ros_a52a9558c7647fe5e723390a433fac43e}\label{classslope__constrained__planner_1_1_planner_ros_a52a9558c7647fe5e723390a433fac43e}} 
+void \mbox{\hyperlink{classslope__constrained__planner_1_1_planner_ros_a52a9558c7647fe5e723390a433fac43e}{publish\+Phi\+Thread}} ()
+\begin{DoxyCompactList}\small\item\em Publishes phi to corresponding topic continusly. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classslope__constrained__planner_1_1_planner_ros_a9fb368342800d4ea2592cb0e4f78a3da}\label{classslope__constrained__planner_1_1_planner_ros_a9fb368342800d4ea2592cb0e4f78a3da}} 
+virtual void \mbox{\hyperlink{classslope__constrained__planner_1_1_planner_ros_a9fb368342800d4ea2592cb0e4f78a3da}{plan\+From\+Current\+Robot\+Pose}} ()
+\begin{DoxyCompactList}\small\item\em Tries to plan from current robot\textquotesingle{}s pose to the target using {\ttfamily Update\+Map\+And\+Plan\+From\+Current\+Robot\+Pose()} function. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classslope__constrained__planner_1_1_planner_ros_a99a77159afe8b0e573bcb0e850d4e955}{get\+Current\+Robot\+Pose}} (geometry\+\_\+msgs\+::\+Pose\+Stamped $\ast$pose) const
+\begin{DoxyCompactList}\small\item\em Gets robot current position from the tf tree. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classslope__constrained__planner_1_1_planner_ros_a6211651325ad8df677f9234e8e733d51}{publish\+Feedback}} (Feedback\+Status feedback) const
+\begin{DoxyCompactList}\small\item\em Publishes the planner server feedback. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classslope__constrained__planner_1_1_planner_ros_adcb24882b45b76e1c22650016e9fb007}{map\+Callback}} (const grid\+\_\+map\+\_\+msgs\+::\+Grid\+Map\+Const\+Ptr \&map\+\_\+msg)
+\begin{DoxyCompactList}\small\item\em Callback function for subscribing the grid map topic. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classslope__constrained__planner_1_1_planner_ros_a0a22ded61ccc45059309beaba21499d1}\label{classslope__constrained__planner_1_1_planner_ros_a0a22ded61ccc45059309beaba21499d1}} 
+void \mbox{\hyperlink{classslope__constrained__planner_1_1_planner_ros_a0a22ded61ccc45059309beaba21499d1}{cancel\+Goal\+Callback}} ()
+\begin{DoxyCompactList}\small\item\em Callback function for canceling the goal in the planner server. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classslope__constrained__planner_1_1_planner_ros_a09e11aa38ee41d72f6db293180f17049}\label{classslope__constrained__planner_1_1_planner_ros_a09e11aa38ee41d72f6db293180f17049}} 
+void \mbox{\hyperlink{classslope__constrained__planner_1_1_planner_ros_a09e11aa38ee41d72f6db293180f17049}{goal\+Callback}} ()
+\begin{DoxyCompactList}\small\item\em Callback function for when a new pose is available in the planner server. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classslope__constrained__planner_1_1_planner_ros_a07c100591f74660ef073b683749dc9f8}{goal\+Pose\+Callback}} (const slope\+\_\+constrained\+\_\+planner\+\_\+msgs\+::\+Plan\+To\+Goal\+Goal\+Const\+Ptr \&goal)
+\begin{DoxyCompactList}\small\item\em Helper function to be used in {\ttfamily \mbox{\hyperlink{classslope__constrained__planner_1_1_planner_ros_a09e11aa38ee41d72f6db293180f17049}{goal\+Callback()}}} function. Gets the goal and trigers the planner thread to find the path. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classslope__constrained__planner_1_1_planner_ros_a4d71301db89dfaa5dfc9ad7b371553d7}{publish\+Path}} (nav\+\_\+msgs\+::\+Path path)
+\begin{DoxyCompactList}\small\item\em Publishes the found path to corresponding topic. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classslope__constrained__planner_1_1_planner_ros_a8caa92d0739bf0010915c9346ed7ead8}{publish\+Phi}} (std\+\_\+msgs\+::\+Float64 phi)
+\begin{DoxyCompactList}\small\item\em Publishes the value of phi in degrees. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classslope__constrained__planner_1_1_planner_ros_a0288fae0b0b04393ac7fa5c0d1a1fed0}{publish\+Theta}} (std\+\_\+msgs\+::\+Float64 theta)
+\begin{DoxyCompactList}\small\item\em Publishes the value of theta in degrees. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classslope__constrained__planner_1_1_planner_ros_ae3a2872ca3409024b86070d13d6c1113}\label{classslope__constrained__planner_1_1_planner_ros_ae3a2872ca3409024b86070d13d6c1113}} 
+void {\bfseries update\+Map} ()
+\item 
+\mbox{\Hypertarget{classslope__constrained__planner_1_1_planner_ros_a55a36ac22ecf67bb0f2c38d6d7f8ac94}\label{classslope__constrained__planner_1_1_planner_ros_a55a36ac22ecf67bb0f2c38d6d7f8ac94}} 
+void \mbox{\hyperlink{classslope__constrained__planner_1_1_planner_ros_a55a36ac22ecf67bb0f2c38d6d7f8ac94}{publish\+Map}} () const
+\begin{DoxyCompactList}\small\item\em Publiesh the map data to corresponding topic. \end{DoxyCompactList}\item 
+Planner\+Status \mbox{\hyperlink{classslope__constrained__planner_1_1_planner_ros_a8c6afcd6b27a28fb71858307ffe3cada}{update\+Map\+And\+Plan\+From\+Current\+Robot\+Pose}} (const ob\+::\+Scoped\+State$<$$>$ \&goal)
+\begin{DoxyCompactList}\small\item\em Uses {\ttfamily update\+Map()} function and then {\ttfamily plan(start, goal)} function from the base class. Once the path is found, calls {\ttfamily \mbox{\hyperlink{classslope__constrained__planner_1_1_planner_ros_a55a36ac22ecf67bb0f2c38d6d7f8ac94}{publish\+Map()}}} function. This function is used in the {\ttfamily plan\+Continuesly\+Thread()} function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classslope__constrained__planner_1_1_planner_ros_a58ac628582dd6070e5ede1f5dfea37f0}\label{classslope__constrained__planner_1_1_planner_ros_a58ac628582dd6070e5ede1f5dfea37f0}} 
+ros\+::\+Node\+Handle \mbox{\hyperlink{classslope__constrained__planner_1_1_planner_ros_a58ac628582dd6070e5ede1f5dfea37f0}{nh\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Node handler attribute. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classslope__constrained__planner_1_1_planner_ros_a1cb287ac590bf6bf62cc709e739af242}\label{classslope__constrained__planner_1_1_planner_ros_a1cb287ac590bf6bf62cc709e739af242}} 
+ros\+::\+Subscriber \mbox{\hyperlink{classslope__constrained__planner_1_1_planner_ros_a1cb287ac590bf6bf62cc709e739af242}{map\+\_\+sub\+\_\+}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classslope__constrained__planner_1_1_map}{Map}} subscriber attribute. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classslope__constrained__planner_1_1_planner_ros_a12bc765f2915af12d821038b1400d68e}\label{classslope__constrained__planner_1_1_planner_ros_a12bc765f2915af12d821038b1400d68e}} 
+std\+::unique\+\_\+ptr$<$ Planning\+Action\+Server $>$ \mbox{\hyperlink{classslope__constrained__planner_1_1_planner_ros_a12bc765f2915af12d821038b1400d68e}{plan\+\_\+act\+\_\+srv\+\_\+}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classslope__constrained__planner_1_1_planner}{Planner}} action server attribute. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classslope__constrained__planner_1_1_planner_ros_a64f99f07429250056b2797b46e72b063}\label{classslope__constrained__planner_1_1_planner_ros_a64f99f07429250056b2797b46e72b063}} 
+double \mbox{\hyperlink{classslope__constrained__planner_1_1_planner_ros_a64f99f07429250056b2797b46e72b063}{planning\+\_\+time\+\_\+start\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Planning time duration. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classslope__constrained__planner_1_1_planner_ros_a48e6516163a59f9b138ed9f2e61bf6b6}\label{classslope__constrained__planner_1_1_planner_ros_a48e6516163a59f9b138ed9f2e61bf6b6}} 
+double {\bfseries planning\+\_\+time\+\_\+end\+\_\+}
+\item 
+\mbox{\Hypertarget{classslope__constrained__planner_1_1_planner_ros_a97e5b2549bd1568e8851e441dd4f6f15}\label{classslope__constrained__planner_1_1_planner_ros_a97e5b2549bd1568e8851e441dd4f6f15}} 
+ros\+::\+Publisher \mbox{\hyperlink{classslope__constrained__planner_1_1_planner_ros_a97e5b2549bd1568e8851e441dd4f6f15}{path\+\_\+pub\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Path publisher attribute. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classslope__constrained__planner_1_1_planner_ros_a78c00b73bc8dd2b848f88e04d4a2ec64}\label{classslope__constrained__planner_1_1_planner_ros_a78c00b73bc8dd2b848f88e04d4a2ec64}} 
+ros\+::\+Publisher \mbox{\hyperlink{classslope__constrained__planner_1_1_planner_ros_a78c00b73bc8dd2b848f88e04d4a2ec64}{phi\+\_\+pub\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Phi publisher attribute. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classslope__constrained__planner_1_1_planner_ros_a128421675ebf20c24792a98efc7531e3}\label{classslope__constrained__planner_1_1_planner_ros_a128421675ebf20c24792a98efc7531e3}} 
+ros\+::\+Publisher \mbox{\hyperlink{classslope__constrained__planner_1_1_planner_ros_a128421675ebf20c24792a98efc7531e3}{theta\+\_\+pub\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Theta publisher attribute. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classslope__constrained__planner_1_1_planner_ros_a1f064e70048f7594dddf344099d107e2}\label{classslope__constrained__planner_1_1_planner_ros_a1f064e70048f7594dddf344099d107e2}} 
+ros\+::\+Publisher \mbox{\hyperlink{classslope__constrained__planner_1_1_planner_ros_a1f064e70048f7594dddf344099d107e2}{map\+\_\+pub\+\_\+}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classslope__constrained__planner_1_1_map}{Map}} publisher attribute. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classslope__constrained__planner_1_1_planner_ros_a8cfe2cd9b86319a14f8bf580131148da}\label{classslope__constrained__planner_1_1_planner_ros_a8cfe2cd9b86319a14f8bf580131148da}} 
+tf2\+\_\+ros\+::\+Buffer \mbox{\hyperlink{classslope__constrained__planner_1_1_planner_ros_a8cfe2cd9b86319a14f8bf580131148da}{tf\+\_\+buffer\+\_\+}}
+\begin{DoxyCompactList}\small\item\em tf buffer attribute \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classslope__constrained__planner_1_1_planner_ros_a22cd3efc93817ffc21f3bd31b831829a}\label{classslope__constrained__planner_1_1_planner_ros_a22cd3efc93817ffc21f3bd31b831829a}} 
+tf2\+\_\+ros\+::\+Transform\+Listener \mbox{\hyperlink{classslope__constrained__planner_1_1_planner_ros_a22cd3efc93817ffc21f3bd31b831829a}{tf\+\_\+listener\+\_\+}} \{\mbox{\hyperlink{classslope__constrained__planner_1_1_planner_ros_a8cfe2cd9b86319a14f8bf580131148da}{tf\+\_\+buffer\+\_\+}}\}
+\begin{DoxyCompactList}\small\item\em tf listener attribute \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classslope__constrained__planner_1_1_planner_ros_abc8e1517848328f3b86329fb358e3e57}\label{classslope__constrained__planner_1_1_planner_ros_abc8e1517848328f3b86329fb358e3e57}} 
+geometry\+\_\+msgs\+::\+Pose\+Stamped \mbox{\hyperlink{classslope__constrained__planner_1_1_planner_ros_abc8e1517848328f3b86329fb358e3e57}{pose\+\_\+goal\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Goal position attribute. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classslope__constrained__planner_1_1_planner_ros_ae8fc405bdd3b1b12815a7e321fc277d4}\label{classslope__constrained__planner_1_1_planner_ros_ae8fc405bdd3b1b12815a7e321fc277d4}} 
+std\+::mutex \mbox{\hyperlink{classslope__constrained__planner_1_1_planner_ros_ae8fc405bdd3b1b12815a7e321fc277d4}{pose\+\_\+goal\+\_\+mutex\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Goal position process mutex attribute. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classslope__constrained__planner_1_1_planner_ros_a522a786cc281f66e265e8881a3c1f532}\label{classslope__constrained__planner_1_1_planner_ros_a522a786cc281f66e265e8881a3c1f532}} 
+std\+::atomic$<$ bool $>$ \mbox{\hyperlink{classslope__constrained__planner_1_1_planner_ros_a522a786cc281f66e265e8881a3c1f532}{planning\+\_\+continuously\+\_\+}} \{false\}
+\begin{DoxyCompactList}\small\item\em Set the planner thread to whether perform or not. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classslope__constrained__planner_1_1_planner_ros_a6789bd93c97a23455e9f68e009d7d245}\label{classslope__constrained__planner_1_1_planner_ros_a6789bd93c97a23455e9f68e009d7d245}} 
+std\+::atomic$<$ bool $>$ \mbox{\hyperlink{classslope__constrained__planner_1_1_planner_ros_a6789bd93c97a23455e9f68e009d7d245}{thread\+\_\+built\+\_\+}} \{false\}
+\begin{DoxyCompactList}\small\item\em Set the planning thread built status. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classslope__constrained__planner_1_1_planner_ros_a07d910406b27f6cd2383c00e040336bf}\label{classslope__constrained__planner_1_1_planner_ros_a07d910406b27f6cd2383c00e040336bf}} 
+std\+::atomic$<$ bool $>$ \mbox{\hyperlink{classslope__constrained__planner_1_1_planner_ros_a07d910406b27f6cd2383c00e040336bf}{publish\+\_\+path\+\_\+}} \{false\}
+\begin{DoxyCompactList}\small\item\em Sets the publish path thread to whether perform or not. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classslope__constrained__planner_1_1_planner_ros_ae154d85cd66182bea183e511cc1e9069}\label{classslope__constrained__planner_1_1_planner_ros_ae154d85cd66182bea183e511cc1e9069}} 
+std\+::thread \mbox{\hyperlink{classslope__constrained__planner_1_1_planner_ros_ae154d85cd66182bea183e511cc1e9069}{continuous\+\_\+planning\+\_\+thread\+\_\+}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classslope__constrained__planner_1_1_planner}{Planner}} thread attribute. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classslope__constrained__planner_1_1_planner_ros_a290ab282e2a4b128b03d8b3a5b696715}\label{classslope__constrained__planner_1_1_planner_ros_a290ab282e2a4b128b03d8b3a5b696715}} 
+std\+::thread \mbox{\hyperlink{classslope__constrained__planner_1_1_planner_ros_a290ab282e2a4b128b03d8b3a5b696715}{publish\+\_\+path\+\_\+thread\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Publish path thread attribute. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classslope__constrained__planner_1_1_planner_ros_a33c526aa43af66266e15ad6438f93bd7}\label{classslope__constrained__planner_1_1_planner_ros_a33c526aa43af66266e15ad6438f93bd7}} 
+std\+::thread \mbox{\hyperlink{classslope__constrained__planner_1_1_planner_ros_a33c526aa43af66266e15ad6438f93bd7}{publish\+\_\+phi\+\_\+thread\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Publish phi thread attribute. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classslope__constrained__planner_1_1_planner_ros_a67804d619eb7e42c6fe0beab05644df8}\label{classslope__constrained__planner_1_1_planner_ros_a67804d619eb7e42c6fe0beab05644df8}} 
+std\+::mutex \mbox{\hyperlink{classslope__constrained__planner_1_1_planner_ros_a67804d619eb7e42c6fe0beab05644df8}{planning\+\_\+thread\+\_\+mutex\+\_\+}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classslope__constrained__planner_1_1_planner}{Planner}} thread process mutex attribute. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classslope__constrained__planner_1_1_planner_ros_ab505b592685246dde1330b08c9e35700}\label{classslope__constrained__planner_1_1_planner_ros_ab505b592685246dde1330b08c9e35700}} 
+nav\+\_\+msgs\+::\+Path \mbox{\hyperlink{classslope__constrained__planner_1_1_planner_ros_ab505b592685246dde1330b08c9e35700}{plan\+\_\+ros\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Found solution by the planner thread attribute. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classslope__constrained__planner_1_1_planner_ros_a7a9014d01c5f0ef98c3ca7eea4d5415d}\label{classslope__constrained__planner_1_1_planner_ros_a7a9014d01c5f0ef98c3ca7eea4d5415d}} 
+grid\+\_\+map\+\_\+msgs\+::\+Grid\+Map\+Info \mbox{\hyperlink{classslope__constrained__planner_1_1_planner_ros_a7a9014d01c5f0ef98c3ca7eea4d5415d}{planning\+\_\+map\+\_\+info\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Grid map info attribute. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classslope__constrained__planner_1_1_planner_ros_ad5e6f0375cb666186bdfb06a9229b087}\label{classslope__constrained__planner_1_1_planner_ros_ad5e6f0375cb666186bdfb06a9229b087}} 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>std::unique\_ptr$<$ grid\_map::GridMap $>$ {\bfseries map}\\
+\>grid\_map\_msgs::GridMapInfo {\bfseries info}\\
+\} \mbox{\hyperlink{classslope__constrained__planner_1_1_planner_ros_ad5e6f0375cb666186bdfb06a9229b087}{map\_queue\_}}\\
+
+\end{tabbing}\begin{DoxyCompactList}\small\item\em Grid map data queue attribute. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classslope__constrained__planner_1_1_planner_ros_a7ec265b1b5375f591b031e4537e9f989}\label{classslope__constrained__planner_1_1_planner_ros_a7ec265b1b5375f591b031e4537e9f989}} 
+std\+::mutex \mbox{\hyperlink{classslope__constrained__planner_1_1_planner_ros_a7ec265b1b5375f591b031e4537e9f989}{map\+\_\+queue\+\_\+mutex\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Grid map process mutex attribute. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classslope__constrained__planner_1_1_planner_ros_ae4dea1ec9fe6574af6b55d2066676ef4}\label{classslope__constrained__planner_1_1_planner_ros_ae4dea1ec9fe6574af6b55d2066676ef4}} 
+\mbox{\hyperlink{classslope__constrained__planner_1_1_converter}{Converter}} \mbox{\hyperlink{classslope__constrained__planner_1_1_planner_ros_ae4dea1ec9fe6574af6b55d2066676ef4}{converter\+\_\+}}
+\begin{DoxyCompactList}\small\item\em An object from converter class attribute. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classslope__constrained__planner_1_1_planner_ros_aca23b645f43a64ebdc12c502fcc056ca}\label{classslope__constrained__planner_1_1_planner_ros_aca23b645f43a64ebdc12c502fcc056ca}} 
+\index{slope\_constrained\_planner::PlannerRos@{slope\_constrained\_planner::PlannerRos}!PlannerRos@{PlannerRos}}
+\index{PlannerRos@{PlannerRos}!slope\_constrained\_planner::PlannerRos@{slope\_constrained\_planner::PlannerRos}}
+\doxysubsubsection{\texorpdfstring{PlannerRos()}{PlannerRos()}}
+{\footnotesize\ttfamily Planner\+Ros\+::\+Planner\+Ros (\begin{DoxyParamCaption}\item[{const ros\+::\+Node\+Handle \&}]{nh }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nh} & Node\+Handler object \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classslope__constrained__planner_1_1_planner_ros_a99a77159afe8b0e573bcb0e850d4e955}\label{classslope__constrained__planner_1_1_planner_ros_a99a77159afe8b0e573bcb0e850d4e955}} 
+\index{slope\_constrained\_planner::PlannerRos@{slope\_constrained\_planner::PlannerRos}!getCurrentRobotPose@{getCurrentRobotPose}}
+\index{getCurrentRobotPose@{getCurrentRobotPose}!slope\_constrained\_planner::PlannerRos@{slope\_constrained\_planner::PlannerRos}}
+\doxysubsubsection{\texorpdfstring{getCurrentRobotPose()}{getCurrentRobotPose()}}
+{\footnotesize\ttfamily bool Planner\+Ros\+::get\+Current\+Robot\+Pose (\begin{DoxyParamCaption}\item[{geometry\+\_\+msgs\+::\+Pose\+Stamped $\ast$}]{pose }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Gets robot current position from the tf tree. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pose} & Robot position \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classslope__constrained__planner_1_1_planner_ros_a07c100591f74660ef073b683749dc9f8}\label{classslope__constrained__planner_1_1_planner_ros_a07c100591f74660ef073b683749dc9f8}} 
+\index{slope\_constrained\_planner::PlannerRos@{slope\_constrained\_planner::PlannerRos}!goalPoseCallback@{goalPoseCallback}}
+\index{goalPoseCallback@{goalPoseCallback}!slope\_constrained\_planner::PlannerRos@{slope\_constrained\_planner::PlannerRos}}
+\doxysubsubsection{\texorpdfstring{goalPoseCallback()}{goalPoseCallback()}}
+{\footnotesize\ttfamily void Planner\+Ros\+::goal\+Pose\+Callback (\begin{DoxyParamCaption}\item[{const slope\+\_\+constrained\+\_\+planner\+\_\+msgs\+::\+Plan\+To\+Goal\+Goal\+Const\+Ptr \&}]{goal }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Helper function to be used in {\ttfamily \mbox{\hyperlink{classslope__constrained__planner_1_1_planner_ros_a09e11aa38ee41d72f6db293180f17049}{goal\+Callback()}}} function. Gets the goal and trigers the planner thread to find the path. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em goal} & Goal message which is defiened in the custom action file \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classslope__constrained__planner_1_1_planner_ros_adcb24882b45b76e1c22650016e9fb007}\label{classslope__constrained__planner_1_1_planner_ros_adcb24882b45b76e1c22650016e9fb007}} 
+\index{slope\_constrained\_planner::PlannerRos@{slope\_constrained\_planner::PlannerRos}!mapCallback@{mapCallback}}
+\index{mapCallback@{mapCallback}!slope\_constrained\_planner::PlannerRos@{slope\_constrained\_planner::PlannerRos}}
+\doxysubsubsection{\texorpdfstring{mapCallback()}{mapCallback()}}
+{\footnotesize\ttfamily void Planner\+Ros\+::map\+Callback (\begin{DoxyParamCaption}\item[{const grid\+\_\+map\+\_\+msgs\+::\+Grid\+Map\+Const\+Ptr \&}]{map\+\_\+msg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Callback function for subscribing the grid map topic. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em map\+\_\+msg} & Grid map data \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classslope__constrained__planner_1_1_planner_ros_a6211651325ad8df677f9234e8e733d51}\label{classslope__constrained__planner_1_1_planner_ros_a6211651325ad8df677f9234e8e733d51}} 
+\index{slope\_constrained\_planner::PlannerRos@{slope\_constrained\_planner::PlannerRos}!publishFeedback@{publishFeedback}}
+\index{publishFeedback@{publishFeedback}!slope\_constrained\_planner::PlannerRos@{slope\_constrained\_planner::PlannerRos}}
+\doxysubsubsection{\texorpdfstring{publishFeedback()}{publishFeedback()}}
+{\footnotesize\ttfamily void Planner\+Ros\+::publish\+Feedback (\begin{DoxyParamCaption}\item[{Feedback\+Status}]{feedback }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Publishes the planner server feedback. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em feedback} & Feedback to be published \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classslope__constrained__planner_1_1_planner_ros_a4d71301db89dfaa5dfc9ad7b371553d7}\label{classslope__constrained__planner_1_1_planner_ros_a4d71301db89dfaa5dfc9ad7b371553d7}} 
+\index{slope\_constrained\_planner::PlannerRos@{slope\_constrained\_planner::PlannerRos}!publishPath@{publishPath}}
+\index{publishPath@{publishPath}!slope\_constrained\_planner::PlannerRos@{slope\_constrained\_planner::PlannerRos}}
+\doxysubsubsection{\texorpdfstring{publishPath()}{publishPath()}}
+{\footnotesize\ttfamily void Planner\+Ros\+::publish\+Path (\begin{DoxyParamCaption}\item[{nav\+\_\+msgs\+::\+Path}]{path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Publishes the found path to corresponding topic. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & The path which is found by the planner \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classslope__constrained__planner_1_1_planner_ros_a8caa92d0739bf0010915c9346ed7ead8}\label{classslope__constrained__planner_1_1_planner_ros_a8caa92d0739bf0010915c9346ed7ead8}} 
+\index{slope\_constrained\_planner::PlannerRos@{slope\_constrained\_planner::PlannerRos}!publishPhi@{publishPhi}}
+\index{publishPhi@{publishPhi}!slope\_constrained\_planner::PlannerRos@{slope\_constrained\_planner::PlannerRos}}
+\doxysubsubsection{\texorpdfstring{publishPhi()}{publishPhi()}}
+{\footnotesize\ttfamily void Planner\+Ros\+::publish\+Phi (\begin{DoxyParamCaption}\item[{std\+\_\+msgs\+::\+Float64}]{phi }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Publishes the value of phi in degrees. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em phi} & The value of phi \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classslope__constrained__planner_1_1_planner_ros_a0288fae0b0b04393ac7fa5c0d1a1fed0}\label{classslope__constrained__planner_1_1_planner_ros_a0288fae0b0b04393ac7fa5c0d1a1fed0}} 
+\index{slope\_constrained\_planner::PlannerRos@{slope\_constrained\_planner::PlannerRos}!publishTheta@{publishTheta}}
+\index{publishTheta@{publishTheta}!slope\_constrained\_planner::PlannerRos@{slope\_constrained\_planner::PlannerRos}}
+\doxysubsubsection{\texorpdfstring{publishTheta()}{publishTheta()}}
+{\footnotesize\ttfamily void Planner\+Ros\+::publish\+Theta (\begin{DoxyParamCaption}\item[{std\+\_\+msgs\+::\+Float64}]{theta }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Publishes the value of theta in degrees. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em theta} & The value of theta \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classslope__constrained__planner_1_1_planner_ros_a8c6afcd6b27a28fb71858307ffe3cada}\label{classslope__constrained__planner_1_1_planner_ros_a8c6afcd6b27a28fb71858307ffe3cada}} 
+\index{slope\_constrained\_planner::PlannerRos@{slope\_constrained\_planner::PlannerRos}!updateMapAndPlanFromCurrentRobotPose@{updateMapAndPlanFromCurrentRobotPose}}
+\index{updateMapAndPlanFromCurrentRobotPose@{updateMapAndPlanFromCurrentRobotPose}!slope\_constrained\_planner::PlannerRos@{slope\_constrained\_planner::PlannerRos}}
+\doxysubsubsection{\texorpdfstring{updateMapAndPlanFromCurrentRobotPose()}{updateMapAndPlanFromCurrentRobotPose()}}
+{\footnotesize\ttfamily Planner\+Status Planner\+Ros\+::update\+Map\+And\+Plan\+From\+Current\+Robot\+Pose (\begin{DoxyParamCaption}\item[{const ob\+::\+Scoped\+State$<$$>$ \&}]{goal }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Uses {\ttfamily update\+Map()} function and then {\ttfamily plan(start, goal)} function from the base class. Once the path is found, calls {\ttfamily \mbox{\hyperlink{classslope__constrained__planner_1_1_planner_ros_a55a36ac22ecf67bb0f2c38d6d7f8ac94}{publish\+Map()}}} function. This function is used in the {\ttfamily plan\+Continuesly\+Thread()} function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em goal} & The goal state to be set in the planner \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/ali/ros\+\_\+ws/src/slope\+\_\+constrained\+\_\+planner/slope\+\_\+constrained\+\_\+planner\+\_\+ros/include/slope\+\_\+constrained\+\_\+planner\+\_\+ros/\mbox{\hyperlink{planner__ros_8h}{planner\+\_\+ros.\+h}}\item 
+/home/ali/ros\+\_\+ws/src/slope\+\_\+constrained\+\_\+planner/slope\+\_\+constrained\+\_\+planner\+\_\+ros/src/\mbox{\hyperlink{planner__ros_8cpp}{planner\+\_\+ros.\+cpp}}\end{DoxyCompactItemize}

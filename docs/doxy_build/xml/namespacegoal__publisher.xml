@@ -1,0 +1,219 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="namespacegoal__publisher" kind="namespace" language="Python">
+    <compoundname>goal_publisher</compoundname>
+    <innerclass refid="classgoal__publisher_1_1_goal_publisher" prot="public">goal_publisher::GoalPublisher</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="namespacegoal__publisher_1a36c17a7359c67308edc2283b1650f044" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string goal_publisher.ROBOT_FRAME</definition>
+        <argsstring></argsstring>
+        <name>ROBOT_FRAME</name>
+        <initializer>=  &apos;base_link&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/goal_publisher.py" line="30" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/goal_publisher.py" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacegoal__publisher_1a47e75d47ebe77f5d7be99ac0ae38466e" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float goal_publisher.GOAL_THRES_POS</definition>
+        <argsstring></argsstring>
+        <name>GOAL_THRES_POS</name>
+        <initializer>=  0.1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/goal_publisher.py" line="31" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/goal_publisher.py" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacegoal__publisher_1ab630644b9aa235b44e76d2500fc81a71" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float goal_publisher.GOAL_THRES_ANG</definition>
+        <argsstring></argsstring>
+        <name>GOAL_THRES_ANG</name>
+        <initializer>=  0.2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/goal_publisher.py" line="32" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/goal_publisher.py" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacegoal__publisher_1a2028495bd62e527395d9afac97df2a13" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float goal_publisher.FACE_GOAL_DIST</definition>
+        <argsstring></argsstring>
+        <name>FACE_GOAL_DIST</name>
+        <initializer>=  1.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/goal_publisher.py" line="33" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/goal_publisher.py" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacegoal__publisher_1a3c82639afb1477caabe71bcfb4349b94" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>goal_publisher.goal_pub</definition>
+        <argsstring></argsstring>
+        <name>goal_pub</name>
+        <initializer>=  <ref refid="classgoal__publisher_1_1_goal_publisher" kindref="compound">GoalPublisher</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/goal_publisher.py" line="326" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/goal_publisher.py" bodystart="326" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacegoal__publisher_1aa838058efdcdc007466ef3483acd8c91" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>goal_publisher.rate</definition>
+        <argsstring></argsstring>
+        <name>rate</name>
+        <initializer>=  rospy.Rate(10)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/goal_publisher.py" line="328" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/goal_publisher.py" bodystart="328" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespacegoal__publisher_1a11daf38666fb837665b5cba6b3f79e96" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def goal_publisher.getYaw</definition>
+        <argsstring>(quat)</argsstring>
+        <name>getYaw</name>
+        <param>
+          <type>quat</type>
+          <defname>quat</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>    Gets yaw angle from quaternoid representation
+
+    Args: 
+        quat
+
+    Returns:
+        yaw</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/goal_publisher.py" line="37" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/goal_publisher.py" bodystart="37" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacegoal__publisher_1a549afd51c7a2fcbcf5bb77ba15db2b3f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def goal_publisher.getConstrainedYaw</definition>
+        <argsstring>(yaw)</argsstring>
+        <name>getConstrainedYaw</name>
+        <param>
+          <type>yaw</type>
+          <defname>yaw</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>    Gets constrained value of yaw angle between -2pi and 2pi
+
+    Args: 
+        yaw
+    
+    Returns:
+        yaw
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/goal_publisher.py" line="51" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/goal_publisher.py" bodystart="51" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacegoal__publisher_1a8fd5c1b8e030fa2379c267a8d2ab0dbe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def goal_publisher.getAngleError</definition>
+        <argsstring>(target, current)</argsstring>
+        <name>getAngleError</name>
+        <param>
+          <type>target</type>
+          <defname>target</defname>
+        </param>
+        <param>
+          <type>current</type>
+          <defname>current</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>    Gets the difference between two given angles
+
+    Args:
+        target
+        current
+    
+    Returns:
+        dyaw
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/goal_publisher.py" line="68" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/goal_publisher.py" bodystart="68" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacegoal__publisher_1acd1e2e3a6f80e5dd54a5f87bdd95f6d0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def goal_publisher.getQuatFromYaw</definition>
+        <argsstring>(yaw)</argsstring>
+        <name>getQuatFromYaw</name>
+        <param>
+          <type>yaw</type>
+          <defname>yaw</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>    Gets quaternoid representation from euler representation
+
+    Args:
+        yaw
+    
+    Returns:
+        quat
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/goal_publisher.py" line="83" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/goal_publisher.py" bodystart="83" bodyend="96"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>.. module:: goal_publisher
+    :platform: Unix
+    :synopsis: the goal_publisher python script in slope_constrained_planner package
+
+Subscribes to:
+    /slope_constrained_planner/path
+
+Publishes to:
+    /spot/goaltospot
+
+    /slope_constrained_planner/followed_path
+
+
+An auxiliary node, used only in real world mode, gets the next wapoint to go, and publishes it to the ``gotopoint`` local path planner.
+</verbatim> </para>
+    </detaileddescription>
+    <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/goal_publisher.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

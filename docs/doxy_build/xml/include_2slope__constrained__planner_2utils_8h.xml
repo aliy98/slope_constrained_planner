@@ -1,0 +1,282 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="include_2slope__constrained__planner_2utils_8h" kind="file" language="C++">
+    <compoundname>utils.h</compoundname>
+    <includes local="no">memory</includes>
+    <includes local="no">vector</includes>
+    <includes local="no">Eigen/Dense</includes>
+    <includes local="no">grid_map_core/GridMap.hpp</includes>
+    <includes local="no">ompl/base/spaces/SE3StateSpace.h</includes>
+    <includedby refid="map_8h" local="yes">/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/map.h</includedby>
+    <includedby refid="motion__validator_8h" local="no">/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/motion_validator.h</includedby>
+    <includedby refid="map_8cpp" local="yes">/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/src/map.cpp</includedby>
+    <includedby refid="planner_8cpp" local="yes">/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/src/planner.cpp</includedby>
+    <includedby refid="sampler_8cpp" local="yes">/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/src/sampler.cpp</includedby>
+    <includedby refid="src_2utils_8cpp" local="yes">/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/src/utils.cpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/utils.h</label>
+        <link refid="include_2slope__constrained__planner_2utils_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>Eigen/Dense</label>
+      </node>
+      <node id="3">
+        <label>vector</label>
+      </node>
+      <node id="6">
+        <label>ompl/base/spaces/SE3StateSpace.h</label>
+      </node>
+      <node id="5">
+        <label>grid_map_core/GridMap.hpp</label>
+      </node>
+      <node id="2">
+        <label>memory</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="9">
+        <label>/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/src/converter.cpp</label>
+        <link refid="converter_8cpp"/>
+      </node>
+      <node id="10">
+        <label>/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/sampler.h</label>
+        <link refid="sampler_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/motion_validator.h</label>
+        <link refid="motion__validator_8h"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/src/planner_ros_node.cpp</label>
+        <link refid="planner__ros__node_8cpp"/>
+      </node>
+      <node id="1">
+        <label>/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/utils.h</label>
+        <link refid="include_2slope__constrained__planner_2utils_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/src/planner.cpp</label>
+        <link refid="planner_8cpp"/>
+      </node>
+      <node id="12">
+        <label>/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/src/map.cpp</label>
+        <link refid="map_8cpp"/>
+      </node>
+      <node id="11">
+        <label>/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/src/sampler.cpp</label>
+        <link refid="sampler_8cpp"/>
+      </node>
+      <node id="15">
+        <label>/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/src/utils.cpp</label>
+        <link refid="src_2utils_8cpp"/>
+      </node>
+      <node id="3">
+        <label>/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/planner.h</label>
+        <link refid="planner_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/include/slope_constrained_planner_ros/converter.h</label>
+        <link refid="converter_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/src/planner_ros.cpp</label>
+        <link refid="planner__ros_8cpp"/>
+      </node>
+      <node id="14">
+        <label>/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/src/motion_validator.cpp</label>
+        <link refid="motion__validator_8cpp"/>
+      </node>
+      <node id="2">
+        <label>/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/map.h</label>
+        <link refid="map_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/include/slope_constrained_planner_ros/planner_ros.h</label>
+        <link refid="planner__ros_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innernamespace refid="namespaceslope__constrained__planner">slope_constrained_planner</innernamespace>
+    <briefdescription>
+<para>Some helper functions to be used in different components of the software architecture. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="6"><highlight class="preprocessor">#<sp/>pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;memory&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;Eigen/Dense&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;grid_map_core/GridMap.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;ompl/base/spaces/SE3StateSpace.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">ob<sp/>=<sp/>ompl::base;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">slope_constrained_planner<sp/>{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/>std::vector&lt;double&gt;<sp/>global_start_;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>Scalar<sp/>=<sp/>float;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>Pose3<sp/>=<sp/>Eigen::Transform&lt;Scalar,3,Eigen::Affine&gt;;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="include_2slope__constrained__planner_2utils_8h_1aaa1afa706c6eea0820d109fea72fe72f" refkind="member"><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>Pose3<sp/><ref refid="include_2slope__constrained__planner_2utils_8h_1aaa1afa706c6eea0820d109fea72fe72f" kindref="member">Pose3FromSE3</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ob::State*<sp/>state)<sp/>{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>state_se3<sp/>=<sp/>state-&gt;as&lt;ob::SE3StateSpace::StateType&gt;();</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>rotation<sp/>=<sp/>state_se3-&gt;rotation();</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/>Pose3<sp/>pose;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/>pose.translation().x()<sp/>=<sp/>state_se3-&gt;getX();</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/>pose.translation().y()<sp/>=<sp/>state_se3-&gt;getY();</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/>pose.translation().z()<sp/>=<sp/>state_se3-&gt;getZ();</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/>pose.matrix().topLeftCorner(3,3)<sp/>=</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>Eigen::Quaternion&lt;Scalar&gt;(rotation.w,</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rotation.x,</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rotation.y,</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rotation.z).toRotationMatrix();</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>pose;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55" refid="include_2slope__constrained__planner_2utils_8h_1a803385a13df77f5c9f0524be3917c4bf" refkind="member"><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>Pose3<sp/><ref refid="include_2slope__constrained__planner_2utils_8h_1a803385a13df77f5c9f0524be3917c4bf" kindref="member">Pose3FromXYZ</ref>(Scalar<sp/>x,<sp/>Scalar<sp/>y,<sp/>Scalar<sp/>z)<sp/>{</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/>Pose3<sp/>pose<sp/>=<sp/>Pose3::Identity();</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/>pose.translation().x()<sp/>=<sp/>x;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/>pose.translation().y()<sp/>=<sp/>y;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/>pose.translation().z()<sp/>=<sp/>z;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>pose;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70" refid="include_2slope__constrained__planner_2utils_8h_1a33fbcc7fcabcb7a710ab618bb812b7fd" refkind="member"><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="include_2slope__constrained__planner_2utils_8h_1a33fbcc7fcabcb7a710ab618bb812b7fd" kindref="member">lateralDistance</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ob::State*<sp/>from,</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ob::State*<sp/>to)<sp/>{</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>from_se3<sp/>=<sp/>from-&gt;as&lt;ob::SE3StateSpace::StateType&gt;();</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>to_se3<sp/>=<sp/>to-&gt;as&lt;ob::SE3StateSpace::StateType&gt;();</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>dx<sp/>=<sp/>to_se3-&gt;getX()<sp/>-<sp/>from_se3-&gt;getX();</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>dy<sp/>=<sp/>to_se3-&gt;getY()<sp/>-<sp/>from_se3-&gt;getY();</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>std::sqrt(dx*dx<sp/>+<sp/>dy*dy);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="91" refid="include_2slope__constrained__planner_2utils_8h_1aa8430341802109b3203bfe726e3eea91" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>T<sp/><ref refid="include_2slope__constrained__planner_2utils_8h_1aa8430341802109b3203bfe726e3eea91" kindref="member">getRollFromQuat</ref>(T<sp/>w,<sp/>T<sp/>x,<sp/>T<sp/>y,<sp/>T<sp/>z)<sp/>{</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>atan2(2*(w*x<sp/>+<sp/>y*z),<sp/>1-2*(x*x<sp/>+<sp/>y*y));</highlight></codeline>
+<codeline lineno="93"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="105" refid="include_2slope__constrained__planner_2utils_8h_1a51006fe8c71b68332c03b87390505ad3" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>T<sp/><ref refid="include_2slope__constrained__planner_2utils_8h_1a51006fe8c71b68332c03b87390505ad3" kindref="member">getPitchFromQuat</ref>(T<sp/>w,<sp/>T<sp/>x,<sp/>T<sp/>y,<sp/>T<sp/>z)<sp/>{</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>asin(2*(w*y<sp/>-<sp/>x*z));</highlight></codeline>
+<codeline lineno="107"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="119" refid="include_2slope__constrained__planner_2utils_8h_1a6852c8698b81bd3f2b692a44266d0634" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>T<sp/><ref refid="include_2slope__constrained__planner_2utils_8h_1a6852c8698b81bd3f2b692a44266d0634" kindref="member">getYawFromQuat</ref>(T<sp/>w,<sp/>T<sp/>x,<sp/>T<sp/>y,<sp/>T<sp/>z)<sp/>{</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>atan2(2*(w*z<sp/>+<sp/>x*y),<sp/>1-2*(y*y<sp/>+<sp/>z*z));</highlight></codeline>
+<codeline lineno="121"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129" refid="include_2slope__constrained__planner_2utils_8h_1a4da0e01e16937554779f163c6b8e16ae" refkind="member"><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>Scalar<sp/><ref refid="include_2slope__constrained__planner_2utils_8h_1a4da0e01e16937554779f163c6b8e16ae" kindref="member">getYawFromSO3</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ob::SO3StateSpace::StateType&amp;<sp/>s)<sp/>{</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="include_2slope__constrained__planner_2utils_8h_1a6852c8698b81bd3f2b692a44266d0634" kindref="member">getYawFromQuat</ref>(s.w,<sp/>s.x,<sp/>s.y,<sp/>s.z);</highlight></codeline>
+<codeline lineno="131"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="139" refid="include_2slope__constrained__planner_2utils_8h_1a48e1f90cc8391f010fe7efa11f179bb1" refkind="member"><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>Scalar<sp/><ref refid="include_2slope__constrained__planner_2utils_8h_1a48e1f90cc8391f010fe7efa11f179bb1" kindref="member">getRollFromSO3</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ob::SO3StateSpace::StateType&amp;<sp/>s)<sp/>{</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="include_2slope__constrained__planner_2utils_8h_1aa8430341802109b3203bfe726e3eea91" kindref="member">getRollFromQuat</ref>(s.w,<sp/>s.x,<sp/>s.y,<sp/>s.z);</highlight></codeline>
+<codeline lineno="141"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149" refid="include_2slope__constrained__planner_2utils_8h_1a428d7014957c631f7b624a5cac7b16a3" refkind="member"><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>Scalar<sp/><ref refid="include_2slope__constrained__planner_2utils_8h_1a428d7014957c631f7b624a5cac7b16a3" kindref="member">getPitchFromSO3</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ob::SO3StateSpace::StateType&amp;<sp/>s)<sp/>{</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="include_2slope__constrained__planner_2utils_8h_1a51006fe8c71b68332c03b87390505ad3" kindref="member">getPitchFromQuat</ref>(s.w,<sp/>s.x,<sp/>s.y,<sp/>s.z);</highlight></codeline>
+<codeline lineno="151"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159" refid="include_2slope__constrained__planner_2utils_8h_1a795e026e29385a30e9028219b748b09e" refkind="member"><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="include_2slope__constrained__planner_2utils_8h_1a795e026e29385a30e9028219b748b09e" kindref="member">setSO3FromYaw</ref>(ob::SO3StateSpace::StateType&amp;<sp/>s,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>yaw)<sp/>{</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/>s.w<sp/>=<sp/>cos(yaw);</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/>s.x<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/>s.y<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/>s.z<sp/>=<sp/>sin(yaw);</highlight></codeline>
+<codeline lineno="164"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight></codeline>
+<codeline lineno="172" refid="include_2slope__constrained__planner_2utils_8h_1a991f425b1a0e14d5c750fc1406972fa2" refkind="member"><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="include_2slope__constrained__planner_2utils_8h_1a991f425b1a0e14d5c750fc1406972fa2" kindref="member">setSO3FromRPY</ref>(ob::SO3StateSpace::StateType&amp;<sp/>s,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">*<sp/>rpy)<sp/>{</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>r2<sp/>=<sp/>rpy[0]*0.5;</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>p2<sp/>=<sp/>rpy[1]*0.5;</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>y2<sp/>=<sp/>rpy[2]*0.5;</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>cr<sp/>=<sp/>cos(r2);</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>cp<sp/>=<sp/>cos(p2);</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>cy<sp/>=<sp/>cos(y2);</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>sr<sp/>=<sp/>sin(r2);</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>sp<sp/>=<sp/>sin(p2);</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>sy<sp/>=<sp/>sin(y2);</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/>s.w<sp/>=<sp/>cy<sp/>*<sp/>cp<sp/>*<sp/>cr<sp/>+<sp/>sy<sp/>*<sp/>sp<sp/>*<sp/>sr;</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/>s.x<sp/>=<sp/>cy<sp/>*<sp/>cp<sp/>*<sp/>sr<sp/>-<sp/>sy<sp/>*<sp/>sp<sp/>*<sp/>cr;</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/>s.y<sp/>=<sp/>sy<sp/>*<sp/>cp<sp/>*<sp/>sr<sp/>+<sp/>cy<sp/>*<sp/>sp<sp/>*<sp/>cr;</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/>s.z<sp/>=<sp/>sy<sp/>*<sp/>cp<sp/>*<sp/>cr<sp/>-<sp/>cy<sp/>*<sp/>sp<sp/>*<sp/>sr;</highlight></codeline>
+<codeline lineno="186"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>estimateNormals(grid_map::GridMap&amp;<sp/>map,</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>estimation_radius,</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>input_layer,</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>output_layer_prefix<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;normal&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight></codeline>
+<codeline lineno="201"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/utils.h"/>
+  </compounddef>
+</doxygen>

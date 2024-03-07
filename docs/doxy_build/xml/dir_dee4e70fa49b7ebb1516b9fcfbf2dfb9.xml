@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="dir_dee4e70fa49b7ebb1516b9fcfbf2dfb9" kind="dir">
+    <compoundname>/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/build</compoundname>
+    <innerdir refid="dir_19935487125d47717e3c96a58b1816f6">/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/build/atomic_configure</innerdir>
+    <innerdir refid="dir_49798f1994686eec48eafcd7eadde5ad">/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/build/catkin_generated</innerdir>
+    <innerdir refid="dir_04775f4bda67fcd0bc18136cf31014f0">/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/build/CMakeFiles</innerdir>
+    <innerdir refid="dir_571df894fe027c179c227e59949016d3">/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/build/devel</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/build/"/>
+  </compounddef>
+</doxygen>

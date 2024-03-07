@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>slope_constrained_planner_ros.scripts.path_follower &mdash; slope_constrained_planner 1.0 documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            slope_constrained_planner
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../simulation_environment.html">Simulation Environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../real_world.html">Real World</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../software_architecture.html">Software Architucture</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sequence_diagram.html">Sequence Diagram</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../source_files.html">Source Files and Scripts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../usage.html">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../working_hypothesis.html">Working Hypothesis and Environment</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">slope_constrained_planner</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">Module code</a></li>
+      <li class="breadcrumb-item active">slope_constrained_planner_ros.scripts.path_follower</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for slope_constrained_planner_ros.scripts.path_follower</h1><div class="highlight"><pre>
+<span></span><span class="ch">#!/usr/bin/env python </span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">.. module:: path_follower</span>
+<span class="sd">    :platform: Unix</span>
+<span class="sd">    :synopsis: the path_follower python script in slope_constrained_planner package</span>
+
+<span class="sd">Subscribes to:</span>
+<span class="sd">    /slope_constrained_planner/path</span>
+
+<span class="sd">Publishes to:</span>
+<span class="sd">    /spot/wolf_controller/twist</span>
+
+<span class="sd">    /slope_constrained_planner/followed_path</span>
+
+
+<span class="sd">A provided path follower, used only in simulation mode, based on PID control to be used for testing on a mobile robot</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">import</span> <span class="nn">rospy</span>
+<span class="kn">from</span> <span class="nn">nav_msgs.msg</span> <span class="kn">import</span> <span class="n">Path</span>
+<span class="kn">from</span> <span class="nn">geometry_msgs.msg</span> <span class="kn">import</span> <span class="n">Twist</span>
+<span class="kn">from</span> <span class="nn">std_srvs.srv</span> <span class="kn">import</span> <span class="n">Empty</span><span class="p">,</span> <span class="n">EmptyResponse</span>
+<span class="kn">import</span> <span class="nn">rospy</span>
+<span class="kn">import</span> <span class="nn">math</span>
+<span class="kn">import</span> <span class="nn">tf</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+
+
+<span class="n">ROBOT_FRAME</span> <span class="o">=</span> <span class="s1">&#39;base_link&#39;</span>
+<span class="n">GOAL_THRES_POS</span> <span class="o">=</span> <span class="mf">0.1</span>
+<span class="n">GOAL_THRES_ANG</span> <span class="o">=</span> <span class="mf">0.2</span>
+<span class="n">FACE_GOAL_DIST</span> <span class="o">=</span> <span class="mf">1.0</span>
+
+
+
+<div class="viewcode-block" id="getYaw"><a class="viewcode-back" href="../../../path_follower.html#slope_constrained_planner_ros.scripts.path_follower.getYaw">[docs]</a><span class="k">def</span> <span class="nf">getYaw</span><span class="p">(</span><span class="n">quat</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Gets yaw angle from quaternoid representation</span>
+
+<span class="sd">        Args: </span>
+<span class="sd">            quat</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            yaw</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">_</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">yaw</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">transformations</span><span class="o">.</span><span class="n">euler_from_quaternion</span><span class="p">(</span><span class="n">quat</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">yaw</span></div>
+
+
+<div class="viewcode-block" id="getRoll"><a class="viewcode-back" href="../../../path_follower.html#slope_constrained_planner_ros.scripts.path_follower.getRoll">[docs]</a><span class="k">def</span> <span class="nf">getRoll</span><span class="p">(</span><span class="n">quat</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Gets roll angle from quaternoid representation</span>
+
+<span class="sd">        Args: </span>
+<span class="sd">            quat</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            roll</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">roll</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">transformations</span><span class="o">.</span><span class="n">euler_from_quaternion</span><span class="p">(</span><span class="n">quat</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">roll</span></div>
+
+
+<div class="viewcode-block" id="getPitch"><a class="viewcode-back" href="../../../path_follower.html#slope_constrained_planner_ros.scripts.path_follower.getPitch">[docs]</a><span class="k">def</span> <span class="nf">getPitch</span><span class="p">(</span><span class="n">quat</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Gets pitch angle from quaternoid representation</span>
+
+<span class="sd">        Args: </span>
+<span class="sd">            quat</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            pitch</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">_</span><span class="p">,</span> <span class="n">pitch</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">transformations</span><span class="o">.</span><span class="n">euler_from_quaternion</span><span class="p">(</span><span class="n">quat</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">pitch</span></div>
+
+
+<div class="viewcode-block" id="getConstrainedYaw"><a class="viewcode-back" href="../../../path_follower.html#slope_constrained_planner_ros.scripts.path_follower.getConstrainedYaw">[docs]</a><span class="k">def</span> <span class="nf">getConstrainedYaw</span><span class="p">(</span><span class="n">yaw</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Gets constrained value of yaw angle between -2pi and 2pi</span>
+
+<span class="sd">        Args: </span>
+<span class="sd">            yaw</span>
+<span class="sd">        </span>
+<span class="sd">        Returns:</span>
+<span class="sd">            yaw</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">while</span> <span class="n">yaw</span> <span class="o">&gt;</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="p">:</span>
+        <span class="n">yaw</span> <span class="o">-=</span> <span class="mi">2</span><span class="o">*</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span>
+    <span class="k">while</span> <span class="n">yaw</span> <span class="o">&lt;</span> <span class="o">-</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="p">:</span>
+        <span class="n">yaw</span> <span class="o">+=</span> <span class="mi">2</span><span class="o">*</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span>
+    <span class="k">return</span> <span class="n">yaw</span></div>
+
+
+<div class="viewcode-block" id="getAngleError"><a class="viewcode-back" href="../../../path_follower.html#slope_constrained_planner_ros.scripts.path_follower.getAngleError">[docs]</a><span class="k">def</span> <span class="nf">getAngleError</span><span class="p">(</span><span class="n">target</span><span class="p">,</span> <span class="n">current</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Gets the difference between two given angles</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            target</span>
+<span class="sd">            current</span>
+<span class="sd">        </span>
+<span class="sd">        Returns:</span>
+<span class="sd">            dyaw</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">dyaw</span> <span class="o">=</span> <span class="n">target</span> <span class="o">-</span> <span class="n">current</span>
+    <span class="n">dyaw</span> <span class="o">=</span> <span class="n">getConstrainedYaw</span><span class="p">(</span><span class="n">dyaw</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">dyaw</span></div>
+
+<div class="viewcode-block" id="getQuatFromYaw"><a class="viewcode-back" href="../../../path_follower.html#slope_constrained_planner_ros.scripts.path_follower.getQuatFromYaw">[docs]</a><span class="k">def</span> <span class="nf">getQuatFromYaw</span><span class="p">(</span><span class="n">yaw</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Gets quaternoid representation from euler representation</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            yaw</span>
+<span class="sd">        </span>
+<span class="sd">        Returns:</span>
+<span class="sd">            quat</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">tf</span><span class="o">.</span><span class="n">transformations</span><span class="o">.</span><span class="n">quaternion_from_euler</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">yaw</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="PathFollower"><a class="viewcode-back" href="../../../path_follower.html#slope_constrained_planner_ros.scripts.path_follower.PathFollower">[docs]</a><span class="k">class</span> <span class="nc">PathFollower</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Path follower class which defines the corresponding node with its initial configurations </span>
+<span class="sd">    and member functions.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">listener</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">TransformListener</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">pub_twist</span> <span class="o">=</span> <span class="n">rospy</span><span class="o">.</span><span class="n">Publisher</span><span class="p">(</span><span class="s1">&#39;/wolf_controller/twist&#39;</span><span class="p">,</span> <span class="n">Twist</span><span class="p">,</span> <span class="n">queue_size</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">pub_path</span> <span class="o">=</span> <span class="n">rospy</span><span class="o">.</span><span class="n">Publisher</span><span class="p">(</span><span class="s1">&#39;/slope_constrained_planner/followed_path&#39;</span><span class="p">,</span> <span class="n">Path</span><span class="p">,</span> <span class="n">queue_size</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">latch</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sub</span> <span class="o">=</span> <span class="n">rospy</span><span class="o">.</span><span class="n">Subscriber</span><span class="p">(</span><span class="s1">&#39;/slope_constrained_planner/path&#39;</span><span class="p">,</span> <span class="n">Path</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">pathCallback</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dummy_srv</span> <span class="o">=</span> <span class="n">rospy</span><span class="o">.</span><span class="n">Service</span><span class="p">(</span><span class="s1">&#39;/path_follower/dummy_service&#39;</span><span class="p">,</span> <span class="n">Empty</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">dummyCallback</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">current_pose</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">goal_pose</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">fixed_frame</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">path</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">path_ros</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">largest_valid_index</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">gain_pid_pos</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.3</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">gain_pid_ang</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">i</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+        <span class="n">rospy</span><span class="o">.</span><span class="n">set_param</span><span class="p">(</span><span class="s2">&quot;/path_follower/init_time&quot;</span><span class="p">,</span> <span class="n">rospy</span><span class="o">.</span><span class="n">Time</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">to_sec</span><span class="p">())</span>
+
+
+
+<div class="viewcode-block" id="PathFollower.pathCallback"><a class="viewcode-back" href="../../../path_follower.html#slope_constrained_planner_ros.scripts.path_follower.PathFollower.pathCallback">[docs]</a>    <span class="k">def</span> <span class="nf">pathCallback</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path_msg</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">            Callback function which triggers once the found path is available </span>
+
+<span class="sd">            Args:</span>
+<span class="sd">                path_msg</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">fixed_frame</span> <span class="o">=</span> <span class="n">path_msg</span><span class="o">.</span><span class="n">header</span><span class="o">.</span><span class="n">frame_id</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">path</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">path_ros</span> <span class="o">=</span> <span class="n">path_msg</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">goal_pose</span> <span class="o">=</span> <span class="kc">None</span>
+
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">path_msg</span><span class="o">.</span><span class="n">poses</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+
+            <span class="k">for</span> <span class="n">ros_pose</span> <span class="ow">in</span> <span class="n">path_msg</span><span class="o">.</span><span class="n">poses</span><span class="p">:</span>
+                <span class="n">pos</span> <span class="o">=</span> <span class="n">ros_pose</span><span class="o">.</span><span class="n">pose</span><span class="o">.</span><span class="n">position</span>
+                <span class="n">rot</span> <span class="o">=</span> <span class="n">ros_pose</span><span class="o">.</span><span class="n">pose</span><span class="o">.</span><span class="n">orientation</span>
+                <span class="n">yaw</span> <span class="o">=</span> <span class="n">getYaw</span><span class="p">([</span><span class="n">rot</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="n">rot</span><span class="o">.</span><span class="n">y</span><span class="p">,</span> <span class="n">rot</span><span class="o">.</span><span class="n">z</span><span class="p">,</span> <span class="n">rot</span><span class="o">.</span><span class="n">w</span><span class="p">])</span>
+                <span class="n">roll</span> <span class="o">=</span> <span class="n">getRoll</span><span class="p">([</span><span class="n">rot</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="n">rot</span><span class="o">.</span><span class="n">y</span><span class="p">,</span> <span class="n">rot</span><span class="o">.</span><span class="n">z</span><span class="p">,</span> <span class="n">rot</span><span class="o">.</span><span class="n">w</span><span class="p">])</span>
+                <span class="n">pitch</span> <span class="o">=</span> <span class="n">getPitch</span><span class="p">([</span><span class="n">rot</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="n">rot</span><span class="o">.</span><span class="n">y</span><span class="p">,</span> <span class="n">rot</span><span class="o">.</span><span class="n">z</span><span class="p">,</span> <span class="n">rot</span><span class="o">.</span><span class="n">w</span><span class="p">])</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">pos</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="n">pos</span><span class="o">.</span><span class="n">y</span><span class="p">,</span> <span class="n">yaw</span><span class="p">,</span> <span class="n">roll</span><span class="p">,</span> <span class="n">pitch</span><span class="p">])</span>
+
+            <span class="bp">self</span><span class="o">.</span><span class="n">removePathNodesBeforeIndex</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+            <span class="c1"># rospy.loginfo(&#39;Got path: &#39; + str(self.path))</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">i</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>    <span class="c1"># Reset integrators.</span>
+
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">rospy</span><span class="o">.</span><span class="n">logwarn</span><span class="p">(</span><span class="s1">&#39;Path message is too short&#39;</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="PathFollower.dummyCallback"><a class="viewcode-back" href="../../../path_follower.html#slope_constrained_planner_ros.scripts.path_follower.PathFollower.dummyCallback">[docs]</a>    <span class="k">def</span> <span class="nf">dummyCallback</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">            A dummy rosservice, used for notifying the presence of this node to the planner.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">rospy</span><span class="o">.</span><span class="n">loginfo</span><span class="p">(</span><span class="s2">&quot;Empty service called.&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">EmptyResponse</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="PathFollower.updateCurrentPose"><a class="viewcode-back" href="../../../path_follower.html#slope_constrained_planner_ros.scripts.path_follower.PathFollower.updateCurrentPose">[docs]</a>    <span class="k">def</span> <span class="nf">updateCurrentPose</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">            Updates robot current position using tf tree data</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">fixed_frame</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="p">(</span><span class="n">trans</span><span class="p">,</span><span class="n">rot</span><span class="p">)</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">listener</span><span class="o">.</span><span class="n">lookupTransform</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">fixed_frame</span><span class="p">,</span> <span class="n">ROBOT_FRAME</span><span class="p">,</span> <span class="n">rospy</span><span class="o">.</span><span class="n">Time</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span>
+            <span class="k">except</span> <span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">LookupException</span><span class="p">,</span> <span class="n">tf</span><span class="o">.</span><span class="n">ConnectivityException</span><span class="p">,</span> <span class="n">tf</span><span class="o">.</span><span class="n">ExtrapolationException</span><span class="p">):</span>
+                <span class="n">rospy</span><span class="o">.</span><span class="n">logwarn_throttle</span><span class="p">(</span><span class="s1">&#39;TF lookup of pose failed&#39;</span><span class="p">)</span>
+                <span class="k">return</span>
+
+            <span class="bp">self</span><span class="o">.</span><span class="n">current_pose</span> <span class="o">=</span> <span class="p">[</span><span class="n">trans</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">trans</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">getYaw</span><span class="p">(</span><span class="n">rot</span><span class="p">),</span> <span class="n">getRoll</span><span class="p">(</span><span class="n">rot</span><span class="p">),</span> <span class="n">getPitch</span><span class="p">(</span><span class="n">rot</span><span class="p">)]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">rospy</span><span class="o">.</span><span class="n">logwarn_throttle</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;Fixed frame not set.&#39;</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="PathFollower.publishPath"><a class="viewcode-back" href="../../../path_follower.html#slope_constrained_planner_ros.scripts.path_follower.PathFollower.publishPath">[docs]</a>    <span class="k">def</span> <span class="nf">publishPath</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">            Publishes the followed path so far, with its frame id</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">fixed_frame</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">msg</span> <span class="o">=</span> <span class="n">Path</span><span class="p">()</span>
+            <span class="n">msg</span><span class="o">.</span><span class="n">header</span><span class="o">.</span><span class="n">frame_id</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fixed_frame</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">path_ros</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">msg</span><span class="o">.</span><span class="n">poses</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">path_ros</span><span class="o">.</span><span class="n">poses</span>
+
+            <span class="bp">self</span><span class="o">.</span><span class="n">pub_path</span><span class="o">.</span><span class="n">publish</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span></div>
+
+
+
+
+<div class="viewcode-block" id="PathFollower.removePathNodesBeforeIndex"><a class="viewcode-back" href="../../../path_follower.html#slope_constrained_planner_ros.scripts.path_follower.PathFollower.removePathNodesBeforeIndex">[docs]</a>    <span class="k">def</span> <span class="nf">removePathNodesBeforeIndex</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">index</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">            Removes the path points before current index</span>
+
+<span class="sd">            Args:</span>
+<span class="sd">                index</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">path</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">path</span><span class="p">[</span><span class="n">index</span><span class="p">:]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">path_ros</span><span class="o">.</span><span class="n">poses</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">path_ros</span><span class="o">.</span><span class="n">poses</span><span class="p">[</span><span class="n">index</span><span class="p">:]</span></div>
+
+
+
+<div class="viewcode-block" id="PathFollower.updateCurrentGoalPose"><a class="viewcode-back" href="../../../path_follower.html#slope_constrained_planner_ros.scripts.path_follower.PathFollower.updateCurrentGoalPose">[docs]</a>    <span class="k">def</span> <span class="nf">updateCurrentGoalPose</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">            Updates current goal pose considering the remaining path points</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">goal_pose</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">dx</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">goal_pose</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">current_pose</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="n">dy</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">goal_pose</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">current_pose</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+            <span class="n">dist</span> <span class="o">=</span> <span class="p">(</span><span class="n">dx</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dy</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">**</span><span class="mf">0.5</span>
+            <span class="n">dyaw</span> <span class="o">=</span> <span class="n">getAngleError</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">goal_pose</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">current_pose</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+            <span class="k">if</span> <span class="n">dist</span> <span class="o">&lt;</span> <span class="n">GOAL_THRES_POS</span> <span class="ow">and</span> <span class="nb">abs</span><span class="p">(</span><span class="n">dyaw</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">GOAL_THRES_ANG</span><span class="p">:</span>
+                <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">path</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">removePathNodesBeforeIndex</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">path</span> <span class="o">=</span> <span class="kc">None</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">path_ros</span> <span class="o">=</span> <span class="kc">None</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">publishPath</span><span class="p">()</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">goal_pose</span> <span class="o">=</span> <span class="kc">None</span>
+
+        <span class="c1"># Only get new goal pose if we don&#39;t have one.</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">goal_pose</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">current_pose</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">path</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="c1"># Set goal to final path segment in case we have a weird path</span>
+                <span class="c1"># and all checks fail.</span>
+                <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">path</span><span class="p">)):</span>
+                    <span class="c1"># path_segment = np.array([self.path[i+1][0] - self.path[i][0],</span>
+                    <span class="c1">#                          self.path[i+1][1] - self.path[i][1]])</span>
+                    <span class="n">robot_from_node</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="bp">self</span><span class="o">.</span><span class="n">current_pose</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">path</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span>
+                                                <span class="bp">self</span><span class="o">.</span><span class="n">current_pose</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">path</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">]])</span>
+                    <span class="c1"># dist_along_path = robot_from_node.dot(path_segment)</span>
+                    <span class="c1"># if (dist_along_path &gt; 0):</span>
+                    <span class="c1">#     # Robot is &quot;in front of&quot; the current node.</span>
+
+                    <span class="k">if</span> <span class="nb">abs</span><span class="p">(</span><span class="n">robot_from_node</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">&lt;</span> <span class="n">GOAL_THRES_POS</span> <span class="ow">and</span> <span class="nb">abs</span><span class="p">(</span><span class="n">robot_from_node</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="o">&lt;</span> <span class="n">GOAL_THRES_ANG</span><span class="p">:</span>
+                        <span class="n">rospy</span><span class="o">.</span><span class="n">loginfo</span><span class="p">(</span><span class="s1">&#39;Target reached!&#39;</span><span class="p">)</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">largest_valid_index</span> <span class="o">=</span> <span class="n">i</span><span class="o">+</span><span class="mi">1</span>
+                    
+                <span class="n">rospy</span><span class="o">.</span><span class="n">loginfo</span><span class="p">(</span><span class="s1">&#39;Current goal state index in the path: &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">largest_valid_index</span><span class="p">))</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">removePathNodesBeforeIndex</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">largest_valid_index</span><span class="p">)</span>
+                <span class="k">if</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">path</span><span class="p">)</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">):</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">goal_pose</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">path</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">publishPath</span><span class="p">()</span></div>
+
+
+
+<div class="viewcode-block" id="PathFollower.getYawTarget"><a class="viewcode-back" href="../../../path_follower.html#slope_constrained_planner_ros.scripts.path_follower.PathFollower.getYawTarget">[docs]</a>    <span class="k">def</span> <span class="nf">getYawTarget</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">            Gets yaw angle of target frame</span>
+
+<span class="sd">            Returns:</span>
+<span class="sd">                yaw_target</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">dx</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">goal_pose</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">current_pose</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">dy</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">goal_pose</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">current_pose</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">dist</span> <span class="o">=</span> <span class="p">(</span><span class="n">dx</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dy</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">**</span><span class="mf">0.5</span>
+
+        <span class="k">if</span> <span class="n">dist</span> <span class="o">&lt;</span> <span class="n">FACE_GOAL_DIST</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">goal_pose</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c1"># Face towards goal.</span>
+            <span class="n">yaw_target</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">atan2</span><span class="p">(</span><span class="n">dy</span><span class="p">,</span> <span class="n">dx</span><span class="p">)</span>
+            <span class="n">error</span> <span class="o">=</span> <span class="n">getAngleError</span><span class="p">(</span><span class="n">yaw_target</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">current_pose</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+            <span class="k">if</span> <span class="nb">abs</span><span class="p">(</span><span class="n">error</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="mf">0.5</span><span class="p">:</span>
+                <span class="c1"># Face dat booty towards the goal.</span>
+                <span class="n">yaw_target</span> <span class="o">=</span> <span class="n">getConstrainedYaw</span><span class="p">(</span><span class="n">yaw_target</span> <span class="o">+</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">yaw_target</span></div>
+
+
+
+<div class="viewcode-block" id="PathFollower.computeAndPublishTwist"><a class="viewcode-back" href="../../../path_follower.html#slope_constrained_planner_ros.scripts.path_follower.PathFollower.computeAndPublishTwist">[docs]</a>    <span class="k">def</span> <span class="nf">computeAndPublishTwist</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">            Computes the twist value and publishes it on the ``/cmd_vel`` topic</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">updateCurrentPose</span><span class="p">()</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">path</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">current_pose</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">updateCurrentGoalPose</span><span class="p">()</span>
+
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">goal_pose</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="k">return</span>
+
+            <span class="n">msg</span> <span class="o">=</span> <span class="n">Twist</span><span class="p">()</span>
+            <span class="c1"># msg.header.frame_id = ROBOT_FRAME</span>
+            <span class="c1"># msg.header.stamp = rospy.Time.now()</span>
+
+            <span class="n">yaw</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">current_pose</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+            <span class="n">yaw_target</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getYawTarget</span><span class="p">()</span>
+
+            <span class="n">dx</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">goal_pose</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">current_pose</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="n">dy</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">goal_pose</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">current_pose</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+            <span class="n">dyaw</span> <span class="o">=</span> <span class="n">getAngleError</span><span class="p">(</span><span class="n">yaw_target</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">current_pose</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+            <span class="n">droll</span> <span class="o">=</span> <span class="n">getAngleError</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">goal_pose</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">current_pose</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span>
+            <span class="n">dpitch</span> <span class="o">=</span> <span class="n">getAngleError</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">goal_pose</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">current_pose</span><span class="p">[</span><span class="mi">4</span><span class="p">])</span>
+
+            <span class="n">dlon</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">yaw</span><span class="p">)</span><span class="o">*</span><span class="n">dx</span> <span class="o">+</span> <span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">yaw</span><span class="p">)</span><span class="o">*</span><span class="n">dy</span>
+            <span class="n">dlat</span> <span class="o">=</span> <span class="o">-</span><span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">yaw</span><span class="p">)</span><span class="o">*</span><span class="n">dx</span> <span class="o">+</span> <span class="n">math</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">yaw</span><span class="p">)</span><span class="o">*</span><span class="n">dy</span>
+
+            <span class="c1"># Update integrator.</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">i</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+=</span> <span class="n">dlon</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">i</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+=</span> <span class="n">dlat</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">i</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">+=</span> <span class="n">dyaw</span>
+
+            <span class="n">lon_rate</span> <span class="o">=</span> <span class="n">dlon</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">gain_pid_pos</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">i</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">gain_pid_pos</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+            <span class="n">lat_rate</span> <span class="o">=</span> <span class="n">dlat</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">gain_pid_pos</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">i</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">gain_pid_pos</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+            <span class="n">yaw_rate</span> <span class="o">=</span> <span class="n">dyaw</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">gain_pid_ang</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">i</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">gain_pid_ang</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+            <span class="n">roll_rate</span> <span class="o">=</span> <span class="n">droll</span>  <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">gain_pid_ang</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> 
+            <span class="n">pitch_rate</span> <span class="o">=</span> <span class="n">dpitch</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">gain_pid_ang</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> 
+        
+            <span class="n">msg</span><span class="o">.</span><span class="n">linear</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">lon_rate</span>
+            <span class="n">msg</span><span class="o">.</span><span class="n">linear</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">lat_rate</span>
+            <span class="n">msg</span><span class="o">.</span><span class="n">angular</span><span class="o">.</span><span class="n">z</span> <span class="o">=</span> <span class="n">yaw_rate</span>
+            <span class="n">msg</span><span class="o">.</span><span class="n">angular</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">roll_rate</span>
+            <span class="n">msg</span><span class="o">.</span><span class="n">angular</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">pitch_rate</span>
+
+            <span class="bp">self</span><span class="o">.</span><span class="n">pub_twist</span><span class="o">.</span><span class="n">publish</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span></div></div>
+
+
+
+
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">rospy</span><span class="o">.</span><span class="n">init_node</span><span class="p">(</span><span class="s1">&#39;path_follower_pid&#39;</span><span class="p">)</span>
+
+    <span class="n">follower</span> <span class="o">=</span> <span class="n">PathFollower</span><span class="p">()</span>
+
+    <span class="n">rate</span> <span class="o">=</span> <span class="n">rospy</span><span class="o">.</span><span class="n">Rate</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="c1"># 10hz</span>
+    <span class="k">while</span> <span class="ow">not</span> <span class="n">rospy</span><span class="o">.</span><span class="n">is_shutdown</span><span class="p">():</span>
+        <span class="n">follower</span><span class="o">.</span><span class="n">computeAndPublishTwist</span><span class="p">()</span>
+        <span class="n">rate</span><span class="o">.</span><span class="n">sleep</span><span class="p">()</span>
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Ali Yousefi.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

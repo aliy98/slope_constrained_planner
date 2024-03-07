@@ -1,0 +1,339 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classtilt__robot_1_1_tilt_robot" kind="class" language="Python" prot="public">
+    <compoundname>tilt_robot::TiltRobot</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classtilt__robot_1_1_tilt_robot_1ae6ddcdde9c3b668866c4006399c7c1e4" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>tilt_robot.TiltRobot::listener</definition>
+        <argsstring></argsstring>
+        <name>listener</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/tilt_robot.py" line="101" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/tilt_robot.py" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtilt__robot_1_1_tilt_robot_1a0ab8da99f52a56ef12664e6367dd10a3" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>tilt_robot.TiltRobot::pub_twist</definition>
+        <argsstring></argsstring>
+        <name>pub_twist</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/tilt_robot.py" line="102" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/tilt_robot.py" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtilt__robot_1_1_tilt_robot_1aa0903a8548215566bb5aa0fdddd4b07e" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>tilt_robot.TiltRobot::sub_goal</definition>
+        <argsstring></argsstring>
+        <name>sub_goal</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/tilt_robot.py" line="103" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/tilt_robot.py" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtilt__robot_1_1_tilt_robot_1a634df5b40bf1b2c1b7a6b4dcadbc2fd2" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>tilt_robot.TiltRobot::current_pose</definition>
+        <argsstring></argsstring>
+        <name>current_pose</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/tilt_robot.py" line="104" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/tilt_robot.py" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtilt__robot_1_1_tilt_robot_1ab1fda236450846815c5cb47e6ab2050b" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>tilt_robot.TiltRobot::goal_pose</definition>
+        <argsstring></argsstring>
+        <name>goal_pose</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/tilt_robot.py" line="105" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/tilt_robot.py" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtilt__robot_1_1_tilt_robot_1a5e5d2be6c7ef964034158f083a22c862" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>tilt_robot.TiltRobot::fixed_frame</definition>
+        <argsstring></argsstring>
+        <name>fixed_frame</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/tilt_robot.py" line="106" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/tilt_robot.py" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtilt__robot_1_1_tilt_robot_1a8f0c8d727169a4b40aefc8a4c4d64668" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>tilt_robot.TiltRobot::gain_pid_pos</definition>
+        <argsstring></argsstring>
+        <name>gain_pid_pos</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/tilt_robot.py" line="107" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/tilt_robot.py" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtilt__robot_1_1_tilt_robot_1a17f47da960b244cd4d8cf2b8028c7f7b" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>tilt_robot.TiltRobot::gain_pid_ang</definition>
+        <argsstring></argsstring>
+        <name>gain_pid_ang</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/tilt_robot.py" line="108" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/tilt_robot.py" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtilt__robot_1_1_tilt_robot_1aa02856b355b5e1790d0962c80ebba83f" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>tilt_robot.TiltRobot::i</definition>
+        <argsstring></argsstring>
+        <name>i</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/tilt_robot.py" line="109" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/tilt_robot.py" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classtilt__robot_1_1_tilt_robot_1a9af4f2ec3a5065230ab593fd0e0b3ede" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def tilt_robot.TiltRobot.__init__</definition>
+        <argsstring>(self)</argsstring>
+        <name>__init__</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/tilt_robot.py" line="100" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/tilt_robot.py" bodystart="100" bodyend="114"/>
+      </memberdef>
+      <memberdef kind="function" id="classtilt__robot_1_1_tilt_robot_1a23acb0eb31fdd84e26039de7265f483b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def tilt_robot.TiltRobot.goal_clbk</definition>
+        <argsstring>(self, msg)</argsstring>
+        <name>goal_clbk</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>msg</type>
+          <defname>msg</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/tilt_robot.py" line="115" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/tilt_robot.py" bodystart="115" bodyend="118"/>
+      </memberdef>
+      <memberdef kind="function" id="classtilt__robot_1_1_tilt_robot_1a8f6f753dcef447b5c3d400f6508c5aa7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def tilt_robot.TiltRobot.standUp</definition>
+        <argsstring>(self)</argsstring>
+        <name>standUp</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/tilt_robot.py" line="119" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/tilt_robot.py" bodystart="119" bodyend="128"/>
+      </memberdef>
+      <memberdef kind="function" id="classtilt__robot_1_1_tilt_robot_1a42c4fcca3cd8ad80b71d9a389f2b002b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def tilt_robot.TiltRobot.updateCurrentPose</definition>
+        <argsstring>(self)</argsstring>
+        <name>updateCurrentPose</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>    Updates robot current position using tf tree data
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/tilt_robot.py" line="129" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/tilt_robot.py" bodystart="129" bodyend="147"/>
+      </memberdef>
+      <memberdef kind="function" id="classtilt__robot_1_1_tilt_robot_1adbfce35eadb32ea5b65657a53b33434b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def tilt_robot.TiltRobot.getYawTarget</definition>
+        <argsstring>(self)</argsstring>
+        <name>getYawTarget</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>    Gets yaw angle of target frame
+
+    Returns:
+yaw_target
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/tilt_robot.py" line="148" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/tilt_robot.py" bodystart="148" bodyend="169"/>
+      </memberdef>
+      <memberdef kind="function" id="classtilt__robot_1_1_tilt_robot_1a0645d938c27fab069262e539510a700d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def tilt_robot.TiltRobot.alignToGoal</definition>
+        <argsstring>(self)</argsstring>
+        <name>alignToGoal</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/tilt_robot.py" line="170" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/tilt_robot.py" bodystart="170" bodyend="183"/>
+      </memberdef>
+      <memberdef kind="function" id="classtilt__robot_1_1_tilt_robot_1a236254df4b84c32b580604bf68d8a748" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def tilt_robot.TiltRobot.tiltAlongpitch</definition>
+        <argsstring>(self)</argsstring>
+        <name>tiltAlongpitch</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/tilt_robot.py" line="184" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/tilt_robot.py" bodystart="184" bodyend="231"/>
+      </memberdef>
+      <memberdef kind="function" id="classtilt__robot_1_1_tilt_robot_1a48ae5b9988de6a30dc551985d2243246" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def tilt_robot.TiltRobot.moveBackward</definition>
+        <argsstring>(self)</argsstring>
+        <name>moveBackward</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/tilt_robot.py" line="232" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/tilt_robot.py" bodystart="232" bodyend="247"/>
+      </memberdef>
+      <memberdef kind="function" id="classtilt__robot_1_1_tilt_robot_1af5895bbe30c19684d24cba0cab6b09fa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def tilt_robot.TiltRobot.moveForward</definition>
+        <argsstring>(self)</argsstring>
+        <name>moveForward</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/tilt_robot.py" line="248" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/tilt_robot.py" bodystart="248" bodyend="263"/>
+      </memberdef>
+      <memberdef kind="function" id="classtilt__robot_1_1_tilt_robot_1ada8b30a0a8724f3fb73eeb845a935a31" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def tilt_robot.TiltRobot.computeAndPublishTwist</definition>
+        <argsstring>(self)</argsstring>
+        <name>computeAndPublishTwist</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>    Computes the twist value and publishes it on the ``/wolf_controller/twist`` topic
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/tilt_robot.py" line="264" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/tilt_robot.py" bodystart="264" bodyend="275"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>Defines the corresponding node with its initial configurations 
+and member functions.
+</verbatim> </para>
+    </detaileddescription>
+    <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/tilt_robot.py" line="95" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/tilt_robot.py" bodystart="95" bodyend="276"/>
+    <listofallmembers>
+      <member refid="classtilt__robot_1_1_tilt_robot_1a9af4f2ec3a5065230ab593fd0e0b3ede" prot="public" virt="non-virtual"><scope>tilt_robot::TiltRobot</scope><name>__init__</name></member>
+      <member refid="classtilt__robot_1_1_tilt_robot_1a0645d938c27fab069262e539510a700d" prot="public" virt="non-virtual"><scope>tilt_robot::TiltRobot</scope><name>alignToGoal</name></member>
+      <member refid="classtilt__robot_1_1_tilt_robot_1ada8b30a0a8724f3fb73eeb845a935a31" prot="public" virt="non-virtual"><scope>tilt_robot::TiltRobot</scope><name>computeAndPublishTwist</name></member>
+      <member refid="classtilt__robot_1_1_tilt_robot_1a634df5b40bf1b2c1b7a6b4dcadbc2fd2" prot="public" virt="non-virtual"><scope>tilt_robot::TiltRobot</scope><name>current_pose</name></member>
+      <member refid="classtilt__robot_1_1_tilt_robot_1a5e5d2be6c7ef964034158f083a22c862" prot="public" virt="non-virtual"><scope>tilt_robot::TiltRobot</scope><name>fixed_frame</name></member>
+      <member refid="classtilt__robot_1_1_tilt_robot_1a17f47da960b244cd4d8cf2b8028c7f7b" prot="public" virt="non-virtual"><scope>tilt_robot::TiltRobot</scope><name>gain_pid_ang</name></member>
+      <member refid="classtilt__robot_1_1_tilt_robot_1a8f0c8d727169a4b40aefc8a4c4d64668" prot="public" virt="non-virtual"><scope>tilt_robot::TiltRobot</scope><name>gain_pid_pos</name></member>
+      <member refid="classtilt__robot_1_1_tilt_robot_1adbfce35eadb32ea5b65657a53b33434b" prot="public" virt="non-virtual"><scope>tilt_robot::TiltRobot</scope><name>getYawTarget</name></member>
+      <member refid="classtilt__robot_1_1_tilt_robot_1a23acb0eb31fdd84e26039de7265f483b" prot="public" virt="non-virtual"><scope>tilt_robot::TiltRobot</scope><name>goal_clbk</name></member>
+      <member refid="classtilt__robot_1_1_tilt_robot_1ab1fda236450846815c5cb47e6ab2050b" prot="public" virt="non-virtual"><scope>tilt_robot::TiltRobot</scope><name>goal_pose</name></member>
+      <member refid="classtilt__robot_1_1_tilt_robot_1aa02856b355b5e1790d0962c80ebba83f" prot="public" virt="non-virtual"><scope>tilt_robot::TiltRobot</scope><name>i</name></member>
+      <member refid="classtilt__robot_1_1_tilt_robot_1ae6ddcdde9c3b668866c4006399c7c1e4" prot="public" virt="non-virtual"><scope>tilt_robot::TiltRobot</scope><name>listener</name></member>
+      <member refid="classtilt__robot_1_1_tilt_robot_1a48ae5b9988de6a30dc551985d2243246" prot="public" virt="non-virtual"><scope>tilt_robot::TiltRobot</scope><name>moveBackward</name></member>
+      <member refid="classtilt__robot_1_1_tilt_robot_1af5895bbe30c19684d24cba0cab6b09fa" prot="public" virt="non-virtual"><scope>tilt_robot::TiltRobot</scope><name>moveForward</name></member>
+      <member refid="classtilt__robot_1_1_tilt_robot_1a0ab8da99f52a56ef12664e6367dd10a3" prot="public" virt="non-virtual"><scope>tilt_robot::TiltRobot</scope><name>pub_twist</name></member>
+      <member refid="classtilt__robot_1_1_tilt_robot_1a8f6f753dcef447b5c3d400f6508c5aa7" prot="public" virt="non-virtual"><scope>tilt_robot::TiltRobot</scope><name>standUp</name></member>
+      <member refid="classtilt__robot_1_1_tilt_robot_1aa0903a8548215566bb5aa0fdddd4b07e" prot="public" virt="non-virtual"><scope>tilt_robot::TiltRobot</scope><name>sub_goal</name></member>
+      <member refid="classtilt__robot_1_1_tilt_robot_1a236254df4b84c32b580604bf68d8a748" prot="public" virt="non-virtual"><scope>tilt_robot::TiltRobot</scope><name>tiltAlongpitch</name></member>
+      <member refid="classtilt__robot_1_1_tilt_robot_1a42c4fcca3cd8ad80b71d9a389f2b002b" prot="public" virt="non-virtual"><scope>tilt_robot::TiltRobot</scope><name>updateCurrentPose</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

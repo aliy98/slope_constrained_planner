@@ -1,0 +1,218 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="namespacetilt__robot" kind="namespace" language="Python">
+    <compoundname>tilt_robot</compoundname>
+    <innerclass refid="classtilt__robot_1_1_tilt_robot" prot="public">tilt_robot::TiltRobot</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="namespacetilt__robot_1a57257d76bc689c11bbbd98fce48f0ee8" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string tilt_robot.ROBOT_FRAME</definition>
+        <argsstring></argsstring>
+        <name>ROBOT_FRAME</name>
+        <initializer>=  &apos;base_link&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/tilt_robot.py" line="27" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/tilt_robot.py" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetilt__robot_1a6aa8855c0bdf989cfa79bbd821d83c50" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float tilt_robot.GOAL_THRES_POS</definition>
+        <argsstring></argsstring>
+        <name>GOAL_THRES_POS</name>
+        <initializer>=  0.01</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/tilt_robot.py" line="28" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/tilt_robot.py" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetilt__robot_1a266160f8d4f992a99d1794be809a874c" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float tilt_robot.GOAL_THRES_ANG</definition>
+        <argsstring></argsstring>
+        <name>GOAL_THRES_ANG</name>
+        <initializer>=  0.01</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/tilt_robot.py" line="29" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/tilt_robot.py" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetilt__robot_1ae67b56a12aa405a3e5dac2d74f3881a2" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float tilt_robot.FACE_GOAL_DIST</definition>
+        <argsstring></argsstring>
+        <name>FACE_GOAL_DIST</name>
+        <initializer>=  1.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/tilt_robot.py" line="30" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/tilt_robot.py" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetilt__robot_1aba6925a4ca0ab41986bfd2c9fb6cf7f7" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int tilt_robot.COUNTER</definition>
+        <argsstring></argsstring>
+        <name>COUNTER</name>
+        <initializer>=  0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/tilt_robot.py" line="31" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/tilt_robot.py" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetilt__robot_1a6524d49f120c5a719a841678b9d5ea69" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>tilt_robot.tilt_robot</definition>
+        <argsstring></argsstring>
+        <name>tilt_robot</name>
+        <initializer>=  <ref refid="classtilt__robot_1_1_tilt_robot" kindref="compound">TiltRobot</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/tilt_robot.py" line="279" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/tilt_robot.py" bodystart="279" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespacetilt__robot_1af090821167c5a72d918e13c0a1b7b9e4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def tilt_robot.getRPY</definition>
+        <argsstring>(quat)</argsstring>
+        <name>getRPY</name>
+        <param>
+          <type>quat</type>
+          <defname>quat</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>    Gets roll, pitch, and yaw angles from quaternoid representation
+
+    Args: 
+        quat
+
+    Returns:
+        [roll, pitch, yaw]</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/tilt_robot.py" line="34" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/tilt_robot.py" bodystart="34" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetilt__robot_1a2bc2ff7f9374fa07d53154c6a3073ab7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def tilt_robot.getConstrainedAngle</definition>
+        <argsstring>(angle)</argsstring>
+        <name>getConstrainedAngle</name>
+        <param>
+          <type>angle</type>
+          <defname>angle</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>    Gets constrained value of angle between -2pi and 2pi
+
+    Args: 
+        angle
+    
+    Returns:
+        angle
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/tilt_robot.py" line="49" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/tilt_robot.py" bodystart="49" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetilt__robot_1a51bb77e7dcaa489e0380256d6cb583ad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def tilt_robot.getAngleError</definition>
+        <argsstring>(target, current)</argsstring>
+        <name>getAngleError</name>
+        <param>
+          <type>target</type>
+          <defname>target</defname>
+        </param>
+        <param>
+          <type>current</type>
+          <defname>current</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>    Gets the difference between two given angles
+
+    Args:
+        target
+        current
+    
+    Returns:
+        dyaw
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/tilt_robot.py" line="66" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/tilt_robot.py" bodystart="66" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetilt__robot_1ae1da8ae06a976c43329484edd90adeb6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def tilt_robot.getQuatFromRPY</definition>
+        <argsstring>(RPY)</argsstring>
+        <name>getQuatFromRPY</name>
+        <param>
+          <type>RPY</type>
+          <defname>RPY</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>    Gets quaternoid representation from euler representation
+
+    Args:
+        RPY
+    
+    Returns:
+        quat
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/tilt_robot.py" line="82" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/tilt_robot.py" bodystart="82" bodyend="94"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>.. module:: tilt_robot
+    :platform: Unix
+    :synopsis: the tilt_robot python script in slope_constrained_planner_ros package
+
+Subscribes to:
+    /tf
+
+Publishes to:
+    /wolf_controller/twist
+
+
+
+A helper script based on PID control to be used for tilting the robot base frame
+</verbatim> </para>
+    </detaileddescription>
+    <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/tilt_robot.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

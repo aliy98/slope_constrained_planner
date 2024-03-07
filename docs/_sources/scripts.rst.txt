@@ -1,0 +1,8 @@
+Scripts
+========
+.. toctree::
+   :maxdepth: 1
+
+   path_follower
+   plan_to_goal_client
+

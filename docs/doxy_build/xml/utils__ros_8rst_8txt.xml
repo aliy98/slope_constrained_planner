@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="utils__ros_8rst_8txt" kind="file" language="C++">
+    <compoundname>utils_ros.rst.txt</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">utils</highlight></codeline>
+<codeline lineno="2"><highlight class="normal">-------</highlight></codeline>
+<codeline lineno="3"><highlight class="normal">..<sp/>doxygenfile::<sp/>slope_constrained_planner_ros/utils.h</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"><sp/><sp/><sp/>:project:<sp/>slope_constrained_planner</highlight></codeline>
+    </programlisting>
+    <location file="_sources/utils_ros.rst.txt"/>
+  </compounddef>
+</doxygen>

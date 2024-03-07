@@ -1,0 +1,111 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="namespacepkg" kind="namespace" language="Python">
+    <compoundname>pkg</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="build_2catkin__generated_2pkg_8develspace_8context_8pc_8py_1ae26c7a5a06b7d738f4d210ca449e6bee" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string pkg::CATKIN_PACKAGE_PREFIX</definition>
+        <argsstring></argsstring>
+        <name>CATKIN_PACKAGE_PREFIX</name>
+        <initializer>=  &quot;&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/build/catkin_generated/pkg.develspace.context.pc.py" line="2" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/build/catkin_generated/pkg.develspace.context.pc.py" bodystart="2" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="build_2catkin__generated_2pkg_8develspace_8context_8pc_8py_1a2760bf8266ff58da440f65ee91b203ab" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string pkg::PROJECT_PKG_CONFIG_INCLUDE_DIRS</definition>
+        <argsstring></argsstring>
+        <name>PROJECT_PKG_CONFIG_INCLUDE_DIRS</name>
+        <initializer>=  &quot;&quot; else []</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/build/catkin_generated/pkg.develspace.context.pc.py" line="3" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/build/catkin_generated/pkg.develspace.context.pc.py" bodystart="3" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="build_2catkin__generated_2pkg_8develspace_8context_8pc_8py_1a17c18447fad253ee1c0d76deec88028c" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string pkg::PROJECT_CATKIN_DEPENDS</definition>
+        <argsstring></argsstring>
+        <name>PROJECT_CATKIN_DEPENDS</name>
+        <initializer>=  &quot;grid_map_core&quot;.replace(&apos;;&apos;, &apos; &apos;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/build/catkin_generated/pkg.develspace.context.pc.py" line="4" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/build/catkin_generated/pkg.develspace.context.pc.py" bodystart="4" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="build_2catkin__generated_2pkg_8develspace_8context_8pc_8py_1a433e30cecb4a0123a7c4b384d168e336" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string pkg::PKG_CONFIG_LIBRARIES_WITH_PREFIX</definition>
+        <argsstring></argsstring>
+        <name>PKG_CONFIG_LIBRARIES_WITH_PREFIX</name>
+        <initializer>=  &quot;&quot; else []</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/build/catkin_generated/pkg.develspace.context.pc.py" line="5" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/build/catkin_generated/pkg.develspace.context.pc.py" bodystart="5" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="build_2catkin__generated_2pkg_8develspace_8context_8pc_8py_1a7dfbe99257c26f5e4a3a5483995d9ddc" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string pkg::PROJECT_NAME</definition>
+        <argsstring></argsstring>
+        <name>PROJECT_NAME</name>
+        <initializer>=  &quot;slope_constrained_planner&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/build/catkin_generated/pkg.develspace.context.pc.py" line="6" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/build/catkin_generated/pkg.develspace.context.pc.py" bodystart="6" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="build_2catkin__generated_2pkg_8develspace_8context_8pc_8py_1a3f0f1b4bc03c596525e025539ca4332f" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string pkg::PROJECT_SPACE_DIR</definition>
+        <argsstring></argsstring>
+        <name>PROJECT_SPACE_DIR</name>
+        <initializer>=  &quot;/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/build/devel&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/build/catkin_generated/pkg.develspace.context.pc.py" line="7" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/build/catkin_generated/pkg.develspace.context.pc.py" bodystart="7" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="build_2catkin__generated_2pkg_8develspace_8context_8pc_8py_1ab1037914b9286bb61855131c06149648" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string pkg::PROJECT_VERSION</definition>
+        <argsstring></argsstring>
+        <name>PROJECT_VERSION</name>
+        <initializer>=  &quot;0.0.0&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/build/catkin_generated/pkg.develspace.context.pc.py" line="8" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/build/catkin_generated/pkg.develspace.context.pc.py" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/build/catkin_generated/pkg.develspace.context.pc.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="working__hypothesis_8rst_8txt" kind="file" language="C++">
+    <compoundname>working_hypothesis.rst.txt</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">Working<sp/>Hypothesis<sp/>and<sp/>Environment</highlight></codeline>
+<codeline lineno="2"><highlight class="normal">======================================</highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#.<sp/>System&apos;s<sp/>Features:<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#.<sp/>System&apos;s<sp/>Limitations:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#.<sp/>Possible<sp/>Technical<sp/>Improvements:<sp/></highlight></codeline>
+    </programlisting>
+    <location file="_sources/working_hypothesis.rst.txt"/>
+  </compounddef>
+</doxygen>

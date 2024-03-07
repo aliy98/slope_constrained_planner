@@ -1,0 +1,180 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classslope__constrained__planner_1_1_slope_constrained_motion_validator" kind="class" language="C++" prot="public">
+    <compoundname>slope_constrained_planner::SlopeConstrainedMotionValidator</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MotionValidator</basecompoundref>
+    <includes refid="motion__validator_8h" local="no">motion_validator.h</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classslope__constrained__planner_1_1_slope_constrained_motion_validator_1a4d553ca82c40e8b6b7cc2e1e5400fbdc" prot="protected" static="no" mutable="no">
+        <type>ParamsConstPtr</type>
+        <definition>ParamsConstPtr slope_constrained_planner::SlopeConstrainedMotionValidator::params_</definition>
+        <argsstring></argsstring>
+        <name>params_</name>
+        <briefdescription>
+<para>Parameters containing the data for map layers. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/motion_validator.h" line="32" column="24" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/motion_validator.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classslope__constrained__planner_1_1_slope_constrained_motion_validator_1a15dfb0484bca9851d72537699b721af6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SlopeConstrainedMotionValidator::SlopeConstrainedMotionValidator</definition>
+        <argsstring>(const ob::SpaceInformationPtr &amp;si, const ParamsConstPtr &amp;params)</argsstring>
+        <name>SlopeConstrainedMotionValidator</name>
+        <param>
+          <type>const ob::SpaceInformationPtr &amp;</type>
+          <declname>si</declname>
+        </param>
+        <param>
+          <type>const ParamsConstPtr &amp;</type>
+          <declname>params</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>si</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>space information of the state space </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/motion_validator.h" line="40" column="9" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/src/motion_validator.cpp" bodystart="10" bodyend="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classslope__constrained__planner_1_1_slope_constrained_motion_validator_1ac0c338d8e69bcb6f25c65115f09c4281" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool SlopeConstrainedMotionValidator::checkMotion</definition>
+        <argsstring>(const ob::State *s1, const ob::State *s2) const override</argsstring>
+        <name>checkMotion</name>
+        <param>
+          <type>const ob::State *</type>
+          <declname>s1</declname>
+        </param>
+        <param>
+          <type>const ob::State *</type>
+          <declname>s2</declname>
+        </param>
+        <briefdescription>
+<para>Checks the slope of the motion using the first and second states position, if the slope is below the threshold, it returns true otherwise it would return false. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>s1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>First state in the motion </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>s2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Second state in the motion </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>validity of motion </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/motion_validator.h" line="50" column="14" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/src/motion_validator.cpp" bodystart="16" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="function" id="classslope__constrained__planner_1_1_slope_constrained_motion_validator_1a1bc62801fb5825999cffffa9ebf416d6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool SlopeConstrainedMotionValidator::checkMotion</definition>
+        <argsstring>(const ob::State *s1, const ob::State *s2, std::pair&lt; ob::State *, double &gt; &amp;lastValid) const override</argsstring>
+        <name>checkMotion</name>
+        <param>
+          <type>const ob::State *</type>
+          <declname>s1</declname>
+        </param>
+        <param>
+          <type>const ob::State *</type>
+          <declname>s2</declname>
+        </param>
+        <param>
+          <type>std::pair&lt; ob::State *, double &gt; &amp;</type>
+          <declname>lastValid</declname>
+        </param>
+        <briefdescription>
+<para>Checks the slope of the motion using the first and second states position, if the slope is below the threshold, it returns true otherwise it would return false. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>s1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>First state in the motion </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>s2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Second state in the motion </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>validity of motion </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/motion_validator.h" line="59" column="14" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/src/motion_validator.cpp" bodystart="63" bodyend="66"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Custom motion validator class which checks the slope of motion between two states. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>ob::MotionValidator</label>
+      </node>
+      <node id="1">
+        <label>slope_constrained_planner::SlopeConstrainedMotionValidator</label>
+        <link refid="classslope__constrained__planner_1_1_slope_constrained_motion_validator"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>ob::MotionValidator</label>
+      </node>
+      <node id="1">
+        <label>slope_constrained_planner::SlopeConstrainedMotionValidator</label>
+        <link refid="classslope__constrained__planner_1_1_slope_constrained_motion_validator"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/motion_validator.h" line="28" column="65" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/motion_validator.h" bodystart="28" bodyend="60"/>
+    <listofallmembers>
+      <member refid="classslope__constrained__planner_1_1_slope_constrained_motion_validator_1ac0c338d8e69bcb6f25c65115f09c4281" prot="public" virt="non-virtual"><scope>slope_constrained_planner::SlopeConstrainedMotionValidator</scope><name>checkMotion</name></member>
+      <member refid="classslope__constrained__planner_1_1_slope_constrained_motion_validator_1a1bc62801fb5825999cffffa9ebf416d6" prot="public" virt="non-virtual"><scope>slope_constrained_planner::SlopeConstrainedMotionValidator</scope><name>checkMotion</name></member>
+      <member refid="classslope__constrained__planner_1_1_slope_constrained_motion_validator_1a4d553ca82c40e8b6b7cc2e1e5400fbdc" prot="protected" virt="non-virtual"><scope>slope_constrained_planner::SlopeConstrainedMotionValidator</scope><name>params_</name></member>
+      <member refid="classslope__constrained__planner_1_1_slope_constrained_motion_validator_1a15dfb0484bca9851d72537699b721af6" prot="public" virt="non-virtual"><scope>slope_constrained_planner::SlopeConstrainedMotionValidator</scope><name>SlopeConstrainedMotionValidator</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

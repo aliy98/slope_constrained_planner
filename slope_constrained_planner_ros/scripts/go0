@@ -1,0 +1,168 @@
+#!/usr/bin/env python
+
+import rospy, sys, os, time, tf
+import string
+import warnings
+
+from gazebo_ros import gazebo_interface
+from std_srvs.srv import Empty
+from std_msgs.msg import Float64
+from geometry_msgs.msg import Pose, PoseStamped
+from srdfdom.srdf import SRDF
+from ast import literal_eval
+import random
+import math
+
+# Different zones in the map [cx, cy, r]
+zone1 = [10, 1.5, 2]  # Low
+zone2 = [4, -1, 2]    # High
+zone3 = [4.5, 3, 1.5] # High
+zone4 = [0, 4, 2]     # High
+zone5 = [-1, -2, 2]   # Low
+zone6 = [-1, -6, 1.5] # High
+zone7 = [-4, 1, 2]    # Medium
+zone8 = [-1, 12, 1]   # High
+zone9 = [-6, 10, 2]   # Low
+zones = [zone1, zone2, zone3, zone4, zone5, zone6, zone7, zone8, zone9]
+
+def generate_random_point_in_circle(center_x, center_y, radius):
+    angle = random.uniform(0, 2 * math.pi)
+    r = radius * math.sqrt(random.uniform(0, 1))
+    x = center_x + r * math.cos(angle)
+    y = center_y + r * math.sin(angle)
+    return (x, y)
+
+def generate_random_point_on_circle(center_x, center_y, radius):
+    angle = random.uniform(0, 2 * math.pi)
+    r = radius 
+    x = center_x + r * math.cos(angle)
+    y = center_y + r * math.sin(angle)
+    return (x, y)
+
+def unpause(gazebo_namespace):
+	rospy.wait_for_service(gazebo_namespace+'/unpause_physics')
+	time.sleep(1)
+	unpause_physics = rospy.ServiceProxy(gazebo_namespace+'/unpause_physics', Empty)
+	resp = unpause_physics()
+	return
+
+if __name__ == "__main__":
+
+	rospy.init_node('goto0')
+	
+	# Define the parameters
+	model_name                      = ""
+	robot_name                      = ""
+	gazebo_namespace                = "/gazebo"
+	joint_names                     = []
+	joint_positions                 = []
+	initial_pose                    = Pose()
+	goal_pose                       = PoseStamped()
+	reference_frame                 = "world"
+	model_xml                       = ""
+	srdf_data                       = ""
+
+	# Load the parameters
+	model_name  = rospy.get_param('~robot_model')
+	robot_name  = rospy.get_param('~robot_name')
+		
+	pub = rospy.Publisher('/goal', PoseStamped, queue_size=10)
+	robot_description_name          = '/%s/gazebo_robot_description'%(robot_name)
+	robot_description_semantic_name = '/%s/robot_description_semantic'%(robot_name)
+	
+	if robot_name != '': 	# if the robot namespace is not empty use it as the model name as well 
+		model_name = robot_name
+
+	if not rospy.has_param(robot_description_name):
+		rospy.logerr("%s is not available", robot_description_name)
+		sys.exit(1)
+	else:
+		model_xml = rospy.get_param(robot_description_name)
+
+	if not rospy.has_param(robot_description_semantic_name):
+		rospy.logerr("%s is not available", robot_description_semantic_name)
+		sys.exit(1)
+	else:
+		srdf_data = rospy.get_param(robot_description_semantic_name)
+
+	# Wait for the spawn service
+	rospy.wait_for_service("/gazebo/spawn_urdf_model")
+	
+	# Retrieve initial pose
+	init_zone = random.choice(zones)
+
+	init_point = generate_random_point_in_circle(init_zone[0], init_zone[1], init_zone[2])
+	init_yaw = random.uniform(0, 2 * math.pi)
+
+	initial_pose.position.x = init_point[0]
+	initial_pose.position.y = init_point[1]
+	initial_pose.position.z = 3.0
+	roll                    = 0.0
+	pitch                   = 0.0
+	yaw                     = init_yaw
+	rospy.loginfo("spawning %s in zone %s, with pose [%s,%s,%s,%s,%s,%s]",model_name,zones.index(init_zone)+1,init_point[0],init_point[1],0.0,0.0,0.0,init_yaw)
+
+	quaternion = tf.transformations.quaternion_from_euler(roll, pitch, yaw)
+	initial_pose.orientation.x = quaternion[0]
+	initial_pose.orientation.y = quaternion[1]
+	initial_pose.orientation.z = quaternion[2]
+	initial_pose.orientation.w = quaternion[3]
+
+	# Spawn new model
+	gazebo_interface.spawn_urdf_model_client(model_name, model_xml, robot_name, initial_pose, reference_frame, gazebo_namespace)
+
+	robot = SRDF.from_xml_string(srdf_data)
+
+	for joint in robot.group_state_map['standdown'].joints:
+		joint_names.append(joint.name)
+		joint_positions.append(joint.value[0])
+
+	rospy.wait_for_service('%s/set_model_configuration'%(gazebo_namespace))
+	try:
+		success = gazebo_interface.set_model_configuration_client(model_name, robot_description_name, joint_names, joint_positions, gazebo_namespace)
+	except rospy.ServiceException as e:
+		rospy.logerr("set model configuration service call failed")
+
+	rospy.wait_for_service('%s/unpause_physics'%(gazebo_namespace))
+	try:
+		success = unpause(gazebo_namespace)
+	except rospy.ServiceException as e:
+		rospy.logerr("unpause physics service call failed")
+	
+	rospy.sleep(1)
+
+
+	goal_point = generate_random_point_on_circle(init_point[0], init_point[1], 4)
+	goal_yaw = random.uniform(0, 2 * math.pi)
+
+	goal_pose.pose.position.x = goal_point[0]
+	goal_pose.pose.position.y = goal_point[1]
+	goal_pose.pose.position.z = 0.0
+	roll                    = 0.0
+	pitch                   = 0.0
+	yaw                     = goal_yaw
+
+	quaternion = tf.transformations.quaternion_from_euler(roll, pitch, yaw)
+	goal_pose.header.frame_id = "odom"
+	goal_pose.pose.orientation.x = quaternion[0]
+	goal_pose.pose.orientation.y = quaternion[1]
+	goal_pose.pose.orientation.z = quaternion[2]
+	goal_pose.pose.orientation.w = quaternion[3]
+
+	rospy.sleep(1)
+
+	pub.publish(goal_pose)  # publish for tilt_robot
+
+
+	rospy.loginfo("Waiting for the planner...")
+	rospy.wait_for_service("/slope_constrained_planner/get_loggers")
+
+	rospy.sleep(2)
+
+	pub.publish(goal_pose)  # publish for planner
+	rospy.loginfo("spawned %s in zone %s, with pose [%s,%s,%s,%s,%s,%s]",model_name,zones.index(init_zone)+1,init_point[0],init_point[1],0.0,0.0,0.0,init_yaw)
+	rospy.loginfo("generated goal point is in zone %s, with pose [%s,%s,%s,%s,%s,%s]",zones.index(init_zone)+1,goal_point[0],goal_point[1],0.0,0.0,0.0,goal_yaw)
+	rospy.loginfo("goal pose published")
+
+	rospy.sleep(1)
+

@@ -1,0 +1,34 @@
+\hypertarget{planner__ros_8h}{}\doxysection{/home/ali/ros\+\_\+ws/src/slope\+\_\+constrained\+\_\+planner/slope\+\_\+constrained\+\_\+planner\+\_\+ros/include/slope\+\_\+constrained\+\_\+planner\+\_\+ros/planner\+\_\+ros.h File Reference}
+\label{planner__ros_8h}\index{/home/ali/ros\_ws/src/slope\_constrained\_planner/slope\_constrained\_planner\_ros/include/slope\_constrained\_planner\_ros/planner\_ros.h@{/home/ali/ros\_ws/src/slope\_constrained\_planner/slope\_constrained\_planner\_ros/include/slope\_constrained\_planner\_ros/planner\_ros.h}}
+
+
+An inheritance of the {\ttfamily Planner} class to be used in the R\+OS environment.  
+
+
+{\ttfamily \#include $<$thread$>$}\newline
+{\ttfamily \#include $<$actionlib/server/simple\+\_\+action\+\_\+server.\+h$>$}\newline
+{\ttfamily \#include $<$slope\+\_\+constrained\+\_\+planner/planner.\+h$>$}\newline
+{\ttfamily \#include $<$slope\+\_\+constrained\+\_\+planner\+\_\+msgs/\+Plan\+To\+Goal\+Action.\+h$>$}\newline
+{\ttfamily \#include $<$geometry\+\_\+msgs/\+Pose\+Stamped.\+h$>$}\newline
+{\ttfamily \#include $<$grid\+\_\+map\+\_\+msgs/\+Grid\+Map.\+h$>$}\newline
+{\ttfamily \#include $<$nav\+\_\+msgs/\+Get\+Plan.\+h$>$}\newline
+{\ttfamily \#include $<$std\+\_\+msgs/\+Float64.\+h$>$}\newline
+{\ttfamily \#include $<$ros/ros.\+h$>$}\newline
+{\ttfamily \#include $<$tf2\+\_\+ros/transform\+\_\+listener.\+h$>$}\newline
+{\ttfamily \#include $<$slope\+\_\+constrained\+\_\+planner\+\_\+ros/converter.\+h$>$}\newline
+{\ttfamily \#include $<$slope\+\_\+constrained\+\_\+planner/params.\+h$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classslope__constrained__planner_1_1_planner_ros}{slope\+\_\+constrained\+\_\+planner\+::\+Planner\+Ros}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+An inheritance of the {\ttfamily Planner} class to be used in the R\+OS environment. 
+
+{\bfseries{Subscribes to\+:}} /elevation\+\_\+mapping/elevation\+\_\+map\+\_\+raw
+
+{\bfseries{Publishes to\+:}} /slope\+\_\+constrained\+\_\+planner/path
+
+{\bfseries{Uses Action\+:}} /slope\+\_\+constrained\+\_\+planner/plan\+\_\+to\+\_\+goal 

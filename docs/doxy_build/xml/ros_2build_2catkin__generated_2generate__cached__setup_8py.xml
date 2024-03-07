@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="ros_2build_2catkin__generated_2generate__cached__setup_8py" kind="file" language="Python">
+    <compoundname>generate_cached_setup.py</compoundname>
+    <innernamespace refid="namespacegenerate__cached__setup">generate_cached_setup</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">#<sp/>-*-<sp/>coding:<sp/>utf-8<sp/>-*-</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/>__future__<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>print_function</highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>os</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>stat</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>sys</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">#<sp/>find<sp/>the<sp/>import<sp/>for<sp/>catkin&apos;s<sp/>python<sp/>package<sp/>-<sp/>either<sp/>from<sp/>source<sp/>space<sp/>or<sp/>from<sp/>an<sp/>installed<sp/>underlay</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>os.path.exists(os.path.join(</highlight><highlight class="stringliteral">&apos;/opt/ros/noetic/share/catkin/cmake&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;catkinConfig.cmake.in&apos;</highlight><highlight class="normal">)):</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/>sys.path.insert(0,<sp/>os.path.join(</highlight><highlight class="stringliteral">&apos;/opt/ros/noetic/share/catkin/cmake&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;..&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;python&apos;</highlight><highlight class="normal">))</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keywordflow">try</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/>catkin.environment_cache<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>generate_environment_script</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keywordflow">except</highlight><highlight class="normal"><sp/>ImportError:</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>search<sp/>for<sp/>catkin<sp/>package<sp/>in<sp/>all<sp/>workspaces<sp/>and<sp/>prepend<sp/>to<sp/>path</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>workspace<sp/></highlight><highlight class="keywordflow">in</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&apos;/home/ali/ros_ws/devel;/opt/ros/noetic;/opt/xbot&apos;</highlight><highlight class="normal">.split(</highlight><highlight class="stringliteral">&apos;;&apos;</highlight><highlight class="normal">):</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>python_path<sp/>=<sp/>os.path.join(workspace,<sp/></highlight><highlight class="stringliteral">&apos;lib/python3/dist-packages&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>os.path.isdir(os.path.join(python_path,<sp/></highlight><highlight class="stringliteral">&apos;catkin&apos;</highlight><highlight class="normal">)):</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sys.path.insert(0,<sp/>python_path)</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/>catkin.environment_cache<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>generate_environment_script</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal">code<sp/>=<sp/>generate_environment_script(</highlight><highlight class="stringliteral">&apos;/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/build/devel/env.sh&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal">output_filename<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/build/catkin_generated/setup_cached.sh&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">with</highlight><highlight class="normal"><sp/>open(output_filename,<sp/></highlight><highlight class="stringliteral">&apos;w&apos;</highlight><highlight class="normal">)<sp/></highlight><highlight class="keyword">as</highlight><highlight class="normal"><sp/>f:</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>print(&apos;Generate<sp/>script<sp/>for<sp/>cached<sp/>setup<sp/>&quot;%s&quot;&apos;<sp/>%<sp/>output_filename)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>f.write(</highlight><highlight class="stringliteral">&apos;\n&apos;</highlight><highlight class="normal">.join(code))</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal">mode<sp/>=<sp/>os.stat(output_filename).st_mode</highlight></codeline>
+<codeline lineno="30"><highlight class="normal">os.chmod(output_filename,<sp/>mode<sp/>|<sp/>stat.S_IXUSR)</highlight></codeline>
+    </programlisting>
+    <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/build/catkin_generated/generate_cached_setup.py"/>
+  </compounddef>
+</doxygen>

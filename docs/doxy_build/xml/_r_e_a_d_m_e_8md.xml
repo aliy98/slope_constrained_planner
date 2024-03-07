@@ -1,0 +1,117 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="_r_e_a_d_m_e_8md" kind="file" language="Markdown">
+    <compoundname>README.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">##<sp/>Slope-Informed<sp/>Global<sp/>Path<sp/>Planning<sp/>for<sp/>Quadruped<sp/>Robots</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">This<sp/>work<sp/>describes<sp/>the<sp/>initial<sp/>steps<sp/>in<sp/>developing<sp/>a<sp/>global<sp/>path<sp/>planner<sp/>for<sp/>a<sp/>quadruped<sp/>robot<sp/>designed<sp/>to<sp/>traverse<sp/>outdoor<sp/>environments<sp/>with<sp/>uneven<sp/>terrains.<sp/>The<sp/>ultimate<sp/>goal<sp/>is<sp/>to<sp/>generate<sp/>paths<sp/>that<sp/>strike<sp/>a<sp/>balance<sp/>between<sp/>path<sp/>length,<sp/>tortuousness,<sp/>energy<sp/>efficiency,<sp/>and<sp/>safety<sp/>when<sp/>encountering<sp/>slopes.<sp/>The<sp/>article<sp/>details<sp/>the<sp/>system<sp/>architecture<sp/>and<sp/>the<sp/>implemented<sp/>planning<sp/>method,<sp/>which<sp/>incorporates<sp/>slope</highlight></codeline>
+<codeline><highlight class="normal">constraints<sp/>into<sp/>a<sp/>roadmap-based<sp/>approach<sp/>to<sp/>generate<sp/>paths<sp/>with<sp/>various<sp/>characteristics.<sp/>The<sp/>algorithm<sp/>has<sp/>undergone</highlight></codeline>
+<codeline><highlight class="normal">extensive<sp/>testing,<sp/>both<sp/>in<sp/>simulation<sp/>and<sp/>with<sp/>the<sp/>Spot<sp/>robot<sp/>from<sp/>Boston<sp/>Dynamics.<sp/>In<sp/>both<sp/>sets<sp/>of<sp/>experiments,<sp/>noticeable</highlight></codeline>
+<codeline><highlight class="normal">differences<sp/>were<sp/>observed<sp/>when<sp/>adjusting<sp/>the<sp/>constraints<sp/>on<sp/>the<sp/>robot’s<sp/>maximum<sp/>allowable<sp/>inclination<sp/>angles.</highlight></codeline>
+<codeline><highlight class="normal">Please<sp/>refer<sp/>to<sp/>the<sp/>provided<sp/>[documentation](https://aliy98.github.io/slope_constrained_planner/),<sp/>for<sp/>more<sp/>details<sp/>about<sp/>this<sp/>work.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Authors:**<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>-<sp/>Ali<sp/>Yousefi,<sp/>s5265866@studenti.unige.it</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>-<sp/>Zoe<sp/>Betta,<sp/>zoe.betta@edu.unige.it</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>-<sp/>Antonio<sp/>Sgorbissa,<sp/>antonio.sgorbissa@unige.it</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>-<sp/>Carmine<sp/>Tommaso<sp/>Recchiuto,<sp/>carmine.recchiuto@unige.it</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">©2023<sp/>RICE<sp/>-<sp/>DIBRIS,<sp/>University<sp/>of<sp/>Genova</highlight></codeline>
+<codeline><highlight class="normal">&lt;p<sp/>align=&quot;left&quot;&gt;</highlight></codeline>
+<codeline><highlight class="normal">&lt;img<sp/>src=&quot;https://github.com/aliy98/slope_constrained_planner/assets/65722399/6605b9e1-53cc-4962-9b81-9f15e27de395&quot;<sp/>width=&quot;150&quot;<sp/>title=&quot;rice_logo&quot;&gt;</highlight></codeline>
+<codeline><highlight class="normal">&lt;/p&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Dependencies</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>The<sp/>software<sp/>for<sp/>this<sp/>planner<sp/>is<sp/>based<sp/>on<sp/>[OMPL](https://ompl.kavrakilab.org/index.html),<sp/>which<sp/>consists<sp/>of<sp/>many<sp/>state-of-the-art<sp/>sampling-based<sp/>motion<sp/>planning<sp/>algorithms.<sp/>The<sp/>required<sp/>dependencies<sp/>could<sp/>be<sp/>installed<sp/>using<sp/>the<sp/>following<sp/>command:</highlight></codeline>
+<codeline><highlight class="normal"><sp/></highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">sudo<sp/>apt<sp/>install<sp/>ros-noetic-ompl<sp/>ros-noetic-grid-map-core<sp/>ros-noetic-actionlib<sp/>ros-noetic-geometry-msgs<sp/>ros-noetic-grid-map-msgs<sp/>ros-noetic-grid-map-ros<sp/>ros-noetic-nav-msgs<sp/>ros-noetic-roscpp<sp/>ros-noetic-tf2-geometry-msgs<sp/>ros-noetic-tf2-ros</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>Additionally,<sp/>[elevation_mapping](https://github.com/ANYbotics/elevation_mapping)<sp/>ROS<sp/>package<sp/>was<sp/>used<sp/>to<sp/>create<sp/>a<sp/>2.5D<sp/>map<sp/>of<sp/>the<sp/>environment.<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>In<sp/>order<sp/>to<sp/>test<sp/>the<sp/>software<sp/>package<sp/>in<sp/>simulation<sp/>environment,<sp/>[WoLF](https://github.com/graiola/wolf-setup)<sp/>was<sp/>used.<sp/>This<sp/>package<sp/>provides<sp/>whole-body<sp/>controller,<sp/>along<sp/>with<sp/>the<sp/>robot<sp/>description<sp/>files<sp/>and<sp/>some<sp/>interesting<sp/>worlds<sp/>for<sp/>Boston<sp/>Dynamics<sp/>Spot<sp/>robot,<sp/>as<sp/>well<sp/>as<sp/>several<sp/>other<sp/>famous<sp/>quadruped<sp/>robots.</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Usage<sp/>in<sp/>Simulation</highlight></codeline>
+<codeline><highlight class="normal">In<sp/>order<sp/>to<sp/>run<sp/>the<sp/>simulation<sp/>environemnt,<sp/>along<sp/>with<sp/>the<sp/>elevation<sp/>mapping<sp/>package,<sp/>the<sp/>following<sp/>launch<sp/>file<sp/>could<sp/>be<sp/>used:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>roslaunch<sp/>slope_constrained_planner_ros<sp/>simulation.launch</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Once<sp/>the<sp/>robot<sp/>is<sp/>spawned<sp/>in<sp/>a<sp/>random<sp/>point<sp/>by<sp/>``go0.py``<sp/>script,<sp/>a<sp/>random<sp/>goal<sp/>point<sp/>would<sp/>be<sp/>chosen<sp/>on<sp/>the<sp/>map<sp/>with<sp/>a<sp/>particular<sp/>distance<sp/>to<sp/>robot.<sp/>Then,<sp/>robot<sp/>would<sp/>align<sp/>to<sp/>the<sp/>goal<sp/>point,<sp/>and<sp/>it<sp/>would<sp/>tilt<sp/>along<sp/>it&apos;s<sp/>y-axiz<sp/>by<sp/>``tilt_robot.py``<sp/>script,<sp/>in<sp/>order<sp/>to<sp/>have<sp/>a<sp/>better<sp/>view<sp/>in<sp/>the<sp/>elevation<sp/>map.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">The<sp/>planner<sp/>node,<sp/>could<sp/>be<sp/>launched<sp/>using<sp/>the<sp/>following<sp/>command:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>roslaunch<sp/>slope_constrained_planner_ros<sp/>planner.launch<sp/></highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Once<sp/>the<sp/>solution<sp/>path<sp/>is<sp/>found<sp/>by<sp/>the<sp/>planner,<sp/>the<sp/>robot<sp/>could<sp/>move<sp/>along<sp/>the<sp/>path,<sp/>using<sp/>the<sp/>provided<sp/>``path_follower.py``<sp/>script:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>roslaunch<sp/>slope_constrained_planner_ros<sp/>path_follower.launch</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Usage<sp/>in<sp/>real-world<sp/>experiment</highlight></codeline>
+<codeline><highlight class="normal">Regarding<sp/>the<sp/>real-world<sp/>usage<sp/>with<sp/>Boston<sp/>Dynamics<sp/>Spot<sp/>CORE,<sp/>the<sp/>elevation<sp/>mapping<sp/>package,<sp/>and<sp/>spot<sp/>ros<sp/>packages<sp/>could<sp/>be<sp/>launched<sp/>using<sp/>the<sp/>command:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>roslaunch<sp/>slope_constrained_planner_ros<sp/>navigation.launch</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Moreover,<sp/>the<sp/>following<sp/>command<sp/>would<sp/>make<sp/>the<sp/>robot<sp/>stand<sp/>up<sp/>and<sp/>wait<sp/>for<sp/>the<sp/>waypoint<sp/>on<sp/>the<sp/>found<sp/>trajectory.<sp/>Actually,<sp/>it<sp/>uses<sp/>the<sp/>commands<sp/>on<sp/>the<sp/>Spot<sp/>SDK,<sp/>to<sp/>perform<sp/>the<sp/>task<sp/>of<sp/>local<sp/>path<sp/>planning,<sp/>based<sp/>on<sp/>the<sp/>found<sp/>global<sp/>path<sp/>by<sp/>our<sp/>planner.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>rosrun<sp/>slope_constrained_planner_ros<sp/>gotopoint.py</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">The<sp/>planner<sp/>node,<sp/>could<sp/>be<sp/>launched<sp/>using<sp/>the<sp/>following<sp/>command:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>roslaunch<sp/>slope_constrained_planner_ros<sp/>planner.launch<sp/></highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">Once<sp/>the<sp/>path<sp/>is<sp/>found,<sp/>the<sp/>waypoints<sp/>on<sp/>the<sp/>trajectory<sp/>would<sp/>be<sp/>published<sp/>to<sp/>the<sp/>local<sp/>path<sp/>planner<sp/>``gotopoint``,<sp/>using<sp/>the<sp/>following<sp/>command:</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>rosrun<sp/>slope_constrained_planner_ros<sp/>goal_publisher.py</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Configuration</highlight></codeline>
+<codeline><highlight class="normal">The<sp/>parameters<sp/>of<sp/>planner<sp/>components<sp/>(e.g.<sp/>sampler,<sp/>motion<sp/>validartor,<sp/>planning<sp/>algorithm),<sp/>could<sp/>be<sp/>modified<sp/>in<sp/>the<sp/>file<sp/>``slope_constrained_planner/config/params.yaml``.<sp/>Regarding<sp/>the<sp/>elevation<sp/>map,<sp/>the<sp/>configuration<sp/>files<sp/>are<sp/>located<sp/>in<sp/>the<sp/>same<sp/>directory<sp/>which<sp/>are<sp/>named<sp/>``map_sim.yaml``<sp/>and<sp/>``map_real.yaml``.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>System<sp/>hypothesis<sp/>and<sp/>future<sp/>work</highlight></codeline>
+<codeline><highlight class="normal">We<sp/>implemented<sp/>a<sp/>global<sp/>path<sp/>planner<sp/>algorithm<sp/>able<sp/>to</highlight></codeline>
+<codeline><highlight class="normal">take<sp/>into<sp/>account<sp/>constraints<sp/>on<sp/>the<sp/>slope<sp/>a<sp/>quadruped<sp/>robot</highlight></codeline>
+<codeline><highlight class="normal">can<sp/>face<sp/>outdoor.<sp/>The<sp/>presence<sp/>slope<sp/>constraints<sp/>effectively</highlight></codeline>
+<codeline><highlight class="normal">influences<sp/>the<sp/>generated<sp/>path<sp/>in<sp/>a<sp/>way<sp/>that<sp/>allows<sp/>for<sp/>longer</highlight></codeline>
+<codeline><highlight class="normal">paths<sp/>but<sp/>limited<sp/>slope<sp/>or<sp/>vice<sp/>versa.<sp/>We<sp/>observed<sp/>these</highlight></codeline>
+<codeline><highlight class="normal">results<sp/>both<sp/>in<sp/>simulation<sp/>and<sp/>in<sp/>real-world<sp/>experiments<sp/>with</highlight></codeline>
+<codeline><highlight class="normal">the<sp/>Spot<sp/>robot<sp/>from<sp/>Boston<sp/>Dynamics.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">In<sp/>future<sp/>work,<sp/>we<sp/>plan<sp/>to<sp/>conduct<sp/>more<sp/>extensive<sp/>testing</highlight></codeline>
+<codeline><highlight class="normal">with<sp/>the<sp/>Spot<sp/>robot<sp/>on<sp/>steeper<sp/>hills<sp/>to<sp/>thoroughly<sp/>assess</highlight></codeline>
+<codeline><highlight class="normal">the<sp/>algorithm’s<sp/>limitations.<sp/>Additionally,<sp/>we<sp/>will<sp/>investigate</highlight></codeline>
+<codeline><highlight class="normal">the<sp/>impact<sp/>of<sp/>various<sp/>solutions<sp/>on<sp/>battery<sp/>consumption<sp/>to</highlight></codeline>
+<codeline><highlight class="normal">determine<sp/>potential<sp/>differences<sp/>in<sp/>energy<sp/>efficiency.<sp/>This</highlight></codeline>
+<codeline><highlight class="normal">research<sp/>will<sp/>ultimately<sp/>contribute<sp/>to<sp/>the<sp/>development<sp/>of<sp/>a</highlight></codeline>
+<codeline><highlight class="normal">system<sp/>that<sp/>emulates<sp/>human<sp/>versatility<sp/>in<sp/>making<sp/>decisions</highlight></codeline>
+<codeline><highlight class="normal">regarding<sp/>slope<sp/>navigation.<sp/>The<sp/>robot<sp/>may<sp/>opt<sp/>to<sp/>follow<sp/>a</highlight></codeline>
+<codeline><highlight class="normal">longer<sp/>(and<sp/>potentially<sp/>safer)<sp/>path<sp/>or<sp/>a<sp/>shorter<sp/>(but<sp/>more</highlight></codeline>
+<codeline><highlight class="normal">energy-intensive)<sp/>path,<sp/>taking<sp/>into<sp/>account<sp/>factors<sp/>such<sp/>as</highlight></codeline>
+<codeline><highlight class="normal">task<sp/>requirements,<sp/>time<sp/>constraints,<sp/>payload,<sp/>battery<sp/>charge,</highlight></codeline>
+<codeline><highlight class="normal">and<sp/>other<sp/>relevant<sp/>parameters.</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+    </programlisting>
+    <location file="/home/ali/ros_ws/src/slope_constrained_planner/README.md"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,66 @@
+\hypertarget{classslope__constrained__planner_1_1_sampler_allocator}{}\doxysection{slope\+\_\+constrained\+\_\+planner\+::Sampler\+Allocator Class Reference}
+\label{classslope__constrained__planner_1_1_sampler_allocator}\index{slope\_constrained\_planner::SamplerAllocator@{slope\_constrained\_planner::SamplerAllocator}}
+
+
+Allocates the custom sampler class in the planner.  
+
+
+
+
+{\ttfamily \#include $<$sampler.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classslope__constrained__planner_1_1_sampler_allocator_a9bddea7051b6834050d24bc573b4367b}\label{classslope__constrained__planner_1_1_sampler_allocator_a9bddea7051b6834050d24bc573b4367b}} 
+{\bfseries Sampler\+Allocator} (const Params\+Const\+Ptr \&params)
+\item 
+void \mbox{\hyperlink{classslope__constrained__planner_1_1_sampler_allocator_a6c08b70c6c16e4c4bc259a47c36c37f8}{set\+Map}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classslope__constrained__planner_1_1_map}{Map}} $>$ \&map)
+\begin{DoxyCompactList}\small\item\em Sets the grid map data in the corresponding class attribute. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classslope__constrained__planner_1_1_sampler}{Sampler}} $>$ \mbox{\hyperlink{classslope__constrained__planner_1_1_sampler_allocator_a95a897b0212f9925c5b912b7974524db}{get\+Sampler}} (const ob\+::\+State\+Space $\ast$space)
+\begin{DoxyCompactList}\small\item\em Gets the custom sampler class to allocate it in the planner. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Allocates the custom sampler class in the planner. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classslope__constrained__planner_1_1_sampler_allocator_a95a897b0212f9925c5b912b7974524db}\label{classslope__constrained__planner_1_1_sampler_allocator_a95a897b0212f9925c5b912b7974524db}} 
+\index{slope\_constrained\_planner::SamplerAllocator@{slope\_constrained\_planner::SamplerAllocator}!getSampler@{getSampler}}
+\index{getSampler@{getSampler}!slope\_constrained\_planner::SamplerAllocator@{slope\_constrained\_planner::SamplerAllocator}}
+\doxysubsubsection{\texorpdfstring{getSampler()}{getSampler()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classslope__constrained__planner_1_1_sampler}{Sampler}} $>$ Sampler\+Allocator\+::get\+Sampler (\begin{DoxyParamCaption}\item[{const ob\+::\+State\+Space $\ast$}]{space }\end{DoxyParamCaption})}
+
+
+
+Gets the custom sampler class to allocate it in the planner. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em space} & state space in which the sampler would find the states \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classslope__constrained__planner_1_1_sampler}{Sampler}} a shared pointer to the custom sampler class 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classslope__constrained__planner_1_1_sampler_allocator_a6c08b70c6c16e4c4bc259a47c36c37f8}\label{classslope__constrained__planner_1_1_sampler_allocator_a6c08b70c6c16e4c4bc259a47c36c37f8}} 
+\index{slope\_constrained\_planner::SamplerAllocator@{slope\_constrained\_planner::SamplerAllocator}!setMap@{setMap}}
+\index{setMap@{setMap}!slope\_constrained\_planner::SamplerAllocator@{slope\_constrained\_planner::SamplerAllocator}}
+\doxysubsubsection{\texorpdfstring{setMap()}{setMap()}}
+{\footnotesize\ttfamily void Sampler\+Allocator\+::set\+Map (\begin{DoxyParamCaption}\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classslope__constrained__planner_1_1_map}{Map}} $>$ \&}]{map }\end{DoxyParamCaption})}
+
+
+
+Sets the grid map data in the corresponding class attribute. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em map} & grid map of the environment \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/ali/ros\+\_\+ws/src/slope\+\_\+constrained\+\_\+planner/slope\+\_\+constrained\+\_\+planner/include/slope\+\_\+constrained\+\_\+planner/\mbox{\hyperlink{sampler_8h}{sampler.\+h}}\item 
+/home/ali/ros\+\_\+ws/src/slope\+\_\+constrained\+\_\+planner/slope\+\_\+constrained\+\_\+planner/src/\mbox{\hyperlink{sampler_8cpp}{sampler.\+cpp}}\end{DoxyCompactItemize}

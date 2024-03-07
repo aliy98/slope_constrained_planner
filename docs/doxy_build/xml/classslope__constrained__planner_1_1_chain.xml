@@ -1,0 +1,108 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classslope__constrained__planner_1_1_chain" kind="class" language="C++" prot="public">
+    <compoundname>slope_constrained_planner::Chain</compoundname>
+    <templateparamlist>
+      <param>
+        <type>typename ...</type>
+        <declname>Args</declname>
+        <defname>Args</defname>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="classslope__constrained__planner_1_1_chain_1aff24674de20b5f89d4c67b56c2a06765" prot="private" static="no">
+        <type>std::function&lt; void(Args...)&gt;</type>
+        <definition>using slope_constrained_planner::Chain&lt; Args &gt;::ProcFunc =  std::function&lt;void (Args...)&gt;</definition>
+        <argsstring></argsstring>
+        <name>ProcFunc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/chain.h" line="22" column="3" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/chain.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classslope__constrained__planner_1_1_chain_1ab726bda7e196c6069fb19c29912743e1" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; ProcFunc &gt;</type>
+        <definition>std::vector&lt;ProcFunc&gt; slope_constrained_planner::Chain&lt; Args &gt;::functions_</definition>
+        <argsstring></argsstring>
+        <name>functions_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/chain.h" line="24" column="15" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/chain.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classslope__constrained__planner_1_1_chain_1aee39f69e53a5df4b59e4cabadf01235b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void slope_constrained_planner::Chain&lt; Args &gt;::process</definition>
+        <argsstring>(Args... args)</argsstring>
+        <name>process</name>
+        <param>
+          <type>Args...</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/chain.h" line="28" column="8" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/chain.h" bodystart="28" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="function" id="classslope__constrained__planner_1_1_chain_1ae2ea977f21de652346d0b16efee8a974" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void slope_constrained_planner::Chain&lt; Args &gt;::appendFunction</definition>
+        <argsstring>(const ProcFunc &amp;func)</argsstring>
+        <name>appendFunction</name>
+        <param>
+          <type>const ProcFunc &amp;</type>
+          <declname>func</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/chain.h" line="34" column="8" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/chain.h" bodystart="34" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="classslope__constrained__planner_1_1_chain_1a8dc8f82f27cb64ce61843f65b06854a1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void slope_constrained_planner::Chain&lt; Args &gt;::appendFunction</definition>
+        <argsstring>(ProcFunc &amp;&amp;func)</argsstring>
+        <name>appendFunction</name>
+        <param>
+          <type>ProcFunc &amp;&amp;</type>
+          <declname>func</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/chain.h" line="38" column="8" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/chain.h" bodystart="38" bodyend="40"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/chain.h" line="20" column="12" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/chain.h" bodystart="20" bodyend="42"/>
+    <listofallmembers>
+      <member refid="classslope__constrained__planner_1_1_chain_1ae2ea977f21de652346d0b16efee8a974" prot="public" virt="non-virtual"><scope>slope_constrained_planner::Chain</scope><name>appendFunction</name></member>
+      <member refid="classslope__constrained__planner_1_1_chain_1a8dc8f82f27cb64ce61843f65b06854a1" prot="public" virt="non-virtual"><scope>slope_constrained_planner::Chain</scope><name>appendFunction</name></member>
+      <member refid="classslope__constrained__planner_1_1_chain_1ab726bda7e196c6069fb19c29912743e1" prot="private" virt="non-virtual"><scope>slope_constrained_planner::Chain</scope><name>functions_</name></member>
+      <member refid="classslope__constrained__planner_1_1_chain_1aee39f69e53a5df4b59e4cabadf01235b" prot="public" virt="non-virtual"><scope>slope_constrained_planner::Chain</scope><name>process</name></member>
+      <member refid="classslope__constrained__planner_1_1_chain_1aff24674de20b5f89d4c67b56c2a06765" prot="private" virt="non-virtual"><scope>slope_constrained_planner::Chain</scope><name>ProcFunc</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,137 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="__sources_2working__hypothesis_8rst_8txt" kind="file" language="C++">
+    <compoundname>working_hypothesis.rst.txt</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="__sources_2working__hypothesis_8rst_8txt_1ac2d48455bc75a2131cb97c24080592a0" prot="public" static="no" mutable="no">
+        <type>System hypothesis and future</type>
+        <definition>System hypothesis and future work</definition>
+        <argsstring></argsstring>
+        <name>work</name>
+        <initializer>======================================
+
+
+We implemented a global path planner algorithm able to take into account constraints on the slope a 
+quadruped robot can face outdoor. The presence slope constraints effectively influences the generated 
+path in a way that allows for longer paths but limited slope or vice versa. We observed these results 
+both in simulation and in real-world experiments with the Spot robot from Boston Dynamics.
+
+In future work</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="_sources/working_hypothesis.rst.txt" line="1" column="30" bodyfile="_sources/working_hypothesis.rst.txt" bodystart="2" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="__sources_2working__hypothesis_8rst_8txt_1a574d4b13c45502a93537c44804f84210" prot="public" static="no" mutable="no">
+        <type>System hypothesis and future we plan to conduct more extensive testing with the Spot robot on steeper hills to thoroughly assess the algorithm’s limitations</type>
+        <definition>System hypothesis and future we plan to conduct more extensive testing with the Spot robot on steeper hills to thoroughly assess the algorithm’s limitations Additionally</definition>
+        <argsstring></argsstring>
+        <name>Additionally</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="_sources/working_hypothesis.rst.txt" line="11" column="49" bodyfile="_sources/working_hypothesis.rst.txt" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="__sources_2working__hypothesis_8rst_8txt_1a9215a347fc58cd0bd0d359d26e84c45b" prot="public" static="no" mutable="no">
+        <type>System hypothesis and future we plan to conduct more extensive testing with the Spot robot on steeper hills to thoroughly assess the algorithm’s limitations we will investigate the impact of various solutions on battery consumption to determine potential differences in energy efficiency This research will ultimately contribute to the development of a system that emulates human versatility in making decisions regarding slope navigation The robot may opt to follow a taking into account factors such as task</type>
+        <definition>System hypothesis and future we plan to conduct more extensive testing with the Spot robot on steeper hills to thoroughly assess the algorithm’s limitations we will investigate the impact of various solutions on battery consumption to determine potential differences in energy efficiency This research will ultimately contribute to the development of a system that emulates human versatility in making decisions regarding slope navigation The robot may opt to follow a taking into account factors such as task requirements</definition>
+        <argsstring></argsstring>
+        <name>requirements</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="_sources/working_hypothesis.rst.txt" line="15" column="49" bodyfile="_sources/working_hypothesis.rst.txt" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="__sources_2working__hypothesis_8rst_8txt_1aab2f1a6bda524d1a8958364dabe6d68c" prot="public" static="no" mutable="no">
+        <type>System hypothesis and future we plan to conduct more extensive testing with the Spot robot on steeper hills to thoroughly assess the algorithm’s limitations we will investigate the impact of various solutions on battery consumption to determine potential differences in energy efficiency This research will ultimately contribute to the development of a system that emulates human versatility in making decisions regarding slope navigation The robot may opt to follow a taking into account factors such as task time</type>
+        <definition>System hypothesis and future we plan to conduct more extensive testing with the Spot robot on steeper hills to thoroughly assess the algorithm’s limitations we will investigate the impact of various solutions on battery consumption to determine potential differences in energy efficiency This research will ultimately contribute to the development of a system that emulates human versatility in making decisions regarding slope navigation The robot may opt to follow a taking into account factors such as task time constraints</definition>
+        <argsstring></argsstring>
+        <name>constraints</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="_sources/working_hypothesis.rst.txt" line="16" column="6" bodyfile="_sources/working_hypothesis.rst.txt" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="__sources_2working__hypothesis_8rst_8txt_1a78b575b990efb30fb6ada23e856a55ff" prot="public" static="no" mutable="no">
+        <type>System hypothesis and future we plan to conduct more extensive testing with the Spot robot on steeper hills to thoroughly assess the algorithm’s limitations we will investigate the impact of various solutions on battery consumption to determine potential differences in energy efficiency This research will ultimately contribute to the development of a system that emulates human versatility in making decisions regarding slope navigation The robot may opt to follow a taking into account factors such as task time</type>
+        <definition>System hypothesis and future we plan to conduct more extensive testing with the Spot robot on steeper hills to thoroughly assess the algorithm’s limitations we will investigate the impact of various solutions on battery consumption to determine potential differences in energy efficiency This research will ultimately contribute to the development of a system that emulates human versatility in making decisions regarding slope navigation The robot may opt to follow a taking into account factors such as task time payload</definition>
+        <argsstring></argsstring>
+        <name>payload</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="_sources/working_hypothesis.rst.txt" line="16" column="18" bodyfile="_sources/working_hypothesis.rst.txt" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="__sources_2working__hypothesis_8rst_8txt_1a1b6f884723d30579e33f30b7fad7c705" prot="public" static="no" mutable="no">
+        <type>System hypothesis and future we plan to conduct more extensive testing with the Spot robot on steeper hills to thoroughly assess the algorithm’s limitations we will investigate the impact of various solutions on battery consumption to determine potential differences in energy efficiency This research will ultimately contribute to the development of a system that emulates human versatility in making decisions regarding slope navigation The robot may opt to follow a taking into account factors such as task time battery</type>
+        <definition>System hypothesis and future we plan to conduct more extensive testing with the Spot robot on steeper hills to thoroughly assess the algorithm’s limitations we will investigate the impact of various solutions on battery consumption to determine potential differences in energy efficiency This research will ultimately contribute to the development of a system that emulates human versatility in making decisions regarding slope navigation The robot may opt to follow a taking into account factors such as task time battery charge</definition>
+        <argsstring></argsstring>
+        <name>charge</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="_sources/working_hypothesis.rst.txt" line="16" column="34" bodyfile="_sources/working_hypothesis.rst.txt" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="__sources_2working__hypothesis_8rst_8txt_1ab937c3f76f9c8c62d934341b6c11911d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>System hypothesis and future we plan to conduct more extensive testing with the Spot robot on steeper hills to thoroughly assess the algorithm’s limitations we will investigate the impact of various solutions on battery consumption to determine potential differences in energy efficiency This research will ultimately contribute to the development of a system that emulates human versatility in making decisions regarding slope navigation The robot may opt to follow a</type>
+        <definition>System hypothesis and future we plan to conduct more extensive testing with the Spot robot on steeper hills to thoroughly assess the algorithm’s limitations we will investigate the impact of various solutions on battery consumption to determine potential differences in energy efficiency This research will ultimately contribute to the development of a system that emulates human versatility in making decisions regarding slope navigation The robot may opt to follow a longer</definition>
+        <argsstring>(and potentially safer) path or a shorter(but more energy-intensive) path</argsstring>
+        <name>longer</name>
+        <param>
+          <type>and potentially</type>
+          <declname>safer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="_sources/working_hypothesis.rst.txt" line="14" column="68"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">System<sp/>hypothesis<sp/>and<sp/>future<sp/>work</highlight></codeline>
+<codeline lineno="2"><highlight class="normal">======================================</highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal">We<sp/>implemented<sp/>a<sp/>global<sp/>path<sp/>planner<sp/>algorithm<sp/>able<sp/>to<sp/>take<sp/>into<sp/>account<sp/>constraints<sp/>on<sp/>the<sp/>slope<sp/>a<sp/></highlight></codeline>
+<codeline lineno="6"><highlight class="normal">quadruped<sp/>robot<sp/>can<sp/>face<sp/>outdoor.<sp/>The<sp/>presence<sp/>slope<sp/>constraints<sp/>effectively<sp/>influences<sp/>the<sp/>generated<sp/></highlight></codeline>
+<codeline lineno="7"><highlight class="normal">path<sp/>in<sp/>a<sp/>way<sp/>that<sp/>allows<sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>longer<sp/>paths<sp/>but<sp/>limited<sp/>slope<sp/>or<sp/>vice<sp/>versa.<sp/>We<sp/>observed<sp/>these<sp/>results<sp/></highlight></codeline>
+<codeline lineno="8"><highlight class="normal">both<sp/>in<sp/>simulation<sp/>and<sp/>in<sp/>real-world<sp/>experiments<sp/>with<sp/>the<sp/>Spot<sp/>robot<sp/>from<sp/>Boston<sp/>Dynamics.</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal">In<sp/>future<sp/>work,<sp/>we<sp/>plan<sp/>to<sp/>conduct<sp/>more<sp/>extensive<sp/>testing<sp/>with<sp/>the<sp/>Spot<sp/>robot<sp/>on<sp/>steeper<sp/>hills<sp/>to<sp/></highlight></codeline>
+<codeline lineno="11"><highlight class="normal">thoroughly<sp/>assess<sp/>the<sp/>algorithm’s<sp/>limitations.<sp/>Additionally,<sp/>we<sp/>will<sp/>investigate<sp/>the<sp/>impact<sp/>of<sp/>various<sp/></highlight></codeline>
+<codeline lineno="12"><highlight class="normal">solutions<sp/>on<sp/>battery<sp/>consumption<sp/>to<sp/>determine<sp/>potential<sp/>differences<sp/>in<sp/>energy<sp/>efficiency.<sp/>This<sp/>research<sp/></highlight></codeline>
+<codeline lineno="13"><highlight class="normal">will<sp/>ultimately<sp/>contribute<sp/>to<sp/>the<sp/>development<sp/>of<sp/>a<sp/>system<sp/>that<sp/>emulates<sp/>human<sp/>versatility<sp/>in<sp/>making<sp/></highlight></codeline>
+<codeline lineno="14"><highlight class="normal">decisions<sp/>regarding<sp/>slope<sp/>navigation.<sp/>The<sp/>robot<sp/>may<sp/>opt<sp/>to<sp/>follow<sp/>a<sp/>longer<sp/>(and<sp/>potentially<sp/>safer)<sp/>path<sp/></highlight></codeline>
+<codeline lineno="15"><highlight class="normal">or<sp/>a<sp/>shorter<sp/>(but<sp/>more<sp/>energy-intensive)<sp/>path,<sp/>taking<sp/>into<sp/>account<sp/>factors<sp/>such<sp/>as<sp/>task<sp/>requirements,<sp/></highlight></codeline>
+<codeline lineno="16"><highlight class="normal">time<sp/>constraints,<sp/>payload,<sp/>battery<sp/>charge,<sp/>and<sp/>other<sp/>relevant<sp/>parameters.</highlight></codeline>
+    </programlisting>
+    <location file="_sources/working_hypothesis.rst.txt"/>
+  </compounddef>
+</doxygen>

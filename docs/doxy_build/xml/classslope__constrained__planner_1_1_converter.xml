@@ -1,0 +1,120 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classslope__constrained__planner_1_1_converter" kind="class" language="C++" prot="public">
+    <compoundname>slope_constrained_planner::Converter</compoundname>
+    <includes refid="converter_8h" local="no">converter.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classslope__constrained__planner_1_1_converter_1a2de369a571fae9395144b8ffc5532ff0" prot="private" static="no" mutable="no">
+        <type>std::shared_ptr&lt; ob::SE3StateSpace &gt;</type>
+        <definition>std::shared_ptr&lt;ob::SE3StateSpace&gt; slope_constrained_planner::Converter::space_</definition>
+        <argsstring></argsstring>
+        <name>space_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/include/slope_constrained_planner_ros/converter.h" line="24" column="19" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/include/slope_constrained_planner_ros/converter.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classslope__constrained__planner_1_1_converter_1a679c2be0e77cf96db1f4434cbddc8587" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Converter::Converter</definition>
+        <argsstring>(std::shared_ptr&lt; ob::SE3StateSpace &gt; space)</argsstring>
+        <name>Converter</name>
+        <param>
+          <type>std::shared_ptr&lt; ob::SE3StateSpace &gt;</type>
+          <declname>space</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>space</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>State space of the problem represented in SE3 </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/include/slope_constrained_planner_ros/converter.h" line="32" column="5" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/src/converter.cpp" bodystart="10" bodyend="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classslope__constrained__planner_1_1_converter_1a10a71f8ae0507717ec6c28c076f3f20d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>ob::ScopedState</type>
+        <definition>ob::ScopedState Converter::poseRosToOmpl</definition>
+        <argsstring>(const geometry_msgs::PoseStamped &amp;pose_ros) const</argsstring>
+        <name>poseRosToOmpl</name>
+        <param>
+          <type>const geometry_msgs::PoseStamped &amp;</type>
+          <declname>pose_ros</declname>
+        </param>
+        <briefdescription>
+<para>Converts the pos data from type <computeroutput>geometry_msgs::PoseStamped</computeroutput> to SE3 state data type. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pose_ros</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Position to be converted </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/include/slope_constrained_planner_ros/converter.h" line="39" column="6" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/src/converter.cpp" bodystart="15" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="classslope__constrained__planner_1_1_converter_1afd08819f177c65142183740fc008ce7c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>nav_msgs::Path</type>
+        <definition>nav_msgs::Path Converter::pathOmplToRos</definition>
+        <argsstring>(const og::PathGeometric &amp;path) const</argsstring>
+        <name>pathOmplToRos</name>
+        <param>
+          <type>const og::PathGeometric &amp;</type>
+          <declname>path</declname>
+        </param>
+        <briefdescription>
+<para>Converts the found path by the planner to <computeroutput>nav_msgs::Path</computeroutput> data type. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Found solution by the planner in <computeroutput>og::PathGeometric</computeroutput> format </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/include/slope_constrained_planner_ros/converter.h" line="46" column="20" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/src/converter.cpp" bodystart="31" bodyend="47"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Helper class for converting data from OMPL to ROS and vice versa. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/include/slope_constrained_planner_ros/converter.h" line="22" column="16" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/include/slope_constrained_planner_ros/converter.h" bodystart="22" bodyend="48"/>
+    <listofallmembers>
+      <member refid="classslope__constrained__planner_1_1_converter_1a679c2be0e77cf96db1f4434cbddc8587" prot="public" virt="non-virtual"><scope>slope_constrained_planner::Converter</scope><name>Converter</name></member>
+      <member refid="classslope__constrained__planner_1_1_converter_1afd08819f177c65142183740fc008ce7c" prot="public" virt="non-virtual"><scope>slope_constrained_planner::Converter</scope><name>pathOmplToRos</name></member>
+      <member refid="classslope__constrained__planner_1_1_converter_1a10a71f8ae0507717ec6c28c076f3f20d" prot="public" virt="non-virtual"><scope>slope_constrained_planner::Converter</scope><name>poseRosToOmpl</name></member>
+      <member refid="classslope__constrained__planner_1_1_converter_1a2de369a571fae9395144b8ffc5532ff0" prot="private" virt="non-virtual"><scope>slope_constrained_planner::Converter</scope><name>space_</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

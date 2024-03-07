@@ -1,0 +1,415 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classgoal__publisher_1_1_goal_publisher" kind="class" language="Python" prot="public">
+    <compoundname>goal_publisher::GoalPublisher</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classgoal__publisher_1_1_goal_publisher_1a517dfa8a1b5cb0ad037e9cd0e776724b" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>goal_publisher.GoalPublisher::listener</definition>
+        <argsstring></argsstring>
+        <name>listener</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/goal_publisher.py" line="103" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/goal_publisher.py" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgoal__publisher_1_1_goal_publisher_1a4dcaec9e83df6b6f91ba1ed4f38f10cc" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>goal_publisher.GoalPublisher::pub_goal</definition>
+        <argsstring></argsstring>
+        <name>pub_goal</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/goal_publisher.py" line="104" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/goal_publisher.py" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgoal__publisher_1_1_goal_publisher_1a0af8fd00abbfc73a2512002177b2acd1" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>goal_publisher.GoalPublisher::pub_path</definition>
+        <argsstring></argsstring>
+        <name>pub_path</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/goal_publisher.py" line="105" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/goal_publisher.py" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgoal__publisher_1_1_goal_publisher_1a37cadcfbf027ecca4aff369120e66ef3" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>goal_publisher.GoalPublisher::sub</definition>
+        <argsstring></argsstring>
+        <name>sub</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/goal_publisher.py" line="106" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/goal_publisher.py" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgoal__publisher_1_1_goal_publisher_1a098da542deb370035ea468836a86420c" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>goal_publisher.GoalPublisher::dummy_srv</definition>
+        <argsstring></argsstring>
+        <name>dummy_srv</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/goal_publisher.py" line="107" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/goal_publisher.py" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgoal__publisher_1_1_goal_publisher_1a7edb93f6945850e6166e8a3b85f67232" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>goal_publisher.GoalPublisher::current_pose</definition>
+        <argsstring></argsstring>
+        <name>current_pose</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/goal_publisher.py" line="108" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/goal_publisher.py" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgoal__publisher_1_1_goal_publisher_1ad8c13177f7cd40a45f069c237ff900b4" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>goal_publisher.GoalPublisher::goal_pose</definition>
+        <argsstring></argsstring>
+        <name>goal_pose</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/goal_publisher.py" line="109" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/goal_publisher.py" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgoal__publisher_1_1_goal_publisher_1ada9c161996ed3408329ca1c0e490ce64" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>goal_publisher.GoalPublisher::fixed_frame</definition>
+        <argsstring></argsstring>
+        <name>fixed_frame</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/goal_publisher.py" line="110" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/goal_publisher.py" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgoal__publisher_1_1_goal_publisher_1a6144e9e6f37b97ab115c2a93445c52c8" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>goal_publisher.GoalPublisher::path</definition>
+        <argsstring></argsstring>
+        <name>path</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/goal_publisher.py" line="111" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/goal_publisher.py" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgoal__publisher_1_1_goal_publisher_1aaf70e568d8c0b5c9d1b27c74290afeec" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>goal_publisher.GoalPublisher::path_ros</definition>
+        <argsstring></argsstring>
+        <name>path_ros</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/goal_publisher.py" line="112" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/goal_publisher.py" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgoal__publisher_1_1_goal_publisher_1a8097ed63867ce898a33330ba863fd79e" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>goal_publisher.GoalPublisher::largest_valid_index</definition>
+        <argsstring></argsstring>
+        <name>largest_valid_index</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/goal_publisher.py" line="113" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/goal_publisher.py" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgoal__publisher_1_1_goal_publisher_1a893ce1c5ce54fa04fcd22d6a77dd461b" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>goal_publisher.GoalPublisher::gain_pid_pos</definition>
+        <argsstring></argsstring>
+        <name>gain_pid_pos</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/goal_publisher.py" line="114" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/goal_publisher.py" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgoal__publisher_1_1_goal_publisher_1a7d893631acc0459838fff0de976de614" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>goal_publisher.GoalPublisher::gain_pid_ang</definition>
+        <argsstring></argsstring>
+        <name>gain_pid_ang</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/goal_publisher.py" line="115" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/goal_publisher.py" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgoal__publisher_1_1_goal_publisher_1a0b5dde45135d0b9d57a33fd0ab279dc4" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>goal_publisher.GoalPublisher::i</definition>
+        <argsstring></argsstring>
+        <name>i</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/goal_publisher.py" line="116" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/goal_publisher.py" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgoal__publisher_1_1_goal_publisher_1a8236aa2e8454d39a17557100a990bb21" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def goal_publisher.GoalPublisher.__init__</definition>
+        <argsstring>(self)</argsstring>
+        <name>__init__</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/goal_publisher.py" line="102" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/goal_publisher.py" bodystart="102" bodyend="120"/>
+      </memberdef>
+      <memberdef kind="function" id="classgoal__publisher_1_1_goal_publisher_1a397d707b1f2240cd9a26d813e5909e45" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def goal_publisher.GoalPublisher.pathCallback</definition>
+        <argsstring>(self, path_msg)</argsstring>
+        <name>pathCallback</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>path_msg</type>
+          <defname>path_msg</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>    Callback function which triggers once the found path is available 
+
+    Args:
+path_msg
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/goal_publisher.py" line="121" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/goal_publisher.py" bodystart="121" bodyend="148"/>
+      </memberdef>
+      <memberdef kind="function" id="classgoal__publisher_1_1_goal_publisher_1a6cecbda6069f2f863ffc16200a07fe5f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def goal_publisher.GoalPublisher.dummyCallback</definition>
+        <argsstring>(self, request)</argsstring>
+        <name>dummyCallback</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>request</type>
+          <defname>request</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>    A dummy rosservice, used for notifying the presence of this node to the planner.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/goal_publisher.py" line="149" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/goal_publisher.py" bodystart="149" bodyend="155"/>
+      </memberdef>
+      <memberdef kind="function" id="classgoal__publisher_1_1_goal_publisher_1a23b27111ff33bb1ddbc5a7d903d565d2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def goal_publisher.GoalPublisher.updateCurrentPose</definition>
+        <argsstring>(self)</argsstring>
+        <name>updateCurrentPose</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>    Updates robot current position using tf tree data
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/goal_publisher.py" line="156" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/goal_publisher.py" bodystart="156" bodyend="175"/>
+      </memberdef>
+      <memberdef kind="function" id="classgoal__publisher_1_1_goal_publisher_1a4352b8aa8a8080b506983795dab82bf8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def goal_publisher.GoalPublisher.publishPath</definition>
+        <argsstring>(self)</argsstring>
+        <name>publishPath</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>    Publishes the followed path so far, with its frame id
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/goal_publisher.py" line="176" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/goal_publisher.py" bodystart="176" bodyend="190"/>
+      </memberdef>
+      <memberdef kind="function" id="classgoal__publisher_1_1_goal_publisher_1a950febf777598036abd3b48001a02cc4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def goal_publisher.GoalPublisher.removePathNodesBeforeIndex</definition>
+        <argsstring>(self, index)</argsstring>
+        <name>removePathNodesBeforeIndex</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>index</type>
+          <defname>index</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>    Removes the path waypoints before current index
+
+    Args:
+index
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/goal_publisher.py" line="191" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/goal_publisher.py" bodystart="191" bodyend="202"/>
+      </memberdef>
+      <memberdef kind="function" id="classgoal__publisher_1_1_goal_publisher_1a75efb767b637d63a1af3b84229dca70e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def goal_publisher.GoalPublisher.updateCurrentGoalPose</definition>
+        <argsstring>(self)</argsstring>
+        <name>updateCurrentGoalPose</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>    Updates current goal pose considering the remaining path waypoints
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/goal_publisher.py" line="203" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/goal_publisher.py" bodystart="203" bodyend="246"/>
+      </memberdef>
+      <memberdef kind="function" id="classgoal__publisher_1_1_goal_publisher_1a43136464ae39efc83bed9799c90c7446" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def goal_publisher.GoalPublisher.getYawTarget</definition>
+        <argsstring>(self)</argsstring>
+        <name>getYawTarget</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>    Gets yaw angle of target frame
+
+    Returns:
+yaw_target
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/goal_publisher.py" line="247" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/goal_publisher.py" bodystart="247" bodyend="270"/>
+      </memberdef>
+      <memberdef kind="function" id="classgoal__publisher_1_1_goal_publisher_1a39d2704ec6aa9c5ace1bb26ae7b93cda" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def goal_publisher.GoalPublisher.computeAndPublishGoal</definition>
+        <argsstring>(self)</argsstring>
+        <name>computeAndPublishGoal</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>    Computes the Goal value and publishes it on the ``/goaltospot`` topic
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/goal_publisher.py" line="271" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/goal_publisher.py" bodystart="271" bodyend="322"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>Goal publisher class which defines the corresponding node with its initial configurations 
+and member functions.
+</verbatim> </para>
+    </detaileddescription>
+    <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/goal_publisher.py" line="97" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner_ros/scripts/goal_publisher.py" bodystart="97" bodyend="323"/>
+    <listofallmembers>
+      <member refid="classgoal__publisher_1_1_goal_publisher_1a8236aa2e8454d39a17557100a990bb21" prot="public" virt="non-virtual"><scope>goal_publisher::GoalPublisher</scope><name>__init__</name></member>
+      <member refid="classgoal__publisher_1_1_goal_publisher_1a39d2704ec6aa9c5ace1bb26ae7b93cda" prot="public" virt="non-virtual"><scope>goal_publisher::GoalPublisher</scope><name>computeAndPublishGoal</name></member>
+      <member refid="classgoal__publisher_1_1_goal_publisher_1a7edb93f6945850e6166e8a3b85f67232" prot="public" virt="non-virtual"><scope>goal_publisher::GoalPublisher</scope><name>current_pose</name></member>
+      <member refid="classgoal__publisher_1_1_goal_publisher_1a098da542deb370035ea468836a86420c" prot="public" virt="non-virtual"><scope>goal_publisher::GoalPublisher</scope><name>dummy_srv</name></member>
+      <member refid="classgoal__publisher_1_1_goal_publisher_1a6cecbda6069f2f863ffc16200a07fe5f" prot="public" virt="non-virtual"><scope>goal_publisher::GoalPublisher</scope><name>dummyCallback</name></member>
+      <member refid="classgoal__publisher_1_1_goal_publisher_1ada9c161996ed3408329ca1c0e490ce64" prot="public" virt="non-virtual"><scope>goal_publisher::GoalPublisher</scope><name>fixed_frame</name></member>
+      <member refid="classgoal__publisher_1_1_goal_publisher_1a7d893631acc0459838fff0de976de614" prot="public" virt="non-virtual"><scope>goal_publisher::GoalPublisher</scope><name>gain_pid_ang</name></member>
+      <member refid="classgoal__publisher_1_1_goal_publisher_1a893ce1c5ce54fa04fcd22d6a77dd461b" prot="public" virt="non-virtual"><scope>goal_publisher::GoalPublisher</scope><name>gain_pid_pos</name></member>
+      <member refid="classgoal__publisher_1_1_goal_publisher_1a43136464ae39efc83bed9799c90c7446" prot="public" virt="non-virtual"><scope>goal_publisher::GoalPublisher</scope><name>getYawTarget</name></member>
+      <member refid="classgoal__publisher_1_1_goal_publisher_1ad8c13177f7cd40a45f069c237ff900b4" prot="public" virt="non-virtual"><scope>goal_publisher::GoalPublisher</scope><name>goal_pose</name></member>
+      <member refid="classgoal__publisher_1_1_goal_publisher_1a0b5dde45135d0b9d57a33fd0ab279dc4" prot="public" virt="non-virtual"><scope>goal_publisher::GoalPublisher</scope><name>i</name></member>
+      <member refid="classgoal__publisher_1_1_goal_publisher_1a8097ed63867ce898a33330ba863fd79e" prot="public" virt="non-virtual"><scope>goal_publisher::GoalPublisher</scope><name>largest_valid_index</name></member>
+      <member refid="classgoal__publisher_1_1_goal_publisher_1a517dfa8a1b5cb0ad037e9cd0e776724b" prot="public" virt="non-virtual"><scope>goal_publisher::GoalPublisher</scope><name>listener</name></member>
+      <member refid="classgoal__publisher_1_1_goal_publisher_1a6144e9e6f37b97ab115c2a93445c52c8" prot="public" virt="non-virtual"><scope>goal_publisher::GoalPublisher</scope><name>path</name></member>
+      <member refid="classgoal__publisher_1_1_goal_publisher_1aaf70e568d8c0b5c9d1b27c74290afeec" prot="public" virt="non-virtual"><scope>goal_publisher::GoalPublisher</scope><name>path_ros</name></member>
+      <member refid="classgoal__publisher_1_1_goal_publisher_1a397d707b1f2240cd9a26d813e5909e45" prot="public" virt="non-virtual"><scope>goal_publisher::GoalPublisher</scope><name>pathCallback</name></member>
+      <member refid="classgoal__publisher_1_1_goal_publisher_1a4dcaec9e83df6b6f91ba1ed4f38f10cc" prot="public" virt="non-virtual"><scope>goal_publisher::GoalPublisher</scope><name>pub_goal</name></member>
+      <member refid="classgoal__publisher_1_1_goal_publisher_1a0af8fd00abbfc73a2512002177b2acd1" prot="public" virt="non-virtual"><scope>goal_publisher::GoalPublisher</scope><name>pub_path</name></member>
+      <member refid="classgoal__publisher_1_1_goal_publisher_1a4352b8aa8a8080b506983795dab82bf8" prot="public" virt="non-virtual"><scope>goal_publisher::GoalPublisher</scope><name>publishPath</name></member>
+      <member refid="classgoal__publisher_1_1_goal_publisher_1a950febf777598036abd3b48001a02cc4" prot="public" virt="non-virtual"><scope>goal_publisher::GoalPublisher</scope><name>removePathNodesBeforeIndex</name></member>
+      <member refid="classgoal__publisher_1_1_goal_publisher_1a37cadcfbf027ecca4aff369120e66ef3" prot="public" virt="non-virtual"><scope>goal_publisher::GoalPublisher</scope><name>sub</name></member>
+      <member refid="classgoal__publisher_1_1_goal_publisher_1a75efb767b637d63a1af3b84229dca70e" prot="public" virt="non-virtual"><scope>goal_publisher::GoalPublisher</scope><name>updateCurrentGoalPose</name></member>
+      <member refid="classgoal__publisher_1_1_goal_publisher_1a23b27111ff33bb1ddbc5a7d903d565d2" prot="public" virt="non-virtual"><scope>goal_publisher::GoalPublisher</scope><name>updateCurrentPose</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

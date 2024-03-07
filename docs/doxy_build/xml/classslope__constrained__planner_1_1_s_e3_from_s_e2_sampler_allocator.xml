@@ -1,0 +1,125 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classslope__constrained__planner_1_1_s_e3_from_s_e2_sampler_allocator" kind="class" language="C++" prot="public">
+    <compoundname>slope_constrained_planner::SE3FromSE2SamplerAllocator</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classslope__constrained__planner_1_1_s_e3_from_s_e2_sampler_allocator_1a62b9fa954f6d51bd307e6df47a06bb55" prot="private" static="no" mutable="no">
+        <type>ParamsConstPtr</type>
+        <definition>ParamsConstPtr slope_constrained_planner::SE3FromSE2SamplerAllocator::params_</definition>
+        <argsstring></argsstring>
+        <name>params_</name>
+        <briefdescription>
+<para>Parameters containing the data for map layers. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/sampler.h" line="135" column="18" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/sampler.h" bodystart="135" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classslope__constrained__planner_1_1_s_e3_from_s_e2_sampler_allocator_1a5a50b2fba50844b8ccb571b9b6398258" prot="private" static="no" mutable="no">
+        <type>std::shared_ptr&lt; <ref refid="classslope__constrained__planner_1_1_map" kindref="compound">Map</ref> &gt;</type>
+        <definition>std::shared_ptr&lt;Map&gt; slope_constrained_planner::SE3FromSE2SamplerAllocator::map_</definition>
+        <argsstring></argsstring>
+        <name>map_</name>
+        <briefdescription>
+<para>Grid map data. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/sampler.h" line="138" column="19" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/sampler.h" bodystart="138" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classslope__constrained__planner_1_1_s_e3_from_s_e2_sampler_allocator_1aabc6cfcf75b646fd8bbf4f95834ea8b9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>slope_constrained_planner::SE3FromSE2SamplerAllocator::SE3FromSE2SamplerAllocator</definition>
+        <argsstring>(const ParamsConstPtr &amp;params)</argsstring>
+        <name>SE3FromSE2SamplerAllocator</name>
+        <param>
+          <type>const ParamsConstPtr &amp;</type>
+          <declname>params</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/sampler.h" line="142" column="5" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/sampler.h" bodystart="142" bodyend="143"/>
+      </memberdef>
+      <memberdef kind="function" id="classslope__constrained__planner_1_1_s_e3_from_s_e2_sampler_allocator_1adc3f814bd2deb299bcd0c0f1b52cf427" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SE3FromSE2SamplerAllocator::setMap</definition>
+        <argsstring>(const std::shared_ptr&lt; Map &gt; &amp;map)</argsstring>
+        <name>setMap</name>
+        <param>
+          <type>const std::shared_ptr&lt; <ref refid="classslope__constrained__planner_1_1_map" kindref="compound">Map</ref> &gt; &amp;</type>
+          <declname>map</declname>
+        </param>
+        <briefdescription>
+<para>Sets the grid map data in the corresponding class attribute. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>map</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>grid map of the environment </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/sampler.h" line="151" column="10" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/src/sampler.cpp" bodystart="264" bodyend="266"/>
+      </memberdef>
+      <memberdef kind="function" id="classslope__constrained__planner_1_1_s_e3_from_s_e2_sampler_allocator_1ac96c1e277c1b22b2053eb7425ce5353e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::shared_ptr&lt; <ref refid="classslope__constrained__planner_1_1_s_e3_from_s_e2_sampler" kindref="compound">SE3FromSE2Sampler</ref> &gt;</type>
+        <definition>std::shared_ptr&lt; SE3FromSE2Sampler &gt; SE3FromSE2SamplerAllocator::getSampler</definition>
+        <argsstring>(const ob::StateSpace *space)</argsstring>
+        <name>getSampler</name>
+        <param>
+          <type>const ob::StateSpace *</type>
+          <declname>space</declname>
+        </param>
+        <briefdescription>
+<para>Gets the custom sampler class to allocate it in the planner. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>space</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>state space in which the sampler would find the states </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="classslope__constrained__planner_1_1_s_e3_from_s_e2_sampler" kindref="compound">SE3FromSE2Sampler</ref> a shared pointer to the custom sampler class </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/sampler.h" line="160" column="21" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/src/sampler.cpp" bodystart="269" bodyend="271"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/sampler.h" line="132" column="33" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/include/slope_constrained_planner/sampler.h" bodystart="132" bodyend="161"/>
+    <listofallmembers>
+      <member refid="classslope__constrained__planner_1_1_s_e3_from_s_e2_sampler_allocator_1ac96c1e277c1b22b2053eb7425ce5353e" prot="public" virt="non-virtual"><scope>slope_constrained_planner::SE3FromSE2SamplerAllocator</scope><name>getSampler</name></member>
+      <member refid="classslope__constrained__planner_1_1_s_e3_from_s_e2_sampler_allocator_1a5a50b2fba50844b8ccb571b9b6398258" prot="private" virt="non-virtual"><scope>slope_constrained_planner::SE3FromSE2SamplerAllocator</scope><name>map_</name></member>
+      <member refid="classslope__constrained__planner_1_1_s_e3_from_s_e2_sampler_allocator_1a62b9fa954f6d51bd307e6df47a06bb55" prot="private" virt="non-virtual"><scope>slope_constrained_planner::SE3FromSE2SamplerAllocator</scope><name>params_</name></member>
+      <member refid="classslope__constrained__planner_1_1_s_e3_from_s_e2_sampler_allocator_1aabc6cfcf75b646fd8bbf4f95834ea8b9" prot="public" virt="non-virtual"><scope>slope_constrained_planner::SE3FromSE2SamplerAllocator</scope><name>SE3FromSE2SamplerAllocator</name></member>
+      <member refid="classslope__constrained__planner_1_1_s_e3_from_s_e2_sampler_allocator_1adc3f814bd2deb299bcd0c0f1b52cf427" prot="public" virt="non-virtual"><scope>slope_constrained_planner::SE3FromSE2SamplerAllocator</scope><name>setMap</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

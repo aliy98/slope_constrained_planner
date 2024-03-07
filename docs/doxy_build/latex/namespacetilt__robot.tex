@@ -1,0 +1,116 @@
+\hypertarget{namespacetilt__robot}{}\doxysection{tilt\+\_\+robot Namespace Reference}
+\label{namespacetilt__robot}\index{tilt\_robot@{tilt\_robot}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classtilt__robot_1_1_tilt_robot}{Tilt\+Robot}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacetilt__robot_af090821167c5a72d918e13c0a1b7b9e4}{get\+R\+PY}} (quat)
+\item 
+def \mbox{\hyperlink{namespacetilt__robot_a2bc2ff7f9374fa07d53154c6a3073ab7}{get\+Constrained\+Angle}} (angle)
+\item 
+def \mbox{\hyperlink{namespacetilt__robot_a51bb77e7dcaa489e0380256d6cb583ad}{get\+Angle\+Error}} (target, current)
+\item 
+def \mbox{\hyperlink{namespacetilt__robot_ae1da8ae06a976c43329484edd90adeb6}{get\+Quat\+From\+R\+PY}} (R\+PY)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespacetilt__robot_a57257d76bc689c11bbbd98fce48f0ee8}\label{namespacetilt__robot_a57257d76bc689c11bbbd98fce48f0ee8}} 
+string {\bfseries R\+O\+B\+O\+T\+\_\+\+F\+R\+A\+ME} = \textquotesingle{}base\+\_\+link\textquotesingle{}
+\item 
+\mbox{\Hypertarget{namespacetilt__robot_a6aa8855c0bdf989cfa79bbd821d83c50}\label{namespacetilt__robot_a6aa8855c0bdf989cfa79bbd821d83c50}} 
+float {\bfseries G\+O\+A\+L\+\_\+\+T\+H\+R\+E\+S\+\_\+\+P\+OS} = 0.\+01
+\item 
+\mbox{\Hypertarget{namespacetilt__robot_a266160f8d4f992a99d1794be809a874c}\label{namespacetilt__robot_a266160f8d4f992a99d1794be809a874c}} 
+float {\bfseries G\+O\+A\+L\+\_\+\+T\+H\+R\+E\+S\+\_\+\+A\+NG} = 0.\+01
+\item 
+\mbox{\Hypertarget{namespacetilt__robot_ae67b56a12aa405a3e5dac2d74f3881a2}\label{namespacetilt__robot_ae67b56a12aa405a3e5dac2d74f3881a2}} 
+float {\bfseries F\+A\+C\+E\+\_\+\+G\+O\+A\+L\+\_\+\+D\+I\+ST} = 1.\+0
+\item 
+\mbox{\Hypertarget{namespacetilt__robot_aba6925a4ca0ab41986bfd2c9fb6cf7f7}\label{namespacetilt__robot_aba6925a4ca0ab41986bfd2c9fb6cf7f7}} 
+int {\bfseries C\+O\+U\+N\+T\+ER} = 0
+\item 
+\mbox{\Hypertarget{namespacetilt__robot_a6524d49f120c5a719a841678b9d5ea69}\label{namespacetilt__robot_a6524d49f120c5a719a841678b9d5ea69}} 
+{\bfseries tilt\+\_\+robot} = \mbox{\hyperlink{classtilt__robot_1_1_tilt_robot}{Tilt\+Robot}}()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}.. module:: tilt_robot
+    :platform: Unix
+    :synopsis: the tilt_robot python script in slope_constrained_planner_ros package
+
+Subscribes to:
+    /tf
+
+Publishes to:
+    /wolf_controller/twist
+
+
+
+A helper script based on PID control to be used for tilting the robot base frame
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacetilt__robot_a51bb77e7dcaa489e0380256d6cb583ad}\label{namespacetilt__robot_a51bb77e7dcaa489e0380256d6cb583ad}} 
+\index{tilt\_robot@{tilt\_robot}!getAngleError@{getAngleError}}
+\index{getAngleError@{getAngleError}!tilt\_robot@{tilt\_robot}}
+\doxysubsubsection{\texorpdfstring{getAngleError()}{getAngleError()}}
+{\footnotesize\ttfamily def tilt\+\_\+robot.\+get\+Angle\+Error (\begin{DoxyParamCaption}\item[{}]{target,  }\item[{}]{current }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}    Gets the difference between two given angles
+
+    Args:
+        target
+        current
+    
+    Returns:
+        dyaw
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacetilt__robot_a2bc2ff7f9374fa07d53154c6a3073ab7}\label{namespacetilt__robot_a2bc2ff7f9374fa07d53154c6a3073ab7}} 
+\index{tilt\_robot@{tilt\_robot}!getConstrainedAngle@{getConstrainedAngle}}
+\index{getConstrainedAngle@{getConstrainedAngle}!tilt\_robot@{tilt\_robot}}
+\doxysubsubsection{\texorpdfstring{getConstrainedAngle()}{getConstrainedAngle()}}
+{\footnotesize\ttfamily def tilt\+\_\+robot.\+get\+Constrained\+Angle (\begin{DoxyParamCaption}\item[{}]{angle }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}    Gets constrained value of angle between -2pi and 2pi
+
+    Args: 
+        angle
+    
+    Returns:
+        angle
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacetilt__robot_ae1da8ae06a976c43329484edd90adeb6}\label{namespacetilt__robot_ae1da8ae06a976c43329484edd90adeb6}} 
+\index{tilt\_robot@{tilt\_robot}!getQuatFromRPY@{getQuatFromRPY}}
+\index{getQuatFromRPY@{getQuatFromRPY}!tilt\_robot@{tilt\_robot}}
+\doxysubsubsection{\texorpdfstring{getQuatFromRPY()}{getQuatFromRPY()}}
+{\footnotesize\ttfamily def tilt\+\_\+robot.\+get\+Quat\+From\+R\+PY (\begin{DoxyParamCaption}\item[{}]{R\+PY }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}    Gets quaternoid representation from euler representation
+
+    Args:
+        RPY
+    
+    Returns:
+        quat
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacetilt__robot_af090821167c5a72d918e13c0a1b7b9e4}\label{namespacetilt__robot_af090821167c5a72d918e13c0a1b7b9e4}} 
+\index{tilt\_robot@{tilt\_robot}!getRPY@{getRPY}}
+\index{getRPY@{getRPY}!tilt\_robot@{tilt\_robot}}
+\doxysubsubsection{\texorpdfstring{getRPY()}{getRPY()}}
+{\footnotesize\ttfamily def tilt\+\_\+robot.\+get\+R\+PY (\begin{DoxyParamCaption}\item[{}]{quat }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}    Gets roll, pitch, and yaw angles from quaternoid representation
+
+    Args: 
+        quat
+
+    Returns:
+        [roll, pitch, yaw]\end{DoxyVerb}
+ 

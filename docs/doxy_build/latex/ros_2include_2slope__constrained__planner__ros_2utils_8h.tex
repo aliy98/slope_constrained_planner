@@ -1,0 +1,82 @@
+\hypertarget{ros_2include_2slope__constrained__planner__ros_2utils_8h}{}\doxysection{/home/ali/ros\+\_\+ws/src/slope\+\_\+constrained\+\_\+planner/slope\+\_\+constrained\+\_\+planner\+\_\+ros/include/slope\+\_\+constrained\+\_\+planner\+\_\+ros/utils.h File Reference}
+\label{ros_2include_2slope__constrained__planner__ros_2utils_8h}\index{/home/ali/ros\_ws/src/slope\_constrained\_planner/slope\_constrained\_planner\_ros/include/slope\_constrained\_planner\_ros/utils.h@{/home/ali/ros\_ws/src/slope\_constrained\_planner/slope\_constrained\_planner\_ros/include/slope\_constrained\_planner\_ros/utils.h}}
+
+
+Some helper functions to load and configure R\+OS params.  
+
+
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$slope\+\_\+constrained\+\_\+planner/params.\+h$>$}\newline
+{\ttfamily \#include $<$ros/node\+\_\+handle.\+h$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\T \mbox{\hyperlink{ros_2include_2slope__constrained__planner__ros_2utils_8h_a2862edbb20fbd068da4c21867b014c71}{slope\+\_\+constrained\+\_\+planner\+::get\+Param\+With\+Default\+Warning}} (const ros\+::\+Node\+Handle \&nh, const std\+::string \&name, const T \&default\+\_\+val)
+\begin{DoxyCompactList}\small\item\em Gets an specific R\+OS param name and sets its default value in a node handler. \end{DoxyCompactList}\item 
+template$<$$>$ unsigned int \mbox{\hyperlink{ros_2include_2slope__constrained__planner__ros_2utils_8h_ace5b515509c8b45d0d9505d368defa54}{slope\+\_\+constrained\+\_\+planner\+::get\+Param\+With\+Default\+Warning$<$ unsigned int $>$}} (const ros\+::\+Node\+Handle \&nh, const std\+::string \&name, const unsigned int \&default\+\_\+val)
+\begin{DoxyCompactList}\small\item\em Gets an specific R\+OS param name and sets its default value in a node handler. \end{DoxyCompactList}\item 
+Params\+Ptr \mbox{\hyperlink{ros_2include_2slope__constrained__planner__ros_2utils_8h_ab9e1e0d8de4e0f3b4537c194a97f2313}{slope\+\_\+constrained\+\_\+planner\+::load\+Ros\+Parameters}} (const ros\+::\+Node\+Handle \&nh)
+\begin{DoxyCompactList}\small\item\em Gets the provided params in {\ttfamily config} directory and sets them in the node handler using {\ttfamily get\+Param\+With\+Default\+Warning(nh, name, default\+\_\+val)} funciton. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Some helper functions to load and configure R\+OS params. 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{ros_2include_2slope__constrained__planner__ros_2utils_8h_a2862edbb20fbd068da4c21867b014c71}\label{ros_2include_2slope__constrained__planner__ros_2utils_8h_a2862edbb20fbd068da4c21867b014c71}} 
+\index{utils.h@{utils.h}!getParamWithDefaultWarning@{getParamWithDefaultWarning}}
+\index{getParamWithDefaultWarning@{getParamWithDefaultWarning}!utils.h@{utils.h}}
+\doxysubsubsection{\texorpdfstring{getParamWithDefaultWarning()}{getParamWithDefaultWarning()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T slope\+\_\+constrained\+\_\+planner\+::get\+Param\+With\+Default\+Warning (\begin{DoxyParamCaption}\item[{const ros\+::\+Node\+Handle \&}]{nh,  }\item[{const std\+::string \&}]{name,  }\item[{const T \&}]{default\+\_\+val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets an specific R\+OS param name and sets its default value in a node handler. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nh} & Node handler \\
+\hline
+{\em name} & Param\textquotesingle{}s name \\
+\hline
+{\em default\+\_\+val} & Param\textquotesingle{}s default value \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{ros_2include_2slope__constrained__planner__ros_2utils_8h_ace5b515509c8b45d0d9505d368defa54}\label{ros_2include_2slope__constrained__planner__ros_2utils_8h_ace5b515509c8b45d0d9505d368defa54}} 
+\index{utils.h@{utils.h}!getParamWithDefaultWarning$<$ unsigned int $>$@{getParamWithDefaultWarning$<$ unsigned int $>$}}
+\index{getParamWithDefaultWarning$<$ unsigned int $>$@{getParamWithDefaultWarning$<$ unsigned int $>$}!utils.h@{utils.h}}
+\doxysubsubsection{\texorpdfstring{getParamWithDefaultWarning$<$ unsigned int $>$()}{getParamWithDefaultWarning< unsigned int >()}}
+{\footnotesize\ttfamily template$<$$>$ \\
+unsigned int slope\+\_\+constrained\+\_\+planner\+::get\+Param\+With\+Default\+Warning$<$ unsigned int $>$ (\begin{DoxyParamCaption}\item[{const ros\+::\+Node\+Handle \&}]{nh,  }\item[{const std\+::string \&}]{name,  }\item[{const unsigned int \&}]{default\+\_\+val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets an specific R\+OS param name and sets its default value in a node handler. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nh} & Node handler \\
+\hline
+{\em name} & Param\textquotesingle{}s name \\
+\hline
+{\em default\+\_\+val} & Param\textquotesingle{}s default value \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{ros_2include_2slope__constrained__planner__ros_2utils_8h_ab9e1e0d8de4e0f3b4537c194a97f2313}\label{ros_2include_2slope__constrained__planner__ros_2utils_8h_ab9e1e0d8de4e0f3b4537c194a97f2313}} 
+\index{utils.h@{utils.h}!loadRosParameters@{loadRosParameters}}
+\index{loadRosParameters@{loadRosParameters}!utils.h@{utils.h}}
+\doxysubsubsection{\texorpdfstring{loadRosParameters()}{loadRosParameters()}}
+{\footnotesize\ttfamily Params\+Ptr slope\+\_\+constrained\+\_\+planner\+::load\+Ros\+Parameters (\begin{DoxyParamCaption}\item[{const ros\+::\+Node\+Handle \&}]{nh }\end{DoxyParamCaption})}
+
+
+
+Gets the provided params in {\ttfamily config} directory and sets them in the node handler using {\ttfamily get\+Param\+With\+Default\+Warning(nh, name, default\+\_\+val)} funciton. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nh} & Node handler \\
+\hline
+\end{DoxyParams}

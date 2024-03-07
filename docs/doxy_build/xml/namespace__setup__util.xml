@@ -1,0 +1,450 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="namespace__setup__util" kind="namespace" language="Python">
+    <compoundname>_setup_util</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="build_2atomic__configure_2__setup__util_8py_1a3fa0ca5a460a71a43cbc3d4954ab1f10" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string _setup_util::CATKIN_MARKER_FILE</definition>
+        <argsstring></argsstring>
+        <name>CATKIN_MARKER_FILE</name>
+        <initializer>=  &apos;.catkin&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/build/atomic_configure/_setup_util.py" line="47" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/build/atomic_configure/_setup_util.py" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="build_2atomic__configure_2__setup__util_8py_1ae9fca6a80a6923f4580be72f68fee325" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>_setup_util.system</definition>
+        <argsstring></argsstring>
+        <name>system</name>
+        <initializer>=  platform.system()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/build/atomic_configure/_setup_util.py" line="49" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/build/atomic_configure/_setup_util.py" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="build_2atomic__configure_2__setup__util_8py_1aecbb100ce6f94bb3c7e16d58fde05f96" prot="public" static="no" mutable="no">
+        <type>tuple</type>
+        <definition>tuple _setup_util::IS_DARWIN</definition>
+        <argsstring></argsstring>
+        <name>IS_DARWIN</name>
+        <initializer>=  (system == &apos;Darwin&apos;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/build/atomic_configure/_setup_util.py" line="50" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/build/atomic_configure/_setup_util.py" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="build_2atomic__configure_2__setup__util_8py_1a6fe69c2dbd92959b6651a28cbb846e6e" prot="public" static="no" mutable="no">
+        <type>tuple</type>
+        <definition>tuple _setup_util::IS_WINDOWS</definition>
+        <argsstring></argsstring>
+        <name>IS_WINDOWS</name>
+        <initializer>=  (system == &apos;Windows&apos;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/build/atomic_configure/_setup_util.py" line="51" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/build/atomic_configure/_setup_util.py" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="build_2atomic__configure_2__setup__util_8py_1a7de27b8c021c888c6288a885f1e9afa9" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list _setup_util::PATH_TO_ADD_SUFFIX</definition>
+        <argsstring></argsstring>
+        <name>PATH_TO_ADD_SUFFIX</name>
+        <initializer>=  [&apos;bin&apos;]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/build/atomic_configure/_setup_util.py" line="53" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/build/atomic_configure/_setup_util.py" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="build_2atomic__configure_2__setup__util_8py_1aa31804f1be8660156ce9394b33c68dc4" prot="public" static="no" mutable="no">
+        <type>dictionary</type>
+        <definition>dictionary _setup_util::ENV_VAR_SUBFOLDERS</definition>
+        <argsstring></argsstring>
+        <name>ENV_VAR_SUBFOLDERS</name>
+        <initializer>=  {
+    &apos;CMAKE_PREFIX_PATH&apos;: &apos;&apos;,
+    &apos;LD_LIBRARY_PATH&apos; if not IS_DARWIN else &apos;DYLD_LIBRARY_PATH&apos;: [&apos;lib&apos;, os.path.join(&apos;lib&apos;, &apos;x86_64-linux-gnu&apos;)],
+    &apos;PATH&apos;: PATH_TO_ADD_SUFFIX,
+    &apos;PKG_CONFIG_PATH&apos;: [os.path.join(&apos;lib&apos;, &apos;pkgconfig&apos;), os.path.join(&apos;lib&apos;, &apos;x86_64-linux-gnu&apos;, &apos;pkgconfig&apos;)],
+    &apos;PYTHONPATH&apos;: &apos;lib/python3/dist-packages&apos;,
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/build/atomic_configure/_setup_util.py" line="60" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/build/atomic_configure/_setup_util.py" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="build_2atomic__configure_2__setup__util_8py_1a831491331b0650d492585147f04d6615" prot="public" static="no" mutable="no">
+        <type>def</type>
+        <definition>def _setup_util::args</definition>
+        <argsstring></argsstring>
+        <name>args</name>
+        <initializer>=  _parse_arguments()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/build/atomic_configure/_setup_util.py" line="264" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/build/atomic_configure/_setup_util.py" bodystart="264" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="build_2atomic__configure_2__setup__util_8py_1acdce690b925de33d6249bbbfa1109d61" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>_setup_util.e</definition>
+        <argsstring></argsstring>
+        <name>e</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/build/atomic_configure/_setup_util.py" line="266" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/build/atomic_configure/_setup_util.py" bodystart="266" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="build_2atomic__configure_2__setup__util_8py_1aea63a1b32cc79bc3d872ab7cb30dd07e" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>_setup_util.file</definition>
+        <argsstring></argsstring>
+        <name>file</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/build/atomic_configure/_setup_util.py" line="266" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/build/atomic_configure/_setup_util.py" bodystart="266" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="build_2atomic__configure_2__setup__util_8py_1a2a6756158bb4094ed7d259eb564d0578" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>list _setup_util::CMAKE_PREFIX_PATH</definition>
+        <argsstring></argsstring>
+        <name>CMAKE_PREFIX_PATH</name>
+        <initializer>=  r&apos;/home/ali/ros_ws/devel;/opt/ros/noetic;/opt/xbot;/opt/xbot&apos;.split(&apos;;&apos;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/build/atomic_configure/_setup_util.py" line="271" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/build/atomic_configure/_setup_util.py" bodystart="271" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="build_2atomic__configure_2__setup__util_8py_1a83d25140acd7788bbcb95843fe38e639" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>_setup_util.base_path</definition>
+        <argsstring></argsstring>
+        <name>base_path</name>
+        <initializer>=  os.path.dirname(__file__)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/build/atomic_configure/_setup_util.py" line="276" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/build/atomic_configure/_setup_util.py" bodystart="276" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="build_2atomic__configure_2__setup__util_8py_1a9a935bdd9ee1aa0327161025bb18c136" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>_setup_util.environ</definition>
+        <argsstring></argsstring>
+        <name>environ</name>
+        <initializer>=  dict(os.environ)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/build/atomic_configure/_setup_util.py" line="286" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/build/atomic_configure/_setup_util.py" bodystart="286" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="build_2atomic__configure_2__setup__util_8py_1a8618d8be5f729d4c9696daa5e083a001" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list _setup_util::lines</definition>
+        <argsstring></argsstring>
+        <name>lines</name>
+        <initializer>=  []</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/build/atomic_configure/_setup_util.py" line="287" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/build/atomic_configure/_setup_util.py" bodystart="287" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="build_2atomic__configure_2__setup__util_8py_1af3030db6102b5aa35cd354a2fb6cca03" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def _setup_util::rollback_env_variables</definition>
+        <argsstring>(environ, env_var_subfolders)</argsstring>
+        <name>rollback_env_variables</name>
+        <param>
+          <type>environ</type>
+          <defname>environ</defname>
+        </param>
+        <param>
+          <type>env_var_subfolders</type>
+          <defname>env_var_subfolders</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Generate shell code to reset environment variables.
+
+by unrolling modifications based on all workspaces in CMAKE_PREFIX_PATH.
+This does not cover modifications performed by environment hooks.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/build/atomic_configure/_setup_util.py" line="69" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/build/atomic_configure/_setup_util.py" bodystart="69" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="function" id="build_2atomic__configure_2__setup__util_8py_1af05661e87b3270e8bfd0fbc18a5eeec4" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def _setup_util::_rollback_env_variable</definition>
+        <argsstring>(environ, name, subfolders)</argsstring>
+        <name>_rollback_env_variable</name>
+        <param>
+          <type>environ</type>
+          <defname>environ</defname>
+        </param>
+        <param>
+          <type>name</type>
+          <defname>name</defname>
+        </param>
+        <param>
+          <type>subfolders</type>
+          <defname>subfolders</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>For each catkin workspace in CMAKE_PREFIX_PATH remove the first entry from env[NAME] matching workspace + subfolder.
+
+:param subfolders: list of str &apos;&apos; or subfoldername that may start with &apos;/&apos;
+:returns: the updated value of the environment variable.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/build/atomic_configure/_setup_util.py" line="91" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/build/atomic_configure/_setup_util.py" bodystart="91" bodyend="121"/>
+      </memberdef>
+      <memberdef kind="function" id="build_2atomic__configure_2__setup__util_8py_1ab2be07aa31918f1e1e34d6b7c4d66fcb" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def _setup_util::_get_workspaces</definition>
+        <argsstring>(environ, include_fuerte=False, include_non_existing=False)</argsstring>
+        <name>_get_workspaces</name>
+        <param>
+          <type>environ</type>
+          <defname>environ</defname>
+        </param>
+        <param>
+          <type>include_fuerte</type>
+          <defname>include_fuerte</defname>
+          <defval>False</defval>
+        </param>
+        <param>
+          <type>include_non_existing</type>
+          <defname>include_non_existing</defname>
+          <defval>False</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Based on CMAKE_PREFIX_PATH return all catkin workspaces.
+
+:param include_fuerte: The flag if paths starting with &apos;/opt/ros/fuerte&apos; should be considered workspaces, ``bool``
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/build/atomic_configure/_setup_util.py" line="122" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/build/atomic_configure/_setup_util.py" bodystart="122" bodyend="136"/>
+      </memberdef>
+      <memberdef kind="function" id="build_2atomic__configure_2__setup__util_8py_1a832417d18b85bd1d276a87547e86f860" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def _setup_util::prepend_env_variables</definition>
+        <argsstring>(environ, env_var_subfolders, workspaces)</argsstring>
+        <name>prepend_env_variables</name>
+        <param>
+          <type>environ</type>
+          <defname>environ</defname>
+        </param>
+        <param>
+          <type>env_var_subfolders</type>
+          <defname>env_var_subfolders</defname>
+        </param>
+        <param>
+          <type>workspaces</type>
+          <defname>workspaces</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Generate shell code to prepend environment variables for the all workspaces.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/build/atomic_configure/_setup_util.py" line="137" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/build/atomic_configure/_setup_util.py" bodystart="137" bodyend="153"/>
+      </memberdef>
+      <memberdef kind="function" id="build_2atomic__configure_2__setup__util_8py_1a74a1f8575ed82282d03f7795c9ba6e45" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def _setup_util::_prefix_env_variable</definition>
+        <argsstring>(environ, name, paths, subfolders)</argsstring>
+        <name>_prefix_env_variable</name>
+        <param>
+          <type>environ</type>
+          <defname>environ</defname>
+        </param>
+        <param>
+          <type>name</type>
+          <defname>name</defname>
+        </param>
+        <param>
+          <type>paths</type>
+          <defname>paths</defname>
+        </param>
+        <param>
+          <type>subfolders</type>
+          <defname>subfolders</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Return the prefix to prepend to the environment variable NAME.
+
+Adding any path in NEW_PATHS_STR without creating duplicate or empty items.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/build/atomic_configure/_setup_util.py" line="154" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/build/atomic_configure/_setup_util.py" bodystart="154" bodyend="181"/>
+      </memberdef>
+      <memberdef kind="function" id="build_2atomic__configure_2__setup__util_8py_1ad56c24837fa4eddc63c03fbc7035628f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def _setup_util::assignment</definition>
+        <argsstring>(key, value)</argsstring>
+        <name>assignment</name>
+        <param>
+          <type>key</type>
+          <defname>key</defname>
+        </param>
+        <param>
+          <type>value</type>
+          <defname>value</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/build/atomic_configure/_setup_util.py" line="182" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/build/atomic_configure/_setup_util.py" bodystart="182" bodyend="188"/>
+      </memberdef>
+      <memberdef kind="function" id="build_2atomic__configure_2__setup__util_8py_1abe8c95c4cfe8b1374dacd5f91d984353" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def _setup_util::comment</definition>
+        <argsstring>(msg)</argsstring>
+        <name>comment</name>
+        <param>
+          <type>msg</type>
+          <defname>msg</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/build/atomic_configure/_setup_util.py" line="189" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/build/atomic_configure/_setup_util.py" bodystart="189" bodyend="195"/>
+      </memberdef>
+      <memberdef kind="function" id="build_2atomic__configure_2__setup__util_8py_1ae78d86b2c4279f5b8b1acaa146c35802" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def _setup_util::prepend</definition>
+        <argsstring>(environ, key, prefix)</argsstring>
+        <name>prepend</name>
+        <param>
+          <type>environ</type>
+          <defname>environ</defname>
+        </param>
+        <param>
+          <type>key</type>
+          <defname>key</defname>
+        </param>
+        <param>
+          <type>prefix</type>
+          <defname>prefix</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/build/atomic_configure/_setup_util.py" line="196" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/build/atomic_configure/_setup_util.py" bodystart="196" bodyend="204"/>
+      </memberdef>
+      <memberdef kind="function" id="build_2atomic__configure_2__setup__util_8py_1a73de35ca77f260af6691470342ab49ce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def _setup_util::find_env_hooks</definition>
+        <argsstring>(environ, cmake_prefix_path)</argsstring>
+        <name>find_env_hooks</name>
+        <param>
+          <type>environ</type>
+          <defname>environ</defname>
+        </param>
+        <param>
+          <type>cmake_prefix_path</type>
+          <defname>cmake_prefix_path</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Generate shell code with found environment hooks for the all workspaces.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/build/atomic_configure/_setup_util.py" line="205" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/build/atomic_configure/_setup_util.py" bodystart="205" bodyend="253"/>
+      </memberdef>
+      <memberdef kind="function" id="build_2atomic__configure_2__setup__util_8py_1a57d9ecb280810c9a5409d44aeb9d0a25" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def _setup_util::_parse_arguments</definition>
+        <argsstring>(args=None)</argsstring>
+        <name>_parse_arguments</name>
+        <param>
+          <type>args</type>
+          <defname>args</defname>
+          <defval>None</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/build/atomic_configure/_setup_util.py" line="254" column="1" bodyfile="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/build/atomic_configure/_setup_util.py" bodystart="254" bodyend="260"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/ali/ros_ws/src/slope_constrained_planner/slope_constrained_planner/build/atomic_configure/_setup_util.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>
