@@ -9,10 +9,11 @@ Please refer to the provided [documentation](https://aliy98.github.io/slope_cons
 **Authors:** 
   - Ali Yousefi, ali.yousefi@edu.unige.it
   - Zoe Betta, zoe.betta@edu.unige.it
-  - Antonio Sgorbissa, antonio.sgorbissa@unige.it
+  - Giovanni, Mottola, giovanni.mottola@unige.it
   - Carmine Tommaso Recchiuto, carmine.recchiuto@unige.it
+  - Antonio Sgorbissa, antonio.sgorbissa@unige.it
     
-©2023 RICE - DIBRIS, University of Genova
+©2024 RICE - DIBRIS, University of Genova
 <p align="left">
 <img src="https://github.com/aliy98/slope_constrained_planner/assets/65722399/6605b9e1-53cc-4962-9b81-9f15e27de395" width="150" title="rice_logo">
 </p>
