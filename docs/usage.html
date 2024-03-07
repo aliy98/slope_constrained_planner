@@ -1,22 +1,24 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="./">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Usage &mdash; slope_constrained_planner 1.0 documentation</title>
-      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=92fd9be5" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=157ba28e" />
+      <link rel="stylesheet" type="text/css" href="_static/graphviz.css?v=eafc0fe6" />
+
+  
   <!--[if lt IE 9]>
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="_static/jquery.js"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-        <script src="_static/doctools.js"></script>
-        <script src="_static/sphinx_highlight.js"></script>
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=359c27e9"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=4825356b"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -84,9 +86,9 @@
            <div itemprop="articleBody">
              
   <section id="usage">
-<h1>Usage<a class="headerlink" href="#usage" title="Permalink to this heading"></a></h1>
+<h1>Usage<a class="headerlink" href="#usage" title="Link to this heading"></a></h1>
 <section id="dependencies">
-<h2>Dependencies<a class="headerlink" href="#dependencies" title="Permalink to this heading"></a></h2>
+<h2>Dependencies<a class="headerlink" href="#dependencies" title="Link to this heading"></a></h2>
 <ul class="simple">
 <li><p>The software for this planner is based on <a class="reference external" href="https://ompl.kavrakilab.org/index.html">OMPL</a>, which consists of many state-of-the-art sampling-based motion planning algorithms. The required dependencies could be installed using the following command:</p></li>
 </ul>
@@ -108,7 +110,7 @@
 </div>
 </section>
 <section id="usage-in-simulation">
-<h2>Usage in Simulation<a class="headerlink" href="#usage-in-simulation" title="Permalink to this heading"></a></h2>
+<h2>Usage in Simulation<a class="headerlink" href="#usage-in-simulation" title="Link to this heading"></a></h2>
 <p>In order to run the simulation environemnt, along with the elevation mapping package, the following
 launch file could be used:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">roslaunch slope_constrained_planner_ros simulation.launch</span>
@@ -128,7 +130,7 @@ tilt along it’s y-axiz by <code class="docutils literal notranslate"><span cla
 </div>
 </section>
 <section id="usage-in-real-world">
-<h2>Usage in Real-World<a class="headerlink" href="#usage-in-real-world" title="Permalink to this heading"></a></h2>
+<h2>Usage in Real-World<a class="headerlink" href="#usage-in-real-world" title="Link to this heading"></a></h2>
 <p>Regarding the real-world usage with Boston Dynamics Spot CORE, the elevation mapping package, and spot
 ros packages could be launched using the command:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">roslaunch slope_constrained_planner_ros navigation.launch</span>
@@ -151,7 +153,7 @@ based on the found global path by our planner.</p>
 </div>
 </section>
 <section id="configuratrion">
-<h2>Configuratrion<a class="headerlink" href="#configuratrion" title="Permalink to this heading"></a></h2>
+<h2>Configuratrion<a class="headerlink" href="#configuratrion" title="Link to this heading"></a></h2>
 <p>The parameters of planner components (e.g. sampler, motion validartor, planning algorithm), could be
 modified in the file <code class="docutils literal notranslate"><span class="pre">slope_constrained_planner/config/params.yaml</span></code>. Regarding the elevation map, the
 configuration files are located in the same directory which are named <code class="docutils literal notranslate"><span class="pre">map_sim.yaml</span></code> and <code class="docutils literal notranslate"><span class="pre">map_real.yaml</span></code>.</p>

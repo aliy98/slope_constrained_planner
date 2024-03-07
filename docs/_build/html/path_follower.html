@@ -1,22 +1,24 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="./">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>path_follower &mdash; slope_constrained_planner 1.0 documentation</title>
-      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=92fd9be5" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=157ba28e" />
+      <link rel="stylesheet" type="text/css" href="_static/graphviz.css?v=eafc0fe6" />
+
+  
   <!--[if lt IE 9]>
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="_static/jquery.js"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-        <script src="_static/doctools.js"></script>
-        <script src="_static/sphinx_highlight.js"></script>
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=359c27e9"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=4825356b"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -55,23 +57,14 @@
 <li class="toctree-l3"><a class="reference internal" href="converter.html">converter</a></li>
 <li class="toctree-l3"><a class="reference internal" href="utils_ros.html">utils</a></li>
 <li class="toctree-l3"><a class="reference internal" href="plan_to_goal_client.html">plan_to_goal_client</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">path_follower</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#slope_constrained_planner_ros.scripts.path_follower.PathFollower"><code class="docutils literal notranslate"><span class="pre">PathFollower</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#slope_constrained_planner_ros.scripts.path_follower.getAngleError"><code class="docutils literal notranslate"><span class="pre">getAngleError()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#slope_constrained_planner_ros.scripts.path_follower.getConstrainedYaw"><code class="docutils literal notranslate"><span class="pre">getConstrainedYaw()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#slope_constrained_planner_ros.scripts.path_follower.getPitch"><code class="docutils literal notranslate"><span class="pre">getPitch()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#slope_constrained_planner_ros.scripts.path_follower.getQuatFromYaw"><code class="docutils literal notranslate"><span class="pre">getQuatFromYaw()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#slope_constrained_planner_ros.scripts.path_follower.getRoll"><code class="docutils literal notranslate"><span class="pre">getRoll()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#slope_constrained_planner_ros.scripts.path_follower.getYaw"><code class="docutils literal notranslate"><span class="pre">getYaw()</span></code></a></li>
-</ul>
-</li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">path_follower</a></li>
 <li class="toctree-l3"><a class="reference internal" href="goal_publisher.html">goal_publisher</a></li>
 </ul>
 </li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="usage.html">Usage</a></li>
-<li class="toctree-l1"><a class="reference internal" href="working_hypothesis.html">Working Hypothesis and Environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="working_hypothesis.html">System hypothesis and future work</a></li>
 </ul>
 
         </div>
@@ -100,173 +93,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="module-slope_constrained_planner_ros.scripts.path_follower">
-<span id="path-follower"></span><h1>path_follower<a class="headerlink" href="#module-slope_constrained_planner_ros.scripts.path_follower" title="Permalink to this heading"></a></h1>
-<span class="target" id="module-path_follower"></span><dl>
-<dt>Subscribes to:</dt><dd><p>/slope_constrained_planner/path</p>
-</dd>
-<dt>Publishes to:</dt><dd><p>/spot/wolf_controller/twist</p>
-<p>/slope_constrained_planner/followed_path</p>
-</dd>
-</dl>
-<p>A provided path follower, used only in simulation mode, based on PID control to be used for testing on a mobile robot</p>
-<dl class="py class">
-<dt class="sig sig-object py" id="slope_constrained_planner_ros.scripts.path_follower.PathFollower">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">slope_constrained_planner_ros.scripts.path_follower.</span></span><span class="sig-name descname"><span class="pre">PathFollower</span></span><a class="reference internal" href="_modules/slope_constrained_planner_ros/scripts/path_follower.html#PathFollower"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#slope_constrained_planner_ros.scripts.path_follower.PathFollower" title="Permalink to this definition"></a></dt>
-<dd><p>Path follower class which defines the corresponding node with its initial configurations
-and member functions.</p>
-<dl class="py method">
-<dt class="sig sig-object py" id="slope_constrained_planner_ros.scripts.path_follower.PathFollower.computeAndPublishTwist">
-<span class="sig-name descname"><span class="pre">computeAndPublishTwist</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/slope_constrained_planner_ros/scripts/path_follower.html#PathFollower.computeAndPublishTwist"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#slope_constrained_planner_ros.scripts.path_follower.PathFollower.computeAndPublishTwist" title="Permalink to this definition"></a></dt>
-<dd><p>Computes the twist value and publishes it on the <code class="docutils literal notranslate"><span class="pre">/cmd_vel</span></code> topic</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="slope_constrained_planner_ros.scripts.path_follower.PathFollower.dummyCallback">
-<span class="sig-name descname"><span class="pre">dummyCallback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/slope_constrained_planner_ros/scripts/path_follower.html#PathFollower.dummyCallback"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#slope_constrained_planner_ros.scripts.path_follower.PathFollower.dummyCallback" title="Permalink to this definition"></a></dt>
-<dd><p>A dummy rosservice, used for notifying the presence of this node to the planner.</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="slope_constrained_planner_ros.scripts.path_follower.PathFollower.getYawTarget">
-<span class="sig-name descname"><span class="pre">getYawTarget</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/slope_constrained_planner_ros/scripts/path_follower.html#PathFollower.getYawTarget"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#slope_constrained_planner_ros.scripts.path_follower.PathFollower.getYawTarget" title="Permalink to this definition"></a></dt>
-<dd><p>Gets yaw angle of target frame</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>yaw_target</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="slope_constrained_planner_ros.scripts.path_follower.PathFollower.pathCallback">
-<span class="sig-name descname"><span class="pre">pathCallback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path_msg</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/slope_constrained_planner_ros/scripts/path_follower.html#PathFollower.pathCallback"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#slope_constrained_planner_ros.scripts.path_follower.PathFollower.pathCallback" title="Permalink to this definition"></a></dt>
-<dd><p>Callback function which triggers once the found path is available</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>path_msg</strong> – </p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="slope_constrained_planner_ros.scripts.path_follower.PathFollower.publishPath">
-<span class="sig-name descname"><span class="pre">publishPath</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/slope_constrained_planner_ros/scripts/path_follower.html#PathFollower.publishPath"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#slope_constrained_planner_ros.scripts.path_follower.PathFollower.publishPath" title="Permalink to this definition"></a></dt>
-<dd><p>Publishes the followed path so far, with its frame id</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="slope_constrained_planner_ros.scripts.path_follower.PathFollower.removePathNodesBeforeIndex">
-<span class="sig-name descname"><span class="pre">removePathNodesBeforeIndex</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/slope_constrained_planner_ros/scripts/path_follower.html#PathFollower.removePathNodesBeforeIndex"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#slope_constrained_planner_ros.scripts.path_follower.PathFollower.removePathNodesBeforeIndex" title="Permalink to this definition"></a></dt>
-<dd><p>Removes the path points before current index</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>index</strong> – </p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="slope_constrained_planner_ros.scripts.path_follower.PathFollower.updateCurrentGoalPose">
-<span class="sig-name descname"><span class="pre">updateCurrentGoalPose</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/slope_constrained_planner_ros/scripts/path_follower.html#PathFollower.updateCurrentGoalPose"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#slope_constrained_planner_ros.scripts.path_follower.PathFollower.updateCurrentGoalPose" title="Permalink to this definition"></a></dt>
-<dd><p>Updates current goal pose considering the remaining path points</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="slope_constrained_planner_ros.scripts.path_follower.PathFollower.updateCurrentPose">
-<span class="sig-name descname"><span class="pre">updateCurrentPose</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/slope_constrained_planner_ros/scripts/path_follower.html#PathFollower.updateCurrentPose"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#slope_constrained_planner_ros.scripts.path_follower.PathFollower.updateCurrentPose" title="Permalink to this definition"></a></dt>
-<dd><p>Updates robot current position using tf tree data</p>
-</dd></dl>
-
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="slope_constrained_planner_ros.scripts.path_follower.getAngleError">
-<span class="sig-prename descclassname"><span class="pre">slope_constrained_planner_ros.scripts.path_follower.</span></span><span class="sig-name descname"><span class="pre">getAngleError</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">target</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">current</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/slope_constrained_planner_ros/scripts/path_follower.html#getAngleError"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#slope_constrained_planner_ros.scripts.path_follower.getAngleError" title="Permalink to this definition"></a></dt>
-<dd><p>Gets the difference between two given angles</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>target</strong> – </p></li>
-<li><p><strong>current</strong> – </p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>dyaw</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="slope_constrained_planner_ros.scripts.path_follower.getConstrainedYaw">
-<span class="sig-prename descclassname"><span class="pre">slope_constrained_planner_ros.scripts.path_follower.</span></span><span class="sig-name descname"><span class="pre">getConstrainedYaw</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">yaw</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/slope_constrained_planner_ros/scripts/path_follower.html#getConstrainedYaw"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#slope_constrained_planner_ros.scripts.path_follower.getConstrainedYaw" title="Permalink to this definition"></a></dt>
-<dd><p>Gets constrained value of yaw angle between -2pi and 2pi</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>yaw</strong> – </p>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>yaw</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="slope_constrained_planner_ros.scripts.path_follower.getPitch">
-<span class="sig-prename descclassname"><span class="pre">slope_constrained_planner_ros.scripts.path_follower.</span></span><span class="sig-name descname"><span class="pre">getPitch</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">quat</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/slope_constrained_planner_ros/scripts/path_follower.html#getPitch"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#slope_constrained_planner_ros.scripts.path_follower.getPitch" title="Permalink to this definition"></a></dt>
-<dd><p>Gets pitch angle from quaternoid representation</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>quat</strong> – </p>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>pitch</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="slope_constrained_planner_ros.scripts.path_follower.getQuatFromYaw">
-<span class="sig-prename descclassname"><span class="pre">slope_constrained_planner_ros.scripts.path_follower.</span></span><span class="sig-name descname"><span class="pre">getQuatFromYaw</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">yaw</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/slope_constrained_planner_ros/scripts/path_follower.html#getQuatFromYaw"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#slope_constrained_planner_ros.scripts.path_follower.getQuatFromYaw" title="Permalink to this definition"></a></dt>
-<dd><p>Gets quaternoid representation from euler representation</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>yaw</strong> – </p>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>quat</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="slope_constrained_planner_ros.scripts.path_follower.getRoll">
-<span class="sig-prename descclassname"><span class="pre">slope_constrained_planner_ros.scripts.path_follower.</span></span><span class="sig-name descname"><span class="pre">getRoll</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">quat</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/slope_constrained_planner_ros/scripts/path_follower.html#getRoll"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#slope_constrained_planner_ros.scripts.path_follower.getRoll" title="Permalink to this definition"></a></dt>
-<dd><p>Gets roll angle from quaternoid representation</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>quat</strong> – </p>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>roll</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="slope_constrained_planner_ros.scripts.path_follower.getYaw">
-<span class="sig-prename descclassname"><span class="pre">slope_constrained_planner_ros.scripts.path_follower.</span></span><span class="sig-name descname"><span class="pre">getYaw</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">quat</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/slope_constrained_planner_ros/scripts/path_follower.html#getYaw"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#slope_constrained_planner_ros.scripts.path_follower.getYaw" title="Permalink to this definition"></a></dt>
-<dd><p>Gets yaw angle from quaternoid representation</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>quat</strong> – </p>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>yaw</p>
-</dd>
-</dl>
-</dd></dl>
-
+  <section id="path-follower">
+<h1>path_follower<a class="headerlink" href="#path-follower" title="Link to this heading"></a></h1>
 </section>
 
 

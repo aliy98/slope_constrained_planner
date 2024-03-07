@@ -24,12 +24,13 @@ on the robot’s maximum allowable inclination angles.
 
 Authors:
 
-* Ali Yousefi, s5265866@studenti.unige.it
+* Ali Yousefi, ali.yousefi@edu.unige.it
 * Zoe Betta, zoe.betta@edu.unige.it
+* Giovanni Mottola, giovanni.mottola@unige.it
 * Antonio Sgorbissa, antonio.sgorbissa@unige.it
 * Carmine Tommaso Recchiuto, carmine.recchiuto@unige.it
 
-©2023 RICE - DIBRIS, University of Genova
+©2024 RICE - DIBRIS, University of Genova
 
 .. image:: diagrams/rice_logo.jpg
   :width: 150

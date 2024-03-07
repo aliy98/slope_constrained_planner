@@ -1,22 +1,24 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="./">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Software Architucture &mdash; slope_constrained_planner 1.0 documentation</title>
-      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=92fd9be5" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=157ba28e" />
+      <link rel="stylesheet" type="text/css" href="_static/graphviz.css?v=eafc0fe6" />
+
+  
   <!--[if lt IE 9]>
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="_static/jquery.js"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-        <script src="_static/doctools.js"></script>
-        <script src="_static/sphinx_highlight.js"></script>
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=359c27e9"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=4825356b"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -54,7 +56,7 @@
 <li class="toctree-l1"><a class="reference internal" href="sequence_diagram.html">Sequence Diagram</a></li>
 <li class="toctree-l1"><a class="reference internal" href="source_files.html">Source Files and Scripts</a></li>
 <li class="toctree-l1"><a class="reference internal" href="usage.html">Usage</a></li>
-<li class="toctree-l1"><a class="reference internal" href="working_hypothesis.html">Working Hypothesis and Environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="working_hypothesis.html">System hypothesis and future work</a></li>
 </ul>
 
         </div>
@@ -82,7 +84,7 @@
            <div itemprop="articleBody">
              
   <section id="software-architucture">
-<h1>Software Architucture<a class="headerlink" href="#software-architucture" title="Permalink to this heading"></a></h1>
+<h1>Software Architucture<a class="headerlink" href="#software-architucture" title="Link to this heading"></a></h1>
 <p>The software architucture of this experiment for both simulation and real world scenarios are
 represented in the following figures.</p>
 <p>Simulation:</p>
@@ -97,7 +99,7 @@ represented in the following figures.</p>
 </div>
 <p>The components of this software architucture can be described as follows:</p>
 <section id="slope-constrained-planner">
-<h2>slope_constrained_planner<a class="headerlink" href="#slope-constrained-planner" title="Permalink to this heading"></a></h2>
+<h2>slope_constrained_planner<a class="headerlink" href="#slope-constrained-planner" title="Link to this heading"></a></h2>
 <ol class="arabic simple">
 <li><p><strong>sampler</strong>: Uses the grid map data provided by the <code class="docutils literal notranslate"><span class="pre">elevation_mapping</span></code> node to sample random states. Each sampled state cosists of the position and orientation (in quaternion representation) data. In order to implement the robot’s heading constraint, once a random state is sampled from the grid map, roll and pitch angles are dervied from map, and then the state frame would rotate along its z-axis until the heading angle reaches the desired threshold.</p></li>
 <li><p><strong>motion_validator</strong>: Considers the motion slope and length constraint. Additionally, if the motion slope is greater than a small value, the yaw difference between two states should not be greater than a threshold.</p></li>
@@ -109,7 +111,7 @@ represented in the following figures.</p>
 </ol>
 </section>
 <section id="elevation-mapping">
-<h2>elevation_mapping<a class="headerlink" href="#elevation-mapping" title="Permalink to this heading"></a></h2>
+<h2>elevation_mapping<a class="headerlink" href="#elevation-mapping" title="Link to this heading"></a></h2>
 <ol class="arabic simple">
 <li><p><strong>tf_to_pose</strong>: A helper node to convert the <code class="docutils literal notranslate"><span class="pre">/tf</span></code> data to pose in order to be used in the <code class="docutils literal notranslate"><span class="pre">elevation_mappin</span></code> node.</p></li>
 <li><p><strong>elevation_mapping</strong>: Provides a <code class="docutils literal notranslate"><span class="pre">grid_map</span></code> of the environment using the <code class="docutils literal notranslate"><span class="pre">/velodyne_point</span></code>, <code class="docutils literal notranslate"><span class="pre">/pose</span></code> and <code class="docutils literal notranslate"><span class="pre">/tf</span></code> topics, and publishes it on the <code class="docutils literal notranslate"><span class="pre">/elevation_mapping_raw</span></code> topics.</p></li>

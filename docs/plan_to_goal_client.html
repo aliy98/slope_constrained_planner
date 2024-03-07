@@ -1,22 +1,24 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="./">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>plan_to_goal_client &mdash; slope_constrained_planner 1.0 documentation</title>
-      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=92fd9be5" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=157ba28e" />
+      <link rel="stylesheet" type="text/css" href="_static/graphviz.css?v=eafc0fe6" />
+
+  
   <!--[if lt IE 9]>
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="_static/jquery.js"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-        <script src="_static/doctools.js"></script>
-        <script src="_static/sphinx_highlight.js"></script>
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=359c27e9"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=4825356b"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -54,17 +56,15 @@
 <li class="toctree-l3"><a class="reference internal" href="planner_ros.html">planner_ros</a></li>
 <li class="toctree-l3"><a class="reference internal" href="converter.html">converter</a></li>
 <li class="toctree-l3"><a class="reference internal" href="utils_ros.html">utils</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">plan_to_goal_client</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#slope_constrained_planner_ros.scripts.plan_to_goal_client.PathToGoalClient"><code class="docutils literal notranslate"><span class="pre">PathToGoalClient</span></code></a></li>
-</ul>
-</li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">plan_to_goal_client</a></li>
 <li class="toctree-l3"><a class="reference internal" href="path_follower.html">path_follower</a></li>
+<li class="toctree-l3"><a class="reference internal" href="goal_publisher.html">goal_publisher</a></li>
 </ul>
 </li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="usage.html">Usage</a></li>
-<li class="toctree-l1"><a class="reference internal" href="working_hypothesis.html">Working Hypothesis and Environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="working_hypothesis.html">System hypothesis and future work</a></li>
 </ul>
 
         </div>
@@ -93,30 +93,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="module-slope_constrained_planner_ros.scripts.plan_to_goal_client">
-<span id="plan-to-goal-client"></span><h1>plan_to_goal_client<a class="headerlink" href="#module-slope_constrained_planner_ros.scripts.plan_to_goal_client" title="Permalink to this heading"></a></h1>
-<span class="target" id="module-plan_to_goal_client"></span><dl class="simple">
-<dt>Subscribes to:</dt><dd><p>/goal</p>
-</dd>
-<dt>Uses Action:</dt><dd><p>/slope_constrained_planner/plan_to_goal</p>
-</dd>
-</dl>
-<p>A helper planner client node which waits for the target point to be set, and then sends it to the
-planner action server.</p>
-<dl class="py class">
-<dt class="sig sig-object py" id="slope_constrained_planner_ros.scripts.plan_to_goal_client.PathToGoalClient">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">slope_constrained_planner_ros.scripts.plan_to_goal_client.</span></span><span class="sig-name descname"><span class="pre">PathToGoalClient</span></span><a class="reference internal" href="_modules/slope_constrained_planner_ros/scripts/plan_to_goal_client.html#PathToGoalClient"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#slope_constrained_planner_ros.scripts.plan_to_goal_client.PathToGoalClient" title="Permalink to this definition"></a></dt>
-<dd><p>Planner client class which defines the subcription and action client info. Additionally,
-it has a member function for goal callback to send the goal to planner action server</p>
-<dl class="py method">
-<dt class="sig sig-object py" id="slope_constrained_planner_ros.scripts.plan_to_goal_client.PathToGoalClient.goalCallback">
-<span class="sig-name descname"><span class="pre">goalCallback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/slope_constrained_planner_ros/scripts/plan_to_goal_client.html#PathToGoalClient.goalCallback"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#slope_constrained_planner_ros.scripts.plan_to_goal_client.PathToGoalClient.goalCallback" title="Permalink to this definition"></a></dt>
-<dd><p>Callback function for <code class="docutils literal notranslate"><span class="pre">/goal</span></code> topic subscription. Waits for the planner action server
-to be available and sends the goal point.</p>
-</dd></dl>
-
-</dd></dl>
-
+  <section id="plan-to-goal-client">
+<h1>plan_to_goal_client<a class="headerlink" href="#plan-to-goal-client" title="Link to this heading"></a></h1>
 </section>
 
 
