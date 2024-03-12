@@ -15,7 +15,7 @@ Please refer to the provided [documentation](https://aliy98.github.io/slope_cons
     
 ©2024 RICE - DIBRIS, University of Genova
 <p align="left">
-<img src="https://github.com/aliy98/slope_constrained_planner/assets/65722399/6605b9e1-53cc-4962-9b81-9f15e27de395" width="150" title="rice_logo">
+<img src="https://github.com/aliy98/slope_constrained_planner/assets/65722399/720cd6f1-419a-46f1-82e4-84ae9e84bdd2" width="150" title="rice_logo">
 </p>
 
 
