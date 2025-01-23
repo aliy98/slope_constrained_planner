@@ -9,7 +9,6 @@ Please refer to the provided [documentation](https://aliy98.github.io/slope_cons
 **Authors:** 
   - Ali Yousefi, ali.yousefi@edu.unige.it
   - Zoe Betta, zoe.betta@edu.unige.it
-  - Giovanni, Mottola, giovanni.mottola@unige.it
   - Carmine Tommaso Recchiuto, carmine.recchiuto@dibris.unige.it
   - Antonio Sgorbissa, antonio.sgorbissa@unige.it
     
